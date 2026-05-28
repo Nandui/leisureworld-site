@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="LeisureWorld Cork Help Centre — answers to common questions about membership, swimming lessons, pricing, opening hours, and our Bishopstown, Churchfield and Douglas centres."/>
+  <title>Help Centre — LeisureWorld Cork</title>
+  <link rel="icon" type="image/png" href="Images/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div id="cur"></div>
+
+  <!-- ═══ NAV ═══ -->
+  <nav id="nav">
+    <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="centres.html">Centres</a></li>
+      <li><a href="index.html#activities">Activities</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="nav-cta">Sign In / Book</a></li>
+    </ul>
+    <button class="ham" id="ham" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mob" id="mob">
+    <button class="mob-close" id="mob-close">✕</button>
+    <a href="about.html"            class="mlink">About</a>
+    <a href="centres.html"          class="mlink">Our Centres</a>
+    <a href="index.html#activities" class="mlink">Activities</a>
+    <a href="pricing.html"          class="mlink">Pricing</a>
+    <a href="contact.html"          class="mlink">Contact</a>
+    <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" style="color:var(--pool)">Join Now →</a>
+  </div>
+
+  <!-- ═══ FAQ-PAGE SCOPED STYLES (theme-matched) ═══ -->
+  <style>
+    /* ---- Hero search ---- */
+    .faq-hero { min-height: 56vh; }
+    .faq-search {
+      margin-top: 2rem;
+      max-width: 640px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(61,142,255,0.25);
+      border-radius: 16px;
+      padding: 0.55rem 0.55rem 0.55rem 1.25rem;
+      backdrop-filter: blur(8px);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .faq-search:focus-within {
+      border-color: var(--pool);
+      box-shadow: 0 0 0 4px rgba(0,184,212,0.15);
+    }
+    .faq-search i { font-size: 1.25rem; color: var(--pool); flex-shrink: 0; }
+    .faq-search input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--white);
+      font-family: 'Archivo', sans-serif;
+      font-size: 1rem;
+      padding: 0.6rem 0.4rem;
+    }
+    .faq-search input::placeholder { color: rgba(237,242,249,0.45); }
+    .faq-search button {
+      flex-shrink: 0;
+      background: var(--pool);
+      color: var(--ink);
+      border: none;
+      border-radius: 12px;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      padding: 0.8rem 1.6rem;
+      cursor: pointer;
+      transition: transform 0.15s, background 0.2s;
+    }
+    .faq-search button:hover { transform: translateY(-2px); background: var(--bright); }
+
+    /* ---- Category cards ---- */
+    .faq-cats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 3.5rem;
+    }
+    .faq-cat {
+      text-align: left;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 18px;
+      padding: 1.6rem 1.5rem;
+      cursor: pointer;
+      font-family: 'Archivo', sans-serif;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+    .faq-cat:hover, .faq-cat.active {
+      transform: translateY(-4px);
+      border-color: var(--blue);
+      box-shadow: 0 14px 30px rgba(10,35,72,0.12);
+    }
+    .faq-cat-icon {
+      width: 48px; height: 48px;
+      border-radius: 13px;
+      background: rgba(20,100,216,0.1);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .faq-cat.active .faq-cat-icon { background: var(--blue); }
+    .faq-cat-icon i { font-size: 1.4rem; color: var(--blue); }
+    .faq-cat.active .faq-cat-icon i { color: #fff; }
+    .faq-cat h3 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.02rem;
+      color: var(--ink);
+      margin: 0 0 0.3rem;
+    }
+    .faq-cat p { font-size: 0.82rem; color: var(--muted); margin: 0; line-height: 1.45; }
+
+    /* ---- FAQ accordion (light variant) ---- */
+    .faq-list { max-width: 880px; margin: 0 auto; }
+    .faq-q {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 0.9rem;
+      overflow: hidden;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .faq-q.open { border-color: var(--blue); box-shadow: 0 10px 26px rgba(10,35,72,0.1); }
+    .faq-q-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      padding: 1.3rem 1.5rem;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.02rem;
+      color: var(--ink);
+      transition: color 0.2s;
+    }
+    .faq-q.open .faq-q-btn { color: var(--blue); }
+    .faq-q-icon {
+      flex-shrink: 0;
+      width: 26px; height: 26px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--blue);
+      font-size: 1.5rem;
+      transition: transform 0.3s;
+    }
+    .faq-q.open .faq-q-icon { transform: rotate(45deg); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+    .faq-q.open .faq-a { max-height: 420px; }
+    .faq-a-inner {
+      padding: 0 1.5rem 1.4rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .faq-a-inner a { color: var(--blue); }
+    .faq-empty {
+      text-align: center;
+      color: var(--muted);
+      font-style: italic;
+      padding: 2rem 0;
+      display: none;
+    }
+
+    /* ---- Still have a question block ---- */
+    .faq-help {
+      max-width: 1000px;
+      margin: 4rem auto 0;
+      background: linear-gradient(150deg, var(--deep) 0%, var(--navy) 60%, #0d2d62 100%);
+      border-radius: 26px;
+      padding: clamp(2.2rem, 4vw, 3.5rem);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .faq-help::before {
+      content:''; position:absolute; inset:0;
+      background: radial-gradient(ellipse 60% 50% at 75% 20%, rgba(0,184,212,0.18) 0%, transparent 60%);
+      pointer-events:none;
+    }
+    .faq-help h2 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      color: var(--white);
+      margin: 0 0 0.8rem;
+      position: relative;
+    }
+    .faq-help h2 .hi { color: var(--pool); }
+    .faq-help > p {
+      color: rgba(237,242,249,0.6);
+      font-size: 1rem;
+      max-width: 540px;
+      margin: 0 auto 2.2rem;
+      line-height: 1.7;
+      position: relative;
+    }
+    .faq-help-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+      position: relative;
+    }
+    .faq-help-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(61,142,255,0.18);
+      border-radius: 18px;
+      padding: 1.8rem 1.5rem;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s, border-color 0.2s;
+    }
+    .faq-help-card:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,0.08);
+      border-color: var(--pool);
+    }
+    .faq-help-card .fh-icon {
+      width: 50px; height: 50px;
+      border-radius: 14px;
+      background: rgba(0,184,212,0.15);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    .faq-help-card .fh-icon i { font-size: 1.5rem; color: var(--pool); }
+    .faq-help-card strong {
+      display: block;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.1rem;
+      color: var(--white);
+      margin-bottom: 0.35rem;
+    }
+    .faq-help-card span { font-size: 0.85rem; color: rgba(237,242,249,0.55); }
+
+    @media (max-width: 900px) {
+      .faq-cats { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .faq-cats { grid-template-columns: 1fr; }
+      .faq-help-grid { grid-template-columns: 1fr; }
+      .faq-search { flex-wrap: wrap; }
+      .faq-search button { width: 100%; }
+    }
+  </style>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="ctc-hero faq-hero">
+    <div class="ctc-hero-inner">
+      <div class="hero-tag"><span>Help Centre</span></div>
+      <h1>How can<br/>we <span class="hi">help?</span></h1>
+      <p>Search our most common questions, or browse by category to find what you need. Still stuck? Our team is only a call or message away.</p>
+      <div class="faq-search">
+        <i class="ti ti-search"></i>
+        <input id="faqSearch" type="text" placeholder="Search a question — e.g. swimming lessons, membership, opening hours" oninput="faqFilter()"/>
+        <button onclick="faqFilter()">Search</button>
+      </div>
+    </div>
+    <div class="ctc-hero-ramp"></div>
+  </section>
+
+  <!-- ═══ CATEGORIES + FAQ (light) ═══ -->
+  <section class="section contact-body">
+    <div class="section-inner">
+
+      <h2 class="section-title r d1">Browse by <span class="hi">category</span></h2>
+      <p class="section-lead r d2" style="color:var(--muted);max-width:560px;margin-bottom:2.5rem;">
+        Choose a topic to quickly filter the questions below, or scroll through the full list.
+      </p>
+
+      <div class="faq-cats r d2">
+        <button class="faq-cat active" data-cat="all" onclick="faqCat(this)">
+          <div class="faq-cat-icon"><i class="ti ti-layout-grid"></i></div>
+          <h3>All Topics</h3>
+          <p>See every question in one place.</p>
+        </button>
+        <button class="faq-cat" data-cat="membership" onclick="faqCat(this)">
+          <div class="faq-cat-icon"><i class="ti ti-id-badge-2"></i></div>
+          <h3>Membership &amp; Pricing</h3>
+          <p>Joining, plans, payments and freezes.</p>
+        </button>
+        <button class="faq-cat" data-cat="swim" onclick="faqCat(this)">
+          <div class="faq-cat-icon"><i class="ti ti-swimming"></i></div>
+          <h3>Swimming &amp; Lessons</h3>
+          <p>Public swims, lanes and junior lessons.</p>
+        </button>
+        <button class="faq-cat" data-cat="visiting" onclick="faqCat(this)">
+          <div class="faq-cat-icon"><i class="ti ti-map-pin"></i></div>
+          <h3>Visiting Us</h3>
+          <p>Hours, parking, facilities and access.</p>
+        </button>
+      </div>
+
+      <div class="faq-list r d2">
+
+        <div class="faq-q" data-cat="membership">
+          <button class="faq-q-btn" onclick="faqToggle(this)">
+            <span>How do I join, and can I sign up online?</span>
+            <span class="faq-q-icon"><i class="ti ti-plus"></i></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            You can join online in a few minutes through our
+            <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank">online sign-up</a>,
+            or simply call into any of our three centres and our reception team will set you up. No appointment needed — just bring photo ID and your payment details.
+          </div></div>
+        </div>
+
+        <div class="faq-q" data-cat="membership">
+          <button class="faq-q-btn" onclick="faqToggle(this)">
+            <span>What membership options are available?</span>
+            <span class="faq-q-icon"><i class="ti ti-plus"></i></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            We offer monthly direct-debit memberships with full access to the pool, gym and fitness classes, as well as pay-as-you-go visits for those who prefer to drop in. Student, family and concession rates are available. See our <a href="pricing.html">pricing page</a> for the latest rates across all centres.
+          </div></div>
+        </div>
+
+        <div class="faq-q" data-cat="membership">
+          <button class="faq-q-btn" onclick="faqToggle(this)">
+            <span>Can I freeze or cancel my membership?</span>
+            <span class="faq-q-icon"><i class="ti ti-plus"></i></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            Yes. Memberships can be frozen for medical reasons, travel, or other circumstances; just let your home centre know. Cancellation notice periods apply and are outlined in our terms and conditions. Pop into reception or <a href="contact.html">contact us</a> and we'll talk you through it.
+          </div></div>
+        </div>
+
+        <div class="faq-q" data-cat="membership">
+          <button class="faq-q-btn" onclick="faqToggle(this)">
+            <span>How secure are my payment details?</span>
+            <span class="faq-q-icon"><i class="ti ti-plus"></i></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            All payments are handled through our secure, encrypted booking and direct-debit system. We never store full card details on-site, and your information is processed in line with GDPR and our <a href="https://www.leisureworldcork.com/privacy-policy/" target="_blank">privacy policy</a>.
+          </div></div>
+        </div>
+
+        <div class="faq-q" data-cat="swim">
+          <button class="faq-q-btn" onclick="faqToggle(this)">
+            <span>Do I need to book a public swim in advance?</span>
+            <span class="faq-q-icon"><i class="ti ti-plus"></i></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            For most public and leisure swim sessions you can simply walk in on a pay-as-you-go basis. During busy periods or for specific lane sessions we'd recommend checking the timetable in our app or calling ahead, as pool space can fill up.
+          </div></div>
+        </div>
+
+        <div class="faq-q" data-cat="swim">
+          <button class="faq-q-btn" onclick="faqToggle(this)">
+            <span>How do swimming lessons work and how do I enrol?</span>
+            <span class="faq-q-icon"><i class="ti ti-plus"></i></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            We run structured junior and adult lessons across our centres, grouped by ability level. Lessons run in terms, and places are allocated on enrolment. You can find current availability and enrol on our <a href="https://www.leisureworldcork.com/swimming-lessons-cork/" target="_blank">swimming lessons page</a> or by contacting your nearest centre directly.
+          </div></div>
+        </div>
+
+        <div class="faq-q" data-cat="swim">
+          <button class="faq-q-btn" onclick="faqToggle(this)">
+            <span>Which centres have pools, and what sizes are they?</span>
+            <span class="faq-q-icon"><i class="ti ti-plus"></i></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            Bishopstown has an 18m pool, a 25m pool and a kids' pool. Churchfield has a 25m pool, a kids' pool and a poolside waterslide. The Gus Healy Pool in Douglas is a 25m competitive pool used for public and club swimming. See our <a href="centres.html">centres page</a> for full facility lists.
+          </div></div>
+        </div>
+
+        <div class="faq-q" data-cat="visiting">
+          <button class="faq-q-btn" onclick="faqToggle(this)">
+            <span>What are your opening hours?</span>
+            <span class="faq-q-icon"><i class="ti ti-plus"></i></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            Bishopstown and Churchfield are typically open 7:00am–8:45pm on weekdays and 9:00am–5:45pm at weekends. The Gus Healy Pool in Douglas has its own pool-only schedule. Hours can change on bank holidays, so always check our app or <a href="index.html#hours">opening hours section</a> for the latest times.
+          </div></div>
+        </div>
+
+        <div class="faq-q" data-cat="visiting">
+          <button class="faq-q-btn" onclick="faqToggle(this)">
+            <span>Is there parking and step-free access?</span>
+            <span class="faq-q-icon"><i class="ti ti-plus"></i></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            All three centres offer on-site parking and step-free access to main facilities. If you have specific accessibility needs, please get in touch ahead of your visit and we'll make sure everything is ready for you. More detail is on our <a href="https://www.leisureworldcork.com/accessibility/" target="_blank">accessibility page</a>.
+          </div></div>
+        </div>
+
+        <div class="faq-q" data-cat="visiting">
+          <button class="faq-q-btn" onclick="faqToggle(this)">
+            <span>Do you offer gift vouchers?</span>
+            <span class="faq-q-icon"><i class="ti ti-plus"></i></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            Yes — gift vouchers are available to purchase online and can be redeemed against memberships, swims, lessons and more. Grab one through our <a href="https://leisureworld-cork.vouchercart.com/app" target="_blank">gift voucher store</a>.
+          </div></div>
+        </div>
+
+        <p class="faq-empty" id="faqEmpty">No questions match your search. Try a different keyword, or reach out to our team below.</p>
+      </div>
+
+      <!-- ═══ STILL HAVE A QUESTION ═══ -->
+      <div class="faq-help r d2">
+        <h2>You still have <span class="hi">a question?</span></h2>
+        <p>If you can't find the answer you're looking for, our reception team is always happy to help. Give us a call during opening hours, or drop us a message and we'll get back to you as soon as we can.</p>
+        <div class="faq-help-grid">
+          <a href="tel:+3530214346505" class="faq-help-card">
+            <div class="fh-icon"><i class="ti ti-phone"></i></div>
+            <strong>021 434 6505</strong>
+            <span>We're always happy to help.</span>
+          </a>
+          <a href="contact.html" class="faq-help-card">
+            <div class="fh-icon"><i class="ti ti-mail"></i></div>
+            <strong>Send us a message</strong>
+            <span>The best way to get an answer faster.</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ CTA STRIP ═══ -->
+  <div class="pri-cta-strip r">
+    <div class="pri-cta-inner">
+      <div>
+        <h3>Ready to get started?</h3>
+        <p>Sign up online today, or simply walk in to any of our three centres; no booking required for pay-as-you-go visits. We're open seven days a week.</p>
+      </div>
+      <div class="pri-cta-btns">
+        <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" class="btn-join">Join Online</a>
+        <a href="contact.html" class="btn-ask">Ask a Question</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+        <p class="footer-tagline">Operated by LW Management on behalf of Cork City Council. Three centres serving Cork since 1997.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/LeisureWorldCork" target="_blank" title="Facebook">
+            <img src="Images/fb.png" alt="Facebook" class="social-icon">
+          </a>
+          <a href="https://www.instagram.com/leisureworldhq/" target="_blank" title="Instagram">
+            <img src="Images/ig.png" alt="Instagram" class="social-icon">
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Centres</h5>
+        <ul>
+          <li><a href="./Centres/bishopstown.html" target="_blank">Bishopstown</a></li>
+          <li><a href="./Centres/churchfield.html" target="_blank">Churchfield</a></li>
+          <li><a href="./Centres/douglas.html" target="_blank">Douglas</a></li>
+          <li><a href="index.html#hours" target="_blank">Opening Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Activities</h5>
+        <ul>
+          <li><a href="https://www.leisureworldcork.com/swimming-lessons-cork/" target="_blank">Swimming Lessons</a></li>
+          <li><a href="https://www.leisureworldcork.com/all-weather-pitch-cork/" target="_blank">Astro Pitches</a></li>
+          <li><a href="https://www.leisureworldcork.com/teen-gym-cork/" target="_blank">Teen Gym</a></li>
+          <li><a href="https://www.leisureworldcork.com/summer-activity-camps/" target="_blank">Summer Camps</a></li>
+          <li><a href="https://www.leisureworldcork.com/health-wellbeing/" target="_blank">Health &amp; Wellbeing</a></li>
+          <li><a href="https://www.leisureworldcork.com/training/nplq-courses/" target="_blank">Lifeguard Training</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>More</h5>
+        <ul>
+          <li><a href="./pricing.html" target="_blank">Prices</a></li>
+          <li><a href="https://leisureworld-cork.vouchercart.com/app" target="_blank">Gift Vouchers</a></li>
+          <li><a href="./about.html" target="_blank">About Us</a></li>
+          <li><a href="https://www.leisureworldcork.com/category/news/" target="_blank">News</a></li>
+          <li><a href="./careers.html" target="_blank">Careers</a></li>
+          <li><a href="faq.html" target="_blank">Help Centre</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 LeisureWorld Cork</p>
+      <div class="footer-legal">
+        <a href="https://www.leisureworldcork.com/privacy-policy/" target="_blank">Privacy Policy</a>
+        <a href="https://www.leisureworldcork.com/cookies-policy/" target="_blank">Cookie Policy</a>
+        <a href="./centre-policies.html" target="_blank">Centre Policies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script>
+    // FAQ accordion (independent of the site's .acc-item toggle)
+    function faqToggle(btn){
+      const q = btn.closest('.faq-q');
+      const open = q.classList.contains('open');
+      document.querySelectorAll('.faq-q').forEach(i => i.classList.remove('open'));
+      if(!open) q.classList.add('open');
+    }
+
+    // Category filter
+    function faqCat(btn){
+      document.querySelectorAll('.faq-cat').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.cat;
+      document.getElementById('faqSearch').value = '';
+      applyFilter(cat, '');
+    }
+
+    // Search filter
+    function faqFilter(){
+      const term = document.getElementById('faqSearch').value.toLowerCase().trim();
+      const active = document.querySelector('.faq-cat.active');
+      const cat = active ? active.dataset.cat : 'all';
+      applyFilter(cat, term);
+    }
+
+    function applyFilter(cat, term){
+      let visible = 0;
+      document.querySelectorAll('.faq-q').forEach(q => {
+        const matchCat = (cat === 'all' || q.dataset.cat === cat);
+        const matchTerm = (!term || q.textContent.toLowerCase().includes(term));
+        const show = matchCat && matchTerm;
+        q.style.display = show ? '' : 'none';
+        if(!show) q.classList.remove('open');
+        if(show) visible++;
+      });
+      document.getElementById('faqEmpty').style.display = visible ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>

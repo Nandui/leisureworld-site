@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="LeisureWorld Cork — Cork's leading public leisure centres in Bishopstown, Churchfield and Douglas. Swim, train, move. Every body belongs."/>
+  <title>LeisureWorld Cork — Every Body Belongs</title>
+
+  <link rel="icon" type="image/png" href="Images/logo.png">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="cur"></div>
+
+  <nav id="nav">
+    <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="centres.html">Centres</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="nav-cta">Sign In / Book</a></li>
+    </ul>
+    <button class="ham" id="ham" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mob" id="mob">
+    <button class="mob-close" id="mob-close">✕</button>
+    <a href="about.html"      class="mlink">About</a>
+    <a href="centres.html"  class="mlink">Our Centres</a>
+    <a href="#activities" class="mlink">Activities</a>
+    <a href="pricing.html"    class="mlink">Pricing</a>
+    <a href="#contact"    class="mlink">Contact</a>
+    <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" style="color:var(--pool)">Join Now →</a>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="home">
+    <div class="hero-wm" aria-hidden="true">BELONGS</div>
+    <div class="hero-inner">
+      <div class="hero-tag"><span>Cork City · Est. 1997</span></div>
+      <h1 class="hero-title">
+        Every<br/>
+        <span class="ghost">Body</span><br/>
+        <span class="hi">Belongs</span>
+      </h1>
+      <div class="hero-body">
+        <div>
+          <div class="hero-btns">
+            <a href="membershipfunnel.html" target="_blank" class="btn-pri">Explore Options</a>
+            <a href="#locations" class="btn-ghost">Explore Our Centres</a>
+          </div>
+        </div>
+        <div class="hero-scroll" aria-hidden="true"><span>Scroll</span></div>
+      </div>
+    </div>
+    <div class="hero-ramp" aria-hidden="true"></div>
+  </section>
+
+  <!-- ═══ LOCATIONS ═══ -->
+  <section class="section locations" id="locations">
+    <div class="section-inner">
+      <h2 class="section-title r d1">Find your<br/><span class="hi">nearest centre</span></h2>
+
+      <div class="loc-grid">
+
+        <a href="./Centres/bishopstown.html" class="loc-card lc-btown r d1">
+          <div class="loc-card-head">
+            <img src="Images/bishopstown.jpg" alt="Bishopstown Leisure Centre" class="loc-card-img"/>
+            <div class="loc-card-overlay"></div>
+            <div class="loc-card-text">
+              <span class="loc-badge">Flagship Centre</span>
+              <h3>Bishopstown</h3>
+              <p>Rossa Ave, Cork City</p>
+            </div>
+          </div>
+          <div class="loc-card-body">
+            <p class="loc-desc">Our largest and busiest centre. Three pools, Revelate studio, Fitness Studio, Gym , and outdoor astro pitches.</p>
+            <div class="loc-features">
+              <span class="loc-feat">18m Pool</span>
+              <span class="loc-feat">25m Pool</span>
+              <span class="loc-feat">Kids Pool</span>
+              <span class="loc-feat">Gym</span>
+              <span class="loc-feat">Sauna</span>
+              <span class="loc-feat">Steam Room</span>
+              <span class="loc-feat">4 Astro Pitch</span>
+              <span class="loc-feat">Revelate Studio</span>
+              <span class="loc-feat">Fitness Studio</span>
+            </div>
+            <span class="loc-link">View Centre Details</span>
+          </div>
+        </a>
+
+        <a href="./Centres/churchfield.html" class="loc-card lc-cfield r d2">
+          <div class="loc-card-head">
+            <img src="Images/cf.jpg" alt="Churchfield Leisure Centre" class="loc-card-img"/>
+            <div class="loc-card-overlay"></div>
+            <div class="loc-card-text">
+              <span class="loc-badge">North Cork City</span>
+              <h3>Churchfield</h3>
+              <p>Knockfree Ave, Cork City</p>
+            </div>
+          </div>
+          <div class="loc-card-body">
+            <p class="loc-desc">A community favourite on the northside. Featuring three pools including a 25m pool, kids’ pool, and a poolside waterslide alongside a gym and astropitches..</p>
+            <div class="loc-features">
+              <span class="loc-feat">25m Pool</span>
+              <span class="loc-feat">Kids Pool</span>
+              <span class="loc-feat">Pool Slide</span>
+              <span class="loc-feat">Gym</span>
+              <span class="loc-feat">Sauna</span>
+              <span class="loc-feat">Steam Room</span>
+              <span class="loc-feat">6 Astro Pitch</span>
+            </div>
+            <span class="loc-link">View Centre Details</span>
+          </div>
+        </a>
+
+        <a href="./Centres/douglas.html" class="loc-card lc-douglas r d3">
+          <div class="loc-card-head">
+            <img src="Images/gus.jpg" alt="Gus Healy Pool Douglas" class="loc-card-img"/>
+            <div class="loc-card-overlay"></div>
+            <div class="loc-card-text">
+              <span class="loc-badge">Douglas</span>
+              <h3>Gus Healy Pool</h3>
+              <p>Ballinlough, Cork City</p>
+            </div>
+          </div>
+          <div class="loc-card-body">
+            <p class="loc-desc">The Gus Healy Pool. A well-loved competitive 25-metre pool in Douglas, open for public lane and leisure swimming, as well as structured club swimming.</p>
+            <div class="loc-features">
+              <span class="loc-feat">25m Pool</span>
+              <span class="loc-feat">Competitive Swimming</span>
+              <span class="loc-feat">Public Sessions</span>
+              <span class="loc-feat">Pay As You Go</span>
+            </div>
+            <span class="loc-link">View Centre Details</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ACTIVITIES ═══ -->
+  <section class="section activities" id="activities">
+    <div class="section-inner">
+      <div class="act-layout">
+
+        <div class="act-sticky">
+          <h2 class="section-title r d1">Something<br/>for <span class="hi">everyone</span></h2>
+          <div class="act-intro r d2">
+            <p>From early-morning lane swims to late-night fitness classes, weekend junior lessons to summer activity camps, LeisureWorld is built around real Cork people and real Cork lives.</p>
+            <p>All activities are available on a pay-as-you-go basis. Members enjoy unlimited access at no extra cost.</p>
+            <a href="#hours" target="_blank" class="act-cta">View Timetables</a>
+          </div>
+        </div>
+
+        <div class="acc-wrap r d2">
+
+          <div class="acc-item open">
+            <button class="acc-trigger" onclick="accToggle(this)">
+              <span class="acc-label">Swimming</span>
+              <span class="acc-meta">2 activities</span>
+              <span class="acc-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="acc-body">
+              <div class="acc-cells">
+                <div class="acc-cell">
+                  <p class="acc-cell-name">Lane Swimming</p>
+                  <p class="acc-cell-desc">Morning and evening adult sessions across Bishopstown and Churchfield's pools.</p>
+                </div>
+                <div class="acc-cell">
+                  <p class="acc-cell-name">Leisure Swimming</p>
+                  <p class="acc-cell-desc">Drop-in sessions at all three centres.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-trigger" onclick="accToggle(this)">
+              <span class="acc-label">Health &amp; Wellbeing</span>
+              <span class="acc-meta">4 activities</span>
+              <span class="acc-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="acc-body">
+              <div class="acc-cells">
+                <div class="acc-cell">
+                  <p class="acc-cell-name">Gym Floor</p>
+                  <p class="acc-cell-desc">Fully equipped gym with expert staff on hand.</p>
+                </div>
+                <div class="acc-cell">
+                  <p class="acc-cell-name">Fitness Classes</p>
+                  <p class="acc-cell-desc">Revelate, AquaFit, Ageless classes and more.</p>
+                </div>
+                <div class="acc-cell">
+                  <p class="acc-cell-name">Functional Zone</p>
+                  <p class="acc-cell-desc">placeholder</p>
+                </div>
+                <div class="acc-cell">
+                  <p class="acc-cell-name">Movewell</p>
+                  <p class="acc-cell-desc">Guided movement and wellbeing programme for all ages and abilities.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-trigger" onclick="accToggle(this)">
+              <span class="acc-label">Teens &amp; Family</span>
+              <span class="acc-meta">4 activities</span>
+              <span class="acc-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="acc-body">
+              <div class="acc-cells">
+                <div class="acc-cell">
+                  <p class="acc-cell-name">Teen Gym</p>
+                  <p class="acc-cell-desc">Supervised sessions for 13–17 year olds with qualified instructors.</p>
+                </div>
+                <div class="acc-cell">
+                  <p class="acc-cell-name">Aquatics Programme</p>
+                  <p class="acc-cell-desc">Placeholder</p>
+                </div>
+                <div class="acc-cell">
+                  <p class="acc-cell-name">Family Fun Swim</p>
+                  <p class="acc-cell-desc">Dedicated swim sessions for families at all three centres.</p>
+                </div>
+                <div class="acc-cell">
+                  <p class="acc-cell-name">Rookie Lifesaving</p>
+                  <p class="acc-cell-desc">Junior lifesaving programme teaching water safety and rescue skills.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-trigger" onclick="accToggle(this)">
+              <span class="acc-label">Additional Programmes</span>
+              <span class="acc-meta">4 activities</span>
+              <span class="acc-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="acc-body">
+              <div class="acc-cells">
+                <div class="acc-cell">
+                  <p class="acc-cell-name">Kids Activity Camps</p>
+                  <p class="acc-cell-desc">Seasonal multi-sport camps keeping kids active during school breaks.</p>
+                </div>
+                <div class="acc-cell">
+                  <p class="acc-cell-name">Astro Pitches</p>
+                  <p class="acc-cell-desc">Floodlit all-weather pitches for hire at Bishopstown and Churchfield.</p>
+                </div>
+                <div class="acc-cell">
+                  <p class="acc-cell-name">Swim Teaching Courses</p>
+                  <p class="acc-cell-desc">Swim Ireland accredited courses for aspiring swim teachers.</p>
+                </div>
+                <div class="acc-cell">
+                  <p class="acc-cell-name">Lifeguard Courses</p>
+                  <p class="acc-cell-desc">Accredited Rookie Lifeguard, Bronze Medallion, and full NPLQ courses year-round.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.acc-wrap -->
+      </div><!-- /.act-layout -->
+    </div>
+  </section>
+
+  <!-- ═══ PRICING ═══ -->
+<section class="section pricing" id="pricing">
+  <div class="section-inner">
+
+    <div class="pricing-header r d1">
+      <h2 class="section-title">No hidden fees.<br>No <span class="hi">surprises.</span></h2>
+      <p class="section-lead">All facilities are open to the public — walk in any day, no membership required. Explore everything available across our centres.</p>
+    </div>
+
+    <div class="cat-grid r d2">
+      <div class="cat-card">
+        <div class="cat-icon"><i class="ti ti-droplet"></i></div>
+        <div class="cat-body">
+          <p class="cat-label">Pool</p>
+          <p class="cat-desc">Lane swimming, leisure &amp; aqua classes</p>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon"><i class="ti ti-barbell"></i></div>
+        <div class="cat-body">
+          <p class="cat-label">Gym</p>
+          <p class="cat-desc">Weights, cardio &amp; fitness floor access</p>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon"><i class="ti ti-id-badge"></i></div>
+        <div class="cat-body">
+          <p class="cat-label">Membership</p>
+          <p class="cat-desc">Monthly &amp; annual plans with great value</p>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon"><i class="ti ti-users"></i></div>
+        <div class="cat-body">
+          <p class="cat-label">Teens &amp; Family</p>
+          <p class="cat-desc">Family sessions &amp; youth programmes</p>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon"><i class="ti ti-heart-rate-monitor"></i></div>
+        <div class="cat-body">
+          <p class="cat-label">Health &amp; Wellbeing</p>
+          <p class="cat-desc">Sauna, spa &amp; wellness services</p>
+        </div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon"><i class="ti ti-calendar-event"></i></div>
+        <div class="cat-body">
+          <p class="cat-label">Programmes</p>
+          <p class="cat-desc">Courses, coaching &amp; additional classes</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="price-footer r d3">
+      <p>Full 2026 price list: <a href="pricing.html" target="_blank">leisureworldcork.com/prices</a> &nbsp;·&nbsp; Prices may vary between centres.</p>
+      <a href="pricing.html" target="_blank" class="btn-pri">
+        <i class="ti ti-external-link"></i> View Price Details
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* ── Pricing section fix ── */
+  .pricing .pricing-header {
+    max-width: 640px;
+    margin-bottom: 3rem;
+  }
+
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  @media (max-width: 900px) {
+    .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .cat-grid { grid-template-columns: 1fr; }
+  }
+
+  .cat-card {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 1.25rem 1.4rem;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  }
+  .cat-card:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(255,255,255,0.15);
+    transform: translateY(-2px);
+  }
+
+  .cat-icon {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: rgba(0, 120, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cat-icon i {
+    font-size: 1.4rem;
+    color: var(--pool, #29b6f6);
+  }
+
+  .cat-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .cat-label {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+  }
+  .cat-desc {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.5);
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .price-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    flex-wrap: wrap;
+  }
+  .price-footer p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.45);
+    margin: 0;
+  }
+  .price-footer a:not(.btn-pri) {
+    color: var(--pool, #29b6f6);
+  }
+</style>
+
+  <!-- ═══ HOURS ═══ -->
+  <section class="section hours" id="hours">
+    <div class="section-inner">
+      <h2 class="section-title r d1">Opening <br> <span class="hi">hours</span></h2>
+      <p class="section-lead r d2">Hours vary by centre and may change on bank holidays. Always check on our app or call ahead for the latest information.</p>
+
+      <div class="hours-grid">
+        <div class="hours-card r d1">
+          <div class="hours-card-head">
+            <h3>Bishopstown</h3>
+            <span class="hours-badge">Full Facility</span>
+          </div>
+          <table class="hours-table">
+            <tr><td>Mon – Thu</td><td>7:00am – 08:45pm</td></tr>
+            <tr><td>Friday</td><td>7:00am – 08:45pm</td></tr>
+            <tr><td>Saturday &amp;Sunday</td><td>9:00am – 05:45pm</td></tr>
+          </table>
+          <p class="hours-note">Pool timetable may differ from gym &amp; classes. Check site for full schedule.</p>
+        </div>
+        <div class="hours-card r d2">
+          <div class="hours-card-head">
+            <h3>Churchfield</h3>
+            <span class="hours-badge">Full Facility</span>
+          </div>
+          <table class="hours-table">
+            <tr><td>Mon – Thu</td><td>7:00am – 08:45pm</td></tr>
+            <tr><td>Friday</td><td>7:00am – 08:45pm</td></tr>
+            <tr><td>Saturday &amp;Sunday</td><td>9:00am – 05:45pm</td></tr>
+          </table>
+          <p class="hours-note">Pool timetable may differ from gym &amp; classes. Check site for full schedule.</p>
+        </div>
+        <div class="hours-card r d3">
+          <div class="hours-card-head">
+            <h3>Gus Healy Pool</h3>
+            <span class="hours-badge">Pool Only</span>
+          </div>
+          <table class="hours-table">
+            <tr><td>Mon – Fri</td><td>7:00am – 9:00pm</td></tr>
+            <tr><td>Saturday</td><td>9:00am – 5:00pm</td></tr>
+            <tr><td>Sunday</td><td>10:00am – 4:00pm</td></tr>
+          </table>
+          <p class="hours-note">Lesson times vary each term. Contact Douglas directly for session availability.</p>
+        </div>
+      </div>
+
+      <p style="margin-top:1.5rem;font-size:.82rem;color:var(--muted);font-style:italic">
+        ⚠️ Hours are indicative, always confirm current times at
+        <a href="#hours" target="_blank" style="color:var(--blue)">leisureworldcork.com/opening-hours</a>
+        or download our app for most accurent times.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ JOIN STRIP ═══ -->
+  <div class="join-strip">
+    <div class="join-inner">
+      <div class="join-copy r">
+        <h2>Ready to get started?</h2>
+        <p>Sign up online today, or simply walk in to any of our three centres; no booking required for pay-as-you-go visits. We're open seven days a week.</p>
+      </div>
+      <div class="join-actions r d2">
+        <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" class="btn-white">Join Online</a>
+        <a href="#contact" class="btn-outline-w">Ask a Question</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+        <p class="footer-tagline">Operated by LW Management on behalf of Cork City Council. Three centres serving Cork since 1997.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/LeisureWorldCork" target="_blank" title="Facebook">
+            <img src="Images/fb.png" alt="Facebook" class="social-icon">
+          </a>
+          <a href="https://www.instagram.com/leisureworldhq/" target="_blank" title="Instagram">
+            <img src="Images/ig.png" alt="Instagram" class="social-icon">
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Centres</h5>
+        <ul>
+          <li><a href="./Centres/bishopstown.html" target="_blank">Bishopstown</a></li>
+          <li><a href="./Centres/churchfield.html" target="_blank">Churchfield</a></li>
+          <li><a href="./Centres/douglas.html" target="_blank">Douglas</a></li>
+          <li><a href="#hours" target="_blank">Opening Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Activities</h5>
+        <ul>
+          <li><a href="https://www.leisureworldcork.com/swimming-lessons-cork/" target="_blank">Swimming Lessons</a></li>
+          <li><a href="https://www.leisureworldcork.com/all-weather-pitch-cork/" target="_blank">Astro Pitches</a></li>
+          <li><a href="https://www.leisureworldcork.com/teen-gym-cork/" target="_blank">Teen Gym</a></li>
+          <li><a href="https://www.leisureworldcork.com/summer-activity-camps/" target="_blank">Summer Camps</a></li>
+          <li><a href="https://www.leisureworldcork.com/health-wellbeing/" target="_blank">Health &amp; Wellbeing</a></li>
+          <li><a href="https://www.leisureworldcork.com/training/nplq-courses/" target="_blank">Lifeguard Training</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>More</h5>
+        <ul>
+          <li><a href="./pricing.html" target="_blank">Prices</a></li>
+          <li><a href="https://leisureworld-cork.vouchercart.com/app" target="_blank">Gift Vouchers</a></li>
+          <li><a href="./about.html" target="_blank">About Us</a></li>
+          <li><a href="https://www.leisureworldcork.com/category/news/" target="_blank">News</a></li>
+          <li><a href="./careers.html" target="_blank">Careers</a></li>
+          <li><a href="https://www.leisureworldcork.com/accessibility/" target="_blank">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 LeisureWorld Cork</p>
+      <div class="footer-legal">
+        <a href="https://www.leisureworldcork.com/privacy-policy/" target="_blank">Privacy Policy</a>
+        <a href="https://www.leisureworldcork.com/cookies-policy/" target="_blank">Cookie Policy</a>
+        <a href="./centre-policies.html" target="_blank">Centre Policies</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
+
+</body>
+</html>

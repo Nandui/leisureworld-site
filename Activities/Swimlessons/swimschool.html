@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swim School – LeisureWorld Cork</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="../../style.css">
+<style>
+/* ══════════════════════════════════════════
+   SWIM SCHOOL (aq.html) — Hub page styles
+   ══════════════════════════════════════════ */
+
+/* ── Hero ─────────────────────────────── */
+.aq-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 7rem 6rem 10rem;
+  overflow: hidden;
+  background: linear-gradient(155deg, #03071e 0%, #071b36 40%, #0c2d50 100%);
+}
+.aq-hero::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse at 70% 55%, rgba(34,211,238,0.09) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 80%, rgba(59,130,246,0.07) 0%, transparent 50%);
+  pointer-events: none;
+}
+.page-aq .hero-ghost {
+  -webkit-text-stroke: 1.5px rgba(34,211,238,0.09);
+}
+.page-aq .hero-swoosh {
+  background: var(--light-bg, #f4f7fb);
+}
+.aq-hero-sub {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+  max-width: 520px;
+  margin-bottom: 2rem;
+}
+
+/* ── About ────────────────────────────── */
+.aq-about {
+  background: var(--light-bg, #f4f7fb);
+  padding: 6rem 2rem 5rem;
+}
+.aq-about-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.aq-about-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+.aq-about-text p:last-child { margin-bottom: 0; }
+.aq-about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.aq-highlight {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.1rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.aq-highlight-icon {
+  width: 42px; height: 42px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.25rem; flex-shrink: 0;
+}
+.aq-highlight-text strong {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0a1628;
+  margin-bottom: 0.15rem;
+}
+.aq-highlight-text span {
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+/* ── Programmes ───────────────────────── */
+.aq-programmes {
+  background: #060e20;
+  padding: 6rem 2rem 7rem;
+  position: relative;
+  overflow: hidden;
+}
+.aq-programmes::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(34,211,238,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+.aq-programmes-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  position: relative; z-index: 1;
+}
+.aq-prog-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+.aq-prog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+.aq-prog-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease;
+}
+.aq-prog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+.aq-prog-card-top {
+  height: 220px;
+  position: relative; overflow: hidden;
+}
+.aq-prog-card-top::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(6,14,32,0.6) 100%);
+  z-index: 2;
+}
+.aq-prog-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  transition: transform 0.35s ease;
+}
+.aq-prog-card:hover .aq-prog-img { transform: scale(1.08) translateY(-4px); }
+.aq-prog-body {
+  padding: 1.6rem 1.75rem 1.75rem;
+  display: flex; flex-direction: column; flex: 1;
+}
+.aq-prog-tag {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 0.25rem 0.7rem;
+  border-radius: 999px; display: inline-block;
+  margin-bottom: 0.85rem; width: fit-content;
+}
+.aq-prog-name {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.8rem; font-weight: 900;
+  line-height: 1.05; text-transform: uppercase;
+  color: #fff; margin-bottom: 0.75rem;
+}
+.aq-prog-desc {
+  font-size: 0.9rem; line-height: 1.65;
+  color: rgba(255,255,255,0.6);
+  flex: 1; margin-bottom: 1.25rem;
+}
+.aq-prog-meta {
+  display: flex; gap: 0.5rem;
+  flex-wrap: wrap; margin-bottom: 1.5rem;
+}
+.aq-prog-pill {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em;
+  padding: 0.25rem 0.65rem; border-radius: 999px;
+  background: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.55);
+}
+.aq-prog-btn {
+  display: block; text-align: center;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px; font-weight: 700; font-size: 0.9rem;
+  text-decoration: none; letter-spacing: 0.02em;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+.aq-prog-btn:hover { filter: brightness(1.12); transform: translateY(-1px); }
+
+/* Programme colour schemes */
+.aq-card-wsf .aq-prog-card-top { background: linear-gradient(135deg, #0c2e44, #0e4a62); }
+.aq-card-wsf .aq-prog-card:hover { border-color: rgba(34,211,238,0.3); }
+.aq-card-wsf .aq-prog-tag  { background: rgba(34,211,238,0.15); color: #22d3ee; }
+.aq-card-wsf .aq-prog-btn  { background: #22d3ee; color: #071b36; }
+
+.aq-card-ss .aq-prog-card-top  { background: linear-gradient(135deg, #0b1e3d, #0f2e6b); }
+.aq-card-ss .aq-prog-card:hover { border-color: rgba(96,165,250,0.3); }
+.aq-card-ss .aq-prog-tag   { background: rgba(96,165,250,0.15); color: #60a5fa; }
+.aq-card-ss .aq-prog-btn   { background: #3b82f6; color: #fff; }
+
+.aq-card-rl .aq-prog-card-top  { background: linear-gradient(135deg, #1c1200, #2e1f00); }
+.aq-card-rl .aq-prog-card:hover { border-color: rgba(251,191,36,0.3); }
+.aq-card-rl .aq-prog-tag   { background: rgba(251,191,36,0.15); color: #fbbf24; }
+.aq-card-rl .aq-prog-btn   { background: #f59e0b; color: #1c1200; }
+
+/* ── Hero image panel ─────────────────── */
+.aq-hero-img {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.aq-hero-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.75;
+  filter: saturate(0.8);
+}
+.aq-hero-img::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(155deg, rgba(3,7,30,0.58) 0%, rgba(7,27,54,0.5) 50%, rgba(12,45,80,0.52) 100%);
+  z-index: 1;
+}
+.hero-content { position: relative; z-index: 1; }
+
+/* ── Responsive ───────────────────────── */
+@media (max-width: 900px) {
+  .aq-hero { padding: 6rem 2rem 8rem; }
+  .aq-about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .aq-prog-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+}
+@media (max-width: 600px) {
+  .aq-programmes { padding: 4rem 1.25rem 5rem; }
+  .aq-about { padding: 4rem 1.25rem 3.5rem; }
+}
+</style>
+</head>
+<body class="page-aq">
+
+<div id="cur"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="../../index.html" class="logo"><img src="../../Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+  <ul class="nav-links">
+    <li><a href="../../index.html#about">About</a></li>
+    <li><a href="../../index.html#locations">Centres</a></li>
+    <li><a href="../../index.html#activities">Activities</a></li>
+    <li><a href="../../pricing.html">Pricing</a></li>
+    <li><a href="../../contact.html">Contact</a></li>
+    <li><a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="nav-cta">Sign In / Book</a></li>
+  </ul>
+  <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob" id="mob">
+  <button class="mob-close" id="mob-close">✕</button>
+  <a href="../../index.html#about" class="mlink">About</a>
+  <a href="../../index.html#locations" class="mlink">Our Centres</a>
+  <a href="../../index.html#activities" class="mlink">Activities</a>
+  <a href="../../pricing.html" class="mlink">Pricing</a>
+  <a href="../../contact.html" class="mlink">Contact</a>
+  <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" style="color:var(--pool)">Join Now →</a>
+</div>
+
+<!-- HERO -->
+<section class="aq-hero">
+  <canvas class="hero-bubbles" id="bubbleCanvas"></canvas>
+  <div class="aq-hero-img" aria-hidden="true">
+    <img src="../../Images/swimschool.png" alt="">
+  </div>
+  <div class="hero-ghost">SCHOOL</div>
+  <div class="hero-content">
+    <h1 class="wsf-title">
+      <span class="white">Swim</span>
+      <span class="cyan fun-animate">
+        <span class="fun-char" style="--i:0">S</span><span class="fun-char" style="--i:1">c</span><span class="fun-char" style="--i:2">h</span><span class="fun-char" style="--i:3">o</span><span class="fun-char" style="--i:4">o</span><span class="fun-char" style="--i:5">l</span>
+      </span>
+    </h1>
+      <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="btn-pri">Book an Assessment</a>
+      <a href="../../contact.html" class="btn-ghost">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="aq-about" id="about">
+  <div class="aq-about-inner">
+    <div class="aq-about-left">
+      <h2 class="wsf-section-title">World-class<br>swimming <span class="accent">right here</span><br>in Cork</h2>
+      <div class="aq-about-text" style="margin-top:1.5rem;">
+        <p>LeisureWorld Swim School runs year-round at all three of our Cork centres. Our qualified instructors follow a proven progression pathway, ensuring every swimmer — young or old — builds confidence, technique, and safety awareness at their own pace.</p>
+        <p>Whether your child is stepping into the water for the very first time or working towards a lifeguard qualification, we have a programme built exactly for where they are right now.</p>
+      </div>
+    </div>
+    <div class="aq-about-highlights">
+      <div class="aq-highlight">
+        <div class="aq-highlight-icon" style="background:rgba(34,211,238,0.12);">🌊</div>
+        <div class="aq-highlight-text">
+          <strong>3 Distinct Programmes</strong>
+          <span>Catering for beginners through to aspiring lifeguards</span>
+        </div>
+      </div>
+      <div class="aq-highlight">
+        <div class="aq-highlight-icon" style="background:rgba(59,130,246,0.12);">📍</div>
+        <div class="aq-highlight-text">
+          <strong>3 Centres Across Cork</strong>
+          <span>Bishopstown, Churchfield &amp; Douglas</span>
+        </div>
+      </div>
+      <div class="aq-highlight">
+        <div class="aq-highlight-icon" style="background:rgba(251,191,36,0.12);">🏆</div>
+        <div class="aq-highlight-text">
+          <strong>Qualified Instructors</strong>
+          <span>Certified, garda-vetted, and passionate about swimming</span>
+        </div>
+      </div>
+      <div class="aq-highlight">
+        <div class="aq-highlight-icon" style="background:rgba(74,222,128,0.12);">🔄</div>
+        <div class="aq-highlight-text">
+          <strong>Year-Round Classes</strong>
+          <span>Morning, afternoon &amp; weekend slots available</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMMES -->
+<section class="aq-programmes" id="programmes">
+  <div class="aq-programmes-inner">
+    <div class="aq-prog-header">
+      <div class="wsf-eyebrow" style="justify-content:center; margin-bottom:1rem;">
+        <span class="wsf-eyebrow-text" style="color:var(--cyan)">Our Programmes</span>
+      </div>
+      <h2 class="wsf-section-title on-dark">Find the right<br><span class="accent">programme for you</span></h2>
+      <p style="margin-top:1rem; color:rgba(255,255,255,0.55); font-size:0.95rem; max-width:520px; margin-left:auto; margin-right:auto; line-height:1.7;">Three carefully designed pathways — each one building on the last, each one led by expert instructors who genuinely love what they do.</p>
+    </div>
+
+    <div class="aq-prog-grid">
+
+      <!-- Water Safety & Fun -->
+      <div class="aq-card-wsf">
+        <div class="aq-prog-card">
+          <div class="aq-prog-card-top">
+            <img src="../../Images/wsf.png" alt="Water Safety and Fun" class="aq-prog-img"
+              onerror="this.style.display='none'">
+          </div>
+          <div class="aq-prog-body">
+            <span class="aq-prog-tag">Beginner</span>
+            <div class="aq-prog-name">Water Safety<br>&amp; Fun</div>
+            <p class="aq-prog-desc">The perfect introduction to swimming. Children aged 5 and above learn to feel safe and confident in the water across four progressive levels — Starfish, Penguins, Turtles and Dolphins.</p>
+            <div class="aq-prog-meta">
+              <span class="aq-prog-pill">Ages 5+</span>
+              <span class="aq-prog-pill">4 Levels</span>
+              <span class="aq-prog-pill">No experience needed</span>
+            </div>
+            <a href="wsf.html" class="aq-prog-btn">Explore Programme →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Swimming Skills -->
+      <div class="aq-card-ss">
+        <div class="aq-prog-card">
+          <div class="aq-prog-card-top">
+            <img src="../../Images/ss.png" alt="Swimming Skills" class="aq-prog-img"
+              onerror="this.style.display='none'">
+          </div>
+          <div class="aq-prog-body">
+            <span class="aq-prog-tag">Intermediate</span>
+            <div class="aq-prog-name">Swimming<br>Skills</div>
+            <p class="aq-prog-desc">For swimmers who have completed Water Safety &amp; Fun and are ready to take their technique further. Refine strokes, build stamina, and develop the skills needed for competitive swimming or advanced water activities.</p>
+            <div class="aq-prog-meta">
+              <span class="aq-prog-pill">Post-Dolphins</span>
+              <span class="aq-prog-pill">3 Levels</span>
+              <span class="aq-prog-pill">Stroke refinement</span>
+            </div>
+            <a href="ss.html" class="aq-prog-btn">Explore Programme →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rookie Lifeguard -->
+      <div class="aq-card-rl">
+        <div class="aq-prog-card">
+          <div class="aq-prog-card-top">
+            <img src="../../Images/rl.png" alt="Rookie Lifeguard" class="aq-prog-img"
+              onerror="this.style.display='none'">
+          </div>
+          <div class="aq-prog-body">
+            <span class="aq-prog-tag">Lifeguard</span>
+            <div class="aq-prog-name">Rookie<br>Lifeguard</div>
+            <p class="aq-prog-desc">An award-winning programme for confident swimmers who want to learn real lifesaving skills. Earning Bronze, Silver and Gold awards, participants develop rescue techniques, first aid knowledge, and poolside responsibility.</p>
+            <div class="aq-prog-meta">
+              <span class="aq-prog-pill">Ages 11+</span>
+              <span class="aq-prog-pill">Bronze · Silver · Gold</span>
+              <span class="aq-prog-pill">ILS Certified</span>
+            </div>
+            <a href="rl.html" class="aq-prog-btn">Explore Programme →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="wsf-cta">
+  <div class="wsf-cta-ghost">JOIN</div>
+  <div class="wsf-cta-inner">
+    <div>
+      <h2 class="wsf-cta-title">Ready to get<br>started?</h2>
+      <p class="wsf-cta-text">Sign up online today, or simply walk in to any of our three centres. No booking required for pay-as-you-go visits. Open seven days a week.</p>
+    </div>
+    <div class="wsf-cta-btns">
+      <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="wsf-btn-white">Book An Assessment</a>
+      <a href="../../contact.html" class="wsf-btn-outline">Ask a Question</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="../../index.html" class="logo"><img src="../../Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+      <p class="footer-tagline">Operated by LW Management on behalf of Cork City Council. Three centres serving Cork since 1997.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/LeisureWorldCork" target="_blank" title="Facebook">
+          <img src="../../Images/fb.png" alt="Facebook" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com/leisureworldhq/" target="_blank" title="Instagram">
+          <img src="../../Images/ig.png" alt="Instagram" class="social-icon">
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Centres</h5>
+      <ul>
+        <li><a href="../../Centres/bishopstown.html" target="_blank">Bishopstown</a></li>
+        <li><a href="../../Centres/churchfield.html" target="_blank">Churchfield</a></li>
+        <li><a href="../../Centres/douglas.html" target="_blank">Douglas</a></li>
+        <li><a href="#hours">Opening Hours</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Activities</h5>
+      <ul>
+        <li><a href="https://www.leisureworldcork.com/swimming-lessons-cork/" target="_blank">Swimming Lessons</a></li>
+        <li><a href="https://www.leisureworldcork.com/all-weather-pitch-cork/" target="_blank">Astro Pitches</a></li>
+        <li><a href="https://www.leisureworldcork.com/teen-gym-cork/" target="_blank">Teen Gym</a></li>
+        <li><a href="https://www.leisureworldcork.com/summer-activity-camps/" target="_blank">Summer Camps</a></li>
+        <li><a href="https://www.leisureworldcork.com/health-wellbeing/" target="_blank">Health &amp; Wellbeing</a></li>
+        <li><a href="https://www.leisureworldcork.com/training/nplq-courses/" target="_blank">Lifeguard Training</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>More</h5>
+      <ul>
+        <li><a href="../../pricing.html">Prices</a></li>
+        <li><a href="https://leisureworld-cork.vouchercart.com/app" target="_blank">Gift Vouchers</a></li>
+        <li><a href="../../about.html">About Us</a></li>
+        <li><a href="https://www.leisureworldcork.com/category/news/" target="_blank">News</a></li>
+        <li><a href="../../careers.html">Careers</a></li>
+        <li><a href="https://www.leisureworldcork.com/accessibility/" target="_blank">Accessibility</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 LeisureWorld Cork</p>
+    <div class="footer-legal">
+      <a href="https://www.leisureworldcork.com/privacy-policy/" target="_blank">Privacy Policy</a>
+      <a href="https://www.leisureworldcork.com/cookies-policy/" target="_blank">Cookie Policy</a>
+      <a href="../../centre-policies.html">Centre Policies</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../script.js" defer></script>
+
+<script>
+function initBubbleCanvas(canvas, color, count) {
+  const ctx = canvas.getContext('2d');
+  let bubbles = [];
+
+  function resize() {
+    canvas.width  = canvas.parentElement.offsetWidth  || canvas.offsetWidth;
+    canvas.height = canvas.parentElement.offsetHeight || canvas.offsetHeight;
+  }
+
+  function makeBubble(spreadY) {
+    return {
+      x: Math.random() * canvas.width,
+      y: spreadY ? Math.random() * canvas.height : canvas.height + Math.random() * 80,
+      r: 3 + Math.random() * 20,
+      speed: 0.25 + Math.random() * 0.6,
+      drift: (Math.random() - 0.5) * 0.35,
+      alpha: 0.05 + Math.random() * 0.12,
+      wobble: Math.random() * Math.PI * 2,
+      wobbleSpeed: 0.008 + Math.random() * 0.018
+    };
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    bubbles.forEach(b => {
+      b.wobble += b.wobbleSpeed;
+      b.x += b.drift + Math.sin(b.wobble) * 0.25;
+      b.y -= b.speed;
+      if (b.y + b.r < 0) Object.assign(b, makeBubble(false));
+
+      ctx.beginPath();
+      ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(${color},${b.alpha * 2})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(b.x - b.r * 0.28, b.y - b.r * 0.28, b.r * 0.18, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255,255,255,${b.alpha})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  bubbles = Array.from({ length: count }, () => makeBubble(true));
+  window.addEventListener('resize', resize);
+  draw();
+}
+
+initBubbleCanvas(
+  document.getElementById('bubbleCanvas'),
+  '34,211,238',
+  35
+);
+
+/* ── Scroll reveal for programme cards ── */
+const progCards = document.querySelectorAll('.aq-prog-card');
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }, i * 120);
+      revealObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+progCards.forEach(card => {
+  card.style.opacity = '0';
+  card.style.transform = 'translateY(28px)';
+  card.style.transition = 'opacity 0.55s ease, transform 0.55s ease, box-shadow 0.32s ease, border-color 0.32s ease';
+  revealObs.observe(card);
+});
+
+/* ── fun-char staggered entrance ── */
+document.querySelectorAll('.fun-char').forEach(el => {
+  el.style.animationDelay = `${(el.style.getPropertyValue('--i') || 0) * 0.07}s`;
+});
+</script>
+</body>
+</html>

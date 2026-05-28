@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Water Safety and Fun – LeisureWorld Cork</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="../../style.css">
+<style>
+  /* Hero diagonal cut override (matches swimschool hero style) */
+  .page-wsf .wsf-hero .hero-swoosh { background: var(--light-bg, #f4f7fb); }
+  .page-wsf .wsf-about::before { display: none; }
+</style>
+</head>
+<body class="page-wsf">
+
+<div id="cur"></div>
+
+<!-- NAV (shared across all pages) -->
+<nav id="nav">
+  <a href="../index.html" class="logo"><img src="../../Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+  <ul class="nav-links">
+    <li><a href="../../index.html#about">About</a></li>
+    <li><a href="../../index.html#locations">Centres</a></li>
+    <li><a href="../../index.html#activities">Activities</a></li>
+    <li><a href="../../pricing.html">Pricing</a></li>
+    <li><a href="../../contact.html">Contact</a></li>
+    <li><a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="nav-cta">Sign In / Book</a></li>
+  </ul>
+  <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob" id="mob">
+  <button class="mob-close" id="mob-close">✕</button>
+  <a href="../../index.html#about" class="mlink">About</a>
+  <a href="../../index.html#locations" class="mlink">Our Centres</a>
+  <a href="../../index.html#activities" class="mlink">Activities</a>
+  <a href="../../pricing.html" class="mlink">Pricing</a>
+  <a href="../../contact.html" class="mlink">Contact</a>
+  <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" style="color:var(--pool)">Join Now →</a>
+</div>
+
+<!-- HERO -->
+<section class="wsf-hero">
+  <canvas class="hero-bubbles" id="bubbleCanvas"></canvas>
+  <div class="page-hero-bg" aria-hidden="true">
+    <img src="../../Images/1.png" alt="">
+  </div>
+  <div class="hero-ghost">FUN</div>
+  <div class="hero-content">
+    <h1 class="wsf-title">
+      <span class="white">Water Safety</span>
+      <span class="cyan fun-animate">
+        <span class="fun-char" style="--i:0">&amp;</span><span class="fun-space"> </span><span class="fun-char" style="--i:1">F</span><span class="fun-char" style="--i:2">u</span><span class="fun-char" style="--i:3">n</span>
+      </span>
+      </h1>
+    <div class="hero-btns" style="margin-top:2rem;">
+      <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="btn-pri">Book an Assessment</a>
+      <a href="../../contact.html" class="btn-ghost">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-swoosh"></div>
+</section>
+
+<!-- ABOUT -->
+<section class="wsf-about" id="about">
+  <div class="about-inner">
+    <div class="wsf-eyebrow">
+      <span class="wsf-eyebrow-text">The Programme</span>
+    </div>
+    <h2 class="wsf-section-title">What is <span class="accent">Water Safety</span><br>&amp; Fun?</h2>
+    <div class="about-body">
+      <div class="about-text">
+        <p>Water Safety and Fun is a beginner-level swimming course, ideal for children aged 5 and above who have little to no prior experience in the water.</p>
+        <p>Kids will learn how to be safe in shallow and deep water, perform the main swim strokes — front crawl, back crawl and breaststroke — and enjoy a huge range of fun water activities along the way.</p>
+        <p>The course is divided into 4 levels: Starfish, Penguins, Turtles and Dolphins. Each contains competencies that, when achieved, allow the child to progress to the next level. Every child develops at their own pace, and we only move kids on when the competencies are fully met.</p>
+      </div>
+      <div class="about-stats">
+
+        <div class="stat-card" data-target="4">
+          <div class="stat-icon-wrap">
+            <span class="stat-count" data-target="4">0</span>
+          </div>
+          <div class="stat-card-label">Programme Levels</div>
+          <div class="stat-card-sub">Starfish · Penguins · Turtles · Dolphins</div>
+        </div>
+
+        <div class="stat-card stat-card--wave" data-target="5">
+          <div class="stat-icon-wrap">
+            <span class="stat-count" data-target="5">0</span>
+            <span class="stat-plus">+</span>
+          </div>
+          <div class="stat-card-label">Years Old</div>
+          <div class="stat-card-sub">No experience needed to start</div>
+        </div>
+
+        <div class="stat-card" data-target="3">
+          <div class="stat-icon-wrap">
+            <span class="stat-count" data-target="3">0</span>
+          </div>
+          <div class="stat-card-label">Swim Strokes</div>
+          <div class="stat-card-sub">Front crawl · Back crawl · Breaststroke</div>
+        </div>
+
+        <div class="stat-card stat-card--fun">
+          <div class="stat-icon-wrap">
+            <span class="stat-inf">∞</span>
+          </div>
+          <div class="stat-card-label">Fun Guaranteed</div>
+          <div class="stat-card-sub">Every session, every level</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEVELS -->
+<section class="levels" id="levels">
+  <div class="levels-inner">
+    <div class="levels-header">
+      <div class="levels-header-left">
+        <div class="wsf-eyebrow" style="margin-bottom:1rem;">
+          <span class="wsf-eyebrow-text" style="color:var(--cyan)">The Four Levels</span>
+        </div>
+        <h2 class="wsf-section-title on-dark">Main goals<br><span class="accent">of each level</span></h2>
+      </div>
+      <div class="levels-header-right">
+        Each level has a set of competencies that, when achieved, allow the child to move up. Children progress only when they're truly ready.
+      </div>
+    </div>
+
+    <!-- STARFISH -->
+    <div class="level-card">
+      <div class="level-sidebar starfish-bg">
+        <div class="level-num">01</div>
+        <img src="../../Images/sf.png" alt="Starfish level" class="level-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="level-emoji-big" style="display:none">⭐</div>
+        <div class="level-name-big">Starfish</div>
+        <div class="level-tag-pill">Level One</div>
+      </div>
+      <div class="level-body starfish-border">
+        <canvas class="card-bubbles" data-color="248,113,113"></canvas>
+        <div>
+          <div class="level-goal-label starfish-color">Goal</div>
+          <p class="level-goal-text">Helping children feel comfortable and confident in the pool environment. Kids build trust in their own abilities and take their very first steps with water.</p>
+          <div class="skills-heading">Competencies</div>
+          <div class="skills-grid">
+            <div class="skill-item"><span class="skill-dot starfish-dot"></span>Put face in the water</div>
+            <div class="skill-item"><span class="skill-dot starfish-dot"></span>Float on front</div>
+            <div class="skill-item"><span class="skill-dot starfish-dot"></span>Float on back</div>
+            <div class="skill-item"><span class="skill-dot starfish-dot"></span>Glide confidently through the water</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROGRESSION ARROW → Penguins -->
+    <div class="level-arrow arrow-starfish">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 8v26M14 26l10 12 10-12" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <!-- PENGUINS -->
+    <div class="level-card">
+      <div class="level-sidebar penguin-bg">
+        <div class="level-num">02</div>
+        <img src="../../Images/pg.png" alt="Penguins level" class="level-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="level-emoji-big" style="display:none">🐧</div>
+        <div class="level-name-big">Penguins</div>
+        <div class="level-tag-pill">Level Two</div>
+      </div>
+      <div class="level-body penguin-border">
+        <canvas class="card-bubbles" data-color="251,146,60"></canvas>
+        <div>
+          <div class="level-goal-label penguin-color">Goal</div>
+          <p class="level-goal-text">Adapting to the larger pool and building strength and coordination. Kids extend their water skills and work towards more independent swimming.</p>
+          <div class="skills-heading">Competencies</div>
+          <div class="skills-grid">
+            <div class="skill-item"><span class="skill-dot penguin-dot"></span>Get used to the big pool</div>
+            <div class="skill-item"><span class="skill-dot penguin-dot"></span>Kick legs for longer distances</div>
+            <div class="skill-item"><span class="skill-dot penguin-dot"></span>Swim with belly up to the sky</div>
+            <div class="skill-item"><span class="skill-dot penguin-dot"></span>Retrieve objects from pool floor</div>
+            <div class="skill-item"><span class="skill-dot penguin-dot"></span>Swim through a hoop</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROGRESSION ARROW → Turtles -->
+    <div class="level-arrow arrow-penguin">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 8v26M14 26l10 12 10-12" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <!-- TURTLES -->
+    <div class="level-card">
+      <div class="level-sidebar turtle-bg">
+        <div class="level-num">03</div>
+        <img src="../../Images/turtle.png" alt="Turtles level" class="level-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="level-emoji-big" style="display:none">🐢</div>
+        <div class="level-name-big">Turtles</div>
+        <div class="level-tag-pill">Level Three</div>
+      </div>
+      <div class="level-body turtle-border">
+        <canvas class="card-bubbles" data-color="192,132,252"></canvas>
+        <div>
+          <div class="level-goal-label turtle-color">Goal</div>
+          <p class="level-goal-text">Introducing more advanced swimming techniques and deep-water activities. Kids begin to refine their strokes and develop essential survival skills.</p>
+          <div class="skills-heading">Competencies</div>
+          <div class="skills-grid">
+            <div class="skill-item"><span class="skill-dot turtle-dot"></span>Use arms for all strokes</div>
+            <div class="skill-item"><span class="skill-dot turtle-dot"></span>Tread water</div>
+            <div class="skill-item"><span class="skill-dot turtle-dot"></span>Jump &amp; surface dive in deep end</div>
+            <div class="skill-item"><span class="skill-dot turtle-dot"></span>Full front &amp; back crawl stroke</div>
+            <div class="skill-item"><span class="skill-dot turtle-dot"></span>Introduction to breaststroke</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROGRESSION ARROW → Dolphins -->
+    <div class="level-arrow arrow-turtle">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 8v26M14 26l10 12 10-12" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <!-- DOLPHINS -->
+    <div class="level-card">
+      <div class="level-sidebar dolphin-bg">
+        <div class="level-num">04</div>
+        <img src="../../Images/dol.png" alt="Dolphins level" class="level-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="level-emoji-big" style="display:none">🐬</div>
+        <div class="level-name-big">Dolphins</div>
+        <div class="level-tag-pill">Final Level</div>
+      </div>
+      <div class="level-body dolphin-border">
+        <canvas class="card-bubbles" data-color="74,222,128"></canvas>
+        <div>
+          <div class="level-goal-label dolphin-color">Goal</div>
+          <p class="level-goal-text">Preparing children for longer distances and deep-water confidence. Kids graduate as capable, safe, and joyful swimmers — ready for anything.</p>
+          <div class="skills-heading">Competencies</div>
+          <div class="skills-grid">
+            <div class="skill-item"><span class="skill-dot dolphin-dot"></span>Proper breathing in all strokes</div>
+            <div class="skill-item"><span class="skill-dot dolphin-dot"></span>Stay safely in the deep end</div>
+            <div class="skill-item"><span class="skill-dot dolphin-dot"></span>Breaststroke kick &amp; timing</div>
+            <div class="skill-item"><span class="skill-dot dolphin-dot"></span>Swim longer distances</div>
+            <div class="skill-item"><span class="skill-dot dolphin-dot"></span>Retrieve from the deep</div>
+            <div class="skill-item"><span class="skill-dot dolphin-dot"></span>Kneeling &amp; standing dives</div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <div class="prog-note">
+      <p>Each child develops at their own time. We only allow kids to move from one group to another after <strong>all competencies are met</strong>, respecting their own personal development. There is no rush — every step forward is a genuine achievement.</p>
+    </div>
+    <div class="grad-note">
+      <div class="grad-note-title">🎓 After Dolphins — What's next?</div>
+      <p>Once your child completes the Dolphins level, they graduate from Water Safety and Fun as a confident swimmer. If they want to go further — joining a swim club or competing — ask us about our advanced <strong>Swimming Skills</strong> course.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA BANNER (shared across all pages) -->
+<div class="wsf-cta">
+  <div class="wsf-cta-ghost">JOIN</div>
+  <div class="wsf-cta-inner">
+    <div>
+      <h2 class="wsf-cta-title">Ready to get<br>started?</h2>
+      <p class="wsf-cta-text">Sign up online today, or simply walk in to any of our three centres. No booking required for pay-as-you-go visits. Open seven days a week.</p>
+    </div>
+    <div class="wsf-cta-btns">
+      <a href="#" class="wsf-btn-white">Book An Assessment</a>
+      <a href="#" class="wsf-btn-outline">Ask a Question</a>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="wsf-faq" id="faq">
+  <div class="faq-inner">
+    <div class="wsf-eyebrow">
+      <span class="wsf-eyebrow-text" style="color:var(--cyan)">Got Questions?</span>
+    </div>
+    <h2 class="wsf-section-title on-dark">Frequently Asked <span class="accent">Questions</span></h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">What age does my child need to be to join?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Water Safety and Fun is designed for children aged 5 and above. Your child does not need any prior swimming experience — the Starfish level is specifically built for complete beginners who are just getting comfortable in the water.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">How does my child move up to the next level?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Each level has a defined set of competencies. Your child's instructor will assess their progress and only move them up once every skill has been confidently achieved. We respect each child's personal development — there is no fixed timeline, only progress done right.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">What happens after my child completes Dolphins?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">After graduating from Dolphins, your child will be a confident, safe swimmer. If they're passionate about swimming and want to continue — whether joining a swim club or swimming competitively in the future — we also offer an advanced course called Swimming Skills. Ask at reception for details.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="faq-q-text">How do I book a place on the programme?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">You can sign up online using the Join Online button above, or simply call in to LeisureWorld Bishopstown and speak to a member of our team. We'll assess your child's current level and place them in the right group to get started.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER (shared across all pages) -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo"><img src="../Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+      <p class="footer-tagline">Operated by LW Management on behalf of Cork City Council. Three centres serving Cork since 1997.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/LeisureWorldCork" target="_blank" title="Facebook">
+          <img src="../Images/fb.png" alt="Facebook" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com/leisureworldhq/" target="_blank" title="Instagram">
+          <img src="../Images/ig.png" alt="Instagram" class="social-icon">
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Centres</h5>
+      <ul>
+        <li><a href="../Centres/bishopstown.html" target="_blank">Bishopstown</a></li>
+        <li><a href="../Centres/churchfield.html" target="_blank">Churchfield</a></li>
+        <li><a href="../Centres/douglas.html" target="_blank">Douglas</a></li>
+        <li><a href="#hours" target="_blank">Opening Hours</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Activities</h5>
+      <ul>
+        <li><a href="https://www.leisureworldcork.com/swimming-lessons-cork/" target="_blank">Swimming Lessons</a></li>
+        <li><a href="https://www.leisureworldcork.com/all-weather-pitch-cork/" target="_blank">Astro Pitches</a></li>
+        <li><a href="https://www.leisureworldcork.com/teen-gym-cork/" target="_blank">Teen Gym</a></li>
+        <li><a href="https://www.leisureworldcork.com/summer-activity-camps/" target="_blank">Summer Camps</a></li>
+        <li><a href="https://www.leisureworldcork.com/health-wellbeing/" target="_blank">Health &amp; Wellbeing</a></li>
+        <li><a href="https://www.leisureworldcork.com/training/nplq-courses/" target="_blank">Lifeguard Training</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>More</h5>
+      <ul>
+        <li><a href="../pricing.html" target="_blank">Prices</a></li>
+        <li><a href="https://leisureworld-cork.vouchercart.com/app" target="_blank">Gift Vouchers</a></li>
+        <li><a href="../about.html" target="_blank">About Us</a></li>
+        <li><a href="https://www.leisureworldcork.com/category/news/" target="_blank">News</a></li>
+        <li><a href="../careers.html" target="_blank">Careers</a></li>
+        <li><a href="https://www.leisureworldcork.com/accessibility/" target="_blank">Accessibility</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 LeisureWorld Cork</p>
+    <div class="footer-legal">
+      <a href="https://www.leisureworldcork.com/privacy-policy/" target="_blank">Privacy Policy</a>
+      <a href="https://www.leisureworldcork.com/cookies-policy/" target="_blank">Cookie Policy</a>
+      <a href="../centre-policies.html" target="_blank">Centre Policies</a>
+    </div>
+  </div>
+</footer>
+<script src="../../script.js" defer></script>
+
+<script>
+/* ══════════════════════════════════════════
+   REUSABLE BUBBLE ENGINE
+   Call initBubbleCanvas(canvas, color, count)
+   color = "r,g,b" string e.g. "255,107,53"
+   ══════════════════════════════════════════ */
+function initBubbleCanvas(canvas, color, count) {
+  const ctx = canvas.getContext('2d');
+  let bubbles = [];
+
+  function resize() {
+    canvas.width  = canvas.parentElement.offsetWidth  || canvas.offsetWidth;
+    canvas.height = canvas.parentElement.offsetHeight || canvas.offsetHeight;
+  }
+
+  function makeBubble(spreadY) {
+    return {
+      x: Math.random() * canvas.width,
+      y: spreadY ? Math.random() * canvas.height : canvas.height + Math.random() * 80,
+      r: 3 + Math.random() * 20,
+      speed: 0.25 + Math.random() * 0.6,
+      drift: (Math.random() - 0.5) * 0.35,
+      alpha: 0.05 + Math.random() * 0.12,
+      wobble: Math.random() * Math.PI * 2,
+      wobbleSpeed: 0.008 + Math.random() * 0.018
+    };
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    bubbles.forEach(b => {
+      b.wobble += b.wobbleSpeed;
+      b.x += b.drift + Math.sin(b.wobble) * 0.25;
+      b.y -= b.speed;
+      if (b.y + b.r < 0) Object.assign(b, makeBubble(false));
+
+      /* ring */
+      ctx.beginPath();
+      ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(${color},${b.alpha * 2})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      /* glint */
+      ctx.beginPath();
+      ctx.arc(b.x - b.r * 0.28, b.y - b.r * 0.28, b.r * 0.18, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255,255,255,${b.alpha})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  bubbles = Array.from({ length: count }, () => makeBubble(true));
+  window.addEventListener('resize', resize);
+  draw();
+}
+
+/* ── HERO BUBBLES ── */
+initBubbleCanvas(
+  document.getElementById('bubbleCanvas'),
+  '34,211,238',
+  35
+);
+
+/* ── CARD BUBBLES — one canvas per level body ── */
+document.querySelectorAll('.card-bubbles').forEach(canvas => {
+  const color = canvas.dataset.color;
+  initBubbleCanvas(canvas, color, 18);
+});
+
+/* ── SCROLL REVEAL for level cards ── */
+const cards = document.querySelectorAll('.level-card');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 120);
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+cards.forEach(c => io.observe(c));
+
+/* ── STAT COUNT-UP on scroll ── */
+const statCounts = document.querySelectorAll('.stat-count');
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const target = parseInt(el.dataset.target);
+    const duration = 1200;
+    const start = performance.now();
+    function tick(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(ease * target);
+      if (progress < 1) requestAnimationFrame(tick);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(tick);
+    statObserver.unobserve(el);
+  });
+}, { threshold: 0.5 });
+statCounts.forEach(el => statObserver.observe(el));
+
+/* ── LEVEL IMAGE click pop ── */
+document.querySelectorAll('.level-img').forEach(img => {
+  img.addEventListener('click', () => {
+    img.classList.remove('popped');
+    void img.offsetWidth; /* reflow to restart */
+    img.classList.add('popped');
+    img.addEventListener('animationend', () => img.classList.remove('popped'), { once: true });
+  });
+});
+
+
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => {
+      el.classList.remove('open');
+      el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      el.querySelector('.faq-icon').textContent = '+';
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      btn.querySelector('.faq-icon').textContent = '−';
+    }
+  });
+});
+</script>
+</body>
+</html>

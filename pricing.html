@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="LeisureWorld Cork — Full Pricing. Memberships, PAYG, Classes and more."/>
+  <title>LeisureWorld Cork — Pricing</title>
+  <link rel="stylesheet" href="style.css"/>>
+</head>
+<body>
+
+  <div id="cur"></div>
+  <a href="index.html" class="back-arrow" aria-label="Go back">
+    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </a>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+    <ul class="nav-links">
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./centres.html">Centres</a></li>
+      <li><a href="index.html#activities">Activities</a></li>
+      <li><a href="pricing.html" style="color:var(--white)">Pricing</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="nav-cta">Sign In / Book</a></li>
+    </ul>
+    <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="mob" id="mob">
+    <button class="mob-close" id="mob-close">✕</button>
+    <a href="./about.html" class="mlink">About</a>
+    <a href="./centres.html" class="mlink">Our Centres</a>
+    <a href="index.html#activities" class="mlink">Activities</a>
+    <a href="pricing.html" class="mlink">Pricing</a>
+    <a href="contact.html" class="mlink">Contact</a>
+    <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" style="color:var(--pool)">Join Now →</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="pri-hero">
+    <div class="pri-hero-wm" aria-hidden="true">PRICE</div>
+    <div class="pri-hero-inner">
+      <div class="hero-tag"><span>Transparent Pricing</span></div>
+      <h1>No hidden fees<br/>No <span class="hi">surprises</span></h1>
+      <p>All facilities are open to the public: walk in any day, no membership required. Memberships unlock unlimited access for regular users.</p>
+    </div>
+    <div class="pri-hero-ramp"></div>
+  </section>
+
+  <!-- BODY -->
+  <div class="pri-body">
+    <div class="pri-body-inner">
+
+      <!-- Centre tabs -->
+      <div class="centre-tabs">
+        <button class="ctab active" onclick="showCentre('bc', this)">Bishopstown &amp; Churchfield</button>
+        <button class="ctab" onclick="showCentre('douglas', this)">Gus Healy Pool — Douglas</button>
+      </div>
+
+      <!-- ══ BISHOPSTOWN & CHURCHFIELD ══ -->
+      <div class="centre-panel show" id="panel-bc">
+
+        <!-- PAYG -->
+        <div class="pri-section">
+          <h2 class="pri-section-title">Pay As You Go</h2>
+          <p class="pri-section-sub">No membership needed. Walk in any day, pay per visit.</p>
+          <table class="mem-table">
+            <thead>
+              <tr>
+                <th>Visit Type</th>
+                <th>Price</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Adult</td>
+                <td class="price">€11</td>
+                <td>Pool, gym, or classes - any time, any day.</td>
+              </tr>
+              <tr>
+                <td>Discounted Visit</td>
+                <td class="price">€9</td>
+                <td>Student / Over 65 / Unemployed. Valid ID required.</td>
+              </tr>
+              <tr>
+                <td>Teen Visit</td>
+                <td class="price">€9</td>
+                <td>Ages 13–17 years. See Teen Gym page for details.</td>
+              </tr>
+              <tr>
+                <td>Health Session</td>
+                <td class="price">€9</td>
+                <td>Functional Zone</td>
+              </tr>
+              <tr>
+                <td>Family Fun Swim</td>
+                <td class="price">€25</td>
+                <td>2 adults + 2 children or 1 adult + 3 children. Pool access for 1 hour.</td>
+              </tr>
+              <tr>
+                <td>Child Swim</td>
+                <td class="price">€6.50</td>
+                <td>Ages 6–12 years. Pool access.</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="pri-notice">* Discounted rate only available with proof of unemployment, valid student ID, or for those aged 65 and over.</div>
+        </div>
+
+        <!-- MEMBERSHIPS -->
+        <div class="pri-section">
+          <h2 class="pri-section-title">Memberships <span>Direct Debits</span></h2>
+          <p class="pri-section-sub">Membership includes access to both LeisureWorld Bishopstown &amp; LeisureWorld Churchfield.</p>
+          <table class="mem-table">
+            <thead>
+              <tr>
+                <th>Membership Type</th>
+                <th>Single</th>
+                <th>Couple</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monthly Direct Debit</td>
+                <td class="price">€65 / month</td>
+                <td class="price">€108 / month</td>
+              </tr>
+              <tr>
+                <td>Discounted Direct Debit</td>
+                <td class="price">€46 / month</td>
+                <td class="price">—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pri-section">
+          <h2 class="pri-section-title">Memberships <span> Pay In Full</span></h2>
+          <p class="pri-section-sub">Membership includes access to both LeisureWorld Bishopstown &amp; LeisureWorld Churchfield.</p>
+          <table class="mem-table">
+            <thead>
+              <tr>
+                <th>Membership Type</th>
+                <th>Single</th>
+                <th>Couple</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1 Month Paid in Full</td>
+                <td class="price">€75</td>
+                <td class="price">—</td>
+              </tr>
+              <tr>
+                <td>3 Month Paid in Full</td>
+                <td class="price">€215</td>
+                <td class="price">—</td>
+              </tr>
+              <tr>
+                <td>12 Month Paid in Full</td>
+                <td class="price">€650</td>
+                <td class="price">€1,080</td>
+              </tr>
+              <tr>
+                <td>12 Month Discounted (Teen / Student / Over 65 / Unemployed)</td>
+                <td class="price">€465</td>
+                <td class="price">—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- MEMBERSHIP ADD ONS -->
+        <div class="pri-section">
+          <h2 class="pri-section-title">Membership <span>Add-Ons</span></h2>
+          <p class="pri-section-sub">Add unlimited class access to any membership. Must be purchased at time of sign up.</p>
+          <table class="mem-table">
+            <thead>
+              <tr>
+                <th>Add-On</th>
+                <th>Price</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monthly Direct Debit Add-On</td>
+                <td class="price">€20 / month</td>
+                <td>In addition to your monthly membership direct debit. Includes access to all classes.</td>
+              </tr>
+              <tr>
+                <td>12 Month Add-On</td>
+                <td class="price">€200</td>
+                <td>In addition to 12 month membership. Full class access for the year.</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="pri-notice">Add-on must be purchased at time of sign up.</div>
+        </div>
+
+        <!-- CLASSES -->
+        <div class="pri-section">
+          <h2 class="pri-section-title">Classes</h2>
+          <p class="pri-section-sub">Available to both members and non-members.</p>
+          <table class="mem-table">
+            <thead>
+              <tr>
+                <th>Class Type</th>
+                <th>Price</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Regular Classes</td>
+                <td class="price">€11</td>
+                <td>Standard fitness classes for all adults.</td>
+              </tr>
+              <tr>
+                <td>Revelate Classes</td>
+                <td class="price">€11</td>
+                <td>Revelate fitness class sessions.</td>
+              </tr>
+              <tr>
+                <td>Discounted Classes</td>
+                <td class="price">€9</td>
+                <td>Teen / Student / Over 65 / Unemployed. Valid ID required.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ASTRO -->
+        <div class="pri-section">
+          <h2 class="pri-section-title">Astroturf <span>Bishopstown</span></h2>
+          <p class="pri-section-sub">All-weather floodlit pitches at Bishopstown.</p>
+          <table class="mem-table">
+            <thead>
+              <tr>
+                <th>Centre</th>
+                <th>Price</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Peak Times ( Mon - Thu 17:00-21:00)</td>
+                <td class="price">€66</td>
+                <td>1 hour hire during peak evening hours. 4 floodlit all-weather pitches.</td>
+              </tr>
+              <tr>
+                <td>Off-Peak</td>
+                <td class="price">€50</td>
+                <td>1 hour hire during off-peak hours. 4 floodlit all-weather pitches.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pri-section">
+          <h2 class="pri-section-title">Astroturf <span>Churchfield</span></h2>
+          <p class="pri-section-sub">All-weather floodlit pitches at Churchfield.</p>
+          <table class="mem-table">
+            <thead>
+              <tr>
+                <th>Centre &amp; Time</th>
+                <th>Price</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Peak Times ( Mon - Thu 17:00-21:00)</td>
+                <td class="price">€55</td>
+                <td>1 hour hire during peak evening hours. 6 floodlit all-weather pitches.</td>
+              </tr>
+              <tr>
+                <td>Off-Peak</td>
+                <td class="price">€45</td>
+                <td>1 hour hire at all other times.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- SWIM LESSONS -->
+        <div class="pri-section">
+          <h2 class="pri-section-title">Aquatics <span>Programme</span></h2>
+          <p class="pri-section-sub">Available at Bishopstown and Churchfield for all ages and abilities.</p>
+          <table class="mem-table">
+            <thead>
+              <tr>
+                <th>Lesson Type</th>
+                <th>Price</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Water Safety &amp; Fun</td>
+                <td class="price">€54 / month DD</td>
+                <td>All levels. Monthly direct debit. Kids of all ages and abilities.</td>
+              </tr>
+              <tr>
+                <td>Swimming Skills</td>
+                <td class="price">€54 / month DD</td>
+                <td>All levels. Monthly direct debit. Kids of all ages and abilities.</td>
+              </tr>
+              <tr>
+                <td>Rookie Lifesaving</td>
+                <td class="price">€54 / month DD</td>
+                <td>All levels. Monthly direct debit. Kids of all ages and abilities.</td>
+              </tr>
+              <tr>
+                <td>Shark Swim Club</td>
+                <td class="price">€54 / month DD</td>
+                <td>All levels. Monthly direct debit. Kids of all ages and abilities.</td>
+              </tr>
+              <tr>
+                <td>Adult Swim Lessons</td>
+                <td class="price">€84</td>
+                <td>6-week course. All abilities welcome.</td>
+              </tr>
+              <tr>
+                <td>Adult Swim Club</td>
+                <td class="price">€66 / month DD</td>
+                <td>Monthly direct debit. Structured adult swim club sessions.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div><!-- /#panel-bc -->
+
+      <!-- ══ GUS HEALY POOL — DOUGLAS ══ -->
+      <div class="centre-panel" id="panel-douglas">
+
+        <div class="pri-section">
+          <h2 class="pri-section-title">Public <span>Swim Prices</span></h2>
+          <p class="pri-section-sub">Gus Healy Pool is a pay-as-you-go public pool. No membership required.</p>
+          <table class="mem-table">
+            <thead>
+              <tr>
+                <th>Visitor Type</th>
+                <th>Price</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Adult</td>
+                <td class="price">€7.50</td>
+                <td>Public swim session.</td>
+              </tr>
+              <tr>
+                <td>Child (6 and over)</td>
+                <td class="price">€4.50</td>
+                <td>Ages 6 and over.</td>
+              </tr>
+              <tr>
+                <td>OAP</td>
+                <td class="price">€5.00</td>
+                <td>Valid ID required.</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="pri-free">⭐ Children 5 and under go FREE</div>
+          <div class="pri-notice">Public swim times vary. <a href="https://www.leisureworldcork.com/opening-hours/" target="_blank" style="color:var(--blue)">View current public swim times →</a></div>
+        </div>
+
+      </div><!-- /#panel-douglas -->
+
+    </div>
+  </div>
+
+  <!-- CTA strip (full-width, flush to footer) -->
+  <div class="pri-cta-strip r">
+    <div class="pri-cta-inner">
+      <div>
+        <h3>Ready to get started?</h3>
+        <p>Sign up online today, or simply walk in to any of our three centres; no booking required for pay-as-you-go visits. We're open seven days a week.</p>
+      </div>
+      <div class="pri-cta-btns">
+        <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" class="btn-join">Join Online</a>
+        <a href="contact.html" class="btn-ask">Ask a Question</a>
+      </div>
+    </div>
+  </div>
+
+   <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+        <p class="footer-tagline">Operated by LW Management on behalf of Cork City Council. Three centres serving Cork since 1997.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/LeisureWorldCork" target="_blank" title="Facebook">
+            <img src="Images/fb.png" alt="Facebook" class="social-icon">
+          </a>
+          <a href="https://www.instagram.com/leisureworldhq/" target="_blank" title="Instagram">
+            <img src="Images/ig.png" alt="Instagram" class="social-icon">
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Centres</h5>
+        <ul>
+          <li><a href="./Centres/bishopstown.html" target="_blank">Bishopstown</a></li>
+          <li><a href="./Centres/churchfield.html" target="_blank">Churchfield</a></li>
+          <li><a href="./Centres/douglas.html" target="_blank">Douglas</a></li>
+          <li><a href="#hours" target="_blank">Opening Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Activities</h5>
+        <ul>
+          <li><a href="https://www.leisureworldcork.com/swimming-lessons-cork/" target="_blank">Swimming Lessons</a></li>
+          <li><a href="https://www.leisureworldcork.com/all-weather-pitch-cork/" target="_blank">Astro Pitches</a></li>
+          <li><a href="https://www.leisureworldcork.com/teen-gym-cork/" target="_blank">Teen Gym</a></li>
+          <li><a href="https://www.leisureworldcork.com/summer-activity-camps/" target="_blank">Summer Camps</a></li>
+          <li><a href="https://www.leisureworldcork.com/health-wellbeing/" target="_blank">Health &amp; Wellbeing</a></li>
+          <li><a href="https://www.leisureworldcork.com/training/nplq-courses/" target="_blank">Lifeguard Training</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>More</h5>
+        <ul>
+          <li><a href="./pricing.html" target="_blank">Prices</a></li>
+          <li><a href="https://leisureworld-cork.vouchercart.com/app" target="_blank">Gift Vouchers</a></li>
+          <li><a href="./about.html" target="_blank">About Us</a></li>
+          <li><a href="https://www.leisureworldcork.com/category/news/" target="_blank">News</a></li>
+          <li><a href="./careers.html" target="_blank">Careers</a></li>
+          <li><a href="https://www.leisureworldcork.com/accessibility/" target="_blank">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 LeisureWorld Cork</p>
+      <div class="footer-legal">
+        <a href="https://www.leisureworldcork.com/privacy-policy/" target="_blank">Privacy Policy</a>
+        <a href="https://www.leisureworldcork.com/cookies-policy/" target="_blank">Cookie Policy</a>
+        <a href="./centre-policies.html" target="_blank">Centre Policies</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="LeisureWorld Cork — Find the right membership for you."/>
+  <title>LeisureWorld Cork — Find Your Membership</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ── TOKENS (matching site theme) ─────────────────────────────── */
+    :root {
+      --ink:    #05101f;
+      --deep:   #081a38;
+      --navy:   #0a2348;
+      --blue:   #1464d8;
+      --bright: #3d8eff;
+      --pool:   #00b8d4;
+      --paper:  #edf2f9;
+      --white:  #ffffff;
+      --muted:  #6e85a3;
+      --border: rgba(61,142,255,0.14);
+      --orange: #ff6a1a;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Archivo', sans-serif;
+      background: var(--ink);
+      color: var(--paper);
+      overflow-x: hidden;
+      cursor: none;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── CURSOR ───────────────────────────────────────────────────── */
+    #cur {
+      position: fixed;
+      width: 10px; height: 10px;
+      background: var(--orange);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%,-50%);
+      transition: width .18s ease, height .18s ease, opacity .18s ease;
+      opacity: .9;
+    }
+    #cur.big { width: 44px; height: 44px; opacity: .3; }
+    @media (hover:none) { #cur { display:none; } body { cursor: auto; } }
+
+    /* ── NAV ──────────────────────────────────────────────────────── */
+    nav {
+      position: fixed; top:0; left:0; width:100%; z-index:500;
+      height:66px; padding:0 6vw;
+      display:flex; align-items:center; justify-content:space-between;
+      transition: background .3s, backdrop-filter .3s, box-shadow .3s;
+    }
+    nav.stuck {
+      background: rgba(5,16,31,.92);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 1px 0 var(--border);
+    }
+
+    .nav-links { list-style:none; display:flex; align-items:center; gap:2rem; }
+    .nav-links a { color:var(--muted); text-decoration:none; font-size:.9rem; font-weight:500; transition:color .2s; }
+    .nav-links a:hover { color:var(--white); }
+    .nav-cta {
+      padding:.5rem 1.25rem; background:var(--blue);
+      color:var(--white)!important; border-radius:3px;
+      font-weight:600!important; transition:background .2s, transform .2s!important;
+    }
+    .nav-cta:hover { background:var(--bright)!important; transform:translateY(-1px)!important; }
+    .ham { display:none; flex-direction:column; gap:5px; cursor:none; background:none; border:none; padding:4px; }
+    .ham span { display:block; width:24px; height:2px; background:var(--white); border-radius:2px; transition:.3s; }
+
+    /* ── HERO ─────────────────────────────────────────────────────── */
+    .fh {
+      min-height: 54vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 120px 6vw 64px;
+      position: relative;
+      overflow: hidden;
+    }
+    .fh::before {
+      content:'';
+      position:absolute; inset:0;
+      background: radial-gradient(ellipse 70% 60% at 50% 30%, rgba(20,100,216,.22) 0%, transparent 70%);
+    }
+    .fh-wm {
+      position:absolute; inset:0;
+      display:flex; align-items:center; justify-content:center;
+      font-family:'Archivo Black',sans-serif;
+      font-size: clamp(80px, 16vw, 180px);
+      color: rgba(255,255,255,.03);
+      letter-spacing:-.04em;
+      pointer-events:none; user-select:none;
+    }
+    .hero-tag {
+      display:inline-flex; align-items:center; gap:.5rem;
+      border:1px solid var(--border); border-radius:100px;
+      padding:.35rem 1rem; margin-bottom:1.4rem;
+      font-size:.78rem; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--pool);
+    }
+    .hero-tag span::before { content:'● '; font-size:.5rem; vertical-align:middle; }
+    .fh-inner { position:relative; z-index:2; max-width:720px; }
+    .fh-inner h1 {
+      font-family:'Archivo Black',sans-serif;
+      font-size: clamp(2.4rem,6vw,4.2rem);
+      line-height:1.08; letter-spacing:-.03em;
+      margin-bottom:1rem;
+    }
+    .fh-inner h1 .hi {
+      background: linear-gradient(135deg, var(--pool), var(--bright));
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+    }
+    .fh-inner p {
+      font-size:1.05rem; color:var(--muted); line-height:1.7; max-width:560px; margin:0 auto;
+    }
+
+    /* ── FUNNEL CARDS ─────────────────────────────────────────────── */
+    .funnel {
+      padding: 0 6vw 80px;
+      max-width: 1280px; margin: 0 auto;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width:900px) { .cards-grid { grid-template-columns:1fr; max-width:480px; margin:0 auto; } }
+
+    .card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.2rem 2rem 2rem;
+      display: flex; flex-direction: column;
+      position: relative; overflow: hidden;
+      transition: transform .3s, box-shadow .3s, border-color .3s;
+      cursor: none;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(0,0,0,.35);
+      border-color: rgba(61,142,255,.35);
+    }
+    .card.featured {
+      background: linear-gradient(145deg, #0f2a60 0%, #0c1e46 60%, #081a38 100%);
+      border-color: rgba(61,142,255,.45);
+      box-shadow: 0 0 0 1px rgba(61,142,255,.25), 0 20px 60px rgba(20,100,216,.25);
+    }
+    .card.featured:hover {
+      border-color: rgba(0,184,212,.6);
+      box-shadow: 0 0 0 1px rgba(0,184,212,.35), 0 28px 70px rgba(0,184,212,.2);
+    }
+    .card-badge {
+      display: inline-block;
+      background: var(--pool);
+      color: var(--ink);
+      font-family:'Archivo Black',sans-serif;
+      font-size:.68rem; letter-spacing:.1em; text-transform:uppercase;
+      padding:.28rem .75rem; border-radius:100px;
+      margin-bottom:1.4rem; align-self:flex-start;
+    }
+    .card-badge.orange { background:var(--orange); }
+    .card-badge.blue { background:var(--blue); color:var(--white); }
+
+    .card-label {
+      font-family:'Archivo Black',sans-serif;
+      font-size:1.4rem; letter-spacing:-.02em;
+      margin-bottom:.3rem;
+    }
+    .card-sub { font-size:.88rem; color:var(--muted); margin-bottom:1.6rem; line-height:1.5; }
+
+    .card-price {
+      display:flex; align-items:baseline; gap:.3rem;
+      margin-bottom:1.6rem;
+    }
+    .card-price .amt {
+      font-family:'Archivo Black',sans-serif;
+      font-size:2.6rem; letter-spacing:-.04em;
+      color:var(--white);
+    }
+    .card-price .period { font-size:.85rem; color:var(--muted); }
+    .card-price .from { font-size:.8rem; color:var(--muted); align-self:center; }
+
+    .card-divider { height:1px; background:var(--border); margin-bottom:1.6rem; }
+
+    .card-features { list-style:none; display:flex; flex-direction:column; gap:.85rem; flex:1; }
+    .card-features li {
+      display:flex; align-items:flex-start; gap:.7rem;
+      font-size:.9rem; color:var(--paper); line-height:1.45;
+    }
+    .card-features li .ck {
+      width:18px; height:18px; flex-shrink:0; margin-top:.1rem;
+      background: rgba(0,184,212,.15);
+      border-radius:50%; display:flex; align-items:center; justify-content:center;
+    }
+    .card.featured .card-features li .ck { background:rgba(0,184,212,.25); }
+    .card-features li .ck svg { width:10px; height:10px; stroke:var(--pool); stroke-width:2.5; fill:none; }
+
+    .card-cta {
+      display:block; text-align:center; text-decoration:none;
+      margin-top:2rem;
+      padding:1rem 1.5rem;
+      border-radius:6px;
+      font-family:'Archivo Black',sans-serif;
+      font-size:.82rem; letter-spacing:.08em; text-transform:uppercase;
+      transition: transform .2s, box-shadow .2s, background .2s;
+    }
+    .card-cta.primary {
+      background:var(--blue); color:var(--white);
+    }
+    .card-cta.primary:hover { background:var(--bright); transform:translateY(-2px); box-shadow:0 8px 24px rgba(20,100,216,.4); }
+    .card-cta.ghost {
+      background:transparent;
+      color:var(--white);
+      border:1.5px solid rgba(255,255,255,.2);
+    }
+    .card-cta.ghost:hover { border-color:rgba(255,255,255,.5); transform:translateY(-2px); }
+    .card-cta.pool-btn {
+      background: linear-gradient(135deg, var(--pool), var(--bright));
+      color:var(--ink);
+    }
+    .card-cta.pool-btn:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,184,212,.4); }
+
+    /* ── PAYG STRIP ───────────────────────────────────────────────── */
+    .payg-strip {
+      max-width:1280px; margin:0 auto 80px;
+      padding:0 6vw;
+    }
+    .payg-inner {
+      background: rgba(255,255,255,.035);
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:2.4rem 2.8rem;
+      display:flex; align-items:center; justify-content:space-between; gap:2rem;
+      flex-wrap:wrap;
+    }
+    .payg-inner h3 {
+      font-family:'Archivo Black',sans-serif;
+      font-size:1.5rem; letter-spacing:-.025em; margin-bottom:.4rem;
+    }
+    .payg-inner p { color:var(--muted); font-size:.92rem; line-height:1.6; max-width:500px; }
+    .payg-prices {
+      display:flex; gap:2rem; flex-wrap:wrap; align-items:center; flex-shrink:0;
+    }
+    .payg-pill {
+      text-align:center;
+    }
+    .payg-pill .pp-amt {
+      font-family:'Archivo Black',sans-serif;
+      font-size:2rem; color:var(--white); display:block; letter-spacing:-.03em;
+    }
+    .payg-pill .pp-label { font-size:.75rem; color:var(--muted); text-transform:uppercase; letter-spacing:.1em; }
+
+    /* ── NOT SURE CTA ─────────────────────────────────────────────── */
+    .notsure {
+      max-width:1280px; margin:0 auto 80px;
+      padding:0 6vw;
+    }
+    .notsure-inner {
+      position:relative; overflow:hidden;
+      background: var(--deep);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:3.5rem 3.5rem;
+      display:flex; align-items:center; justify-content:space-between; gap:2rem;
+      flex-wrap:wrap;
+      text-align:left;
+    }
+    .notsure-inner::before {
+      content:'';
+      position:absolute; inset:0;
+      background:
+        linear-gradient(135deg, rgba(20,100,216,.12) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 80% at 90% 50%, rgba(0,184,212,.08) 0%, transparent 60%);
+    }
+    /* grid lines decoration */
+    .notsure-inner::after {
+      content:'';
+      position:absolute; top:0; right:0;
+      width:280px; height:100%;
+      background-image:
+        linear-gradient(rgba(61,142,255,.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(61,142,255,.07) 1px, transparent 1px);
+      background-size:32px 32px;
+      mask-image: linear-gradient(to left, rgba(0,0,0,.8) 0%, transparent 100%);
+      pointer-events:none;
+    }
+    .notsure-text { position:relative; z-index:2; }
+    .notsure-text h2 {
+      font-family:'Archivo Black',sans-serif;
+      font-size: clamp(1.6rem,3.5vw,2.4rem);
+      letter-spacing:-.03em; margin-bottom:.6rem;
+    }
+    .notsure-text p { color:var(--muted); font-size:.95rem; line-height:1.7; max-width:480px; }
+    .notsure-btns { position:relative; z-index:2; display:flex; gap:1rem; flex-wrap:wrap; }
+    .ns-btn-primary {
+      display:inline-block; text-decoration:none;
+      background:var(--white); color:var(--blue);
+      font-family:'Archivo Black',sans-serif;
+      font-size:.82rem; letter-spacing:.08em; text-transform:uppercase;
+      padding:1.1rem 2.2rem; border-radius:4px;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .ns-btn-primary:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,.2); }
+    .ns-btn-outline {
+      display:inline-block; text-decoration:none;
+      background:transparent; color:var(--white);
+      font-family:'Archivo Black',sans-serif;
+      font-size:.82rem; letter-spacing:.08em; text-transform:uppercase;
+      padding:1.1rem 2.2rem; border-radius:4px;
+      border:1.5px solid rgba(255,255,255,.3);
+      transition: border-color .2s, transform .2s;
+    }
+    .ns-btn-outline:hover { border-color:rgba(255,255,255,.7); transform:translateY(-2px); }
+
+    /* ── SWIM LESSONS MINI CARD ───────────────────────────────────── */
+    .extras {
+      max-width:1280px; margin:0 auto 80px; padding:0 6vw;
+    }
+    .extras-title {
+      font-family:'Archivo Black',sans-serif;
+      font-size:1.5rem; letter-spacing:-.02em;
+      margin-bottom:1.5rem;
+    }
+    .extras-title span { color:var(--muted); font-family:'Archivo',sans-serif; font-size:1rem; font-weight:400; margin-left:.6rem; }
+    .extras-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
+    .extra-card {
+      background:rgba(255,255,255,.035); border:1px solid var(--border);
+      border-radius:10px; padding:1.5rem 1.6rem;
+      display:flex; align-items:center; gap:1.2rem;
+      transition:border-color .2s, transform .2s;
+      text-decoration:none; color:inherit;
+      cursor:none;
+    }
+    .extra-card:hover { border-color:rgba(61,142,255,.35); transform:translateY(-3px); }
+    .extra-icon {
+      width:44px; height:44px; border-radius:10px; flex-shrink:0;
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.3rem;
+    }
+    .extra-icon.pool { background:rgba(0,184,212,.15); }
+    .extra-icon.pitch { background:rgba(255,106,26,.12); }
+    .extra-icon.teen { background:rgba(20,100,216,.15); }
+    .extra-icon.gus { background:rgba(61,142,255,.1); }
+    .extra-text strong { display:block; font-size:.93rem; margin-bottom:.2rem; }
+    .extra-text span { font-size:.8rem; color:var(--muted); }
+
+    /* ── FOOTER (stripped down matching) ─────────────────────────── */
+    footer {
+      border-top:1px solid var(--border);
+      padding:3rem 6vw 2rem;
+    }
+    .footer-bottom {
+      display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;
+      padding-top:1.5rem; border-top:1px solid var(--border);
+      font-size:.8rem; color:var(--muted);
+    }
+    .footer-legal { display:flex; gap:1.5rem; }
+    .footer-legal a { color:var(--muted); text-decoration:none; transition:color .2s; }
+    .footer-legal a:hover { color:var(--white); }
+    .footer-top { display:flex; gap:4rem; flex-wrap:wrap; margin-bottom:2.5rem; }
+    .footer-brand { flex:1; min-width:200px; }
+    .footer-tagline { font-size:.8rem; color:var(--muted); line-height:1.6; margin-top:.7rem; max-width:280px; }
+    .footer-col h5 { font-family:'Archivo Black',sans-serif; font-size:.8rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:1rem; color:var(--white); }
+    .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:.6rem; }
+    .footer-col ul a { font-size:.83rem; color:var(--muted); text-decoration:none; transition:color .2s; }
+    .footer-col ul a:hover { color:var(--white); }
+
+    /* ── ANIMATIONS ───────────────────────────────────────────────── */
+    .reveal {
+      opacity:0; transform:translateY(28px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.in { opacity:1; transform:translateY(0); }
+    .reveal-d1 { transition-delay:.1s; }
+    .reveal-d2 { transition-delay:.2s; }
+    .reveal-d3 { transition-delay:.3s; }
+
+    /* ── RESPONSIVE ───────────────────────────────────────────────── */
+    .nav-links { display:flex; }
+    @media(max-width:768px){
+      .nav-links { display:none; }
+      .ham { display:flex; }
+      .payg-inner { flex-direction:column; text-align:center; }
+      .payg-prices { justify-content:center; }
+      .notsure-inner { text-align:center; flex-direction:column; align-items:center; }
+      .notsure-text p { margin:0 auto; }
+      .notsure-btns { justify-content:center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="cur"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="centres.html">Centres</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="nav-cta">Sign In / Book</a></li>
+    </ul>
+    <button class="ham" id="ham" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="fh">
+    <div class="fh-wm" aria-hidden="true">JOIN</div>
+    <div class="fh-inner">
+      <div class="hero-tag"><span>Flexible Memberships</span></div>
+      <h1>Find the plan<br/>that fits <span class="hi">your life.</span></h1>
+      <p>No hidden fees, no long lock-ins. Access our pools, gym, classes, and pitches across three Cork centres, on your terms.</p>
+    </div>
+  </section>
+
+  <!-- MEMBERSHIP CARDS -->
+  <section class="funnel">
+    <div class="cards-grid">
+
+      <!-- PAYG CARD -->
+      <div class="card reveal reveal-d1">
+        <span class="card-badge orange">Annual Pass</span>
+        <div class="card-label">Pay In Full</div>
+        <div class="card-sub">Unlimited access with one upfront annual payment.</div>
+        <div class="card-price">
+          <span class="from">from</span>
+          <span class="amt">€650</span>
+          <span class="period">/ year</span>
+        </div>
+        <div class="card-divider"></div>
+        <ul class="card-features">
+          <li>
+            <span class="ck"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            Adults from €650 . Discounted €465 (student / OAP / unemployed)
+          <li>
+            <span class="ck"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            Teen annual pass €465 (ages 13–17)
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            Couple annual pass €1080
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            Add unlimited classes for just €200/mo extra
+          </li>
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            Available at Bishopstown &amp; Churchfield
+          </li>
+        </ul>
+        <a href="pricing.html" class="card-cta ghost">See Full Prices →</a>
+      </div>
+
+      <!-- MEMBERSHIP CARD (FEATURED) -->
+      <div class="card featured reveal reveal-d2">
+        <span class="card-badge">Most Popular</span>
+        <div class="card-label">Membership</div>
+        <div class="card-sub">Unlimited access to both Bishopstown &amp; Churchfield for regular users.</div>
+        <div class="card-price">
+          <span class="from">from</span>
+          <span class="amt">€65</span>
+          <span class="period">/ month</span>
+        </div>
+        <div class="card-divider"></div>
+        <ul class="card-features">
+          <li>
+            <span class="ck"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            Single from €65/mo · Couple €108/mo (Direct Debit)
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            Discounted rate €46/mo (student / OAP / unemployed)
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            Unlimited pool, gym &amp; functional zone
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            Add unlimited classes for just €20/mo extra
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            Available at Bishopstown &amp; Churchfield
+          </li>
+        </ul>
+        <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" class="card-cta pool-btn">Join Online Now</a>
+      </div>
+
+      <!-- SWIM LESSONS / SPECIALIST CARD -->
+      <div class="card reveal reveal-d3">
+        <span class="card-badge blue">Specialist</span>
+        <div class="card-label">Aquatics &amp; Lessons</div>
+        <div class="card-sub">Structured programmes for all ages from toddlers to adult swimmers.</div>
+        <div class="card-price">
+          <span class="from">from</span>
+          <span class="amt">€54</span>
+          <span class="period">/ month</span>
+        </div>
+        <div class="card-divider"></div>
+        <ul class="card-features">
+          <li>
+            <span class="ck"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            Kids: Water Safety, Swimming Skills, Rookie Lifesaving — €54/mo DD
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            Shark Swim Club for kids €54/mo DD
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            Adult Swim Lessons — €84 for a 6-week course
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            Adult Swim Club €66/mo DD
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+            Available at Bishopstown &amp; Churchfield
+          </li>
+        </ul>
+        <a href="pricing.html#aquatics" class="card-cta primary">View Lesson Details</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NOT SURE CTA -->
+  <section class="notsure reveal">
+    <div class="notsure-inner">
+      <div class="notsure-text">
+        <h2>Not sure which plan suits you best?</h2>
+        <p>View our full pricing breakdown, or simply walk into any of our three centres. No booking needed for pay-as-you-go visits. We're open seven days a week.</p>
+      </div>
+      <div class="notsure-btns">
+        <a href="pricing.html" class="ns-btn-primary">View Full Pricing</a>
+        <a href="contact.html" class="ns-btn-outline">Ask a Question</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+    <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+        <p class="footer-tagline">Operated by LW Management on behalf of Cork City Council. Three centres serving Cork since 1997.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/LeisureWorldCork" target="_blank" title="Facebook">
+            <img src="Images/fb.png" alt="Facebook" class="social-icon">
+          </a>
+          <a href="https://www.instagram.com/leisureworldhq/" target="_blank" title="Instagram">
+            <img src="Images/ig.png" alt="Instagram" class="social-icon">
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Centres</h5>
+        <ul>
+          <li><a href="./Centres/bishopstown.html" target="_blank">Bishopstown</a></li>
+          <li><a href="./Centres/churchfield.html" target="_blank">Churchfield</a></li>
+          <li><a href="./Centres/douglas.html" target="_blank">Douglas</a></li>
+          <li><a href="#hours" target="_blank">Opening Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Activities</h5>
+        <ul>
+          <li><a href="https://www.leisureworldcork.com/swimming-lessons-cork/" target="_blank">Swimming Lessons</a></li>
+          <li><a href="https://www.leisureworldcork.com/all-weather-pitch-cork/" target="_blank">Astro Pitches</a></li>
+          <li><a href="https://www.leisureworldcork.com/teen-gym-cork/" target="_blank">Teen Gym</a></li>
+          <li><a href="https://www.leisureworldcork.com/summer-activity-camps/" target="_blank">Summer Camps</a></li>
+          <li><a href="https://www.leisureworldcork.com/health-wellbeing/" target="_blank">Health &amp; Wellbeing</a></li>
+          <li><a href="https://www.leisureworldcork.com/training/nplq-courses/" target="_blank">Lifeguard Training</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>More</h5>
+        <ul>
+          <li><a href="./pricing.html" target="_blank">Prices</a></li>
+          <li><a href="https://leisureworld-cork.vouchercart.com/app" target="_blank">Gift Vouchers</a></li>
+          <li><a href="./about.html" target="_blank">About Us</a></li>
+          <li><a href="https://www.leisureworldcork.com/category/news/" target="_blank">News</a></li>
+          <li><a href="./careers.html" target="_blank">Careers</a></li>
+          <li><a href="https://www.leisureworldcork.com/accessibility/" target="_blank">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 LeisureWorld Cork</p>
+      <div class="footer-legal">
+        <a href="https://www.leisureworldcork.com/privacy-policy/" target="_blank">Privacy Policy</a>
+        <a href="https://www.leisureworldcork.com/cookies-policy/" target="_blank">Cookie Policy</a>
+        <a href="./centre-policies.html" target="_blank">Centre Policies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Custom cursor
+    const cur = document.getElementById('cur');
+    document.addEventListener('mousemove', e => {
+      cur.style.left = e.clientX + 'px';
+      cur.style.top  = e.clientY + 'px';
+    });
+    document.querySelectorAll('a, button, .card, .extra-card').forEach(el => {
+      el.addEventListener('mouseenter', () => cur.classList.add('big'));
+      el.addEventListener('mouseleave', () => cur.classList.remove('big'));
+    });
+
+    // Sticky nav
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('stuck', window.scrollY > 30);
+    });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // Trigger hero reveal immediately
+    document.querySelectorAll('.fh-inner > *').forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = `opacity .7s ease ${i * .12 + .1}s, transform .7s ease ${i * .12 + .1}s`;
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
