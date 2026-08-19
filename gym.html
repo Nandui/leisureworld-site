@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="LeisureWorld Cork — Fitness Classes. Agewell, Boxercise, Teen Fitness and more, across Bishopstown, Churchfield and Douglas."/>
+  <title>Fitness Classes — LeisureWorld Cork</title>
+  <link rel="icon" type="image/png" href="Images/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div id="cur"></div>
+  <a href="index.html" class="back-arrow" aria-label="Go back">
+    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </a>
+
+  <!-- ═══ NAV ═══ -->
+  <nav id="nav">
+    <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="centres.html">Centres</a></li>
+      <li><a href="index.html#activities">Activities</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="help.html">Help</a></li>
+      <li><a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="nav-cta">Sign In / Book</a></li>
+    </ul>
+    <button class="ham" id="ham" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mob" id="mob">
+    <button class="mob-close" id="mob-close">✕</button>
+    <a href="about.html"            class="mlink">About</a>
+    <a href="centres.html"          class="mlink">Our Centres</a>
+    <a href="index.html#activities" class="mlink">Activities</a>
+    <a href="pricing.html"          class="mlink">Pricing</a>
+    <a href="contact.html"          class="mlink">Contact</a>
+    <a href="help.html"             class="mlink">Help</a>
+    <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" style="color:var(--pool)">Join Now →</a>
+  </div>
+
+  <!-- ═══ SCOPED STYLES — Fitness Classes page ═══ -->
+  <style>
+    /* ---- category color system ---- */
+    :root{
+      --cat-teen:     #5AC8FA;   /* baby blue */
+      --cat-wellbeing:#16A34A;   /* green */
+      --cat-fitness:  #111318;   /* dark / near-black */
+    }
+
+    /* ---- image placeholders (swap for real photos in /Images) ---- */
+    .cls-ph {
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 0.5rem;
+      color: rgba(255,255,255,0.85);
+      overflow: hidden;
+    }
+    .cls-ph i { font-size: 2rem; opacity: 0.9; }
+    .cls-ph span {
+      font-family: 'Archivo', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .cls-ph::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.18), transparent 60%);
+    }
+    .ph-teen      { background: linear-gradient(140deg, #1c6f94, #5AC8FA); }
+    .ph-wellbeing { background: linear-gradient(140deg, #0b4023, #16A34A); }
+    .ph-fitness   { background: linear-gradient(140deg, #000000, #2b2f36); }
+
+    /* ---- badges / tags ---- */
+    .cls-tag {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--white);
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+    }
+    .tag-teen      { background: var(--cat-teen); color: var(--navy); }
+    .tag-wellbeing { background: var(--cat-wellbeing); }
+    .tag-fitness   { background: var(--cat-fitness); }
+
+    .cls-meta-pill {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      font-family: 'Archivo', sans-serif;
+      font-size: 0.78rem;
+      color: var(--muted);
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.35rem 0.7rem;
+    }
+    .cls-meta-pill i { font-size: 0.9rem; color: var(--navy); }
+
+    /* ---- induction banner (top of featured section) ---- */
+    .induction-banner {
+      display: flex; align-items: center; gap: 1rem;
+      background: linear-gradient(90deg, rgba(255,106,26,0.1), rgba(255,106,26,0.04));
+      border: 1.5px solid rgba(255,106,26,0.3);
+      border-radius: 16px;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .induction-banner .ib-icon {
+      flex-shrink: 0;
+      width: 46px; height: 46px;
+      border-radius: 12px;
+      background: var(--orange);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white); font-size: 1.3rem;
+    }
+    .induction-banner p { margin: 0; font-size: 0.92rem; color: var(--navy); line-height: 1.5; }
+    .induction-banner strong { color: var(--orange); }
+
+    /* ---- featured cards (Section 2) — photo-card style ---- */
+    .cls-featured-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    .cls-feat-card {
+      position: relative;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 20px;
+      overflow: visible;
+      display: flex; flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .cls-feat-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--blue);
+      box-shadow: 0 20px 40px rgba(10,35,72,0.14);
+    }
+
+    .cls-feat-img {
+      position: relative;
+      height: 230px;
+      border-radius: 20px 20px 0 0;
+      overflow: visible;
+    }
+    .cls-feat-img img,
+    .cls-feat-img .cls-ph {
+      border-radius: 20px 20px 0 0;
+      overflow: hidden;
+    }
+    .cls-feat-img img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    .cls-feat-img .cls-ph { position: absolute; inset: 0; z-index: 0; }
+
+    .cls-feat-tag { position: absolute; top: 1rem; left: 1rem; z-index: 3; }
+    .cls-feat-ribbon {
+      position: absolute; top: 1rem; right: -0.1rem; z-index: 3;
+      background: var(--orange);
+      color: var(--white);
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 0.64rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      padding: 0.45rem 0.8rem 0.45rem 1rem;
+      border-radius: 999px 0 0 999px;
+      display: flex; align-items: center; gap: 0.3rem;
+      box-shadow: 0 6px 16px rgba(255,106,26,0.35);
+    }
+
+    /* overlapping circular badge, bottom-right of image */
+    .cls-feat-badge {
+      position: absolute;
+      bottom: -28px; right: 1.5rem;
+      z-index: 4;
+      width: 56px; height: 56px;
+      border-radius: 999px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white);
+      font-size: 1.35rem;
+      border: 4px solid var(--white);
+      box-shadow: 0 8px 18px rgba(10,35,72,0.25);
+    }
+
+    .cls-feat-body { padding: 2.4rem 1.5rem 1.7rem; display: flex; flex-direction: column; gap: 0.85rem; flex: 1; }
+    .cls-feat-body h3 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.3rem;
+      color: var(--ink);
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+    .cls-feat-body p.desc { font-size: 0.88rem; color: var(--muted); line-height: 1.55; margin: 0; }
+
+    /* stat row — Price / Duration / Difficulty, like the reference */
+    .cls-stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 0.9rem 0;
+      margin-top: 0.2rem;
+    }
+    .cls-stat { text-align: center; position: relative; }
+    .cls-stat:not(:last-child)::after {
+      content: '';
+      position: absolute; right: 0; top: 10%; bottom: 10%;
+      width: 1px; background: var(--border);
+    }
+    .cls-stat b {
+      display: block;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.15rem;
+      color: var(--blue);
+      margin-bottom: 0.15rem;
+    }
+    .cls-stat span {
+      display: block;
+      font-family: 'Archivo', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .cls-price-breakdown { font-size: 0.78rem; color: var(--muted); margin: 0; }
+
+    .cls-induction-note {
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      background: rgba(255,106,26,0.08);
+      border: 1px solid rgba(255,106,26,0.25);
+      border-radius: 12px;
+      padding: 0.75rem 0.9rem;
+      font-size: 0.8rem;
+      color: #a8412e;
+      line-height: 1.45;
+    }
+    .cls-induction-note i { color: var(--orange); font-size: 1rem; margin-top: 0.1rem; flex-shrink: 0; }
+
+    .cls-feat-btns { margin-top: auto; display: flex; flex-direction: column; gap: 0.6rem; padding-top: 0.4rem; }
+    .cls-btn-pri, .cls-btn-sec {
+      display: flex; align-items: center; justify-content: center; gap: 0.4rem;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      border-radius: 10px;
+      padding: 0.8rem 1rem;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.2s;
+    }
+    .cls-btn-pri { background: var(--blue); color: var(--white); }
+    .cls-btn-pri:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(20,100,216,0.35); background: var(--bright); }
+    .cls-btn-pri.induction { background: var(--orange); }
+    .cls-btn-pri.induction:hover { box-shadow: 0 8px 20px rgba(255,106,26,0.35); background: #ff8143; }
+    .cls-btn-sec { background: transparent; color: var(--navy); border: 1.5px solid var(--border); }
+    .cls-btn-sec:hover { transform: translateY(-2px); border-color: var(--blue); color: var(--blue); }
+
+    /* ---- filter tabs (Section 3) ---- */
+    .cls-tabs {
+      display: flex; flex-wrap: wrap; gap: 0.6rem;
+      margin: 3.5rem 0 2.5rem;
+    }
+    .cls-tab {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.01em;
+      color: var(--muted);
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 999px;
+      padding: 0.65rem 1.2rem;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+    .cls-tab:hover { border-color: var(--blue); color: var(--navy); }
+    .cls-tab.active { background: var(--navy); border-color: var(--navy); color: var(--white); }
+
+    /* ---- other classes grid (Section 3) — same photo-card style, 3-up ---- */
+    .cls-other-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem 1.75rem;
+      row-gap: 3.2rem;
+    }
+    .cls-price-note {
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    .cls-price-note a { color: var(--blue); font-style: normal; }
+
+    @media (max-width: 1080px) {
+      .cls-featured-grid, .cls-other-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .induction-banner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="pri-hero">
+    <div class="pri-hero-wm" aria-hidden="true">MOVE</div>
+    <div class="pri-hero-inner">
+      <div class="hero-tag"><span>Fitness Classes · All Levels</span></div>
+      <h1>Move more.<br/>Feel <span class="hi">better.</span></h1>
+      <p>From gentle Agewell sessions to high-energy Boxercise, our class timetable is built for every stage of life — across Bishopstown, Churchfield and Douglas.</p>
+      <div style="margin-top:2rem;">
+        <a href="#classes" class="btn-pri">Explore Classes</a>
+      </div>
+    </div>
+    <div class="pri-hero-ramp"></div>
+  </section>
+
+  <!-- ═══ BODY ═══ -->
+  <div class="pri-body">
+    <div class="pri-body-inner" id="classes">
+
+      <!-- ═══ SECTION 2 — POPULAR CLASSES ═══ -->
+      <div class="pri-section">
+        <h2 class="pri-section-title">Explore Our <span>Popular Classes</span></h2>
+        <p class="pri-section-sub">Our three most-booked classes — one for every kind of mover.</p>
+
+        <div class="induction-banner">
+          <div class="ib-icon"><i class="ti ti-shield-check"></i></div>
+          <p><strong>Heads up:</strong> all Teen fitness programmes require a mandatory gym induction before a Teen's first class. Book the induction alongside — or ahead of — the class itself.</p>
+        </div>
+
+        <div class="cls-featured-grid">
+
+          <!-- Agewell Movement -->
+          <div class="cls-feat-card">
+            <div class="cls-feat-img">
+              <div class="cls-ph ph-wellbeing"><i class="ti ti-heart-rate-monitor"></i><span> Agewell Movement</span></div>
+              <img src="./Images/agewmove.jpeg" alt="Agewell Fitness Class" onerror="this.style.display='none'">
+              <span class="cls-feat-tag tag-wellbeing cls-tag"><i class="ti ti-heart"></i> Wellbeing</span>
+              <div class="cls-feat-badge" style="background:var(--cat-wellbeing)"><i class="ti ti-heart-rate-monitor"></i></div>
+            </div>
+            <div class="cls-feat-body">
+              <h3>Agewell Movement</h3>
+              <p class="desc">Agewell Movement is a class for older adults with dole purpose of helping them become more active. Main emphasis on improving balance.</p>
+              <div class="cls-stat-row">
+                <div class="cls-stat"><b>€9</b><span>From</span></div>
+                <div class="cls-stat"><b>45</b><span>Mins</span></div>
+                <div class="cls-stat"><b>Gentle</b><span>Intensity</span></div>
+              </div>
+              <p class="cls-price-breakdown">Adults €11 · Teens €9 · Over 65s €9</p>
+              <div class="cls-feat-btns">
+                <a href="appfunnel.html" target="_blank" class="cls-btn-pri">Book This Class</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Boxercise -->
+          <div class="cls-feat-card">
+            <div class="cls-feat-img">
+              <div class="cls-ph ph-fitness"><i class="ti ti-run"></i><span>Boxercise</span></div>
+              <img src="Images/box.jpg" alt="Boxercise" onerror="this.style.display='none'">
+              <span class="cls-feat-tag tag-fitness cls-tag"><i class="ti ti-bolt"></i> Fitness Class</span>
+              <div class="cls-feat-badge" style="background:var(--cat-fitness)"><i class="ti ti-run"></i></div>
+            </div>
+            <div class="cls-feat-body">
+              <h3>Boxercise</h3>
+              <p class="desc">A high-energy, non-contact fitness exercise based on training methods using boxers — no experience needed.</p>
+              <div class="cls-stat-row">
+                <div class="cls-stat"><b>€9</b><span>From</span></div>
+                <div class="cls-stat"><b>45</b><span>Mins</span></div>
+                <div class="cls-stat"><b>High</b><span>Intensity</span></div>
+              </div>
+              <p class="cls-price-breakdown">Adults €11 · Teens €9 · Over 65s €9</p>
+              <div class="cls-feat-btns">
+                <a href="appfunnel.html" target="_blank" class="cls-btn-pri">Book This Class</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- AquaFit -->
+          <div class="cls-feat-card">
+            <div class="cls-feat-img">
+              <div class="cls-ph ph-fitness"><i class="ti ti-run"></i><span>AquaFit</span></div>
+              <img src="Images/aqua.jpeg" alt="AquaFit" onerror="this.style.display='none'">
+              <span class="cls-feat-tag tag-fitness cls-tag"><i class="ti ti-bolt"></i> Fitness Class</span>
+              <div class="cls-feat-badge" style="background:var(--cat-fitness)"><i class="ti ti-run"></i></div>
+            </div>
+            <div class="cls-feat-body">
+              <h3>AquaFit</h3>
+              <p class="desc">Full body aerobic pool workout to get your heartbeat pumping from the music beats.</p>
+              <div class="cls-stat-row">
+                <div class="cls-stat"><b>€9</b><span>From</span></div>
+                <div class="cls-stat"><b>45</b><span>Mins</span></div>
+                <div class="cls-stat"><b>Medium - High</b><span>Intensity</span></div>
+              </div>
+              <p class="cls-price-breakdown">Adults €11 · Teens €9 · Over 65s €9</p>
+              <div class="cls-feat-btns">
+                <a href="appfunnel.html" target="_blank" class="cls-btn-pri">Book This Class</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ═══ SECTION 3 — OTHER CLASSES ═══ -->
+      <div class="pri-section">
+        <h2 class="pri-section-title">Explore Our <span>Other Fitness Classes</span></h2>
+        <p class="pri-section-sub">The rest of our weekly timetable, grouped by category. Filter to find what fits you.</p>
+
+        <div class="cls-tabs" id="clsTabs">
+          <button class="cls-tab active" data-cat="all" onclick="clsFilter(this)">All Classes</button>
+          <button class="cls-tab" data-cat="fitness" onclick="clsFilter(this)">Fitness Class</button>
+          <button class="cls-tab" data-cat="teen" onclick="clsFilter(this)">Teen Programmes</button>
+          <button class="cls-tab" data-cat="wellbeing" onclick="clsFilter(this)">Health &amp; Wellbeing</button>
+        </div>
+
+        <div class="cls-other-grid" id="clsGrid">
+
+          <!-- Legs, Bums & Tums -->
+          <div class="cls-feat-card" data-cat="fitness">
+            <div class="cls-feat-img">
+              <div class="cls-ph ph-fitness"><i class="ti ti-barbell"></i><span>Legs, Bums &amp; Tums</span></div>
+              <img src="Images/lbt.jpeg" alt="Legs, Bums & Tums" onerror="this.style.display='none'">
+              <span class="cls-feat-tag tag-fitness cls-tag"><i class="ti ti-barbell"></i> Fitness Class</span>
+              <div class="cls-feat-badge" style="background:var(--cat-fitness)"><i class="ti ti-barbell"></i></div>
+            </div>
+            <div class="cls-feat-body">
+              <h3>Legs, Bums &amp; Tums</h3>
+              <p class="desc">A focused weights session targeting the lower body and core, building strength class after class.</p>
+              <div class="cls-stat-row">
+                <div class="cls-stat"><b>€11</b><span>From</span></div>
+                <div class="cls-stat"><b>45</b><span>Mins</span></div>
+                <div class="cls-stat"><b>Weights</b><span>Focus</span></div>
+              </div>
+              <div class="cls-feat-btns">
+                <a href="appfunnel.html" target="_blank" class="cls-btn-pri">Book This Class</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Revelate -->
+          <div class="cls-feat-card" data-cat="fitness">
+            <div class="cls-feat-img">
+              <div class="cls-ph ph-fitness"><i class="ti ti-run"></i><span>Add photo — Revelate</span></div>
+              <img src="Images/revelate.png" alt="Revelate" onerror="this.style.display='none'">
+              <span class="cls-feat-tag tag-fitness cls-tag"><i class="ti ti-run"></i> Fitness Class</span>
+              <div class="cls-feat-badge" style="background:var(--cat-fitness)"><i class="ti ti-run"></i></div>
+            </div>
+            <div class="cls-feat-body">
+              <h3>Revelate</h3>
+              <p class="desc">A fast-paced cardio class designed to get your heart rate up and burn through the week's stress.</p>
+              <div class="cls-stat-row">
+                <div class="cls-stat"><b>€11</b><span>From</span></div>
+                <div class="cls-stat"><b>45</b><span>Mins</span></div>
+                <div class="cls-stat"><b>Cardio</b><span>Focus</span></div>
+              </div>
+              <div class="cls-feat-btns">
+                <a href="appfunnel.html" target="_blank" class="cls-btn-pri">Book This Class</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Total Tone -->
+          <div class="cls-feat-card" data-cat="fitness">
+            <div class="cls-feat-img">
+              <div class="cls-ph ph-fitness"><i class="ti ti-yoga"></i><span>Add photo — Total Tone</span></div>
+              <img src="Images/tt.jpeg" alt="Total Tone" onerror="this.style.display='none'">
+              <span class="cls-feat-tag tag-fitness cls-tag"><i class="ti ti-yoga"></i> Fitness Class</span>
+              <div class="cls-feat-badge" style="background:var(--cat-fitness)"><i class="ti ti-yoga"></i></div>
+            </div>
+            <div class="cls-feat-body">
+              <h3>Total Tone</h3>
+              <p class="desc">A full-body sculpt and strength class combining light weights with high reps for lasting tone.</p>
+              <div class="cls-stat-row">
+                <div class="cls-stat"><b>€11</b><span>From</span></div>
+                <div class="cls-stat"><b>45</b><span>Mins</span></div>
+                <div class="cls-stat"><b>Sculpt</b><span>Focus</span></div>
+              </div>
+              <div class="cls-feat-btns">
+                <a href="appfunnel.html" target="_blank" class="cls-btn-pri">Book This Class</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- AgeWell Boxercise -->
+          <div class="cls-feat-card" data-cat="fitness">
+            <div class="cls-feat-img">
+              <div class="cls-ph ph-fitness"><i class="ti ti-yoga"></i><span>Agewell Boxercise</span></div>
+              <img src="Images/ABox.jpeg" alt="Agewell Boxercise" onerror="this.style.display='none'">
+              <span class="cls-feat-tag tag-fitness cls-tag"><i class="ti ti-yoga"></i> Fitness Class</span>
+              <div class="cls-feat-badge" style="background:var(--cat-fitness)"><i class="ti ti-yoga"></i></div>
+            </div>
+            <div class="cls-feat-body">
+              <h3>AgeWell Boxercise</h3>
+              <p class="desc">Mixed Ability class tailored to individuals to build strength and endurance.</p>
+              <div class="cls-stat-row">
+                <div class="cls-stat"><b>€11</b><span>From</span></div>
+                <div class="cls-stat"><b>45</b><span>Mins</span></div>
+                <div class="cls-stat"><b>Sculpt</b><span>Focus</span></div>
+              </div>
+              <div class="cls-feat-btns">
+                <a href="appfunnel.html" target="_blank" class="cls-btn-pri">Book This Class</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Boxercise -->
+          <div class="cls-feat-card" data-cat="fitness">
+            <div class="cls-feat-img">
+              <div class="cls-ph ph-fitness"><i class="ti ti-yoga"></i><span>Boxercise</span></div>
+              <img src="Images/box.jpg" alt="Boxercise" onerror="this.style.display='none'">
+              <span class="cls-feat-tag tag-fitness cls-tag"><i class="ti ti-yoga"></i> Fitness Class</span>
+              <div class="cls-feat-badge" style="background:var(--cat-fitness)"><i class="ti ti-yoga"></i></div>
+            </div>
+            <div class="cls-feat-body">
+              <h3>Boxercise</h3>
+              <p class="desc">A high-energy, non-contact fitness exercise based on training methods using boxers — no experience needed.</p>
+              <div class="cls-stat-row">
+                <div class="cls-stat"><b>€11</b><span>From</span></div>
+                <div class="cls-stat"><b>45</b><span>Mins</span></div>
+                <div class="cls-stat"><b>Sculpt</b><span>Focus</span></div>
+              </div>
+              <div class="cls-feat-btns">
+                <a href="appfunnel.html" target="_blank" class="cls-btn-pri">Book This Class</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- AgeWell Movement -->
+          <div class="cls-feat-card" data-cat="fitness">
+            <div class="cls-feat-img">
+              <div class="cls-ph ph-fitness"><i class="ti ti-yoga"></i><span>AgeWell Movement </span></div>
+              <img src="Images/agewmove.jpeg" alt="Total Tone" onerror="this.style.display='none'">
+              <span class="cls-feat-tag tag-fitness cls-tag"><i class="ti ti-yoga"></i> Fitness Class</span>
+              <div class="cls-feat-badge" style="background:var(--cat-fitness)"><i class="ti ti-yoga"></i></div>
+            </div>
+            <div class="cls-feat-body">
+              <h3>AgeWell Movement </h3>
+              <p class="desc">Ageles Movement is a class for older adults with sole purpose of helping them become more active</p>
+              <div class="cls-stat-row">
+                <div class="cls-stat"><b>€11</b><span>From</span></div>
+                <div class="cls-stat"><b>45</b><span>Mins</span></div>
+                <div class="cls-stat"><b>Sculpt</b><span>Focus</span></div>
+              </div>
+              <div class="cls-feat-btns">
+                <a href="appfunnel.html" target="_blank" class="cls-btn-pri">Book This Class</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Teen Learn 2 Lift -->
+          <div class="cls-feat-card" data-cat="teen">
+            <div class="cls-feat-img">
+              <div class="cls-ph ph-teen"><i class="ti ti-barbell"></i><span>Teen Learn 2 Lift</span></div>
+              <img src="Images/l2f.jpeg" alt="Teen Learn 2 Lift" onerror="this.style.display='none'">
+              <span class="cls-feat-tag tag-teen cls-tag"><i class="ti ti-users"></i> Teen</span>
+              <div class="cls-feat-ribbon"><i class="ti ti-shield-check"></i> Induction Required</div>
+              <div class="cls-feat-badge" style="background:var(--cat-teen);color:var(--navy)"><i class="ti ti-barbell"></i></div>
+            </div>
+            <div class="cls-feat-body">
+              <h3>Teen Learn 2 Lift</h3>
+              <p class="desc">This class is designed to enhance Teens performance, safety, confidence and technique focused on further knowledge and information on carrying out safe lifting</p>
+              <div class="cls-stat-row">
+                <div class="cls-stat"><b>€9</b><span>From</span></div>
+                <div class="cls-stat"><b>45</b><span>Mins</span></div>
+                <div class="cls-stat"><b>Beginner</b><span>Level</span></div>
+              </div>
+              <div class="cls-induction-note">
+                <i class="ti ti-alert-triangle"></i>
+                <span>Mandatory: a gym induction is required before a teen's first session.</span>
+              </div>
+              <div class="cls-feat-btns">
+                <a href="contact.html" class="cls-btn-pri induction">Book Induction</a>
+                <a href="appfunnel.html" target="_blank" class="cls-btn-sec">Book This Class</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Teen Fitness Academy -->
+          <div class="cls-feat-card" data-cat="teen">
+            <div class="cls-feat-img">
+              <div class="cls-ph ph-teen"><i class="ti ti-trophy"></i><span>Add photo — Teen Fitness Academy</span></div>
+              <img src="Images/fa.jpeg" alt="Teen Fitness Academy" onerror="this.style.display='none'">
+              <span class="cls-feat-tag tag-teen cls-tag"><i class="ti ti-users"></i> Teen</span>
+              <div class="cls-feat-ribbon"><i class="ti ti-shield-check"></i> Induction Required</div>
+              <div class="cls-feat-badge" style="background:var(--cat-teen);color:var(--navy)"><i class="ti ti-trophy"></i></div>
+            </div>
+            <div class="cls-feat-body">
+              <h3>Teen Fitness Academy</h3>
+              <p class="desc">Teen Fitness Academy involves different levels starting with level 1 beginners. With this they get access to the facility and one class with an experienced instructor.</p>
+              <div class="cls-stat-row">
+                <div class="cls-stat"><b>€54</b><span>Full Access</span></div>
+                <div class="cls-stat"><b>45</b><span>Mins</span></div>
+                <div class="cls-stat"><b>Beginner</b><span>Level</span></div>
+              </div>
+              <div class="cls-induction-note">
+                <i class="ti ti-alert-triangle"></i>
+                <span>Mandatory: a gym induction is required before a teen's first session.</span>
+              </div>
+              <div class="cls-feat-btns">
+                <a href="contact.html" class="cls-btn-pri induction">Book Induction</a>
+                <a href="appfunnel.html" target="_blank" class="cls-btn-sec">Book This Class</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Teen Boxercise -->
+          <div class="cls-feat-card" data-cat="teen">
+            <div class="cls-feat-img">
+              <div class="cls-ph ph-teen"><i class="ti ti-run"></i><span>Add photo — Teen Boxercise</span></div>
+              <img src="Images/Tbox.jpeg" alt="Teen Boxercise" onerror="this.style.display='none'">
+              <span class="cls-feat-tag tag-teen cls-tag"><i class="ti ti-users"></i> Teen</span>
+              <div class="cls-feat-ribbon"><i class="ti ti-shield-check"></i> Induction Required</div>
+              <div class="cls-feat-badge" style="background:var(--cat-teen);color:var(--navy)"><i class="ti ti-run"></i></div>
+            </div>
+            <div class="cls-feat-body">
+              <h3>Teen Boxercise</h3>
+              <p class="desc">Mixed Ability class tailored for teens who would like incorporate cardio in their day building strength and endurance.</p>
+              <div class="cls-stat-row">
+                <div class="cls-stat"><b>€9</b><span>From</span></div>
+                <div class="cls-stat"><b>45</b><span>Mins</span></div>
+                <div class="cls-stat"><b>Mixed</b><span>Ability</span></div>
+              </div>
+              <div class="cls-induction-note">
+                <i class="ti ti-alert-triangle"></i>
+                <span>Mandatory: a gym induction is required before a teen's first session.</span>
+              </div>
+              <div class="cls-feat-btns">
+                <a href="contact.html" class="cls-btn-pri induction">Book Induction</a>
+                <a href="appfunnel.html" target="_blank" class="cls-btn-sec">Book This Class</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Agewell Strength -->
+          <div class="cls-feat-card" data-cat="wellbeing">
+            <div class="cls-feat-img">
+              <div class="cls-ph ph-wellbeing"><i class="ti ti-heart"></i><span>Agewell Strength</span></div>
+              <img src="Images/Astrength.jpeg" alt="Movewell" onerror="this.style.display='none'">
+              <span class="cls-feat-tag tag-wellbeing cls-tag"><i class="ti ti-heart"></i> Wellbeing</span>
+              <div class="cls-feat-badge" style="background:var(--cat-wellbeing)"><i class="ti ti-heart"></i></div>
+            </div>
+            <div class="cls-feat-body">
+              <h3>Agewell Strength </h3>
+              <p class="desc">High Intensity 45 minute focused on building strength and maintaining muscle. Aim is to improve strength, flexiblity, mobility and stability.</p>
+              <div class="cls-stat-row">
+                <div class="cls-stat"><b>€9</b><span>From</span></div>
+                <div class="cls-stat"><b>45</b><span>Mins</span></div>
+                <div class="cls-stat"><b>Adapted</b><span>Focus</span></div>
+              </div>
+              <div class="cls-feat-btns">
+                <a href="appfunnel.html" target="_blank" class="cls-btn-pri">Book This Class</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- AquaFit -->
+          <div class="cls-feat-card" data-cat="fitness">
+            <div class="cls-feat-img">
+              <div class="cls-ph ph-fitness"><i class="ti ti-yoga"></i><span>AquaFit </span></div>
+              <img src="Images/aqua.jpeg" alt="Total Tone" onerror="this.style.display='none'">
+              <span class="cls-feat-tag tag-fitness cls-tag"><i class="ti ti-yoga"></i> Fitness Class</span>
+              <div class="cls-feat-badge" style="background:var(--cat-fitness)"><i class="ti ti-yoga"></i></div>
+            </div>
+            <div class="cls-feat-body">
+              <h3>AquaFit </h3>
+              <p class="desc">Full body aerobic pool workout to get your heartbeat pumping from the music beats.</p>
+              <div class="cls-stat-row">
+                <div class="cls-stat"><b>€11</b><span>From</span></div>
+                <div class="cls-stat"><b>45</b><span>Mins</span></div>
+                <div class="cls-stat"><b>Medium - High</b><span>Intensity</span></div>
+              </div>
+              <div class="cls-feat-btns">
+                <a href="appfunnel.html" target="_blank" class="cls-btn-pri">Book This Class</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Agewell Stretch -->
+          <div class="cls-feat-card" data-cat="wellbeing">
+            <div class="cls-feat-img">
+              <div class="cls-ph ph-wellbeing"><i class="ti ti-swimming"></i><span>Agewell Stretch</span></div>
+              <img src="Images/agewellstrecth.jpeg" alt="Agewell Stretch" onerror="this.style.display='none'">
+              <span class="cls-feat-tag tag-wellbeing cls-tag"><i class="ti ti-swimming"></i> Wellbeing</span>
+              <div class="cls-feat-badge" style="background:var(--cat-wellbeing)"><i class="ti ti-swimming"></i></div>
+            </div>
+            <div class="cls-feat-body">
+              <h3>Agewell Stretch</h3>
+              <p class="desc">New Class to stretch and relax after a stressful week with rehabilitation stretches to enhance flexibility, mobility and stability.</p>
+              <div class="cls-stat-row">
+                <div class="cls-stat"><b>€9</b><span>From</span></div>
+                <div class="cls-stat"><b>45</b><span>Mins</span></div>
+                <div class="cls-stat"><b>Pool</b><span>Focus</span></div>
+              </div>
+              <div class="cls-feat-btns">
+                <a href="appfunnel.html" target="_blank" class="cls-btn-pri">Book This Class</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- MoveWell -->
+          <div class="cls-feat-card" data-cat="wellbeing">
+            <div class="cls-feat-img">
+              <div class="cls-ph ph-wellbeing"><i class="ti ti-heart"></i><span>Add photo — Movewell</span></div>
+              <img src="Images/movewell.jpeg" alt="Movewell" onerror="this.style.display='none'">
+              <span class="cls-feat-tag tag-wellbeing cls-tag"><i class="ti ti-heart"></i> Wellbeing</span>
+              <div class="cls-feat-badge" style="background:var(--cat-wellbeing)"><i class="ti ti-heart"></i></div>
+            </div>
+            <div class="cls-feat-body">
+              <h3>MoveWell </h3>
+              <p class="desc">A supportive, adapted class for adults managing specific health conditions, at a pace that works for you.</p>
+              <div class="cls-stat-row">
+                <div class="cls-stat"><b>€9</b><span>From</span></div>
+                <div class="cls-stat"><b>45</b><span>Mins</span></div>
+                <div class="cls-stat"><b>Adapted</b><span>Focus</span></div>
+              </div>
+              <div class="cls-feat-btns">
+                <a href="appfunnel.html" target="_blank" class="cls-btn-pri">Book This Class</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- MoveinChat -->
+          <div class="cls-feat-card" data-cat="wellbeing">
+            <div class="cls-feat-img">
+              <div class="cls-ph ph-wellbeing"><i class="ti ti-heart"></i><span>Add photo — Movewell</span></div>
+              <img src="Images/movinchat.jpeg" alt="Movewell" onerror="this.style.display='none'">
+              <span class="cls-feat-tag tag-wellbeing cls-tag"><i class="ti ti-heart"></i> Wellbeing</span>
+              <div class="cls-feat-badge" style="background:var(--cat-wellbeing)"><i class="ti ti-heart"></i></div>
+            </div>
+            <div class="cls-feat-body">
+              <h3>MovinChat </h3>
+              <p class="desc">A supportive, adapted class for adults managing specific health conditions, at a pace that works for you.</p>
+              <div class="cls-stat-row">
+                <div class="cls-stat"><b>€9</b><span>From</span></div>
+                <div class="cls-stat"><b>45</b><span>Mins</span></div>
+                <div class="cls-stat"><b>Adapted</b><span>Focus</span></div>
+              </div>
+              <div class="cls-feat-btns">
+                <a href="appfunnel.html" target="_blank" class="cls-btn-pri">Book This Class</a>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <p class="cls-price-note">Prices shown are standard pay-as-you-go rates. Discounted rates apply for students, over 65s and the unemployed — see the <a href="pricing.html">full price list</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ JOIN STRIP ═══ -->
+  <div class="join-strip">
+    <div class="join-inner">
+      <div class="join-copy r">
+        <h2>Ready to get moving?</h2>
+        <p>Sign up online today, or simply walk in to any of our three centres — pay-as-you-go spots are available for every class listed above.</p>
+      </div>
+      <div class="join-actions r d2">
+        <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" class="btn-white">Join Online</a>
+        <a href="contact.html" class="btn-outline-w">Ask a Question</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+        <p class="footer-tagline">Operated by LW Management on behalf of Cork City Council. Three centres serving Cork since 1997.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/LeisureWorldCork" target="_blank" title="Facebook">
+            <img src="Images/fb.png" alt="Facebook" class="social-icon">
+          </a>
+          <a href="https://www.instagram.com/leisureworldhq/" target="_blank" title="Instagram">
+            <img src="Images/ig.png" alt="Instagram" class="social-icon">
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Centres</h5>
+        <ul>
+          <li><a href="./Centres/bishopstown.html" target="_blank">Bishopstown</a></li>
+          <li><a href="./Centres/churchfield.html" target="_blank">Churchfield</a></li>
+          <li><a href="./Centres/douglas.html" target="_blank">Douglas</a></li>
+          <li><a href="index.html#hours" target="_blank">Opening Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Activities</h5>
+        <ul>
+          <li><a href="fitness-classes.html">Fitness Classes</a></li>
+          <li><a href="https://www.leisureworldcork.com/swimming-lessons-cork/" target="_blank">Swimming Lessons</a></li>
+          <li><a href="https://www.leisureworldcork.com/all-weather-pitch-cork/" target="_blank">Astro Pitches</a></li>
+          <li><a href="https://www.leisureworldcork.com/teen-gym-cork/" target="_blank">Teen Gym</a></li>
+          <li><a href="https://www.leisureworldcork.com/summer-activity-camps/" target="_blank">Summer Camps</a></li>
+          <li><a href="https://www.leisureworldcork.com/training/nplq-courses/" target="_blank">Lifeguard Training</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>More</h5>
+        <ul>
+          <li><a href="./pricing.html" target="_blank">Prices</a></li>
+          <li><a href="https://leisureworld-cork.vouchercart.com/app" target="_blank">Gift Vouchers</a></li>
+          <li><a href="./about.html" target="_blank">About Us</a></li>
+          <li><a href="./careers.html" target="_blank">Careers</a></li>
+          <li><a href="help.html">Help Centre</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 LeisureWorld Cork</p>
+      <div class="footer-legal">
+        <a href="https://www.leisureworldcork.com/privacy-policy/" target="_blank">Privacy Policy</a>
+        <a href="https://www.leisureworldcork.com/cookies-policy/" target="_blank">Cookie Policy</a>
+        <a href="./centre-policies.html" target="_blank">Centre Policies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script>
+    function clsFilter(btn) {
+      document.querySelectorAll('.cls-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.cat;
+      document.querySelectorAll('#clsGrid .cls-feat-card').forEach(card => {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>
