@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Adult Swim Lessons at LeisureWorld Cork — structured Learn2Swim courses for Beginner and Improver, plus the Otter Swim Club for confident swimmers."/>
+  <title>Adult Swim Lessons — LeisureWorld Cork</title>
+  <link rel="icon" type="image/png" href="Images/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div id="cur"></div>
+  <a href="aquatics.html" class="back-arrow" aria-label="Back to Aquatics">
+    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </a>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="centres.html">Centres</a></li>
+      <li><a href="activities.html" style="color:var(--white)">Activities</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html">Help</a></li>
+      <li><a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="nav-cta">Sign In / Book</a></li>
+    </ul>
+    <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="mob" id="mob">
+    <button class="mob-close" id="mob-close">✕</button>
+    <a href="about.html"       class="mlink">About</a>
+    <a href="centres.html"     class="mlink">Our Centres</a>
+    <a href="activities.html"  class="mlink">Activities</a>
+    <a href="pricing.html"     class="mlink">Pricing</a>
+    <a href="contact.html"     class="mlink">Contact</a>
+    <a href="faq.html"         class="mlink">Help Centre</a>
+    <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" style="color:var(--pool)">Join Now →</a>
+  </div>
+
+  <style>
+    /* Breadcrumb */
+    .aq-crumbs {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(237,242,249,0.55); margin-bottom: 1.4rem;
+    }
+    .aq-crumbs a { color: var(--pool); text-decoration: none; }
+    .aq-crumbs a:hover { text-decoration: underline; }
+    .aq-crumbs span { opacity: 0.5; }
+
+    /* Section intro (shared) */
+    .adult-intro { max-width: 720px; margin: 0 auto 4rem; text-align: center; }
+    .adult-eyebrow {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--pool); margin-bottom: 1rem;
+      padding: 0.4rem 1rem; border-radius: 999px;
+      background: rgba(0,184,212,0.08); border: 1px solid rgba(0,184,212,0.2);
+    }
+    .adult-intro h2 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem); color: var(--ink);
+      margin: 0 0 1rem; letter-spacing: -0.01em;
+    }
+    .adult-intro h2 .hi { color: var(--blue); }
+    .adult-intro p { color: var(--muted); font-size: 1.02rem; line-height: 1.7; margin: 0; }
+
+    /* ─── PROGRAMME WRAPPER ─── */
+    .prog-wrap {
+      max-width: 1100px; margin: 0 auto 5rem;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 24px;
+      overflow: hidden;
+    }
+    .prog-header {
+      padding: 3rem 3rem 2rem;
+      background: linear-gradient(135deg, #f5f9fc 0%, #eaf3f8 100%);
+      border-bottom: 1.5px solid var(--border);
+    }
+    .prog-tag {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--blue); margin-bottom: 0.7rem;
+    }
+    .prog-tag i { font-size: 0.9rem; }
+    .prog-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.1rem); color: var(--ink);
+      margin: 0 0 0.9rem; letter-spacing: -0.01em;
+    }
+    .prog-lede {
+      color: var(--muted); font-size: 1rem; line-height: 1.7; margin: 0;
+      max-width: 720px;
+    }
+
+    /* ─── LEVEL CARDS (inside Learn2Swim) ─── */
+    .levels-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.4rem;
+      padding: 2.5rem 3rem 0;
+    }
+    .lvl-card {
+      background: linear-gradient(160deg, #f0f8fc 0%, #e6f4f9 100%);
+      border: 1.5px solid rgba(0,184,212,0.2);
+      border-radius: 18px;
+      padding: 2rem 1.8rem;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .lvl-card.advanced {
+      background: linear-gradient(160deg, #0a2452 0%, #1a4488 100%);
+      border-color: rgba(20,100,216,0.3);
+      color: #fff;
+    }
+    .lvl-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--pool);
+      box-shadow: 0 14px 30px rgba(10,35,72,0.12);
+    }
+    .lvl-head {
+      display: flex; align-items: center; gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    .lvl-num {
+      flex-shrink: 0;
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: var(--white);
+      border: 1.5px solid rgba(0,184,212,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.5rem; color: var(--pool);
+    }
+    .lvl-card.advanced .lvl-num {
+      background: rgba(0,184,212,0.18);
+      border-color: rgba(0,184,212,0.5);
+      color: var(--pool);
+    }
+    .lvl-head-txt { flex: 1; }
+    .lvl-eyebrow {
+      display: block;
+      font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+      opacity: 0.7; margin-bottom: 0.2rem;
+    }
+    .lvl-card h4 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.25rem; margin: 0; line-height: 1.2;
+      color: var(--ink);
+    }
+    .lvl-card.advanced h4 { color: #fff; }
+    .lvl-desc {
+      font-size: 0.95rem; line-height: 1.65;
+      color: var(--muted); margin: 0 0 1.3rem;
+    }
+    .lvl-card.advanced .lvl-desc { color: rgba(237,242,249,0.75); }
+    .lvl-list {
+      list-style: none; padding: 0; margin: 0;
+    }
+    .lvl-list li {
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      padding: 0.5rem 0;
+      font-size: 0.9rem; color: var(--ink); line-height: 1.5;
+    }
+    .lvl-card.advanced .lvl-list li { color: rgba(237,242,249,0.9); }
+    .lvl-list li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 16px; height: 16px; margin-top: 0.1rem;
+      background: var(--pool);
+      -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>") center/contain no-repeat;
+              mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>") center/contain no-repeat;
+    }
+
+    /* Facts strip inside Learn2Swim */
+    .prog-facts {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      padding: 2.5rem 3rem 3rem;
+    }
+    .prog-fact { text-align: center; }
+    .prog-fact-lbl {
+      display: block;
+      font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 0.4rem;
+    }
+    .prog-fact-val {
+      display: block;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1rem; color: var(--ink); line-height: 1.2;
+    }
+    .prog-fact-val.hi { color: var(--pool); }
+
+    /* ─── OTTER SWIM CLUB — split layout ─── */
+    .otter-wrap {
+      max-width: 1100px; margin: 0 auto;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 24px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 380px 1fr;
+    }
+    .otter-visual {
+      background:
+        radial-gradient(ellipse 90% 60% at 50% 30%, rgba(0,184,212,0.28) 0%, transparent 65%),
+        linear-gradient(160deg, #0a2452 0%, #051535 100%);
+      color: #fff;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .otter-visual::after {
+      content: '';
+      position: absolute;
+      bottom: -20px; left: 0; right: 0; height: 60px;
+      background:
+        radial-gradient(circle at 15% 50%, rgba(0,184,212,0.35) 0%, transparent 40%),
+        radial-gradient(circle at 45% 60%, rgba(255,255,255,0.15) 0%, transparent 35%),
+        radial-gradient(circle at 75% 40%, rgba(0,184,212,0.25) 0%, transparent 40%);
+      pointer-events: none;
+    }
+    .otter-svg {
+      width: 150px; height: 150px;
+      margin-bottom: 1.4rem;
+      color: var(--pool);
+      transition: transform 0.4s ease;
+      position: relative; z-index: 1;
+    }
+    .otter-wrap:hover .otter-svg { transform: scale(1.06) rotate(-3deg); }
+
+    .otter-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+      padding: 0.5rem 1rem; border-radius: 999px;
+      background: rgba(0,184,212,0.15); border: 1px solid rgba(0,184,212,0.35);
+      color: var(--pool);
+      position: relative; z-index: 1;
+    }
+    .otter-content { padding: 3rem; }
+    .otter-tag {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--pool); margin-bottom: 0.7rem;
+    }
+    .otter-tag i { font-size: 0.9rem; }
+    .otter-content h3 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(1.5rem, 2.8vw, 2rem); color: var(--ink);
+      margin: 0 0 1rem; letter-spacing: -0.01em;
+    }
+    .otter-content > p {
+      color: var(--muted); font-size: 1rem; line-height: 1.7;
+      margin: 0 0 1.6rem;
+    }
+    .otter-details {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+      margin-bottom: 1.8rem;
+    }
+    .otter-detail {
+      display: flex; align-items: flex-start; gap: 0.7rem;
+      padding: 0.9rem 1rem;
+      background: linear-gradient(135deg, #f5f9fc 0%, #eaf3f8 100%);
+      border-radius: 12px;
+    }
+    .otter-detail-icon {
+      flex-shrink: 0;
+      width: 32px; height: 32px;
+      border-radius: 9px;
+      background: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--blue);
+    }
+    .otter-detail-icon svg { width: 16px; height: 16px; }
+    .otter-detail-txt strong {
+      display: block;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 0.85rem; color: var(--ink);
+      margin-bottom: 0.15rem;
+    }
+    .otter-detail-txt span { font-size: 0.82rem; color: var(--muted); }
+
+    .otter-cta-row {
+      display: flex; gap: 0.7rem; flex-wrap: wrap;
+    }
+    .otter-cta {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 0.9rem 1.4rem; border-radius: 999px;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .otter-cta.pri { background: var(--blue); color: #fff; }
+    .otter-cta.pri:hover { background: var(--pool); color: var(--ink); transform: translateX(4px); }
+    .otter-cta.sec { background: transparent; color: var(--ink); border: 1.5px solid var(--border); }
+    .otter-cta.sec:hover { border-color: var(--ink); background: var(--paper); }
+    .otter-cta svg { width: 14px; height: 14px; stroke-width: 2.5; }
+
+    /* ─── HOW TO ENROL (reused pattern) ─── */
+    .enrol-wrap { max-width: 1000px; margin: 5rem auto 0; text-align: center; }
+    .enrol-wrap h3 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.8rem; color: var(--ink); margin: 0 0 2.5rem;
+    }
+    .enrol-wrap h3 .hi { color: var(--blue); }
+    .enrol-steps {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+    }
+    .enrol-step {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 18px;
+      padding: 2rem 1.5rem;
+      text-align: left;
+    }
+    .enrol-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 40px; height: 40px;
+      background: var(--blue); color: #fff;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.1rem; border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    .enrol-step h4 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.05rem; color: var(--ink); margin: 0 0 0.5rem;
+    }
+    .enrol-step p {
+      font-size: 0.9rem; color: var(--muted); line-height: 1.6; margin: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .levels-grid { grid-template-columns: 1fr; padding: 2rem 1.8rem 0; }
+      .prog-facts { grid-template-columns: repeat(2, 1fr); padding: 2rem 1.8rem; }
+      .prog-header { padding: 2rem 1.8rem 1.5rem; }
+      .otter-wrap { grid-template-columns: 1fr; }
+      .otter-visual { padding: 2.5rem 1.5rem; }
+      .otter-content { padding: 2rem 1.8rem; }
+      .otter-details { grid-template-columns: 1fr; }
+      .enrol-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="ctr-hero">
+    <div class="ctr-hero-wm" aria-hidden="true">ADULT</div>
+    <div class="ctr-hero-inner">
+      <div class="aq-crumbs">
+        <a href="activities.html">Activities</a>
+        <span>›</span>
+        <a href="aquatics.html">Aquatics</a>
+        <span>›</span>
+        <span style="color:rgba(237,242,249,0.75)">Adult Swim Lessons</span>
+      </div>
+      <h1>Adult <span class="hi">Swim Lessons</span></h1>
+      <p>It's never too late to learn — or to get better. Whether you're stepping into the pool for the first time as an adult, refining your stroke, or joining a swim squad, there's a lane and a group here for you.</p>
+    </div>
+    <div class="ctr-hero-ramp"></div>
+  </section>
+
+  <!-- ═══ BODY ═══ -->
+  <div class="ctr-body">
+    <div class="ctr-body-inner">
+
+      <!-- Intro -->
+      <div class="adult-intro r">
+        <span class="adult-eyebrow">Two Ways to Swim as an Adult</span>
+        <h2>Structured lessons, or a <span class="hi">swim community</span></h2>
+        <p>Choose between our step-by-step Learn2Swim programme — with dedicated Beginner and Improver levels — or join Otter Swim Club, our friendly weekly squad for adults who already swim confidently.</p>
+      </div>
+
+      <!-- ═══ SECTION 1: LEARN2SWIM ═══ -->
+      <div class="prog-wrap r">
+        <div class="prog-header">
+          <div class="prog-tag"><i class="ti ti-school"></i> Programme 1</div>
+          <h3 class="prog-title">Adult Learn2Swim</h3>
+          <p class="prog-lede">A structured six-week course in small, adult-only groups. Choose the level that matches where you are today — no judgement, no children in the lane, just steady progress with a qualified teacher.</p>
+        </div>
+
+        <div class="levels-grid">
+
+          <!-- Beginner -->
+          <div class="lvl-card">
+            <div class="lvl-head">
+              <div class="lvl-num">1</div>
+              <div class="lvl-head-txt">
+                <span class="lvl-eyebrow">Level 1</span>
+                <h4>Beginner</h4>
+              </div>
+            </div>
+            <p class="lvl-desc">For adults with little or no swimming experience. We start in the shallow end and build water confidence at your pace — no pressure, no deep water until you're ready.</p>
+            <ul class="lvl-list">
+              <li>Getting comfortable in the water</li>
+              <li>Breathing &amp; face-in-water technique</li>
+              <li>Floating on your front and back</li>
+              <li>Kicking with support (kickboards)</li>
+              <li>First strokes across the pool</li>
+              <li>Basic pool safety</li>
+            </ul>
+          </div>
+
+          <!-- Improver -->
+          <div class="lvl-card advanced">
+            <div class="lvl-head">
+              <div class="lvl-num">2</div>
+              <div class="lvl-head-txt">
+                <span class="lvl-eyebrow">Level 2</span>
+                <h4>Improver</h4>
+              </div>
+            </div>
+            <p class="lvl-desc">For adults who can already swim a length but want to refine technique, learn new strokes, or build the stamina to swim continuously without stopping.</p>
+            <ul class="lvl-list">
+              <li>Refining freestyle technique &amp; breathing</li>
+              <li>Introduction to breaststroke</li>
+              <li>Backstroke fundamentals</li>
+              <li>Building continuous swim distance</li>
+              <li>Turns &amp; efficient breathing patterns</li>
+              <li>Prep for open-water &amp; club swimming</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="prog-facts">
+          <div class="prog-fact">
+            <span class="prog-fact-lbl">Duration</span>
+            <span class="prog-fact-val">6 Weeks</span>
+          </div>
+          <div class="prog-fact">
+            <span class="prog-fact-lbl">Format</span>
+            <span class="prog-fact-val">Weekly · 45 min</span>
+          </div>
+          <div class="prog-fact">
+            <span class="prog-fact-lbl">Group Size</span>
+            <span class="prog-fact-val">Max 8</span>
+          </div>
+          <div class="prog-fact">
+            <span class="prog-fact-lbl">Next Course</span>
+            <span class="prog-fact-val hi">€84 · 6 weeks</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SECTION 2: OTTER SWIM CLUB ═══ -->
+      <div class="otter-wrap r d1">
+
+        <div class="otter-visual">
+          <!-- Otter SVG (playful line-art) -->
+          <svg class="otter-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Head -->
+            <ellipse cx="60" cy="52" rx="30" ry="26"/>
+            <!-- Ears -->
+            <circle cx="38" cy="34" r="6"/>
+            <circle cx="82" cy="34" r="6"/>
+            <!-- Eyes -->
+            <circle cx="50" cy="50" r="2.5" fill="currentColor"/>
+            <circle cx="70" cy="50" r="2.5" fill="currentColor"/>
+            <!-- Nose -->
+            <ellipse cx="60" cy="62" rx="4" ry="3" fill="currentColor"/>
+            <!-- Mouth -->
+            <path d="M56 66 Q60 70 64 66"/>
+            <!-- Whiskers -->
+            <path d="M40 60 L28 58 M40 63 L28 65 M80 60 L92 58 M80 63 L92 65" opacity="0.6"/>
+            <!-- Water waves at bottom -->
+            <path d="M10 100 Q22 92 34 100 T58 100 T82 100 T106 100" opacity="0.7"/>
+            <path d="M10 108 Q22 100 34 108 T58 108 T82 108 T106 108" opacity="0.5"/>
+          </svg>
+          <div class="otter-badge">Adult Swim Club</div>
+        </div>
+
+        <div class="otter-content">
+          <div class="otter-tag"><i class="ti ti-users"></i> Programme 2</div>
+          <h3>Otter Swim Club</h3>
+          <p>A friendly, coached swim club for adults who already swim confidently and want the structure of a weekly squad session. Think of it as a run club, but in the pool — with tailored sets, technique feedback, and a great community of Cork swimmers to train alongside.</p>
+
+          <div class="otter-details">
+            <div class="otter-detail">
+              <div class="otter-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <div class="otter-detail-txt">
+                <strong>Weekly Sessions</strong>
+                <span>Tue &amp; Thu evenings, Sat morning</span>
+              </div>
+            </div>
+            <div class="otter-detail">
+              <div class="otter-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="otter-detail-txt">
+                <strong>60 Min</strong>
+                <span>Coached sets &amp; drills</span>
+              </div>
+            </div>
+            <div class="otter-detail">
+              <div class="otter-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 4v6c0 5-4 8-9 9-5-1-9-4-9-9V7l9-4z"/></svg>
+              </div>
+              <div class="otter-detail-txt">
+                <strong>Prerequisite</strong>
+                <span>Swim 200m continuous</span>
+              </div>
+            </div>
+            <div class="otter-detail">
+              <div class="otter-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="otter-detail-txt">
+                <strong>Community</strong>
+                <span>Adults only · all abilities welcome</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="otter-cta-row">
+            <a href="contact.html" class="otter-cta pri">
+              Join the Club
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="contact.html" class="otter-cta sec">Try a Session First</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ═══ HOW TO ENROL ═══ -->
+      <div class="enrol-wrap r">
+        <h3>How to <span class="hi">enrol</span></h3>
+        <div class="enrol-steps">
+          <div class="enrol-step">
+            <div class="enrol-num">1</div>
+            <h4>Choose your track</h4>
+            <p>Learn2Swim for structured lessons with clear progression, or Otter Swim Club for coached weekly training with a community.</p>
+          </div>
+          <div class="enrol-step">
+            <div class="enrol-num">2</div>
+            <h4>Check availability</h4>
+            <p>Contact reception to see current class times, or check the timetable online. New Learn2Swim intakes run every six weeks.</p>
+          </div>
+          <div class="enrol-step">
+            <div class="enrol-num">3</div>
+            <h4>Book &amp; get swimming</h4>
+            <p>Enrol online or at reception. Bring togs, a towel and goggles — we'll take care of the rest. First session is the hardest part.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ CTA STRIP ═══ -->
+  <div class="pri-cta-strip r">
+    <div class="pri-cta-inner">
+      <div>
+        <h3>Not sure which one is for you?</h3>
+        <p>Give us a call or drop by any centre — we're happy to talk it through and help you pick the right starting point. There's no wrong answer, and no pressure to commit before you're ready.</p>
+      </div>
+      <div class="pri-cta-btns">
+        <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" class="btn-join">Enrol Online</a>
+        <a href="contact.html" class="btn-ask">Talk to Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+        <p class="footer-tagline">Operated by LW Management on behalf of Cork City Council. Three centres serving Cork since 1997.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/LeisureWorldCork" target="_blank" title="Facebook"><img src="Images/fb.png" alt="Facebook" class="social-icon"></a>
+          <a href="https://www.instagram.com/leisureworldhq/" target="_blank" title="Instagram"><img src="Images/ig.png" alt="Instagram" class="social-icon"></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Centres</h5>
+        <ul>
+          <li><a href="Centres/bishopstown.html" target="_blank">Bishopstown</a></li>
+          <li><a href="Centres/churchfield.html" target="_blank">Churchfield</a></li>
+          <li><a href="Centres/douglas.html" target="_blank">Douglas</a></li>
+          <li><a href="index.html#hours">Opening Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Aquatics</h5>
+        <ul>
+          <li><a href="aquatics.html">Aquatics Programme</a></li>
+          <li><a href="Activities/Swimlessons/swimschool.html">Swim School (Kids)</a></li>
+          <li><a href="adult-swim.html">Adult Swim Lessons</a></li>
+          <li><a href="Activities/Swimlessons/aquafit.html">Aquafit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>More</h5>
+        <ul>
+          <li><a href="pricing.html">Prices</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="faq.html">Help Centre</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 LeisureWorld Cork</p>
+      <div class="footer-legal">
+        <a href="https://www.leisureworldcork.com/privacy-policy/" target="_blank">Privacy Policy</a>
+        <a href="https://www.leisureworldcork.com/cookies-policy/" target="_blank">Cookie Policy</a>
+        <a href="centre-policies.html">Centre Policies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

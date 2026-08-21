@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="LeisureWorld Cork Aquatics Programme — Swim School for kids, Adult Swim Lessons, and Aquafit classes across our Cork centres."/>
+  <title>Aquatics Programme — LeisureWorld Cork</title>
+  <link rel="icon" type="image/png" href="Images/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div id="cur"></div>
+  <a href="activities.html" class="back-arrow" aria-label="Back to Activities">
+    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </a>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="centres.html">Centres</a></li>
+      <li><a href="activities.html" style="color:var(--white)">Activities</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html">Help</a></li>
+      <li><a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="nav-cta">Sign In / Book</a></li>
+    </ul>
+    <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="mob" id="mob">
+    <button class="mob-close" id="mob-close">✕</button>
+    <a href="about.html"       class="mlink">About</a>
+    <a href="centres.html"     class="mlink">Our Centres</a>
+    <a href="activities.html"  class="mlink">Activities</a>
+    <a href="pricing.html"     class="mlink">Pricing</a>
+    <a href="contact.html"     class="mlink">Contact</a>
+    <a href="faq.html"         class="mlink">Help Centre</a>
+    <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" style="color:var(--pool)">Join Now →</a>
+  </div>
+
+  <!-- ═══ SCOPED PAGE STYLES ═══ -->
+  <style>
+    /* Breadcrumb above hero title */
+    .aq-crumbs {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(237,242,249,0.55);
+      margin-bottom: 1.4rem;
+    }
+    .aq-crumbs a { color: var(--pool); text-decoration: none; }
+    .aq-crumbs a:hover { text-decoration: underline; }
+    .aq-crumbs span { opacity: 0.5; }
+
+    /* Section eyebrow */
+    .aq-eyebrow {
+      display: block;
+      text-align: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--pool);
+      margin-bottom: 1rem;
+    }
+    .aq-intro {
+      max-width: 720px;
+      margin: 0 auto 3.5rem;
+      text-align: center;
+    }
+    .aq-intro h2 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      color: var(--ink);
+      margin: 0 0 1rem;
+      letter-spacing: -0.01em;
+    }
+    .aq-intro h2 .hi { color: var(--blue); }
+    .aq-intro p {
+      color: var(--muted);
+      font-size: 1.02rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Little wave divider under intro */
+    .aq-wave {
+      display: block;
+      margin: 0 auto 3rem;
+      width: 80px;
+      height: 20px;
+      color: var(--pool);
+      opacity: 0.55;
+    }
+
+    /* ─── PROGRAMME CARDS ─── */
+    .prog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.6rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .prog-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 2rem 2.5rem;
+      border-radius: 24px;
+      text-decoration: none;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      min-height: 480px;
+    }
+    .prog-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 60px rgba(10,35,72,0.18);
+    }
+    /* Colour variants — themed to the site palette */
+    .prog-card.pc-kids {
+      background: linear-gradient(160deg, #b8ecf5 0%, #7cd7e8 100%);
+      color: #052a4a;
+    }
+    .prog-card.pc-adult {
+      background: linear-gradient(160deg, #1a4488 0%, #082456 100%);
+      color: var(--white);
+    }
+    .prog-card.pc-fit {
+      background: linear-gradient(160deg, #ffb27a 0%, #ff7a3d 100%);
+      color: #3a1a05;
+    }
+
+    /* Subtle wave pattern behind each card */
+    .prog-card::before {
+      content: '';
+      position: absolute;
+      bottom: -20%; left: -10%; right: -10%;
+      height: 60%;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.12) 0%, transparent 20%),
+        radial-gradient(circle at 60% 60%, rgba(255,255,255,0.08) 0%, transparent 25%),
+        radial-gradient(circle at 90% 40%, rgba(255,255,255,0.1) 0%, transparent 22%);
+      pointer-events: none;
+    }
+
+    /* Icon circle at top */
+    .prog-icon {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.28);
+      border: 2px dashed rgba(255,255,255,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.6rem;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.4s ease;
+    }
+    .prog-card.pc-adult .prog-icon {
+      background: rgba(0,184,212,0.18);
+      border-color: rgba(0,184,212,0.5);
+    }
+    .prog-card:hover .prog-icon { transform: scale(1.06) rotate(-4deg); }
+    .prog-icon svg { width: 70px; height: 70px; stroke-width: 1.6; }
+    .prog-icon-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .prog-card.pc-kids  .prog-icon svg { color: #052a4a; }
+    .prog-card.pc-adult .prog-icon svg { color: #7fe8f5; }
+    .prog-card.pc-fit   .prog-icon svg { color: #3a1a05; }
+
+    /* Card content */
+    .prog-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 0.5rem;
+      position: relative; z-index: 1;
+    }
+    .prog-card h3 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.5rem;
+      margin: 0 0 0.9rem;
+      letter-spacing: -0.01em;
+      position: relative; z-index: 1;
+    }
+    .prog-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0 0 1.5rem;
+      opacity: 0.88;
+      position: relative; z-index: 1;
+      flex-grow: 1;
+    }
+
+    /* Little info pills at bottom of each card */
+    .prog-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-bottom: 1.4rem;
+      position: relative; z-index: 1;
+    }
+    .prog-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.35);
+    }
+    .prog-card.pc-adult .prog-meta span { background: rgba(255,255,255,0.12); }
+
+    .prog-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.9rem 1.6rem;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.85);
+      color: #fff;
+      position: relative; z-index: 1;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .prog-card.pc-adult .prog-cta { background: var(--pool); color: var(--ink); }
+    .prog-card:hover .prog-cta { transform: translateX(4px); }
+    .prog-cta svg { width: 14px; height: 14px; stroke-width: 2.5; }
+
+    /* ─── LEVELS ROW (for SwimSchool) ─── */
+    .levels-wrap {
+      max-width: 1000px;
+      margin: 5rem auto 0;
+      padding: 3rem;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 24px;
+    }
+    .levels-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .levels-head h3 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.5rem;
+      color: var(--ink);
+      margin: 0;
+    }
+    .levels-head span { font-size: 0.85rem; color: var(--muted); }
+    .levels-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    .level {
+      text-align: center;
+      padding: 1.4rem 0.8rem;
+      background: linear-gradient(160deg, #f0f8fc 0%, #e6f4f9 100%);
+      border-radius: 16px;
+      border: 1.5px solid transparent;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+    .level:hover { transform: translateY(-4px); border-color: var(--pool); }
+    .level-emoji {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 0.6rem;
+    }
+    .level strong {
+      display: block;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1rem;
+      color: var(--ink);
+      margin-bottom: 0.2rem;
+    }
+    .level span { font-size: 0.8rem; color: var(--muted); }
+
+    /* ─── HOW TO ENROL ─── */
+    .enrol-wrap {
+      max-width: 1000px;
+      margin: 5rem auto 0;
+      text-align: center;
+    }
+    .enrol-wrap h3 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.8rem;
+      color: var(--ink);
+      margin: 0 0 2.5rem;
+    }
+    .enrol-wrap h3 .hi { color: var(--blue); }
+    .enrol-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      position: relative;
+    }
+    .enrol-step {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 18px;
+      padding: 2rem 1.5rem;
+      text-align: left;
+      position: relative;
+    }
+    .enrol-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      background: var(--blue);
+      color: #fff;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.1rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    .enrol-step h4 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.05rem;
+      color: var(--ink);
+      margin: 0 0 0.5rem;
+    }
+    .enrol-step p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .prog-grid { grid-template-columns: 1fr; max-width: 480px; }
+      .prog-card { min-height: auto; }
+      .levels-row { grid-template-columns: repeat(2, 1fr); }
+      .enrol-steps { grid-template-columns: 1fr; }
+      .levels-wrap { padding: 2rem 1.5rem; }
+    }
+  </style>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="ctr-hero">
+    <div class="ctr-hero-wm" aria-hidden="true">AQUATICS</div>
+    <div class="ctr-hero-inner">
+      <div class="aq-crumbs">
+        <a href="activities.html">Activities</a>
+        <span>›</span>
+        <span style="color:rgba(237,242,249,0.75)">Aquatics Programme</span>
+      </div>
+      <h1>Aquatics <span class="hi">Programme</span></h1>
+      <p>From your first splash to freestyle flip-turns, we've got a lane for you. Structured programmes for kids, adults and everyone in between — across three pools in Cork.</p>
+    </div>
+    <div class="ctr-hero-ramp"></div>
+  </section>
+
+  <!-- ═══ BODY ═══ -->
+  <div class="ctr-body">
+    <div class="ctr-body-inner">
+
+      <!-- Section intro (reference-inspired) -->
+      <div class="aq-intro r">
+        <span class="aq-eyebrow">Three Ways to Swim</span>
+        <h2>Choose your <span class="hi">programme</span></h2>
+        <p>Whether you're bringing a little one for their first lesson, learning to swim as an adult, or looking for a low-impact workout in the water, our qualified instructors have you covered.</p>
+      </div>
+
+      <svg class="aq-wave r" viewBox="0 0 80 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0 10 Q 10 0, 20 10 T 40 10 T 60 10 T 80 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+
+      <!-- ═══ THREE PROGRAMME CARDS ═══ -->
+      <div class="prog-grid">
+
+        <!-- 1 ── SWIM SCHOOL (Kids) -->
+        <a href="Activities/Swimlessons/swimschool.html" class="prog-card pc-kids r d1">
+          <div class="prog-icon">
+            <img src="Images/ss.png" alt="Swim School" class="prog-icon-img"/>
+          </div>
+          <div class="prog-tag">Ages 5 – 12</div>
+          <h3>Swim School</h3>
+          <p>Structured group lessons for kids, from Water Safety &amp; Fun through to competitive Swim Club. Small groups, qualified instructors, level progression every term.</p>
+          <div class="prog-meta">
+            <span>4 Levels</span>
+            <span>Weekly</span>
+            <span>Term-Based</span>
+          </div>
+          <span class="prog-cta">
+            Learn More
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </a>
+
+        <!-- 2 ── ADULT SWIM LESSONS -->
+        <a href="adultswimlesson.html" class="prog-card pc-adult r d2">
+          <div class="prog-icon">
+            <img src="Images/adultswim.png" alt="Adult Swim Lessons" class="prog-icon-img"/>
+          </div>
+          <div class="prog-tag">Ages 18+</div>
+          <h3>Adult Swim Lessons</h3>
+          <p>Learn to swim, or refine your stroke. Six-week courses in small, supportive adult-only groups — from complete beginners to those chasing a smoother freestyle.</p>
+          <div class="prog-meta">
+            <span>6-Week Course</span>
+            <span>All Levels</span>
+            <span>Small Groups</span>
+          </div>
+          <span class="prog-cta">
+            Enrol Now
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </a>
+
+        <!-- 3 ── AQUAFIT -->
+        <a href="Activities/Swimlessons/aquafit.html" class="prog-card pc-fit r d3">
+          <div class="prog-icon">
+            <img src="Images/aqua.jpeg" alt="Aquafit" class="prog-icon-img"/>
+          </div>
+          <div class="prog-tag">All Ages · All Fitness</div>
+          <h3>Aquafit Classes</h3>
+          <p>High-energy, low-impact workouts in the shallow end. Great for cardio, mobility and recovery — join a class alone or with friends, no swimming skill required.</p>
+          <div class="prog-meta">
+            <span>45 Mins</span>
+            <span>Drop-In</span>
+            <span>Low-Impact</span>
+          </div>
+          <span class="prog-cta">
+            View Timetable
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ CTA STRIP ═══ -->
+  <div class="pri-cta-strip r">
+    <div class="pri-cta-inner">
+      <div>
+        <h3>Ready to dive in?</h3>
+        <p>Places in each term fill up quickly, especially for kids' Swim School. Enrol online or drop into any centre to grab a spot.</p>
+      </div>
+      <div class="pri-cta-btns">
+        <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" class="btn-join">Enrol Online</a>
+        <a href="contact.html" class="btn-ask">Ask a Question</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+        <p class="footer-tagline">Operated by LW Management on behalf of Cork City Council. Three centres serving Cork since 1997.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/LeisureWorldCork" target="_blank" title="Facebook">
+            <img src="Images/fb.png" alt="Facebook" class="social-icon">
+          </a>
+          <a href="https://www.instagram.com/leisureworldhq/" target="_blank" title="Instagram">
+            <img src="Images/ig.png" alt="Instagram" class="social-icon">
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Centres</h5>
+        <ul>
+          <li><a href="Centres/bishopstown.html" target="_blank">Bishopstown</a></li>
+          <li><a href="Centres/churchfield.html" target="_blank">Churchfield</a></li>
+          <li><a href="Centres/douglas.html" target="_blank">Douglas</a></li>
+          <li><a href="index.html#hours" target="_blank">Opening Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Activities</h5>
+        <ul>
+          <li><a href="activities.html">All Activities</a></li>
+          <li><a href="Activities/Swimlessons/swimschool.html">Swim School</a></li>
+          <li><a href="adultswimlesson.html">Adult Lessons</a></li>
+          <li><a href="Activities/Swimlessons/aquafit.html">Aquafit</a></li>
+          <li><a href="Activities/Swimlessons/rl.html">Rookie Lifeguard</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>More</h5>
+        <ul>
+          <li><a href="pricing.html" target="_blank">Prices</a></li>
+          <li><a href="https://leisureworld-cork.vouchercart.com/app" target="_blank">Gift Vouchers</a></li>
+          <li><a href="about.html" target="_blank">About Us</a></li>
+          <li><a href="careers.html" target="_blank">Careers</a></li>
+          <li><a href="faq.html">Help Centre</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 LeisureWorld Cork</p>
+      <div class="footer-legal">
+        <a href="https://www.leisureworldcork.com/privacy-policy/" target="_blank">Privacy Policy</a>
+        <a href="https://www.leisureworldcork.com/cookies-policy/" target="_blank">Cookie Policy</a>
+        <a href="centre-policies.html" target="_blank">Centre Policies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

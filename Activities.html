@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="LeisureWorld Cork Activities — pool, gym and everything in between. Swim lessons, gym & fitness, astro pitches, camps and more across three Cork centres."/>
+  <title>LeisureWorld Cork — Our Activities</title>
+  <link rel="icon" type="image/png" href="Images/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div id="cur"></div>
+  <a href="index.html" class="back-arrow" aria-label="Go back">
+    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </a>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="centres.html">Centres</a></li>
+      <li><a href="activities.html" style="color:var(--white)">Activities</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html">Help</a></li>
+      <li><a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="nav-cta">Sign In / Book</a></li>
+    </ul>
+    <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="mob" id="mob">
+    <button class="mob-close" id="mob-close">✕</button>
+    <a href="about.html"       class="mlink">About</a>
+    <a href="centres.html"     class="mlink">Our Centres</a>
+    <a href="activities.html"  class="mlink">Activities</a>
+    <a href="pricing.html"     class="mlink">Pricing</a>
+    <a href="contact.html"     class="mlink">Contact</a>
+    <a href="faq.html"         class="mlink">Help Centre</a>
+    <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" style="color:var(--pool)">Join Now →</a>
+  </div>
+
+  <!-- ═══ ACTIVITIES-PAGE SCOPED STYLES ═══ -->
+  <style>
+    /* Category badge — sits at the top-left of the content side */
+    .act-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      align-self: flex-start;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.3rem;
+    }
+    .act-badge i { font-size: 0.95rem; }
+    .badge-aquatics { background: rgba(0,184,212,0.14); color: var(--pool); }
+    .badge-popular  { background: rgba(20,100,216,0.14); color: var(--blue); }
+    .badge-outdoor  { background: rgba(255,138,80,0.16); color: #ff7a3d; }
+
+    /* Icon-poster panels for cards that don't have a real photo yet.
+       Reuses .centre-card-image dimensions; just swaps the visual. */
+    .act-poster {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .act-poster::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 30% 30%, rgba(20,100,216,0.35) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 60% at 70% 80%, rgba(0,184,212,0.25) 0%, transparent 55%);
+    }
+    .act-poster.orange::before {
+      background:
+        radial-gradient(ellipse 70% 50% at 30% 30%, rgba(255,138,80,0.32) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 60% at 70% 80%, rgba(20,100,216,0.28) 0%, transparent 55%);
+    }
+    .act-poster-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, #0a1f42 0%, #082456 50%, #05122b 100%);
+    }
+    .act-poster i,
+    .act-poster-svg {
+      position: relative;
+      width: clamp(6rem, 12vw, 11rem);
+      height: clamp(6rem, 12vw, 11rem);
+      font-size: clamp(6rem, 12vw, 11rem);
+      color: rgba(237,242,249,0.16);
+      z-index: 1;
+      transition: transform 0.5s ease, color 0.3s ease;
+    }
+    .centre-card:hover .act-poster i,
+    .centre-card:hover .act-poster-svg {
+      transform: scale(1.08) rotate(-4deg);
+      color: rgba(237,242,249,0.26);
+    }
+    /* subtle grid pattern behind icon for texture */
+    .act-poster::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+    }
+
+    /* Small intro block above the cards */
+    .act-intro {
+      max-width: 780px;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+    .act-intro h2 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--ink);
+      margin: 0 0 0.9rem;
+      letter-spacing: -0.01em;
+    }
+    .act-intro h2 .hi { color: var(--blue); }
+    .act-intro p {
+      color: var(--muted);
+      font-size: 1.02rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Card count row — three little stats above the cards */
+    .act-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      max-width: 780px;
+      margin: 0 auto 4rem;
+    }
+    .act-stat {
+      text-align: center;
+      padding: 1.4rem 1rem;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+    }
+    .act-stat-num {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 2rem;
+      color: var(--blue);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .act-stat-lbl {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    @media (max-width: 560px) {
+      .act-stats { grid-template-columns: 1fr; gap: 0.7rem; }
+      .act-stat { padding: 1rem; }
+      .act-stat-num { font-size: 1.6rem; }
+    }
+  </style>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="ctr-hero">
+    <div class="ctr-hero-wm" aria-hidden="true">ACTIVITIES</div>
+    <div class="ctr-hero-inner">
+      <div class="hero-tag"><span>Pool · Gym · &amp; More</span></div>
+      <h1>Our <span class="hi">Activities</span></h1>
+      <p>From your first swim lesson to your hundredth 5-a-side, there's something on the timetable at every centre. Explore what you can do, then drop in or book online.</p>
+    </div>
+    <div class="ctr-hero-ramp"></div>
+  </section>
+
+  <!-- ═══ BODY ═══ -->
+  <div class="ctr-body">
+    <div class="ctr-body-inner">
+
+      <!-- Intro + stats -->
+      <div class="act-intro r">
+        <h2>Three ways to <span class="hi">get moving</span></h2>
+        <p>Whether you're chasing a new PB in the pool, building strength in the gym, or booking an astro pitch with the lads on Saturday morning, pick your track below.</p>
+      </div>
+
+      <div class="act-stats r d1">
+        <div class="act-stat">
+          <div class="act-stat-num">3</div>
+          <div class="act-stat-lbl">Cork Centres</div>
+        </div>
+        <div class="act-stat">
+          <div class="act-stat-num">50+</div>
+          <div class="act-stat-lbl">Weekly Classes</div>
+        </div>
+        <div class="act-stat">
+          <div class="act-stat-num">7</div>
+          <div class="act-stat-lbl">Days a Week</div>
+        </div>
+      </div>
+
+      <!-- Cards -->
+      <div class="centre-cards">
+
+        <!-- 1 ── POOL ACTIVITIES -->
+        <a href="poolactivities.html" class="centre-card r">
+          <div class="centre-card-image">
+            <div class="centre-card-image-bg" style="background-image:url('Images/hero-bg.jpeg')"></div>
+            <div class="centre-card-image-overlay"></div>
+          </div>
+          <div class="centre-card-content">
+            <span class="act-badge badge-aquatics"><i class="ti ti-swimming"></i> Aquatics</span>
+            <h2 class="centre-card-title">Pool<br/><span>Activities</span></h2>
+            <p class="centre-card-desc">Public swims, lessons for every level, competitive swim clubs and lifeguard training. Three pools across Bishopstown and Churchfield, plus the 25m Gus Healy Pool in Douglas.</p>
+            <span class="centre-card-cta">
+              Explore Pool
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- 2 ── GYM & FITNESS -->
+        <a href="gym.html" class="centre-card r d1">
+          <div class="centre-card-image">
+            <div class="centre-card-image-bg" style="background-image:url('Images/gymact.jpg')"></div>
+            <div class="centre-card-image-overlay"></div>
+          </div>
+          <div class="centre-card-content">
+            <span class="act-badge badge-popular"><i class="ti ti-flame"></i> Most Popular</span>
+            <h2 class="centre-card-title">Gym &amp;<br/><span>Fitness</span></h2>
+            <p class="centre-card-desc">A full class studio programme, free-weights and functional zones, cardio floors and a dedicated teen gym. Beginner-friendly inductions and structured plans available on request.</p>
+            <span class="centre-card-cta">
+              Explore Gym
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- 3 ── OTHER ACTIVITIES -->
+        <a href="Activities/other.html" class="centre-card r d2">
+          <div class="centre-card-image">
+            <div class="centre-card-image-bg" style="background-image:url('Images/kidscamps.jpg')"></div>
+            <div class="centre-card-image-overlay"></div>
+          </div>
+          <div class="centre-card-content">
+            <span class="act-badge badge-outdoor"><i class="ti ti-sun"></i> All-Weather</span>
+            <h2 class="centre-card-title">Other<br/><span>Activities</span></h2>
+            <p class="centre-card-desc">Everything beyond the pool and the gym floor — floodlit astro pitches for 5-a-side or 7-a-side, summer camps for kids, sauna and steam rooms to unwind, and health &amp; wellbeing sessions.</p>
+            <span class="centre-card-cta">
+              Explore More
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ CTA STRIP ═══ -->
+  <div class="pri-cta-strip r">
+    <div class="pri-cta-inner">
+      <div>
+        <h3>Not sure where to start?</h3>
+        <p>Pop into any of our three centres and our team will walk you through what's on. No booking needed for a look around, and no pressure to sign up.</p>
+      </div>
+      <div class="pri-cta-btns">
+        <a href="centres.html" class="btn-join">Find a Centre</a>
+        <a href="contact.html" class="btn-ask">Ask a Question</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+        <p class="footer-tagline">Operated by LW Management on behalf of Cork City Council. Three centres serving Cork since 1997.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/LeisureWorldCork" target="_blank" title="Facebook">
+            <img src="Images/fb.png" alt="Facebook" class="social-icon">
+          </a>
+          <a href="https://www.instagram.com/leisureworldhq/" target="_blank" title="Instagram">
+            <img src="Images/ig.png" alt="Instagram" class="social-icon">
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Centres</h5>
+        <ul>
+          <li><a href="./Centres/bishopstown.html" target="_blank">Bishopstown</a></li>
+          <li><a href="./Centres/churchfield.html" target="_blank">Churchfield</a></li>
+          <li><a href="./Centres/douglas.html" target="_blank">Douglas</a></li>
+          <li><a href="index.html#hours" target="_blank">Opening Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Activities</h5>
+        <ul>
+          <li><a href="poolactivities.html">Pool Activities</a></li>
+          <li><a href="gym.html">Gym &amp; Fitness</a></li>
+          <li><a href="Activities/other.html">Other Activities</a></li>
+          <li><a href="Activities/Swimlessons/swimschool.html">Swim School</a></li>
+          <li><a href="Activities/Swimlessons/rl.html">Rookie Lifeguard</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>More</h5>
+        <ul>
+          <li><a href="./pricing.html" target="_blank">Prices</a></li>
+          <li><a href="https://leisureworld-cork.vouchercart.com/app" target="_blank">Gift Vouchers</a></li>
+          <li><a href="./about.html" target="_blank">About Us</a></li>
+          <li><a href="./careers.html" target="_blank">Careers</a></li>
+          <li><a href="faq.html">Help Centre</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 LeisureWorld Cork</p>
+      <div class="footer-legal">
+        <a href="https://www.leisureworldcork.com/privacy-policy/" target="_blank">Privacy Policy</a>
+        <a href="https://www.leisureworldcork.com/cookies-policy/" target="_blank">Cookie Policy</a>
+        <a href="./centre-policies.html" target="_blank">Centre Policies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
