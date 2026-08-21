@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-08-21
+
+- Added `Activities.html` — new central activities hub page, replacing the old `index.html#activities` anchor section
+- Added `adultswimlesson.html` and `poolactivities.html` — new pages for adult swim lessons and pool activities
+- Built out `accessibility.html` (previously empty) with a full "Functional Zone" page — adapted gym equipment for people with neurological conditions, physiotherapist-led, HSE referral info
+- Added `Certfictaons/` folder with `Cert.html`, `nplq.html`, and `ws.html` — new certification pages (NPLQ, water safety, etc.)
+- Added new images to `Images/`: `adultswim.png`, `gymact.jpg`, `kidscamps.jpg`
+- Updated "Activities" nav links across the site (`index.html`, `about.html`, `careers.html`, `centre-policies.html`, `centres.html`, `contact.html`, `gym.html`, `help.html`, `membershipfunnel.html`, `pricing.html`, the `Centres/`, `Activities/Swimlessons/`, and `Policies/` pages) to point to `Activities.html`/`activities.html` instead of the old `#activities` anchor
+
 ## 2026-08-19
 
 - Added `gym.html` — new gym page

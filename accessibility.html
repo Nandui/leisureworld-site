@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="The Functional Zone at LeisureWorld Bishopstown — a gym with adapted equipment for people with neurological conditions. Physiotherapist-led, gym-instructor supervised. Referral via HSE physiotherapy service."/>
+  <title>Functional Zone — LeisureWorld Cork</title>
+  <link rel="icon" type="image/png" href="Images/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div id="cur"></div>
+  <a href="activities.html" class="back-arrow" aria-label="Back to Activities">
+    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </a>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="centres.html">Centres</a></li>
+      <li><a href="activities.html" style="color:var(--white)">Activities</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html">Help</a></li>
+      <li><a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="nav-cta">Sign In / Book</a></li>
+    </ul>
+    <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="mob" id="mob">
+    <button class="mob-close" id="mob-close">✕</button>
+    <a href="about.html"       class="mlink">About</a>
+    <a href="centres.html"     class="mlink">Our Centres</a>
+    <a href="activities.html"  class="mlink">Activities</a>
+    <a href="pricing.html"     class="mlink">Pricing</a>
+    <a href="contact.html"     class="mlink">Contact</a>
+    <a href="faq.html"         class="mlink">Help Centre</a>
+    <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" style="color:var(--pool)">Join Now →</a>
+  </div>
+
+  <style>
+    /* Breadcrumb */
+    .fz-crumbs {
+      display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+      font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(237,242,249,0.55); margin-bottom: 1.4rem;
+    }
+    .fz-crumbs a { color: var(--pool); text-decoration: none; }
+    .fz-crumbs a:hover { text-decoration: underline; }
+    .fz-crumbs span { opacity: 0.5; }
+
+    /* Hero badges */
+    .fz-hero-badges { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-top: 1.8rem; }
+    .fz-hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.55rem 1rem; border-radius: 999px;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.85);
+    }
+    .fz-hero-badge.hi { background: rgba(0,184,212,0.14); border-color: rgba(0,184,212,0.35); color: var(--pool); }
+    .fz-hero-badge i { font-size: 0.9rem; }
+
+    /* ─── SECTION: WHAT IT IS ─── */
+    .fz-what {
+      max-width: 1000px; margin: 0 auto 5rem;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 22px;
+      padding: 3rem;
+    }
+    .fz-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--pool); margin-bottom: 1rem;
+    }
+    .fz-eyebrow i { font-size: 0.9rem; }
+    .fz-what h2 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.1rem); color: var(--ink);
+      margin: 0 0 1.2rem; letter-spacing: -0.01em;
+    }
+    .fz-what h2 .hi { color: var(--blue); }
+    .fz-what p {
+      color: var(--muted); font-size: 1.02rem; line-height: 1.75;
+      margin: 0 0 1rem;
+    }
+    .fz-what p:last-of-type { margin-bottom: 0; }
+    .fz-what strong { color: var(--ink); }
+
+    /* Care model callout (physio + instructor) */
+    .fz-care {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
+      margin-top: 2rem; padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .fz-care-item {
+      display: flex; align-items: flex-start; gap: 1rem;
+      padding: 1.2rem 1.4rem;
+      background: linear-gradient(135deg, #f5f9fc 0%, #eaf3f8 100%);
+      border-radius: 14px;
+    }
+    .fz-care-icon {
+      flex-shrink: 0;
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--blue);
+    }
+    .fz-care-icon svg { width: 22px; height: 22px; }
+    .fz-care-txt strong {
+      display: block;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1rem; color: var(--ink); margin-bottom: 0.25rem;
+    }
+    .fz-care-txt span { font-size: 0.9rem; color: var(--muted); line-height: 1.5; }
+
+    /* ─── SECTION: WHO IT'S FOR ─── */
+    .fz-who-head { text-align: center; max-width: 720px; margin: 0 auto 2.5rem; }
+    .fz-who-head h2 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.1rem); color: var(--ink);
+      margin: 0 0 0.9rem; letter-spacing: -0.01em;
+    }
+    .fz-who-head h2 .hi { color: var(--blue); }
+    .fz-who-head p {
+      color: var(--muted); font-size: 1rem; line-height: 1.7; margin: 0;
+    }
+    .fz-who-grid {
+      max-width: 1100px; margin: 0 auto 5rem;
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem;
+    }
+    .fz-who-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 20px;
+      padding: 2.2rem 2rem;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .fz-who-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--pool);
+      box-shadow: 0 14px 30px rgba(10,35,72,0.1);
+    }
+    .fz-who-icon {
+      width: 56px; height: 56px;
+      border-radius: 15px;
+      background: rgba(0,184,212,0.12);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.3rem;
+    }
+    .fz-who-icon svg { width: 28px; height: 28px; color: var(--pool); stroke-width: 1.8; }
+    .fz-who-card h4 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.15rem; color: var(--ink); margin: 0 0 0.7rem; line-height: 1.3;
+    }
+    .fz-who-card > p {
+      font-size: 0.95rem; color: var(--muted); line-height: 1.65; margin: 0 0 1.3rem;
+    }
+    .fz-examples-lbl {
+      display: block;
+      font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 0.6rem;
+    }
+    .fz-examples { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .fz-examples span {
+      font-size: 0.82rem; font-weight: 600;
+      padding: 0.35rem 0.8rem; border-radius: 999px;
+      background: rgba(20,100,216,0.08); color: var(--blue);
+    }
+
+    /* ─── PATHWAY SECTION ─── */
+    .fz-path-wrap { max-width: 1100px; margin: 0 auto 5rem; }
+    .fz-path-head { text-align: center; margin-bottom: 2.5rem; }
+    .fz-path-head h2 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.1rem); color: var(--ink);
+      margin: 0 0 0.9rem; letter-spacing: -0.01em;
+    }
+    .fz-path-head h2 .hi { color: var(--blue); }
+    .fz-path-head p {
+      color: var(--muted); font-size: 1rem; line-height: 1.7;
+      max-width: 640px; margin: 0 auto;
+    }
+
+    .fz-path-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      position: relative;
+    }
+    /* Connecting line behind the numbered circles */
+    .fz-path-steps::before {
+      content: '';
+      position: absolute;
+      top: 32px; left: 12.5%; right: 12.5%; height: 2px;
+      background: linear-gradient(to right, var(--pool), var(--blue));
+      opacity: 0.3;
+      z-index: 0;
+    }
+    .fz-path-step {
+      position: relative;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 18px;
+      padding: 1.8rem 1.4rem 1.4rem;
+      text-align: center;
+    }
+    .fz-path-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      background: var(--blue); color: #fff;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.1rem;
+      margin: -3rem auto 1rem;
+      border: 4px solid var(--paper);
+      position: relative; z-index: 1;
+    }
+    .fz-path-step h4 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 0.98rem; color: var(--ink); margin: 0 0 0.5rem;
+    }
+    .fz-path-step p {
+      font-size: 0.88rem; color: var(--muted); line-height: 1.55; margin: 0;
+    }
+
+    /* ─── CONTACT CARD (Blackrock Hall) ─── */
+    .fz-contact {
+      max-width: 1000px; margin: 0 auto;
+      background: linear-gradient(135deg, #0a2452 0%, #051535 100%);
+      color: #fff;
+      border-radius: 24px;
+      padding: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .fz-contact::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 80% 20%, rgba(0,184,212,0.2) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 10% 90%, rgba(20,100,216,0.15) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .fz-contact-inner {
+      position: relative; z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .fz-contact-lbl {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--pool); margin-bottom: 0.9rem;
+    }
+    .fz-contact h3 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 0.9rem; letter-spacing: -0.01em;
+    }
+    .fz-contact h3 .hi { color: var(--pool); }
+    .fz-contact > p, .fz-contact-inner > div > p {
+      color: rgba(237,242,249,0.75); font-size: 0.98rem; line-height: 1.7;
+      margin: 0 0 1rem; max-width: 480px;
+    }
+    .fz-contact-note {
+      display: inline-flex; align-items: flex-start; gap: 0.6rem;
+      padding: 0.9rem 1.1rem;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      font-size: 0.88rem; color: rgba(237,242,249,0.85); line-height: 1.55;
+      max-width: 480px;
+    }
+    .fz-contact-note svg { flex-shrink: 0; width: 18px; height: 18px; color: var(--pool); margin-top: 0.1rem; }
+
+    .fz-phone-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(0,184,212,0.3);
+      border-radius: 20px;
+      padding: 2rem 2.2rem;
+      text-align: center;
+      min-width: 260px;
+    }
+    .fz-phone-lbl {
+      display: block;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--pool); margin-bottom: 0.8rem;
+    }
+    .fz-phone-num {
+      display: inline-flex; align-items: center; gap: 0.7rem;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.6rem; color: #fff;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .fz-phone-num:hover { color: var(--pool); }
+    .fz-phone-num svg { width: 22px; height: 22px; color: var(--pool); }
+    .fz-phone-sub {
+      display: block;
+      font-size: 0.85rem; color: rgba(237,242,249,0.55);
+      margin-top: 0.5rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .fz-what { padding: 2rem 1.8rem; }
+      .fz-care { grid-template-columns: 1fr; }
+      .fz-who-grid { grid-template-columns: 1fr; }
+      .fz-path-steps { grid-template-columns: 1fr; gap: 2.5rem; }
+      .fz-path-steps::before { display: none; }
+      .fz-path-num { margin-top: -2.8rem; }
+      .fz-contact { padding: 2rem 1.8rem; }
+      .fz-contact-inner { grid-template-columns: 1fr; gap: 1.8rem; }
+      .fz-phone-card { min-width: auto; }
+      .fz-phone-num { font-size: 1.4rem; }
+    }
+  </style>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="ctr-hero">
+    <div class="ctr-hero-wm" aria-hidden="true">FUNCTIONAL</div>
+    <div class="ctr-hero-inner">
+      <div class="fz-crumbs">
+        <a href="activities.html">Activities</a>
+        <span>›</span>
+        <a href="Centres/bishopstown.html">Bishopstown</a>
+        <span>›</span>
+        <span style="color:rgba(237,242,249,0.75)">Functional Zone</span>
+      </div>
+      <h1>The <span class="hi">Functional Zone</span></h1>
+      <p>A dedicated gym at LeisureWorld Bishopstown, designed with adapted equipment so people living with a neurological condition can train optimally and sustain an exercise programme — with the right support in place, every session.</p>
+      <div class="fz-hero-badges">
+        <span class="fz-hero-badge hi"><i class="ti ti-stethoscope"></i> Physiotherapist-Led</span>
+        <span class="fz-hero-badge"><i class="ti ti-user-shield"></i> Instructor-Supervised</span>
+        <span class="fz-hero-badge"><i class="ti ti-map-pin"></i> Bishopstown</span>
+      </div>
+    </div>
+    <div class="ctr-hero-ramp"></div>
+  </section>
+
+  <!-- ═══ BODY ═══ -->
+  <div class="ctr-body">
+    <div class="ctr-body-inner">
+
+      <!-- ─── WHAT IT IS ─── -->
+      <div class="fz-what r">
+        <div class="fz-eyebrow"><i class="ti ti-info-circle"></i> About the Functional Zone</div>
+        <h2>Adapted equipment, <span class="hi">expert support</span></h2>
+        <p>The Functional Zone is a specialist gym space at our Bishopstown centre, fitted with equipment adapted to suit people with a range of physical impairments. Everything about the space — the equipment, the pace, the guidance — is designed to make regular, meaningful exercise possible.</p>
+        <p><strong>Every session is led by a chartered physiotherapist</strong>, with a qualified gym instructor also on the floor to supervise. That combination means you have both clinical expertise and hands-on exercise support, so you can train confidently and safely from your very first visit.</p>
+
+        <div class="fz-care">
+          <div class="fz-care-item">
+            <div class="fz-care-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            </div>
+            <div class="fz-care-txt">
+              <strong>Led by a Physiotherapist</strong>
+              <span>A chartered physio designs and leads each session, tailored to your goals.</span>
+            </div>
+          </div>
+          <div class="fz-care-item">
+            <div class="fz-care-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="fz-care-txt">
+              <strong>Supervised by an Instructor</strong>
+              <span>A qualified gym instructor is on the floor to support you throughout.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── WHO IT'S FOR ─── -->
+      <div class="fz-who-head r">
+        <h2>Who the Functional Zone <span class="hi">is for</span></h2>
+        <p>The space is designed for people whose physical function has been affected by a neurological condition — whether that was a single event, or an ongoing condition they manage over time.</p>
+      </div>
+
+      <div class="fz-who-grid">
+
+        <!-- Card 1: Single event -->
+        <div class="fz-who-card r">
+          <div class="fz-who-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h4>People recovering from a single neurological event</h4>
+          <p>If you've experienced a one-off neurological event that has left you with physical impairment, the Functional Zone offers a structured way to rebuild strength, movement and independence at your own pace.</p>
+          <span class="fz-examples-lbl">Examples include</span>
+          <div class="fz-examples">
+            <span>Stroke</span>
+            <span>Acquired brain injury</span>
+            <span>Spinal cord injury</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Progressive condition -->
+        <div class="fz-who-card r d1">
+          <div class="fz-who-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>
+          </div>
+          <h4>People living with a progressive neurological condition</h4>
+          <p>If you have a long-term progressive neurological condition, regular supervised exercise can support mobility, strength and quality of life. Our team will help you build a sustainable routine that works around how you're feeling.</p>
+          <span class="fz-examples-lbl">Examples include</span>
+          <div class="fz-examples">
+            <span>Parkinson's</span>
+            <span>Multiple Sclerosis</span>
+            <span>Motor neurone disease</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ─── PATHWAY ─── -->
+      <div class="fz-path-wrap">
+        <div class="fz-path-head r">
+          <h2>How to get <span class="hi">started</span></h2>
+          <p>Access to the Functional Zone is currently through the HSE physiotherapy service. If you're not yet linked in, your GP can start the process for you.</p>
+        </div>
+
+        <div class="fz-path-steps">
+          <div class="fz-path-step r">
+            <div class="fz-path-num">1</div>
+            <h4>Speak with your GP</h4>
+            <p>Book a routine appointment with your GP and let them know you'd like to be referred for physiotherapy.</p>
+          </div>
+          <div class="fz-path-step r d1">
+            <div class="fz-path-num">2</div>
+            <h4>HSE Physiotherapy Referral</h4>
+            <p>Your GP will refer you to the HSE physiotherapy service, which handles access to the Functional Zone.</p>
+          </div>
+          <div class="fz-path-step r d2">
+            <div class="fz-path-num">3</div>
+            <h4>Blackrock Hall</h4>
+            <p>The team at Blackrock Hall will be in touch to assess suitability and next steps.</p>
+          </div>
+          <div class="fz-path-step r d3">
+            <div class="fz-path-num">4</div>
+            <h4>Start in the Zone</h4>
+            <p>Once approved, you'll begin sessions in the Functional Zone — physio-led, instructor-supervised.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── BLACKROCK HALL CONTACT CARD ─── -->
+      <div class="fz-contact r">
+        <div class="fz-contact-inner">
+          <div>
+            <div class="fz-contact-lbl"><i class="ti ti-phone-call"></i> For more information</div>
+            <h3>Contact <span class="hi">Blackrock Hall</span></h3>
+            <p>To find out more about getting started with the Functional Zone, or to check where you are in the referral process, get in touch with the team at Blackrock Hall directly.</p>
+            <div class="fz-contact-note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span>Access is currently only via the HSE physiotherapy service. Blackrock Hall can guide you through what that looks like.</span>
+            </div>
+          </div>
+
+          <div class="fz-phone-card">
+            <span class="fz-phone-lbl">Blackrock Hall</span>
+            <a href="tel:+353214231166" class="fz-phone-num">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              021 423 1166
+            </a>
+            <span class="fz-phone-sub">Tap to call</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA STRIP -->
+  <div class="pri-cta-strip r">
+    <div class="pri-cta-inner">
+      <div>
+        <h3>Questions about the space itself?</h3>
+        <p>For questions about the Bishopstown facility, opening hours, or access to the building, our LeisureWorld reception team is here to help.</p>
+      </div>
+      <div class="pri-cta-btns">
+        <a href="Centres/bishopstown.html" class="btn-join">About Bishopstown</a>
+        <a href="contact.html" class="btn-ask">Contact Reception</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
+        <p class="footer-tagline">Operated by LW Management on behalf of Cork City Council. Three centres serving Cork since 1997.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/LeisureWorldCork" target="_blank" title="Facebook"><img src="Images/fb.png" alt="Facebook" class="social-icon"></a>
+          <a href="https://www.instagram.com/leisureworldhq/" target="_blank" title="Instagram"><img src="Images/ig.png" alt="Instagram" class="social-icon"></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Centres</h5>
+        <ul>
+          <li><a href="Centres/bishopstown.html" target="_blank">Bishopstown</a></li>
+          <li><a href="Centres/churchfield.html" target="_blank">Churchfield</a></li>
+          <li><a href="Centres/douglas.html" target="_blank">Douglas</a></li>
+          <li><a href="index.html#hours">Opening Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Activities</h5>
+        <ul>
+          <li><a href="activities.html">All Activities</a></li>
+          <li><a href="aquatics.html">Aquatics Programme</a></li>
+          <li><a href="functional-zone.html">Functional Zone</a></li>
+          <li><a href="certifications.html">Training Courses</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>More</h5>
+        <ul>
+          <li><a href="pricing.html">Prices</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="faq.html">Help Centre</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 LeisureWorld Cork</p>
+      <div class="footer-legal">
+        <a href="https://www.leisureworldcork.com/privacy-policy/" target="_blank">Privacy Policy</a>
+        <a href="https://www.leisureworldcork.com/cookies-policy/" target="_blank">Cookie Policy</a>
+        <a href="centre-policies.html">Centre Policies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
