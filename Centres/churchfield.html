@@ -1,552 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="LeisureWorld Churchfield — North Cork City leisure centre. Pools, waterslide, gym and more."/>
-  <title>LeisureWorld Churchfield</title>
-  <link rel="stylesheet" href="../style.css"/>
-  <style>
-    /* ── HERO ── */
-    .ctr-hero {
-      min-height: 100svh;
-      background: linear-gradient(150deg, var(--ink) 0%, #062048 50%, #1464d8 100%);
-      display: flex; flex-direction: column; justify-content: flex-end;
-      padding: 0 6vw; position: relative; overflow: hidden;
-    }
-    .ctr-hero::before {
-      content: ''; position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse 60% 50% at 80% 30%, rgba(20,100,216,.3) 0%, transparent 65%),
-        radial-gradient(ellipse 40% 40% at 10% 70%, rgba(0,184,212,.15) 0%, transparent 55%);
-      pointer-events: none;
-    }
-    .ctr-hero-img {
-      position: absolute; inset: 0;
-      background: url('../Images/cf.jpg') center center / cover no-repeat;
-      opacity: 0.18;
-      pointer-events: none;
-    }
-    .ctr-hero-wm {
-      position: absolute; right: -2vw; top: 50%; transform: translateY(-50%);
-      font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(140px, 22vw, 400px);
-      line-height: 0.85; letter-spacing: -0.04em; color: transparent;
-      -webkit-text-stroke: 1px rgba(255,255,255,.04);
-      pointer-events: none; user-select: none;
-    }
-    .ctr-hero-inner {
-      position: relative; z-index: 1;
-      padding-top: 130px; padding-bottom: clamp(70px, 9vw, 130px);
-      max-width: 1100px;
-    }
-    .ctr-hero-inner .eyebrow { color: var(--pool); margin-bottom: 1rem; }
-    .ctr-hero-badge {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15);
-      border-radius: 3px; padding: 0.3rem 0.8rem;
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; color: rgba(255,255,255,.7);
-      margin-bottom: 1.2rem;
-    }
-    .ctr-hero-inner h1 {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(3.5rem, 9vw, 9rem);
-      line-height: 0.88; letter-spacing: -0.03em; color: var(--white);
-      margin-bottom: 1.5rem;
-    }
-    .ctr-hero-inner h1 .hi { color: var(--pool); }
-    .ctr-hero-inner p {
-      font-size: clamp(1rem, 1.5vw, 1.15rem); font-weight: 300; font-style: italic;
-      color: rgba(237,242,249,.5); max-width: 520px; line-height: 1.75;
-      margin-bottom: 2.5rem;
-    }
-    .ctr-hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .ctr-hero-ramp {
-      position: absolute; bottom: -1px; left: 0; width: 100%;
-      height: clamp(50px, 7vw, 110px); background: var(--paper);
-      clip-path: polygon(0 100%, 100% 0, 100% 100%); pointer-events: none;
-    }
-
-    /* ── QUICK FACTS ── */
-    .ctr-facts {
-      background: var(--navy); padding: 0;
-    }
-    .ctr-facts-inner {
-      max-width: 1200px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 0;
-    }
-    .ctr-fact {
-      padding: 2.2rem 2rem;
-      border-right: 1px solid rgba(255,255,255,.06);
-    }
-    .ctr-fact:last-child { border-right: none; }
-    .ctr-fact-label {
-      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em;
-      text-transform: uppercase; color: var(--pool); margin-bottom: 0.5rem;
-    }
-    .ctr-fact-value {
-      font-family: 'Archivo Black', sans-serif; font-size: 1rem;
-      color: var(--white); line-height: 1.3;
-    }
-    .ctr-fact-sub { font-size: 0.78rem; color: rgba(237,242,249,.35); margin-top: 0.2rem; }
-
-    /* ── BODY ── */
-    .ctr-body { background: var(--paper); padding: 80px 6vw 100px; }
-    .ctr-body-inner { max-width: 1200px; margin: 0 auto; }
-
-    /* ── PHOTO PLACEHOLDER ── */
-    .ctr-photo-strip {
-      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem;
-      margin-bottom: 5rem; border-radius: 8px; overflow: hidden; height: 360px;
-    }
-    .ctr-photo {
-      background: linear-gradient(135deg, #0a2348 0%, #1464d8 100%);
-      display: flex; align-items: center; justify-content: center;
-      position: relative; overflow: hidden;
-    }
-    .ctr-photo-label {
-      font-family: 'Archivo Black', sans-serif; font-size: 0.75rem;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: rgba(255,255,255,.3); text-align: center; padding: 1rem;
-    }
-
-    /* ── TWO COL ── */
-    .ctr-two-col {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
-      margin-bottom: 5rem; align-items: start;
-    }
-
-    /* ── SECTION HEADINGS ── */
-    .ctr-section-eyebrow {
-      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em;
-      text-transform: uppercase; color: var(--pool); margin-bottom: 0.6rem;
-    }
-    .ctr-section-title {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(1.6rem, 3vw, 2.6rem);
-      letter-spacing: -0.02em; color: var(--navy);
-      margin-bottom: 1.5rem; line-height: 1;
-    }
-    .ctr-section-title span { color: var(--blue); }
-    .ctr-body-text {
-      font-size: 0.95rem; color: #3a4f6a; line-height: 1.85;
-      margin-bottom: 1rem;
-    }
-    .ctr-body-text:last-child { margin-bottom: 0; }
-
-    /* ── FACILITIES GRID ── */
-    .facilities-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
-      background: rgba(10,35,72,.08); border: 1px solid rgba(10,35,72,.08);
-      border-radius: 8px; overflow: hidden;
-    }
-    .facility-item {
-      background: var(--white); padding: 1.4rem 1.6rem;
-      display: flex; align-items: center; gap: 1rem;
-      transition: background 0.2s;
-    }
-    .facility-item:hover { background: #f5f8ff; }
-    .facility-icon {
-      width: 38px; height: 38px; border-radius: 6px;
-      background: rgba(20,100,216,.08);
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-    }
-    .facility-icon svg { width: 18px; height: 18px; stroke: var(--blue); fill: none; }
-    .facility-name {
-      font-family: 'Archivo Black', sans-serif; font-size: 0.88rem;
-      color: var(--navy); line-height: 1.2;
-    }
-    .facility-detail { font-size: 0.75rem; color: var(--muted); margin-top: 0.1rem; }
-
-    /* ── ACTIVITIES LIST ── */
-    .activities-list { display: flex; flex-direction: column; border-top: 1px solid rgba(10,35,72,.08); }
-    .activity-row {
-      display: grid;
-      grid-template-columns: 1fr auto 24px;
-      align-items: center;
-      gap: 1rem;
-      padding: 1.1rem 0; border-bottom: 1px solid rgba(10,35,72,.06);
-      text-decoration: none; color: inherit;
-      transition: background 0.2s;
-    }
-    .activity-row:last-child { border-bottom: none; }
-    .activity-row:hover .activity-name { color: var(--blue); }
-    .activity-row:hover .activity-arrow { transform: translateX(4px); color: var(--blue); }
-    .activity-name {
-      font-family: 'Archivo Black', sans-serif; font-size: 0.95rem;
-      color: var(--navy); transition: color 0.2s;
-    }
-    .activity-tag {
-      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em;
-      text-transform: uppercase; padding: 0.22rem 0.6rem; border-radius: 3px;
-      background: rgba(20,100,216,.07); color: var(--blue);
-      justify-self: end;
-      white-space: nowrap;
-    }
-    .activity-arrow {
-      color: var(--muted); transition: transform 0.2s, color 0.2s;
-      display: flex; align-items: center; justify-content: flex-end;
-    }
-    .activity-arrow svg { width: 16px; height: 16px; stroke: currentColor; fill: none; }
-
-    /* ── HOURS ── */
-    .hours-block {
-      background: var(--white); border: 1px solid rgba(10,35,72,.08);
-      border-radius: 8px; overflow: hidden;
-    }
-    .hours-block table { width: 100%; border-collapse: collapse; }
-    .hours-block td {
-      padding: 0.9rem 1.4rem; font-size: 0.88rem;
-      color: #3a4f6a; border-bottom: 1px solid rgba(10,35,72,.05);
-    }
-    .hours-block tr:last-child td { border-bottom: none; }
-    .hours-block td:first-child { font-family: 'Archivo Black', sans-serif; font-size: 0.82rem; color: var(--navy); width: 45%; }
-    .hours-note {
-      padding: 0.8rem 1.4rem; font-size: 0.75rem; color: var(--muted);
-      font-style: italic; border-top: 1px solid rgba(10,35,72,.05);
-    }
-
-    /* ── INFO STRIP (relocated above map) ── */
-    .ctr-info-strip {
-      background: var(--paper);
-      padding: 0 6vw;
-    }
-    .ctr-info-strip-inner {
-      background: var(--navy);
-      max-width: 1200px;
-      margin: 0 auto;
-      border-radius: 8px 8px 0 0;
-      overflow: hidden;
-    }
-
-    /* ── MAP BLOCK ── */
-    .ctr-map-wrap {
-      background: var(--paper);
-      padding: 0 6vw 80px;
-    }
-    .ctr-map-wrap-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .ctr-map {
-      position: relative;
-      display: block;
-      width: 100%;
-      height: 380px;
-      border-radius: 0 0 8px 8px;
-      overflow: hidden;
-      text-decoration: none;
-      box-shadow: 0 8px 30px rgba(10,35,72,.08);
-      border: 1px solid rgba(10,35,72,.08);
-      border-top: none;
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
-    .ctr-map:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(10,35,72,.14); }
-    .ctr-map iframe {
-      width: 100%; height: 100%; border: 0; display: block;
-      pointer-events: none;
-      filter: saturate(0.95);
-    }
-    .ctr-map-overlay {
-      position: absolute;
-      left: 1.5rem; bottom: 1.5rem;
-      display: inline-flex; align-items: center; gap: 0.55rem;
-      background: var(--pool); color: var(--white);
-      font-family: 'Archivo Black', sans-serif; font-size: 0.82rem;
-      letter-spacing: 0.05em; text-transform: uppercase;
-      padding: 0.85rem 1.6rem; border-radius: 3px;
-      box-shadow: 0 6px 18px rgba(0,0,0,.18);
-      transition: background 0.2s;
-    }
-    .ctr-map:hover .ctr-map-overlay { background: #00a0b8; }
-    .ctr-map-overlay svg { width: 16px; height: 16px; stroke: currentColor; fill: none; }
-    @media (max-width: 720px) {
-      .ctr-map { height: 280px; }
-      .ctr-map-overlay { left: 1rem; bottom: 1rem; padding: 0.7rem 1.2rem; font-size: 0.72rem; }
-    }
-
-    @media (max-width: 1024px) { .ctr-facts-inner { grid-template-columns: 1fr 1fr; } .ctr-two-col { grid-template-columns: 1fr; gap: 3rem; } }
-    @media (max-width: 720px) { .ctr-facts-inner { grid-template-columns: 1fr 1fr; } .facilities-grid { grid-template-columns: 1fr; } .ctr-photo-strip { grid-template-columns: 1fr; height: auto; } .ctr-photo { height: 200px; } }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore LeisureWorld Churchfield: swimming pools, a waterslide, gyms, classes and astro pitches. Find facilities, opening hours and directions for your next visit.">
+  <meta name="theme-color" content="#0a2348">
+  <title>Churchfield — LeisureWorld Cork</title>
+  <link rel="icon" type="image/png" href="../Images/logo.png">
+  <link rel="preload" href="../fonts/archivo-black-v23-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/archivo-v25-latin/archivo-v25-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/icons/tabler-icons.min.css">
+  <link rel="stylesheet" href="../homepage.css">
+  <link rel="stylesheet" href="../centre-page.css">
+  <script src="../homepage.js" defer></script>
 </head>
-<body>
-
-  <div id="cur"></div>
-  <a href="../centres.html" class="back-arrow" aria-label="Go back">
-    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-  </a>
-
-  <nav id="nav">
-    <a href="../index.html" class="logo"><img src="../Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
-    <ul class="nav-links">
-      <li><a href="../index.html#about">About</a></li>
-      <li><a href="../index.html#locations">Centres</a></li>
-      <li><a href="../activities.html">Activities</a></li>
-      <li><a href="../pricing.html">Pricing</a></li>
-      <li><a href="../contact.html">Contact</a></li>
-      <li><a href="../help.html">Help</a></li>
-      <li><a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="nav-cta">Sign In / Book</a></li>
-    </ul>
-    <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
-  </nav>
-  <div class="mob" id="mob">
-    <button class="mob-close" id="mob-close">✕</button>
-    <a href="../index.html#about" class="mlink">About</a>
-    <a href="../index.html#locations" class="mlink">Our Centres</a>
-    <a href="../activities.html" class="mlink">Activities</a>
-    <a href="../pricing.html" class="mlink">Pricing</a>
-    <a href="../contact.html" class="mlink">Contact</a>
-    <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" style="color:var(--pool)">Join Now →</a>
-  </div>
-
-  <!-- HERO -->
-  <section class="ctr-hero">
-    <div class="ctr-hero-img"></div>
-    <div class="ctr-hero-wm" aria-hidden="true">CHURCH</div>
-    <div class="ctr-hero-inner">
-      <div class="hero-tag"><span>North Cork · Cork City</span></div>
-      <h1>LeisureWorld<br/><span class="hi">Churchfield</span></h1>
-      <p>A community favourite on the northside. Three pools with a waterslide, dedicated free weights gym, a full class timetable, and a brilliant family atmosphere.</p>
-      <div class="ctr-hero-btns">
-        <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" class="btn-pri">Join Today</a>
-        <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="btn-ghost">Book a Session</a>
+<body class="centre-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header">
+    <a class="brand" href="../index.html" aria-label="LeisureWorld Cork home"><img src="../Images/logo.png" alt="LeisureWorld Cork" width="2000" height="2000"></a>
+    <nav class="header-nav" aria-label="Main navigation">
+      <a class="header-link" href="../index.html#locations">Centres</a>
+      <a class="header-link" href="../Activities.html">Activities</a>
+      <a class="header-link" href="../pricing.html">Prices</a>
+      <a class="button button-solid booking-link" href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" rel="noopener noreferrer">Sign in / Book</a>
+      <button class="icon-button menu-toggle" id="menu-toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false" aria-haspopup="dialog" hidden><i class="ti ti-menu-2" aria-hidden="true"></i></button>
+    </nav>
+  </header>
+  <dialog class="site-menu" id="site-menu" aria-labelledby="menu-title">
+    <div class="menu-top">
+      <a class="brand" href="../index.html" aria-label="LeisureWorld Cork home"><img src="../Images/logo.png" alt="LeisureWorld Cork" width="2000" height="2000"></a>
+      <form method="dialog"><button class="icon-button" aria-label="Close menu"><i class="ti ti-x" aria-hidden="true"></i></button></form>
+    </div>
+    <div class="menu-content">
+      <div><p class="eyebrow" id="menu-title">Your LeisureWorld</p><nav class="menu-main" aria-label="Explore LeisureWorld">
+        <a href="../index.html#locations">Our centres <i class="ti ti-arrow-up-right" aria-hidden="true"></i></a>
+        <a href="#activities">Activities <i class="ti ti-arrow-up-right" aria-hidden="true"></i></a>
+        <a href="../pricing.html">Prices <i class="ti ti-arrow-up-right" aria-hidden="true"></i></a>
+        <a href="#hours">Opening hours <i class="ti ti-arrow-up-right" aria-hidden="true"></i></a>
+      </nav></div>
+      <div class="menu-secondary"><p class="eyebrow">A little more information</p>
+        <a href="../membershipfunnel.html">Membership options</a><a href="../about.html">About LeisureWorld</a><a href="../contact.html">Contact us</a><a href="../help.html">Help &amp; FAQs</a><a href="../accessibility.html">Accessibility &amp; inclusion</a><a href="../careers.html">Careers</a>
       </div>
     </div>
-    <div class="ctr-hero-ramp"></div>
-  </section>
-
-  <!-- BODY -->
-  <div class="ctr-body">
-    <div class="ctr-body-inner">
-
-      <!-- Photo strip -->
-      <div class="ctr-photo-strip r">
-        <div class="ctr-photo"><p class="ctr-photo-label">Main Pool<br/>Photo Coming Soon</p></div>
-        <div class="ctr-photo"><p class="ctr-photo-label">Gym Floor<br/>Photo Coming Soon</p></div>
-        <div class="ctr-photo"><p class="ctr-photo-label">Astro Pitch<br/>Photo Coming Soon</p></div>
+    <p class="menu-signoff">Every Body Belongs.</p>
+  </dialog>
+  <main id="main">
+    <section class="home-hero" id="home" aria-labelledby="hero-title">
+      <img class="hero-image" id="hero-image" src="../Images/cf.jpg" alt="Churchfield’s bright family pool with waterslides and a colourful play zone" width="1920" height="1280" fetchpriority="high">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-content"><h1 id="hero-title"><span class="hero-greeting">LeisureWorld</span> Churchfield.</h1></div>
+      <p class="hero-caption"><i class="ti ti-map-pin" aria-hidden="true"></i> Churchfield · Cork City</p>
+    </section>
+    <nav class="visit-strip content-width" aria-label="Plan your Churchfield visit">
+      <div class="visit-intro"><p class="eyebrow">Your Churchfield</p><p>Make yourself at home</p></div>
+      <a href="#facilities"><span>Facilities</span><i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+      <a href="#hours"><span>Opening hours</span><i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+      <a href="#find-us"><span>Find us</span><i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+    </nav>
+    <section class="centre-intro content-width section-space" id="facilities" aria-labelledby="facilities-title">
+      <div class="centre-intro-copy reveal">
+        <p class="eyebrow">At home on the northside</p>
+        <h2 id="facilities-title">More ways<br>to feel good.</h2>
+        <p class="body-copy">A swim, a workout, or a splash with the family. Make a little time for yourself at LeisureWorld Churchfield, on Cork’s northside.</p>
+        <p class="body-copy">With three pools, gym spaces, fitness classes and all-weather pitches, there’s room to find your own way to move.</p>
+        <a class="text-link" href="../pricing.html">View prices <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
       </div>
-
-      <!-- About + Facilities -->
-      <div class="ctr-two-col">
-        <div class="r d1">
-          <h2 class="ctr-section-title">The northside's <span>community</span> centre</h2>
-          <p class="ctr-body-text">LeisureWorld Churchfield is a beloved community facility on Cork's northside, serving the local community with top-quality leisure facilities at affordable prices.</p>
-          <p class="ctr-body-text">Whether you're bringing the kids for a splash, training for a sport, or just looking to stay active, Churchfield has something for everyone.</p>
-          <p class="ctr-body-text">Membership at Churchfield includes full access to LeisureWorld Bishopstown too — two centres for the price of one.</p>
+      <ul class="facility-list reveal" aria-label="Churchfield facilities">
+        <li><i class="ti ti-swimming" aria-hidden="true"></i><h3>Three pools</h3><p>A 25m pool, learner and toddler pools for swimming and play.</p></li>
+        <li><i class="ti ti-pool" aria-hidden="true"></i><h3>Waterslide &amp; play</h3><p>A waterslide and children’s pool with a play zone.</p></li>
+        <li><i class="ti ti-barbell" aria-hidden="true"></i><h3>Gym &amp; fitness</h3><p>Cardio, resistance and free weights, plus fitness studios.</p></li>
+        <li><i class="ti ti-users" aria-hidden="true"></i><h3>Teen gym</h3><p>Supervised training sessions for ages 13–17.</p></li>
+        <li><i class="ti ti-steam" aria-hidden="true"></i><h3>Sauna &amp; steam</h3><p>A little time to unwind. For adults aged 18 and over.</p></li>
+        <li><i class="ti ti-ball-football" aria-hidden="true"></i><h3>Astro pitches</h3><p>Eight floodlit, all-weather pitches. Book ahead for your game.</p></li>
+      </ul>
+    </section>
+    <section class="activities-section" id="activities" aria-labelledby="activities-title">
+      <div class="content-width section-space">
+        <div class="section-heading reveal"><div><p class="eyebrow">Move in your own way</p><h2 id="activities-title">Make it your kind of day.</h2></div><a class="text-link" href="../Activities.html">All activities <i class="ti ti-arrow-right" aria-hidden="true"></i></a></div>
+        <div class="activity-grid">
+          <a class="activity-card reveal" href="../poolactivities.html"><div class="activity-photo"><img src="../Images/cf1.png" alt="The colourful slide and water play area at Churchfield" width="1258" height="572" loading="lazy" decoding="async"><span class="activity-action"><i class="ti ti-arrow-up-right" aria-hidden="true"></i></span></div><div class="activity-copy"><p class="eyebrow">A little pool time</p><h3>Swim. Splash. Smile.</h3><p>Find your flow with lane swimming, family swims and time in the pool.</p></div></a>
+          <a class="activity-card reveal" href="../gym.html"><div class="activity-photo"><img class="gym-photo" src="../Images/gymact.jpg" alt="Dumbbells and space to train on a LeisureWorld gym floor" width="4272" height="2848" loading="lazy" decoding="async"><span class="activity-action"><i class="ti ti-arrow-up-right" aria-hidden="true"></i></span></div><div class="activity-copy"><p class="eyebrow">Make your move</p><h3>Find your strength.</h3><p>Explore gym sessions and fitness classes to make movement part of your day.</p></div></a>
+          <a class="activity-card reveal" href="../Activities/Swimlessons/swimschool.html"><div class="activity-photo"><img class="family-photo" src="../Images/herobg.jpeg" alt="A child in goggles swimming underwater" width="736" height="487" loading="lazy" decoding="async"><span class="activity-action"><i class="ti ti-arrow-up-right" aria-hidden="true"></i></span></div><div class="activity-copy"><p class="eyebrow">Confidence in the water</p><h3>Learn for life.</h3><p>Discover our swim school and help little swimmers find their feet.</p></div></a>
         </div>
-        <div class="r d2">
-          <h2 class="ctr-section-title">What's <span>available</span></h2>
-          <div class="facilities-grid">
-            <div class="facility-item">
-              <div class="facility-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12c2-4 4-6 6-6s4 2 6 6 4 6 6 6M2 12c2 4 4 6 6 6s4-2 6-6"/></svg></div>
-              <div><p class="facility-name">25m Pool</p><p class="facility-detail">Lane &amp; leisure swimming</p></div>
-            </div>
-            <div class="facility-item">
-              <div class="facility-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12c2-4 4-6 6-6s4 2 6 6 4 6 6 6M2 12c2 4 4 6 6 6s4-2 6-6"/></svg></div>
-              <div><p class="facility-name">Leisure Pool</p><p class="facility-detail">Fun &amp; family swimming</p></div>
-            </div>
-            <div class="facility-item">
-              <div class="facility-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12c2-4 4-6 6-6s4 2 6 6 4 6 6 6M2 12c2 4 4 6 6 6s4-2 6-6"/></svg></div>
-              <div><p class="facility-name">Kids Pool</p><p class="facility-detail">With waterslide</p></div>
-            </div>
-            <div class="facility-item">
-              <div class="facility-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
-              <div><p class="facility-name">Gym</p><p class="facility-detail">Free weights &amp; functional zone</p></div>
-            </div>
-            <div class="facility-item">
-              <div class="facility-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg></div>
-              <div><p class="facility-name">Sauna &amp; Steam Room</p><p class="facility-detail">Over 18s only</p></div>
-            </div>
-            <div class="facility-item">
-              <div class="facility-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
-              <div><p class="facility-name">6 Astro Pitches</p><p class="facility-detail">Floodlit all-weather</p></div>
-            </div>
-            <div class="facility-item">
-              <div class="facility-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
-              <div><p class="facility-name">Teen Gym</p><p class="facility-detail">Ages 13–17, supervised</p></div>
-            </div>
-            <div class="facility-item">
-              <div class="facility-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg></div>
-              <div><p class="facility-name">Waterslide</p><p class="facility-detail">Fun pool feature</p></div>
-            </div>
-          </div>
-        </div>
+        <nav class="more-activities" aria-label="More Churchfield activities">
+          <a href="../adultswimlesson.html">Adult lessons <i class="ti ti-arrow-up-right" aria-hidden="true"></i></a>
+          <a href="../gym.html#classes">Fitness &amp; Aquafit <i class="ti ti-arrow-up-right" aria-hidden="true"></i></a>
+          <a href="https://www.leisureworldcork.com/teen-gym-cork/">Teen gym <i class="ti ti-arrow-up-right" aria-hidden="true"></i></a>
+          <a href="https://www.leisureworldcork.com/all-weather-pitch-cork/">Astro pitch hire <i class="ti ti-arrow-up-right" aria-hidden="true"></i></a>
+        </nav>
       </div>
-
-      <!-- Activities + Hours -->
-      <div class="ctr-two-col">
-        <div class="r d1">
-          <h2 class="ctr-section-title">What's <span>on</span></h2>
-          <div class="activities-list">
-            <a href="swimming-lessons.html" class="activity-row">
-              <span class="activity-name">Swimming Lessons</span>
-              <span class="activity-tag">Kids &amp; Adults</span>
-              <span class="activity-arrow"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-            </a>
-            <div class="activity-row" style="cursor:default;">
-              <span class="activity-name">Lane Swimming</span>
-              <span class="activity-tag">Daily</span>
-              <span class="activity-arrow"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-            </div>
-            <div class="activity-row" style="cursor:default;">
-              <span class="activity-name">Fitness Classes</span>
-              <span class="activity-tag">Studio</span>
-              <span class="activity-arrow"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-            </div>
-            <div class="activity-row" style="cursor:default;">
-              <span class="activity-name">Aquafit</span>
-              <span class="activity-tag">Classes</span>
-              <span class="activity-arrow"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-            </div>
-            <div class="activity-row" style="cursor:default;">
-              <span class="activity-name">Astro Pitch Hire</span>
-              <span class="activity-tag">Book Ahead</span>
-              <span class="activity-arrow"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-            </div>
-            <div class="activity-row" style="cursor:default;">
-              <span class="activity-name">Teen Gym</span>
-              <span class="activity-tag">13–17 yrs</span>
-              <span class="activity-arrow"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-            </div>
-            <div class="activity-row" style="cursor:default;">
-              <span class="activity-name">Family Swim</span>
-              <span class="activity-tag">All Ages</span>
-              <span class="activity-arrow"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-            </div>
-          </div>
-        </div>
-        <div class="r d2">
-          <h2 class="ctr-section-title">When we're <span>open</span></h2>
-          <div class="hours-block">
-            <table>
-              <tr><td>Monday – Thursday</td><td>7:00am – 8:45pm</td></tr>
-              <tr><td>Friday</td><td>7:00am – 8:45pm</td></tr>
-              <tr><td>Saturday &amp; Sunday</td><td>9:00am – 5:45pm</td></tr>
-            </table>
-            <p class="hours-note">Pool timetable may differ from gym &amp; classes. Hours may vary on bank holidays.</p>
-          </div>
-          <div style="margin-top:1.5rem;">
-            <a href="../pricing.html" class="btn-pri" style="display:inline-block;">View Full Pricing</a>
-          </div>
-        </div>
+    </section>
+    <section class="centre-hours content-width section-space" id="hours" aria-labelledby="hours-title">
+      <div class="reveal"><p class="eyebrow">Plan a little time for you</p><h2 id="hours-title">When to drop in.</h2><p class="body-copy">Find a time that suits your day. Pool sessions, lessons and classes have their own timetables, so check before you visit.</p><a class="text-link" href="https://www.leisureworldcork.com/opening-hours/">Pool &amp; pitch timetables <i class="ti ti-arrow-right" aria-hidden="true"></i></a></div>
+      <div class="reveal"><table class="hours-table"><caption>Churchfield · Gym opening hours</caption><tbody><tr><th scope="row">Monday – Thursday</th><td>7:00am – 8:45pm</td></tr><tr><th scope="row">Friday</th><td>7:00am – 7:45pm</td></tr><tr><th scope="row">Saturday &amp; Sunday</th><td>9:00am – 5:45pm</td></tr><tr><th scope="row">Bank holidays</th><td>10:00am – 5:45pm</td></tr></tbody></table><p class="hours-note">These are gym opening hours. Swimming, classes and pitches follow separate timetables, which may change during school holidays. Please check your session before visiting.</p><a class="button button-solid" href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" rel="noopener noreferrer">Sign in / Book <i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></div>
+    </section>
+    <section class="find-centre" id="find-us" aria-labelledby="find-title">
+      <div class="find-centre-inner content-width section-space">
+        <div class="find-centre-copy reveal"><p class="eyebrow">See you on the northside</p><h2 id="find-title">Find your way here.</h2><address>LeisureWorld Churchfield<br>Knockfree Avenue, Churchfield<br>Cork, Ireland · T23 VY36</address><div class="centre-contact-links"><a href="tel:+353214397868"><i class="ti ti-phone" aria-hidden="true"></i> 021 439 7868</a><a href="mailto:info@leisureworldcork.com"><i class="ti ti-mail" aria-hidden="true"></i> info@leisureworldcork.com</a></div><a class="button button-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=LeisureWorld+Churchfield+Cork" target="_blank" rel="noopener noreferrer">Get directions <i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></div>
+        <figure class="centre-map"><iframe src="https://www.google.com/maps?q=LeisureWorld+Churchfield+Cork&amp;output=embed" title="Map of LeisureWorld Churchfield on Knockfree Avenue" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><figcaption>LeisureWorld Churchfield · Knockfree Avenue, Cork</figcaption></figure>
       </div>
-
+    </section>
+    <section class="joining-section centre-membership" aria-labelledby="joining-title"><div class="joining-inner content-width reveal"><p class="eyebrow">Room for your everyday</p><h2 id="joining-title">Your pace.<br>Your membership.</h2><p>Drop in on a pay-as-you-go basis, or make us part of your routine. Churchfield membership also includes access to LeisureWorld Bishopstown.</p><div class="button-row"><a class="button button-solid" href="../membershipfunnel.html">Explore membership <i class="ti ti-arrow-right" aria-hidden="true"></i></a><a class="text-link" href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" rel="noopener noreferrer">Join online <i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></div></div></section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-main content-width">
+      <div class="footer-brand"><a class="brand" href="../index.html" aria-label="LeisureWorld Cork home"><img src="../Images/logo.png" alt="LeisureWorld Cork" width="2000" height="2000" loading="lazy"></a><p>Cork’s community leisure centres.<br>Every Body Belongs.</p><div class="social-links"><a class="icon-button" href="https://www.facebook.com/LeisureWorldCork" target="_blank" rel="noopener noreferrer" aria-label="LeisureWorld on Facebook"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a><a class="icon-button" href="https://www.instagram.com/leisureworldhq/" target="_blank" rel="noopener noreferrer" aria-label="LeisureWorld on Instagram"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a></div></div>
+      <div class="footer-column"><h3>Find your centre</h3><a href="../Centres/bishopstown.html">Bishopstown</a><a href="churchfield.html" aria-current="page">Churchfield</a><a href="../Centres/douglas.html">Gus Healy Pool · Douglas</a><a href="#hours">Opening hours</a></div>
+      <div class="footer-column"><h3>Find your activity</h3><a href="../poolactivities.html">Swimming</a><a href="../Activities/Swimlessons/swimschool.html">Swimming lessons</a><a href="../gym.html">Gym &amp; fitness</a><a href="../Activities.html">All activities</a></div>
+      <div class="footer-column" id="help"><h3>A little more</h3><a href="../about.html">About us</a><a href="../help.html">Help &amp; FAQs</a><a href="../accessibility.html">Accessibility &amp; inclusion</a><a href="../careers.html">Careers</a><a href="https://leisureworld-cork.vouchercart.com/app" target="_blank" rel="noopener noreferrer">Gift vouchers</a></div>
     </div>
-  </div>
-
-  <!-- QUICK FACTS (relocated above map) -->
-  <div class="ctr-info-strip">
-    <div class="ctr-info-strip-inner">
-      <div class="ctr-facts-inner">
-        <div class="ctr-fact">
-          <p class="ctr-fact-label">Address</p>
-          <p class="ctr-fact-value">Churchfield</p>
-          <p class="ctr-fact-sub">Cork City</p>
-        </div>
-        <div class="ctr-fact">
-          <p class="ctr-fact-label">Mon – Fri</p>
-          <p class="ctr-fact-value">7:00am – 8:45pm</p>
-          <p class="ctr-fact-sub">Full facility access</p>
-        </div>
-        <div class="ctr-fact">
-          <p class="ctr-fact-label">Sat &amp; Sun</p>
-          <p class="ctr-fact-value">9:00am – 5:45pm</p>
-          <p class="ctr-fact-sub">Full facility access</p>
-        </div>
-        <div class="ctr-fact">
-          <p class="ctr-fact-label">Phone</p>
-          <p class="ctr-fact-value">021 480 4000</p>
-          <p class="ctr-fact-sub">info@leisureworldcork.com</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MAP (click to open directions) -->
-  <div class="ctr-map-wrap">
-    <div class="ctr-map-wrap-inner">
-      <a class="ctr-map r" href="https://www.google.com/maps/dir/?api=1&destination=LeisureWorld+Churchfield+Cork" target="_blank" rel="noopener" aria-label="Get directions to LeisureWorld Churchfield">
-        <iframe src="https://www.google.com/maps?q=LeisureWorld+Churchfield+Cork&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of LeisureWorld Churchfield"></iframe>
-        <span class="ctr-map-overlay">
-          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Get Directions
-        </span>
-      </a>
-    </div>
-  </div>
-
-   <!-- CTA strip (full-width, flush to footer) -->
-  <div class="cf-cta-strip r">
-    <div class="cf-cta-inner">
-      <div>
-        <h3>Ready to get started?</h3>
-        <p>Sign up online today, or simply walk in to any of our three centres; no booking required for pay-as-you-go visits. We're open seven days a week.</p>
-      </div>
-      <div class="cf-cta-btns">
-        <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" class="btn-join">Join Online</a>
-        <a href="contact.html" class="btn-ask">Ask a Question</a>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="index.html" class="logo"><img src="../Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
-        <p class="footer-tagline">Operated by LW Management on behalf of Cork City Council. Three centres serving Cork since 1997.</p>
-        <div class="socials">
-          <a href="https://www.facebook.com/LeisureWorldCork" target="_blank" title="Facebook">
-            <img src="../Images/fb.png" alt="Facebook" class="social-icon">
-          </a>
-          <a href="https://www.instagram.com/leisureworldhq/" target="_blank" title="Instagram">
-            <img src="../Images/ig.png" alt="Instagram" class="social-icon">
-          </a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h5>Centres</h5>
-        <ul>
-          <li><a href="./Centres/bishopstown.html" target="_blank">Bishopstown</a></li>
-          <li><a href="./Centres/churchfield.html" target="_blank">Churchfield</a></li>
-          <li><a href="./Centres/douglas.html" target="_blank">Douglas</a></li>
-          <li><a href="#hours" target="_blank">Opening Hours</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Activities</h5>
-        <ul>
-          <li><a href="https://www.leisureworldcork.com/swimming-lessons-cork/" target="_blank">Swimming Lessons</a></li>
-          <li><a href="https://www.leisureworldcork.com/all-weather-pitch-cork/" target="_blank">Astro Pitches</a></li>
-          <li><a href="https://www.leisureworldcork.com/teen-gym-cork/" target="_blank">Teen Gym</a></li>
-          <li><a href="https://www.leisureworldcork.com/summer-activity-camps/" target="_blank">Summer Camps</a></li>
-          <li><a href="https://www.leisureworldcork.com/health-wellbeing/" target="_blank">Health &amp; Wellbeing</a></li>
-          <li><a href="https://www.leisureworldcork.com/training/nplq-courses/" target="_blank">Lifeguard Training</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>More</h5>
-        <ul>
-          <li><a href="./pricing.html" target="_blank">Prices</a></li>
-          <li><a href="https://leisureworld-cork.vouchercart.com/app" target="_blank">Gift Vouchers</a></li>
-          <li><a href="./about.html" target="_blank">About Us</a></li>
-          <li><a href="https://www.leisureworldcork.com/category/news/" target="_blank">News</a></li>
-          <li><a href="../careers.html" target="_blank">Careers</a></li>
-          <li><a href="https://www.leisureworldcork.com/accessibility/" target="_blank">Accessibility</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 LeisureWorld Cork</p>
-      <div class="footer-legal">
-        <a href="https://www.leisureworldcork.com/privacy-policy/" target="_blank">Privacy Policy</a>
-        <a href="https://www.leisureworldcork.com/cookies-policy/" target="_blank">Cookie Policy</a>
-        <a href="./centre-policies.html" target="_blank">Centre Policies</a>
-      </div>
-    </div>
+    <div class="footer-bottom content-width"><p>© 2026 LeisureWorld Cork</p><nav aria-label="Policies"><a href="https://www.leisureworldcork.com/privacy-policy/">Privacy policy</a><a href="https://www.leisureworldcork.com/cookies-policy/">Cookie policy</a><a href="../centre-policies.html">Centre policies</a></nav><a class="back-to-top" href="#home">Back to top <i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></div>
   </footer>
-  <script src="../script.js" defer></script>
-
 </body>
 </html>
