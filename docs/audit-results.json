@@ -1,0 +1,365 @@
+{
+  "date": "2026-09-12",
+  "engine": "axe-core 4.13.0",
+  "pages": 38,
+  "checks": 304,
+  "widths": [
+    1267,
+    768,
+    390,
+    320
+  ],
+  "states": [
+    "expanded details",
+    "expanded details with WCAG text spacing"
+  ],
+  "automated_rule_violations": 0,
+  "broken_images": 0,
+  "page_overflow_flags": 0,
+  "hero_header_overlap_flags": 0,
+  "does_not_establish_full_conformance": true,
+  "pages_tested": [
+    {
+      "path": "Activities.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Activities/Swimlessons/rl.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Activities/Swimlessons/ss.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Activities/Swimlessons/swimschool.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Activities/Swimlessons/wsf.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Centres/bishopstown.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Centres/churchfield.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Centres/douglas.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Certfictaons/Cert.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Certfictaons/nplq.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Certfictaons/ws.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Policies/admission-policy.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Policies/child-safeguarding-statement.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Policies/code-of-conduct-gym.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Policies/code-of-conduct-pool.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Policies/community-engagement-policy.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Policies/customer-charter.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Policies/disability-inclusion-policy.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Policies/environmental-policy.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Policies/gender-pay-gap-2025.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Policies/sauna-steam-room-guidelines.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Policies/terms-and-conditions.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "Policies/tips-and-gratuities-policy.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "about.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "accessibility.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "adultswimlesson.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "appfunnel.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "careers.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "centre-policies.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "centres.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "contact.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "gym.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "help.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "index.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "membershipfunnel.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "poolactivities.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "pricing.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    },
+    {
+      "path": "website-accessibility.html",
+      "checks": 8,
+      "automated_violations": 0,
+      "manual_review_categories": [
+        "aria-valid-attr-value",
+        "color-contrast"
+      ]
+    }
+  ]
+}

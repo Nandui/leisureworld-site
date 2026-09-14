@@ -1,0 +1,183 @@
+{
+  "scope": "Churchfield light layout matched to restored Bishopstown",
+  "engine": "axe-core",
+  "date": "2026-09-12T18:34:14.534Z",
+  "results": [
+    {
+      "path": "Centres/churchfield.html",
+      "width": 1267,
+      "textSpacing": false,
+      "documentWidth": 1252,
+      "viewportWidth": 1252,
+      "overflow": [],
+      "brokenImages": [],
+      "heroOverlap": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ],
+      "passes": 42
+    },
+    {
+      "path": "Centres/churchfield.html",
+      "width": 768,
+      "textSpacing": false,
+      "documentWidth": 753,
+      "viewportWidth": 753,
+      "overflow": [],
+      "brokenImages": [],
+      "heroOverlap": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "passes": 42
+    },
+    {
+      "path": "Centres/churchfield.html",
+      "width": 390,
+      "textSpacing": false,
+      "documentWidth": 375,
+      "viewportWidth": 375,
+      "overflow": [],
+      "brokenImages": [],
+      "heroOverlap": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 42
+    },
+    {
+      "path": "Centres/churchfield.html",
+      "width": 320,
+      "textSpacing": false,
+      "documentWidth": 305,
+      "viewportWidth": 305,
+      "overflow": [],
+      "brokenImages": [],
+      "heroOverlap": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 42
+    },
+    {
+      "path": "Centres/churchfield.html",
+      "width": 1267,
+      "textSpacing": true,
+      "documentWidth": 1252,
+      "viewportWidth": 1252,
+      "overflow": [],
+      "brokenImages": [],
+      "heroOverlap": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ],
+      "passes": 42
+    },
+    {
+      "path": "Centres/churchfield.html",
+      "width": 768,
+      "textSpacing": true,
+      "documentWidth": 753,
+      "viewportWidth": 753,
+      "overflow": [],
+      "brokenImages": [],
+      "heroOverlap": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ],
+      "passes": 42
+    },
+    {
+      "path": "Centres/churchfield.html",
+      "width": 390,
+      "textSpacing": true,
+      "documentWidth": 375,
+      "viewportWidth": 375,
+      "overflow": [],
+      "brokenImages": [],
+      "heroOverlap": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ],
+      "passes": 42
+    },
+    {
+      "path": "Centres/churchfield.html",
+      "width": 320,
+      "textSpacing": true,
+      "documentWidth": 305,
+      "viewportWidth": 305,
+      "overflow": [],
+      "brokenImages": [],
+      "heroOverlap": false,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-valid-attr-value",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": 42
+    }
+  ]
+}

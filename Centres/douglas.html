@@ -1,311 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Gus Healy Pool Douglas — LeisureWorld Cork. Public 25m swimming pool in Douglas Village."/>
-  <title>Gus Healy Pool - LeisureWorld Douglas</title>
-  <link rel="stylesheet" href="../style.css"/>
-  <style>
-    .ctr-hero { min-height: 100svh; background: linear-gradient(150deg, var(--ink) 0%, #041530 50%, #0a3d7a 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 0 6vw; position: relative; overflow: hidden; }
-    .ctr-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 80% 30%, rgba(0,184,212,.2) 0%, transparent 65%), radial-gradient(ellipse 40% 40% at 10% 70%, rgba(20,100,216,.15) 0%, transparent 55%); pointer-events: none; }
-    .ctr-hero-img { position: absolute; inset: 0; background: url('../Images/gus.jpg') center center / cover no-repeat; opacity: 0.18; pointer-events: none; }
-    .ctr-hero-wm { position: absolute; right: -2vw; top: 50%; transform: translateY(-50%); font-family: 'Archivo Black', sans-serif; font-size: clamp(140px, 22vw, 400px); line-height: 0.85; letter-spacing: -0.04em; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.04); pointer-events: none; user-select: none; }
-    .ctr-hero-inner { position: relative; z-index: 1; padding-top: 130px; padding-bottom: clamp(70px, 9vw, 130px); max-width: 1100px; }
-    .ctr-hero-inner .eyebrow { color: var(--pool); margin-bottom: 1rem; }
-    .ctr-hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15); border-radius: 3px; padding: 0.3rem 0.8rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,.7); margin-bottom: 1.2rem; }
-    .ctr-hero-inner h1 { font-family: 'Archivo Black', sans-serif; font-size: clamp(3.5rem, 9vw, 9rem); line-height: 0.88; letter-spacing: -0.03em; color: var(--white); margin-bottom: 1.5rem; }
-    .ctr-hero-inner h1 .hi { color: var(--pool); }
-    .ctr-hero-inner p { font-size: clamp(1rem, 1.5vw, 1.15rem); font-weight: 300; font-style: italic; color: rgba(237,242,249,.5); max-width: 520px; line-height: 1.75; margin-bottom: 2.5rem; }
-    .ctr-hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .ctr-hero-ramp { position: absolute; bottom: -1px; left: 0; width: 100%; height: clamp(50px, 7vw, 110px); background: var(--paper); clip-path: polygon(0 100%, 100% 0, 100% 100%); pointer-events: none; }
 
-    .ctr-facts { background: var(--navy); }
-    .ctr-facts-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
-    .ctr-fact { padding: 2.2rem 2rem; border-right: 1px solid rgba(255,255,255,.06); }
-    .ctr-fact:last-child { border-right: none; }
-    .ctr-fact-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--pool); margin-bottom: 0.5rem; }
-    .ctr-fact-value { font-family: 'Archivo Black', sans-serif; font-size: 1rem; color: var(--white); line-height: 1.3; }
-    .ctr-fact-sub { font-size: 0.78rem; color: rgba(237,242,249,.35); margin-top: 0.2rem; }
-
-    .ctr-body { background: var(--paper); padding: 80px 6vw 100px; }
-    .ctr-body-inner { max-width: 1200px; margin: 0 auto; }
-
-    .ctr-photo-strip { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; margin-bottom: 5rem; border-radius: 8px; overflow: hidden; height: 360px; }
-    .ctr-photo { background: linear-gradient(135deg, #041530 0%, #0a3d7a 100%); display: flex; align-items: center; justify-content: center; }
-    .ctr-photo-label { font-family: 'Archivo Black', sans-serif; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,.3); text-align: center; padding: 1rem; }
-
-    .ctr-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin-bottom: 5rem; align-items: start; }
-    .ctr-section-eyebrow { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pool); margin-bottom: 0.6rem; }
-    .ctr-section-title { font-family: 'Archivo Black', sans-serif; font-size: clamp(1.6rem, 3vw, 2.6rem); letter-spacing: -0.02em; color: var(--navy); margin-bottom: 1.5rem; line-height: 1; }
-    .ctr-section-title span { color: var(--blue); }
-    .ctr-body-text { font-size: 0.95rem; color: #3a4f6a; line-height: 1.85; margin-bottom: 1rem; }
-
-    .facilities-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(10,35,72,.08); border: 1px solid rgba(10,35,72,.08); border-radius: 8px; overflow: hidden; }
-    .facility-item { background: var(--white); padding: 1.4rem 1.6rem; display: flex; align-items: center; gap: 1rem; transition: background 0.2s; }
-    .facility-item:hover { background: #f5f8ff; }
-    .facility-icon { width: 38px; height: 38px; border-radius: 6px; background: rgba(20,100,216,.08); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .facility-icon svg { width: 18px; height: 18px; stroke: var(--blue); fill: none; }
-    .facility-name { font-family: 'Archivo Black', sans-serif; font-size: 0.88rem; color: var(--navy); line-height: 1.2; }
-    .facility-detail { font-size: 0.75rem; color: var(--muted); margin-top: 0.1rem; }
-
-    /* Pricing table inline */
-    .price-table { width: 100%; border-collapse: collapse; background: var(--white); border: 1px solid rgba(10,35,72,.08); border-radius: 8px; overflow: hidden; margin-bottom: 1rem; }
-    .price-table th { background: var(--navy); color: rgba(237,242,249,.6); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.9rem 1.4rem; text-align: left; }
-    .price-table td { padding: 0.9rem 1.4rem; font-size: 0.9rem; color: #3a4f6a; border-bottom: 1px solid rgba(10,35,72,.06); }
-    .price-table tr:last-child td { border-bottom: none; }
-    .price-table td:first-child { font-family: 'Archivo Black', sans-serif; font-size: 0.85rem; color: var(--navy); }
-    .price-table td.price { font-family: 'Archivo Black', sans-serif; color: var(--blue); font-size: 1rem; }
-    .pri-free { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(0,184,212,.1); color: var(--pool); font-family: 'Archivo Black', sans-serif; font-size: 0.8rem; letter-spacing: 0.04em; padding: 0.5rem 1rem; border-radius: 4px; margin-top: 0.8rem; }
-
-    .hours-block { background: var(--white); border: 1px solid rgba(10,35,72,.08); border-radius: 8px; overflow: hidden; }
-    .hours-block table { width: 100%; border-collapse: collapse; }
-    .hours-block td { padding: 0.9rem 1.4rem; font-size: 0.88rem; color: #3a4f6a; border-bottom: 1px solid rgba(10,35,72,.05); }
-    .hours-block tr:last-child td { border-bottom: none; }
-    .hours-block td:first-child { font-family: 'Archivo Black', sans-serif; font-size: 0.82rem; color: var(--navy); width: 45%; }
-    .hours-note { padding: 0.8rem 1.4rem; font-size: 0.75rem; color: var(--muted); font-style: italic; border-top: 1px solid rgba(10,35,72,.05); }
-
-    /* ── INFO STRIP (relocated above map) ── */
-    .ctr-info-strip {
-      background: var(--paper);
-      padding: 0 6vw;
-    }
-    .ctr-info-strip-inner {
-      background: var(--navy);
-      max-width: 1200px;
-      margin: 0 auto;
-      border-radius: 8px 8px 0 0;
-      overflow: hidden;
-    }
-
-    /* ── MAP BLOCK ── */
-    .ctr-map-wrap { background: var(--paper); padding: 0 6vw 80px; }
-    .ctr-map-wrap-inner { max-width: 1200px; margin: 0 auto; }
-    .ctr-map {
-      position: relative; display: block; width: 100%; height: 380px;
-      border-radius: 0 0 8px 8px; overflow: hidden; text-decoration: none;
-      box-shadow: 0 8px 30px rgba(10,35,72,.08);
-      border: 1px solid rgba(10,35,72,.08); border-top: none;
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
-    .ctr-map:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(10,35,72,.14); }
-    .ctr-map iframe { width: 100%; height: 100%; border: 0; display: block; pointer-events: none; filter: saturate(0.95); }
-    .ctr-map-overlay {
-      position: absolute; left: 1.5rem; bottom: 1.5rem;
-      display: inline-flex; align-items: center; gap: 0.55rem;
-      background: var(--pool); color: var(--white);
-      font-family: 'Archivo Black', sans-serif; font-size: 0.82rem;
-      letter-spacing: 0.05em; text-transform: uppercase;
-      padding: 0.85rem 1.6rem; border-radius: 3px;
-      box-shadow: 0 6px 18px rgba(0,0,0,.18);
-      transition: background 0.2s;
-    }
-    .ctr-map:hover .ctr-map-overlay { background: #00a0b8; }
-    .ctr-map-overlay svg { width: 16px; height: 16px; stroke: currentColor; fill: none; }
-    @media (max-width: 720px) {
-      .ctr-map { height: 280px; }
-      .ctr-map-overlay { left: 1rem; bottom: 1rem; padding: 0.7rem 1.2rem; font-size: 0.72rem; }
-    }
-
-    @media (max-width: 1024px) { .ctr-facts-inner { grid-template-columns: 1fr 1fr; } .ctr-two-col { grid-template-columns: 1fr; gap: 3rem; } }
-    @media (max-width: 720px) { .facilities-grid { grid-template-columns: 1fr; } .ctr-photo-strip { grid-template-columns: 1fr; height: auto; } .ctr-photo { height: 200px; } }
-  </style>
-</head>
-<body>
-  <div id="cur"></div>
-  <a href="../centres.html" class="back-arrow" aria-label="Go back">
-    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-  </a>
-
-  <nav id="nav">
-    <a href="../index.html" class="logo"><img src="../Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
-    <ul class="nav-links">
-      <li><a href="../index.html#about">About</a></li>
-      <li><a href="../index.html#locations">Centres</a></li>
-      <li><a href="../activities.html">Activities</a></li>
-      <li><a href="../pricing.html">Pricing</a></li>
-      <li><a href="../contact.html">Contact</a></li>
-      <li><a href="../help.html">Help</a></li>
-      <li><a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="nav-cta">Sign In / Book</a></li>
-    </ul>
-    <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
-  </nav>
-  <div class="mob" id="mob">
-    <button class="mob-close" id="mob-close">✕</button>
-    <a href="../index.html#about" class="mlink">About</a>
-    <a href="../index.html#locations" class="mlink">Our Centres</a>
-    <a href="../activities.html" class="mlink">Activities</a>
-    <a href="../pricing.html" class="mlink">Pricing</a>
-    <a href="../contact.html" class="mlink">Contact</a>
-    <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" style="color:var(--pool)">Join Now →</a>
-  </div>
-
-  <section class="ctr-hero">
-    <div class="ctr-hero-img"></div>
-    <div class="ctr-hero-wm" aria-hidden="true">DOUGLAS</div>
-    <div class="ctr-hero-inner">
-      <div class="hero-tag"><span>Douglas · Cork City</span></div>
-      <h1>Gus Healy <span class="hi">Pool</span></h1>
-      <p>A well-loved 25-metre pool in Douglas Village, open for public lane and leisure swimming, and structured swimming lessons for all ages.</p>
-      <div class="ctr-hero-btns">
-        <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="btn-pri">Book a Session</a>
-        <a href="../pricing.html" class="btn-ghost">View Pricing</a>
-      </div>
-    </div>
-    <div class="ctr-hero-ramp"></div>
-  </section>
-
-  <div class="ctr-body">
-    <div class="ctr-body-inner">
-
-        <div class="r d1">
-          <h2 class="ctr-section-title">Douglas's <span>community</span> pool</h2>
-          <p class="ctr-body-text">The Gus Healy Pool is a well-loved facility in the heart of Douglas Village, named in honour of Gus Healy, a former Lord Mayor of Cork who championed public leisure facilities for the city.</p>
-          <p class="ctr-body-text">The pool is open to the public on a pay-as-you-go basis — no membership needed. Simply turn up, pay at reception, and swim.</p>
-          <p class="ctr-body-text">Swimming lessons for all ages and abilities are available throughout the year. Contact the centre directly for current lesson schedules.</p>
-
-        <div class="ctr-photo-strip r">
-        <div class="ctr-photo"><p class="ctr-photo-label">25m Pool<br/>Photo Coming Soon</p></div>
-        <div class="ctr-photo"><p class="ctr-photo-label">Pool Deck<br/>Photo Coming Soon</p></div>
-        </div>  
-
-          <div class="ctr-two-col">
-          <div style="margin-top: 2rem;">
-            <p class="ctr-section-eyebrow">Facilities</p>
-            <div class="facilities-grid">
-              <div class="facility-item">
-                <div class="facility-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12c2-4 4-6 6-6s4 2 6 6 4 6 6 6M2 12c2 4 4 6 6 6s4-2 6-6"/></svg></div>
-                <div><p class="facility-name">25m Pool</p><p class="facility-detail">Lane &amp; leisure swimming</p></div>
-              </div>
-              <div class="facility-item">
-                <div class="facility-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
-                <div><p class="facility-name">Swimming Lessons</p><p class="facility-detail">All ages &amp; abilities</p></div>
-              </div>
-              <div class="facility-item">
-                <div class="facility-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-                <div><p class="facility-name">Public Sessions</p><p class="facility-detail">No booking required</p></div>
-              </div>
-              <div class="facility-item">
-                <div class="facility-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-                <div><p class="facility-name">Pay As You Go</p><p class="facility-detail">No membership needed</p></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="r d2">
-          <p class="ctr-section-eyebrow">Pricing</p>
-          <h2 class="ctr-section-title">Simple <span>pricing</span></h2>
-          <table class="price-table">
-            <thead><tr><th>Session</th><th>Price</th></tr></thead>
-            <tbody>
-              <tr><td>Adult</td><td class="price">€7.50</td></tr>
-              <tr><td>Child (6 and over)</td><td class="price">€4.50</td></tr>
-              <tr><td>OAP</td><td class="price">€5.00</td></tr>
-            </tbody>
-          </table>
-
-          <div style="margin-top: 2.5rem;">
-            <p class="ctr-section-eyebrow">Opening Hours</p>
-            <h2 class="ctr-section-title">When we're <span>open</span></h2>
-            <div class="hours-block">
-              <table>
-                <tr><td>Monday – Friday</td><td>7:00am – 9:00pm</td></tr>
-                <tr><td>Saturday</td><td>9:00am – 5:00pm</td></tr>
-                <tr><td>Sunday</td><td>10:00am – 4:00pm</td></tr>
-              </table>
-              <p class="hours-note">Lesson times vary each term. Contact Douglas directly for session availability.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- MAP (click to open directions) -->
-  <div class="ctr-map-wrap">
-    <div class="ctr-map-wrap-inner">
-      <a class="ctr-map r" href="https://www.google.com/maps/dir/?api=1&destination=Gus+Healy+Pool+Douglas+Cork" target="_blank" rel="noopener" aria-label="Get directions to Gus Healy Pool, Douglas">
-        <iframe src="https://www.google.com/maps?q=Gus+Healy+Pool+Douglas+Cork&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Gus Healy Pool, Douglas"></iframe>
-        <span class="ctr-map-overlay">
-          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Get Directions
-        </span>
-      </a>
-    </div>
-  </div>
-
-   <!-- CTA strip (full-width, flush to footer) -->
-  <div class="do-cta-strip r">
-    <div class="do-cta-inner">
-      <div>
-        <h3>Ready to get started?</h3>
-        <p>Sign up online today, or simply walk in to any of our three centres; no booking required for pay-as-you-go visits. We're open seven days a week.</p>
-      </div>
-      <div class="do-cta-btns">
-        <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" class="btn-join">Join Online</a>
-        <a href="contact.html" class="btn-ask">Ask a Question</a>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="index.html" class="logo"><img src="../Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
-        <p class="footer-tagline">Operated by LW Management on behalf of Cork City Council. Three centres serving Cork since 1997.</p>
-        <div class="socials">
-          <a href="https://www.facebook.com/LeisureWorldCork" target="_blank" title="Facebook">
-            <img src="../Images/fb.png" alt="Facebook" class="social-icon">
-          </a>
-          <a href="https://www.instagram.com/leisureworldhq/" target="_blank" title="Instagram">
-            <img src="../Images/ig.png" alt="Instagram" class="social-icon">
-          </a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h5>Centres</h5>
-        <ul>
-          <li><a href="./Centres/bishopstown.html" target="_blank">Bishopstown</a></li>
-          <li><a href="./Centres/churchfield.html" target="_blank">Churchfield</a></li>
-          <li><a href="./Centres/douglas.html" target="_blank">Douglas</a></li>
-          <li><a href="#hours" target="_blank">Opening Hours</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Activities</h5>
-        <ul>
-          <li><a href="https://www.leisureworldcork.com/swimming-lessons-cork/" target="_blank">Swimming Lessons</a></li>
-          <li><a href="https://www.leisureworldcork.com/all-weather-pitch-cork/" target="_blank">Astro Pitches</a></li>
-          <li><a href="https://www.leisureworldcork.com/teen-gym-cork/" target="_blank">Teen Gym</a></li>
-          <li><a href="https://www.leisureworldcork.com/summer-activity-camps/" target="_blank">Summer Camps</a></li>
-          <li><a href="https://www.leisureworldcork.com/health-wellbeing/" target="_blank">Health &amp; Wellbeing</a></li>
-          <li><a href="https://www.leisureworldcork.com/training/nplq-courses/" target="_blank">Lifeguard Training</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>More</h5>
-        <ul>
-          <li><a href="./pricing.html" target="_blank">Prices</a></li>
-          <li><a href="https://leisureworld-cork.vouchercart.com/app" target="_blank">Gift Vouchers</a></li>
-          <li><a href="./about.html" target="_blank">About Us</a></li>
-          <li><a href="https://www.leisureworldcork.com/category/news/" target="_blank">News</a></li>
-          <li><a href="../careers.html" target="_blank">Careers</a></li>
-          <li><a href="https://www.leisureworldcork.com/accessibility/" target="_blank">Accessibility</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 LeisureWorld Cork</p>
-      <div class="footer-legal">
-        <a href="https://www.leisureworldcork.com/privacy-policy/" target="_blank">Privacy Policy</a>
-        <a href="https://www.leisureworldcork.com/cookies-policy/" target="_blank">Cookie Policy</a>
-        <a href="./centre-policies.html" target="_blank">Centre Policies</a>
-      </div>
-    </div>
-  </footer>
-  <script src="../script.js" defer></script>
-
-</body>
-</html>
+<html lang="en-IE"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="#0a2348" name="theme-color"/><title>Gus Healy Pool, Douglas — LeisureWorld Cork</title><meta content="Plan your visit to LeisureWorld Gus Healy Pool · Douglas. Explore facilities, find current opening hours, prices, reception details and directions." name="description"/><link href="../Images/logo.png" rel="icon" type="image/png"/><link as="font" crossorigin="" href="../fonts/archivo-black-v23-latin-regular.woff2" rel="preload" type="font/woff2"/><link href="../assets/icons/tabler-icons.min.css?v=f14b2b4013" rel="stylesheet"/><link href="../homepage.css?v=c91c57f394" rel="stylesheet"/><link href="../site-pages.css?v=b5cb39c3f6" rel="stylesheet"/><link href="../site-accessibility.css?v=6429f2c9ee" rel="stylesheet"/><script defer="" src="../homepage.js?v=9cfbe6a137"></script><script defer="" src="../site-pages.js?v=a5c90c3600"></script><link href="https://www.leisureworldcork.com/Centres/douglas.html" rel="canonical"/><meta content="website" property="og:type"/><meta content="LeisureWorld Cork" property="og:site_name"/><meta content="en_IE" property="og:locale"/><meta content="Gus Healy Pool, Douglas — LeisureWorld Cork" property="og:title"/><meta content="Plan your visit to LeisureWorld Gus Healy Pool · Douglas. Explore facilities, find current opening hours, prices, reception details and directions." property="og:description"/><meta content="https://www.leisureworldcork.com/Centres/douglas.html" property="og:url"/><meta content="https://www.leisureworldcork.com/Images/gus.jpg" property="og:image"/><meta content="Swimming lanes inside Gus Healy Pool in Douglas" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Gus Healy Pool, Douglas — LeisureWorld Cork" name="twitter:title"/><meta content="Plan your visit to LeisureWorld Gus Healy Pool · Douglas. Explore facilities, find current opening hours, prices, reception details and directions." name="twitter:description"/><meta content="https://www.leisureworldcork.com/Images/gus.jpg" name="twitter:image"/><script data-site-schema="" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.leisureworldcork.com/#organization","name":"LeisureWorld Cork","url":"https://www.leisureworldcork.com/","logo":"https://www.leisureworldcork.com/Images/logo.png","email":"info@leisureworldcork.com"},{"@type":"WebSite","@id":"https://www.leisureworldcork.com/#website","url":"https://www.leisureworldcork.com/","name":"LeisureWorld Cork","publisher":{"@id":"https://www.leisureworldcork.com/#organization"},"inLanguage":"en-IE"},{"@type":"WebPage","@id":"https://www.leisureworldcork.com/Centres/douglas.html#webpage","url":"https://www.leisureworldcork.com/Centres/douglas.html","name":"Gus Healy Pool, Douglas — LeisureWorld Cork","description":"Plan your visit to LeisureWorld Gus Healy Pool · Douglas. Explore facilities, find current opening hours, prices, reception details and directions.","inLanguage":"en-IE","isPartOf":{"@id":"https://www.leisureworldcork.com/#website"},"about":{"@id":"https://www.leisureworldcork.com/#organization"},"breadcrumb":{"@id":"https://www.leisureworldcork.com/Centres/douglas.html#breadcrumb"},"mainEntity":{"@id":"https://www.leisureworldcork.com/Centres/douglas.html#centre"}},{"@type":"BreadcrumbList","@id":"https://www.leisureworldcork.com/Centres/douglas.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.leisureworldcork.com/"},{"@type":"ListItem","position":2,"name":"Centres","item":"https://www.leisureworldcork.com/centres.html"},{"@type":"ListItem","position":3,"name":"Gus Healy Pool, Douglas","item":"https://www.leisureworldcork.com/Centres/douglas.html"}]},{"@type":"SportsActivityLocation","@id":"https://www.leisureworldcork.com/Centres/douglas.html#centre","name":"Gus Healy Pool, Douglas","url":"https://www.leisureworldcork.com/Centres/douglas.html","telephone":"+353214293073","address":{"@type":"PostalAddress","streetAddress":"Nursery Drive, Douglas","addressLocality":"Cork","addressCountry":"IE"},"parentOrganization":{"@id":"https://www.leisureworldcork.com/#organization"}}]}</script></head>
+<body class="interior-page location-page"><a class="skip-link" href="#main">Skip to content</a><header class="site-header" id="site-header">
+<a aria-label="LeisureWorld Cork home" class="brand" href="../index.html"><img alt="LeisureWorld Cork" height="2000" src="../Images/logo.png" width="2000"/></a>
+<nav aria-label="Main navigation" class="header-nav">
+<a class="header-link" href="../centres.html">Centres</a>
+<a class="header-link" href="../Activities.html">Activities</a>
+<a class="header-link" href="../pricing.html">Prices</a>
+<a class="button button-solid booking-link" href="#app">Get the app</a>
+<button aria-controls="site-menu" aria-expanded="false" aria-haspopup="dialog" aria-label="Open menu" class="icon-button menu-toggle" hidden="" id="menu-toggle"><i aria-hidden="true" class="ti ti-menu-2"></i></button>
+</nav>
+</header><dialog aria-labelledby="menu-title" class="site-menu" id="site-menu">
+<div class="menu-top">
+<a aria-label="LeisureWorld Cork home" class="brand" href="../index.html"><img alt="LeisureWorld Cork" height="2000" src="../Images/logo.png" width="2000"/></a>
+<form method="dialog"><button aria-label="Close menu" class="icon-button"><i aria-hidden="true" class="ti ti-x"></i></button></form>
+</div>
+<div class="menu-content">
+<div><p class="eyebrow" id="menu-title">Your LeisureWorld</p><nav aria-label="Explore LeisureWorld" class="menu-main">
+<a href="#app">Book with the app <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a>
+<a href="../centres.html">Our centres <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a>
+<a href="../Activities.html">Activities <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a>
+<a href="../pricing.html">Prices <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a>
+<a href="https://www.leisureworldcork.com/opening-hours/">Opening hours <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a>
+</nav></div>
+<div class="menu-secondary"><p class="eyebrow">A little more information</p>
+<a href="../membershipfunnel.html">Membership options</a><a href="../about.html">About LeisureWorld</a><a href="../contact.html">Contact us</a><a href="../help.html">Help &amp; FAQs</a><a href="../accessibility.html">Access &amp; Functional Zone</a><a href="../careers.html">Careers</a>
+<a href="../Certfictaons/Cert.html">Training &amp; qualifications</a><a href="../website-accessibility.html">Website accessibility</a></div>
+</div>
+<p class="menu-signoff">Every Body Belongs.</p>
+</dialog><main id="main" tabindex="-1"><section aria-labelledby="page-title" class="page-lead content-width" id="home"><nav aria-label="Breadcrumb" class="breadcrumbs"><ol><li><a href="../index.html">Home</a></li><li><a href="../centres.html">Centres</a></li><li aria-current="page">Douglas</li></ol></nav><p class="eyebrow">LeisureWorld Cork</p><h1 id="page-title">Gus Healy Pool.<br/>Douglas.</h1><p class="body-copy">A 25m swimming pool on Nursery Drive, Douglas. Find public swim times, swimming lessons and a little pool time for you.</p><div class="action-group"><a class="button button-solid" href="#app">Book with the app <i aria-hidden="true" class="ti ti-arrow-right"></i></a><a class="button button-outline" href="#hours">Plan your visit <i aria-hidden="true" class="ti ti-arrow-right"></i></a></div></section><figure class="centre-panorama content-width"><img alt="Swimming lanes inside Gus Healy Pool in Douglas" class="douglas-panorama-photo" data-original-src="../Images/gus.jpg" decoding="async" fetchpriority="high" height="1280" sizes="100vw" src="../Images/optimized/gus-1600.webp" srcset="../Images/optimized/gus-480.webp 480w, ../Images/optimized/gus-960.webp 960w, ../Images/optimized/gus-1600.webp 1600w" width="1920"/></figure><nav aria-label="Plan your visit" class="section-jumps content-width"><a class="text-link" href="#facilities">Facilities <i aria-hidden="true" class="ti ti-arrow-right"></i></a><a class="text-link" href="#hours">Opening hours <i aria-hidden="true" class="ti ti-arrow-right"></i></a><a class="text-link" href="#find-us">Find us <i aria-hidden="true" class="ti ti-arrow-right"></i></a></nav><section class="content-section white-section" id="facilities"><div class="content-width section-space"><div class="section-heading"><div><p class="eyebrow">At your centre</p><h2>Make it your kind of day.</h2></div></div><div class="info-grid"><article class="info-card"><i aria-hidden="true" class="ti ti-swimming"></i><h3>25m swimming pool</h3><p>Enjoy public swimming at the times set aside in the pool timetable.</p><a class="text-link" href="../poolactivities.html">Explore public swimming <i aria-hidden="true" class="ti ti-arrow-right"></i></a></article><article class="info-card"><i aria-hidden="true" class="ti ti-school"></i><h3>Swimming lessons</h3><p>Contact reception for the current lesson options and course availability in Douglas.</p><a class="text-link" href="../contact.html?centre=Douglas&amp;topic=Swimming%20Lessons#message">Ask about Douglas lessons <i aria-hidden="true" class="ti ti-arrow-right"></i></a></article><article class="info-card"><i aria-hidden="true" class="ti ti-users"></i><h3>Schools &amp; clubs</h3><p>Ask reception about group use and pool bookings.</p><a class="text-link" href="../contact.html#douglas">Talk to Douglas reception <i aria-hidden="true" class="ti ti-arrow-right"></i></a></article></div></div></section><section class="content-section" id="hours"><div class="content-width section-space"><div class="section-heading"><div><p class="eyebrow">Plan your visit</p><h2>A time for you.</h2></div></div><div class="prose"><p>Public swimming in Douglas is limited during school terms because the pool also serves schools and clubs. Use the current Douglas schedule to check public sessions before travelling.</p></div><a class="button button-solid" href="https://www.leisureworldcork.com/locations/leisureworld-douglas/">Check Douglas public swim times <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a><a class="text-link" href="../pricing.html#douglas">See visit prices <i aria-hidden="true" class="ti ti-arrow-right"></i></a></div></section><section class="content-section white-section" id="find-us"><div class="content-width section-space"><div class="section-heading"><div><p class="eyebrow">See you soon</p><h2>Find your way here.</h2></div></div><div class="centre-visit-grid"><div class="prose"><h3>Gus Healy Pool · Douglas</h3><address>Nursery Drive, Douglas, Cork</address><p><a href="tel:+353214293073">021 429 3073</a><br/><a href="mailto:info@leisureworldcork.com">info@leisureworldcork.com</a></p><a class="button button-solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=Gus+Healy+Pool+Nursery+Drive+Douglas+Cork">Get directions <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a></div><div class="prose"><h3>Make yourself at home.</h3><p>Check the session you plan to attend and the admission requirements before your visit. Contact reception about any access arrangements or assistance you need.</p><a class="text-link" href="../Policies/admission-policy.html">Admission policy <i aria-hidden="true" class="ti ti-arrow-right"></i></a><a class="text-link" href="../accessibility.html">Access information <i aria-hidden="true" class="ti ti-arrow-right"></i></a><p>Swimming regularly? Explore <a href="../pricing.html#douglas">Douglas pool membership and pay-as-you-go prices</a>.</p></div></div></div></section><section aria-labelledby="app-title" class="app-section content-width" id="app"><div class="app-copy"><p class="eyebrow">The LeisureWorld app</p><h2 id="app-title">Your centre.<br/>In your pocket.</h2><p class="body-copy app-centre-note">Choose Douglas in the app. Public swimming follows the Douglas timetable; contact reception for lesson and group bookings.</p><ul class="app-features"><li><i aria-hidden="true" class="ti ti-calendar-event"></i><span>Find your centre and check the available swim sessions</span></li><li><i aria-hidden="true" class="ti ti-id"></i><span>Manage bookings and keep your membership card handy</span></li></ul><div aria-label="Download the LeisureWorld app" class="app-downloads" role="group"><a class="store-badge" href="https://apps.apple.com/ie/app/leisureworld/id1479809806"><img alt="Download on the App Store" height="366" loading="lazy" src="../Images/appstore.png" width="1154"/></a><a class="store-badge" href="https://play.google.com/store/apps/details?id=com.innovatise.leisureworldsport"><img alt="Get it on Google Play" height="1310" loading="lazy" src="../Images/playstore.png" width="4130"/></a></div><p class="app-web-booking">Prefer to use your browser? <a class="" href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login">Book online <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a></p></div><figure class="app-preview"><img alt="LeisureWorld app on an iPhone with membership card, bookings and opening hours" data-original-src="../Images/leisureworld-app-iphone.png" decoding="async" height="1536" loading="lazy" sizes="(max-width: 600px) 220px, 320px" src="../Images/optimized/leisureworld-app-iphone-1024.webp" srcset="../Images/optimized/leisureworld-app-iphone-480.webp 480w, ../Images/optimized/leisureworld-app-iphone-960.webp 960w, ../Images/optimized/leisureworld-app-iphone-1024.webp 1024w" width="1024"/></figure></section></main><footer class="site-footer">
+<div class="footer-main content-width">
+<div class="footer-brand"><a aria-label="LeisureWorld Cork home" class="brand" href="../index.html"><img alt="LeisureWorld Cork" height="2000" loading="lazy" src="../Images/logo.png" width="2000"/></a><p>Cork’s community leisure centres.<br/>Every Body Belongs.</p><div class="social-links"><a aria-label="LeisureWorld on Facebook" class="icon-button" href="https://www.facebook.com/LeisureWorldCork" rel="noopener noreferrer"><i aria-hidden="true" class="ti ti-brand-facebook"></i></a><a aria-label="LeisureWorld on Instagram" class="icon-button" href="https://www.instagram.com/leisureworldhq/" rel="noopener noreferrer"><i aria-hidden="true" class="ti ti-brand-instagram"></i></a></div></div>
+<div class="footer-column"><h3>Find your centre</h3><a href="../Centres/bishopstown.html">Bishopstown</a><a href="../Centres/churchfield.html">Churchfield</a><a aria-current="page" href="../Centres/douglas.html">Gus Healy Pool · Douglas</a><a href="https://www.leisureworldcork.com/opening-hours/">Opening hours</a></div>
+<div class="footer-column"><h3>Find your activity</h3><a href="../poolactivities.html">Swimming</a><a href="../Activities/Swimlessons/swimschool.html">Swimming lessons</a><a href="../gym.html">Gym &amp; fitness</a><a href="../Activities.html">All activities</a><a href="../pricing.html">Prices</a><a href="../membershipfunnel.html">Membership options</a></div>
+<div class="footer-column" id="help"><h3>A little more</h3><a href="../contact.html">Contact us</a><a href="../Certfictaons/Cert.html">Training &amp; qualifications</a><a href="#app">Get the LeisureWorld app</a><a href="../about.html">About us</a><a href="../help.html">Help &amp; FAQs</a><a href="../accessibility.html">Access &amp; Functional Zone</a><a href="../careers.html">Careers</a><a href="https://leisureworld-cork.vouchercart.com/app" rel="noopener noreferrer">Gift vouchers</a></div>
+</div>
+<div class="footer-bottom content-width"><p>© 2026 LeisureWorld Cork</p><nav aria-label="Policies"><a href="https://www.leisureworldcork.com/privacy-policy/">Privacy policy</a><a href="https://www.leisureworldcork.com/cookies-policy/">Cookie policy</a><a href="../centre-policies.html">Centre policies</a><a href="../website-accessibility.html">Website accessibility</a></nav><a class="back-to-top" href="#home">Back to top <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a></div>
+</footer></body></html>

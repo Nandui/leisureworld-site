@@ -59,6 +59,30 @@ h3{font-size:clamp(24px,2.1vw,32px)}
 .hero-greeting{display:block;margin-bottom:clamp(16px,1.6vw,24px);font-family:Archivo,sans-serif;font-size:clamp(26px,3vw,42px);font-weight:500;line-height:1.2;letter-spacing:-.025em}
 .hero-caption{position:absolute;bottom:68px;right:calc(var(--gutter) - 12px);display:flex;align-items:center;gap:6px;font-size:12px;line-height:1.4}
 .hero-caption .ti{font-size:16px}
+/* Homepage booking funnel, scoped to keep centre-page heroes unchanged. */
+.homepage .hero-content{bottom:clamp(132px,11vw,160px)}
+.hero-booking{display:flex;align-items:center;gap:24px;margin-top:32px}
+.app-hero-button{background:white;color:var(--navy);min-height:56px;padding-inline:28px}
+.app-hero-button .ti{color:var(--orange)}
+.app-hero-button:hover{background:var(--paper)}
+.hero-booking>p{font-size:14px;line-height:1.5;color:#eef4fc}
+.app-section{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:clamp(40px,6vw,90px);padding-block:60px;scroll-margin-top:0}
+.app-copy{max-width:560px;min-width:0}
+.app-copy .eyebrow{margin-bottom:18px}
+.app-copy h2{font-size:clamp(34px,3.8vw,54px);line-height:1.13}
+.app-features{list-style:none;margin:24px 0;padding:0;border-top:1px solid var(--line)}
+.app-features li{display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.5}
+.app-features .ti{font-size:25px;color:var(--blue)}
+.app-downloads{display:flex;flex-wrap:wrap;gap:12px}
+.store-badge{display:flex;align-items:center;width:174px;min-height:55px;border-radius:9px;transition:transform .2s}
+.store-badge img{width:100%;height:auto}
+.store-badge:hover{transform:translateY(-3px)}
+.app-web-booking{margin-top:12px;font-size:13px;color:var(--muted);line-height:1.6}
+.app-web-booking a{display:inline-flex;align-items:center;gap:4px;min-height:44px;color:var(--navy);text-decoration:underline;text-underline-offset:4px;font-weight:600}
+.app-web-booking a:hover{color:var(--blue)}
+.app-web-booking .ti{font-size:16px}
+.app-preview{width:100%;max-width:360px;margin-inline:auto;overflow:hidden;background:#dce7f5;border-radius:24px}
+.app-preview>img{width:100%;height:auto}
 .visit-strip{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr 1fr 1fr 1.15fr;align-items:center;margin-top:-48px;min-height:138px;padding:28px 10px;background:white;border-radius:var(--radius);scroll-margin-top:40px}
 .visit-intro{padding:7px 30px}
 .visit-intro .eyebrow{letter-spacing:.13em;font-size:11px;margin-bottom:5px}
@@ -152,7 +176,7 @@ h3{font-size:clamp(24px,2.1vw,32px)}
 .menu-secondary>a:hover{text-decoration:underline;text-underline-offset:5px}
 .menu-signoff{margin-top:45px;padding-top:22px;border-top:1px solid #354b69;font-size:14px;color:#b7c8dc}
 .reveal.is-revealed{animation:soft-arrival .65s both}
-@keyframes soft-arrival{from{opacity:.3;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes soft-arrival{from{transform:translateY(18px)}to{transform:translateY(0)}}
 @media(min-width:1600px){.site-header{padding-inline:calc((100% - 1440px)/2)}.hero-content{left:max(var(--gutter),calc((100% - 1440px)/2))}}
 @media(max-width:1100px){
   .header-nav{gap:25px}
@@ -166,6 +190,7 @@ h3{font-size:clamp(24px,2.1vw,32px)}
   .visitor-section{gap:50px}
 }
 @media(max-width:850px){
+  .app-section{gap:32px;grid-template-columns:1.1fr 1fr}.app-preview{max-width:300px}.app-features li{font-size:14px;gap:12px}.app-downloads{gap:10px}.store-badge{width:150px;min-height:48px}
   .site-header{min-height:100px}.site-header .brand{width:140px}.header-nav{gap:14px}.header-link{display:none}
   .home-hero{min-height:610px}.hero-caption{font-size:11px}
   .visit-strip{grid-template-columns:repeat(3,1fr);padding:24px;gap:0;min-height:155px}
@@ -177,6 +202,8 @@ h3{font-size:clamp(24px,2.1vw,32px)}
   .footer-main{grid-template-columns:1.15fr 1fr;gap:44px}.footer-bottom{justify-content:flex-start;gap:16px 30px}
 }
 @media(max-width:600px){
+  .homepage .hero-content{bottom:116px}.hero-booking{margin-top:27px;gap:14px;flex-direction:column;align-items:flex-start}.app-hero-button{min-height:50px;font-size:13px;padding-inline:22px}.hero-booking>p{display:none}
+  .app-section{grid-template-columns:1fr;gap:24px;padding-block:44px}.app-copy .eyebrow{font-size:10px;margin-bottom:16px}.app-copy h2{font-size:clamp(30px,8.6vw,46px)}.app-features{margin:20px 0 22px}.app-features li{font-size:14px;padding-block:13px}.app-downloads{flex-wrap:nowrap;gap:10px}.store-badge{width:calc((100% - 10px)/2);max-width:174px;min-height:48px}.app-web-booking{margin-top:10px}.app-preview{max-width:220px;border-radius:18px}
   :root{--gutter:24px;--radius:16px}html{scroll-padding-top:24px}.section-space{padding-block:70px}.content-width{width:calc(100% - 48px)}
   .site-header{inset:8px 8px auto;padding:15px 16px;gap:10px;min-height:92px}.site-header .brand{width:114px}.header-nav{gap:7px}
   .booking-link{min-height:44px;padding:11px 15px;font-size:11px}.menu-toggle{min-width:44px;min-height:44px;padding:8px}.menu-toggle .ti{font-size:25px}

@@ -1,0 +1,49 @@
+# LeisureWorld Cork
+
+> LeisureWorld operates centres in Bishopstown, Churchfield and Douglas, Cork, Ireland. This optional directory points readers and tools to the public pages. Page content and linked current schedules are the source of truth.
+
+Bookings use the LeisureWorld mobile app or the linked Legend browser service. Published timetables do not establish live availability. Facilities differ by centre.
+
+## Plan a visit
+
+- [About LeisureWorld](https://www.leisureworldcork.com/about.html): Learn about LeisureWorld, Cork’s community leisure centres operated on behalf of Cork City Council. Find your centre, activities and visitor information.
+- [Access & Functional Zone](https://www.leisureworldcork.com/accessibility.html): Plan an accessible visit to LeisureWorld Cork. Ask about facilities and support, learn about the Bishopstown Functional Zone and find website accessibility help.
+- [Rookie Lifeguard](https://www.leisureworldcork.com/Activities/Swimlessons/rl.html): Rookie Lifeguard at LeisureWorld Bishopstown. Learn who the programme suits, what swimmers practise and how to book a free assessment.
+- [Swimming Skills](https://www.leisureworldcork.com/Activities/Swimlessons/ss.html): Swimming Skills at LeisureWorld Bishopstown. Learn who the programme suits, what swimmers practise and how to book a free assessment.
+- [Swim School](https://www.leisureworldcork.com/Activities/Swimlessons/swimschool.html): Find your child's starting point at LeisureWorld Swim School. Explore children's programmes, book a free assessment and find answers to parent questions.
+- [Water Safety & Fun](https://www.leisureworldcork.com/Activities/Swimlessons/wsf.html): Water Safety & Fun at LeisureWorld Bishopstown. Learn who the programme suits, what swimmers practise and how to book a free assessment.
+- [Our Activities](https://www.leisureworldcork.com/Activities.html): Find your kind of active at LeisureWorld Cork. Explore swimming, gym and fitness, swimming lessons, pitches and more, then plan your next visit with the LeisureWorld app.
+- [Adult Swimming Lessons](https://www.leisureworldcork.com/adultswimlesson.html): Build water confidence or improve your swimming with adult lessons at LeisureWorld Cork. Check current courses and ask about individual lessons.
+- [LeisureWorld App](https://www.leisureworldcork.com/appfunnel.html): Download the LeisureWorld app for iPhone or Android. Book swims, gym sessions and classes, manage bookings and access your membership card.
+- [Careers & Training](https://www.leisureworldcork.com/careers.html): Explore careers with LW Management and LeisureWorld Cork. Find current vacancies, employee benefits and routes into lifeguarding and swim teaching.
+- [Policies & Visitor Guidelines](https://www.leisureworldcork.com/centre-policies.html): Find LeisureWorld admission rules, membership terms, safety guidelines, safeguarding, inclusion and corporate policies in readable HTML.
+- [Bishopstown](https://www.leisureworldcork.com/Centres/bishopstown.html): Plan your visit to LeisureWorld Bishopstown. Explore facilities, find current opening hours, prices, reception details and directions.
+- [Churchfield](https://www.leisureworldcork.com/Centres/churchfield.html): Explore LeisureWorld Churchfield: swimming pools, a waterslide, gyms, classes and astro pitches. Find facilities, opening hours and directions for your next visit.
+- [Gus Healy Pool, Douglas](https://www.leisureworldcork.com/Centres/douglas.html): Plan your visit to LeisureWorld Gus Healy Pool · Douglas. Explore facilities, find current opening hours, prices, reception details and directions.
+- [Our Centres](https://www.leisureworldcork.com/centres.html): Find your LeisureWorld in Cork. Compare Bishopstown, Churchfield and Gus Healy Pool in Douglas, explore facilities and get directions for your next visit.
+- [Training & Qualifications](https://www.leisureworldcork.com/Certfictaons/Cert.html): Explore LeisureWorld Cork lifeguard and assistant swim teacher training. Check entry requirements, find course information and contact the team.
+- [National Pool Lifeguard Qualification (NPLQ)](https://www.leisureworldcork.com/Certfictaons/nplq.html): Learn about NPLQ lifeguard training at LeisureWorld Bishopstown. Check prerequisites, course dates and booking details on the published course listing.
+- [Assistant Swim Teacher Training](https://www.leisureworldcork.com/Certfictaons/ws.html): Learn about Water Safety Ireland Level 1 assistant swim teacher training at LeisureWorld Bishopstown. Ask about the next course and entry requirements.
+- [Contact LeisureWorld](https://www.leisureworldcork.com/contact.html): Contact LeisureWorld Bishopstown, Churchfield or Gus Healy Pool in Douglas. Find reception phone numbers or send an enquiry about your visit.
+- [Gym & Fitness Classes](https://www.leisureworldcork.com/gym.html): Make your move at LeisureWorld Cork. Explore gym sessions at Bishopstown and Churchfield, find a fitness class and book your next session with the app.
+- [Help & Frequently Asked Questions](https://www.leisureworldcork.com/help.html): Find answers about LeisureWorld bookings, memberships, swimming lessons, opening hours, teen gym and accessibility. Search questions or contact your centre.
+- [LeisureWorld Cork](https://www.leisureworldcork.com/): Welcome to LeisureWorld Cork. Book swims, gym sessions and fitness classes with our mobile app, and explore our Bishopstown, Churchfield and Douglas centres.
+- [Membership Options](https://www.leisureworldcork.com/membershipfunnel.html): Compare LeisureWorld memberships for Bishopstown, Churchfield and Gus Healy Pool in Douglas. See payment options, class add-ons and how to join.
+- [Pool & Swimming](https://www.leisureworldcork.com/poolactivities.html): Make time for the water at LeisureWorld Cork. Explore public swimming, children's swim school, adult lessons and Aquafit, with pool information and app booking in one place.
+- [Prices & Memberships](https://www.leisureworldcork.com/pricing.html): Find LeisureWorld Cork pay-as-you-go prices, memberships and class add-ons. Compare Bishopstown and Churchfield with Gus Healy Pool in Douglas.
+- [Website Accessibility](https://www.leisureworldcork.com/website-accessibility.html): Read about accessibility on the LeisureWorld website, the design standard, assessment limitations and how to request help or report a barrier.
+
+## Policies
+
+- [Admission Policy](https://www.leisureworldcork.com/Policies/admission-policy.html)
+- [Child Safeguarding Statement](https://www.leisureworldcork.com/Policies/child-safeguarding-statement.html)
+- [Gym & Fitness Class Rules](https://www.leisureworldcork.com/Policies/code-of-conduct-gym.html)
+- [Pool Rules](https://www.leisureworldcork.com/Policies/code-of-conduct-pool.html)
+- [Community Engagement Policy](https://www.leisureworldcork.com/Policies/community-engagement-policy.html)
+- [Customer Charter](https://www.leisureworldcork.com/Policies/customer-charter.html)
+- [Disability Inclusion Policy](https://www.leisureworldcork.com/Policies/disability-inclusion-policy.html)
+- [Environmental Policy](https://www.leisureworldcork.com/Policies/environmental-policy.html)
+- [Gender Pay Gap Report 2025](https://www.leisureworldcork.com/Policies/gender-pay-gap-2025.html)
+- [Sauna & Steam Room Guidelines](https://www.leisureworldcork.com/Policies/sauna-steam-room-guidelines.html)
+- [Terms & Conditions](https://www.leisureworldcork.com/Policies/terms-and-conditions.html)
+- [Tips & Gratuities Policy](https://www.leisureworldcork.com/Policies/tips-and-gratuities-policy.html)

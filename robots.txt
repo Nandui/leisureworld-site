@@ -1,0 +1,16 @@
+# Public search discovery. This file is not an access-control mechanism.
+User-agent: *
+Allow: /
+Disallow: /.impeccable/
+Disallow: /.git/
+Disallow: /scripts/
+Disallow: /send-mail.php
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /.impeccable/
+Disallow: /.git/
+Disallow: /scripts/
+Disallow: /send-mail.php
+
+Sitemap: https://www.leisureworldcork.com/sitemap.xml

@@ -1,274 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Contact LeisureWorld Cork — phone numbers, live chat hours and enquiry form for Bishopstown, Churchfield and Douglas."/>
-  <title>Contact Us — LeisureWorld Cork</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
 
-  <div id="cur"></div>
-
-  <!-- ═══ NAV ═══ -->
-  <nav id="nav">
-    <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
-    <ul class="nav-links">
-      <li><a href="about.html">About</a></li>
-      <li><a href="centres.html">Centres</a></li>
-      <li><a href="activities.html">Activities</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="contact.html" style="color:var(--pool)">Contact</a></li>
-      <li><a href="help.html">Help</a></li>
-      <li><a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="nav-cta">Sign In / Book</a></li>
-    </ul>
-    <button class="ham" id="ham" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-
-  <div class="mob" id="mob">
-    <button class="mob-close" id="mob-close">✕</button>
-    <a href="about.html"            class="mlink">About</a>
-    <a href="centres.html"          class="mlink">Our Centres</a>
-    <a href="activities.html" class="mlink">Activities</a>
-    <a href="pricing.html"          class="mlink">Pricing</a>
-    <a href="contact.html"          class="mlink">Contact</a>
-    <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" style="color:var(--pool)">Join Now →</a>
-  </div>
-
-  <!-- ═══ HERO — clean dark gradient, matches pricing page ═══ -->
-  <section class="ctc-hero">
-    <div class="ctc-hero-inner">
-      <div class="hero-tag"><span>Get In Touch</span></div>
-      <h1>We're here<br/>to <span class="hi">help</span></h1>
-      <p>Whether it's a question about membership, class times, swimming lessons, or anything else. Give us a call or send us an email.</p>
-    </div>
-    <div class="ctc-hero-ramp"></div>
-  </section>
-
-  <!-- ═══ INFO + FORM (light) ═══ -->
-  <section class="section contact-body" id="contact">
-    <div class="section-inner">
-
-      <h2 class="section-title r d1">Call or <span class="hi">message.</span></h2>
-
-      <!-- Info cards -->
-      <div class="ctc-grid">
-
-        <div class="ctc-card r d1">
-          <div class="ctc-card-head">
-            <div>
-              <h3>Bishopstown</h3>
-              <p class="ctc-card-label">Call Us</p>
-            </div>
-            <div class="ctc-icon">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            </div>
-          </div>
-          <a href="tel:+3530214346505" class="ctc-phone">021 434 6505</a>
-          <p class="ctc-sub">Bishopstown, Cork City. Reception team available during centre opening hours.</p>
-        </div>
-
-        <div class="ctc-card r d2">
-          <div class="ctc-card-head">
-            <div>
-              <h3>Churchfield</h3>
-              <p class="ctc-card-label">Call Us</p>
-            </div>
-            <div class="ctc-icon">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            </div>
-          </div>
-          <a href="tel:+353214546505" class="ctc-phone">021 439 7868</a>
-          <p class="ctc-sub">Churchfield, Cork City. Reception team available during centre opening hours.</p>
-        </div>
-
-        <div class="ctc-card r d3">
-          <div class="ctc-card-head">
-            <div>
-              <h3>Live Channel Hours</h3>
-              <p class="ctc-card-label" id="chat-status-label">
-              <span class="chat-live-dot" id="chat-dot"></span><span id="chat-status-text">Checking...</span>
-              </p>
-            </div>
-          </div>
-          <table class="chat-hours">
-            <tr><td>Mon – Thu</td><td>9:00 – 17:00</td></tr>
-            <tr><td>Friday</td><td>9:00 – 16:30</td></tr>
-            <tr><td>Sat &amp; Sun</td><td class="closed">Closed</td></tr>
-          </table>
-          <p class="ctc-sub" style="margin-top:0.8rem;">Get in touch with our team via phone during the hours above. Outside these times, use the form below.</p>
-        </div>
-
-      </div>
-
-      <!-- Message split: intro on left, form on right -->
-      <div class="msg-split">
-
-        <div class="msg-intro r d1">
-          <h3>Send us <span class="hi">a message.</span></h3>
-          <p>Missed live-channel hours? Drop us a note using the form and a member of our team will be back to you shortly.</p>
-
-          <ul class="msg-list">
-            <li>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <div>
-                <strong>Replies As Soon As Possible</strong>
-                <span>Working days — Monday to Sunday.</span>
-              </div>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-              <div>
-                <strong>A real person, every time</strong>
-                <span>No bots, no ticket queues. Just our reception team.</span>
-              </div>
-            </li>
-          </ul>
-
-          <div class="msg-urgent">
-            <strong>Urgent?</strong>
-            For lost property, booking changes, or emergencies. Please call the centre directly using the numbers above.
-          </div>
-        </div>
-
-        <div class="cform r d2">
-          <h3>Enquiry Form</h3>
-          <p class="cform-sub">Fill in a few details and we'll take it from there.</p>
-
-          <div id="formWrap">
-            <div class="frow">
-              <div class="fg"><label>First Name</label><input id="cf-fname" type="text" placeholder="Jane"/></div>
-              <div class="fg"><label>Last Name</label><input id="cf-lname" type="text" placeholder="Murphy"/></div>
-            </div>
-            <div class="fg">
-              <label>Email Address</label>
-              <input id="cf-email" type="email" placeholder="jane@example.com"/>
-            </div>
-            <div class="frow">
-              <div class="fg">
-                <label>Centre</label>
-                <select id="cf-loc">
-                  <option value="">Select a centre...</option>
-                  <option>Bishopstown</option>
-                  <option>Churchfield</option>
-                  <option>Douglas</option>
-                  <option>Not sure / General</option>
-                </select>
-              </div>
-              <div class="fg">
-                <label>Enquiry Type</label>
-                <select id="cf-topic">
-                  <option value="">What's your question about?</option>
-                  <option>Membership &amp; Pricing</option>
-                  <option>Swimming Lessons</option>
-                  <option>Fitness Classes</option>
-                  <option>Astro Pitch Hire</option>
-                  <option>Summer Camps</option>
-                  <option>Health Programmes</option>
-                  <option>Lifeguard Training</option>
-                  <option>Gift Vouchers</option>
-                  <option>General Enquiry</option>
-                </select>
-              </div>
-            </div>
-            <div class="fg">
-              <label>Your Message</label>
-              <textarea id="cf-msg" placeholder="Tell us how we can help..."></textarea>
-            </div>
-
-            <p id="formError" style="display:none;color:#d93025;font-size:.82rem;margin-bottom:.8rem;"></p>
-
-            <button class="btn-submit" id="submitBtn" onclick="handleForm()">
-              Send Message
-              <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </button>
-          </div>
-
-          <div class="form-ok" id="formOk" style="display:none;">
-            <span class="ok-icon">✅</span>
-            <h4>Message sent!</h4>
-            <p>Thanks for getting in touch. We'll get back to you as soon as possible.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA strip (full-width, flush to footer) -->
-  <div class="pri-cta-strip r">
-    <div class="pri-cta-inner">
-      <div>
-        <h3>Ready to get started?</h3>
-        <p>Sign up online today, or simply walk in to any of our three centres; no booking required for pay-as-you-go visits. We're open seven days a week.</p>
-      </div>
-      <div class="pri-cta-btns">
-        <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" class="btn-join">Join Online</a>
-        <a href="contact.html" class="btn-ask">Ask a Question</a>
-      </div>
-    </div>
-  </div>
-
-   <!-- ═══ FOOTER ═══ -->
-  <footer>
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
-        <p class="footer-tagline">Operated by LW Management on behalf of Cork City Council. Three centres serving Cork since 1997.</p>
-        <div class="socials">
-          <a href="https://www.facebook.com/LeisureWorldCork" target="_blank" title="Facebook">
-            <img src="Images/fb.png" alt="Facebook" class="social-icon">
-          </a>
-          <a href="https://www.instagram.com/leisureworldhq/" target="_blank" title="Instagram">
-            <img src="Images/ig.png" alt="Instagram" class="social-icon">
-          </a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h5>Centres</h5>
-        <ul>
-          <li><a href="./Centres/bishopstown.html" target="_blank">Bishopstown</a></li>
-          <li><a href="./Centres/churchfield.html" target="_blank">Churchfield</a></li>
-          <li><a href="./Centres/douglas.html" target="_blank">Douglas</a></li>
-          <li><a href="#hours" target="_blank">Opening Hours</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Activities</h5>
-        <ul>
-          <li><a href="https://www.leisureworldcork.com/swimming-lessons-cork/" target="_blank">Swimming Lessons</a></li>
-          <li><a href="https://www.leisureworldcork.com/all-weather-pitch-cork/" target="_blank">Astro Pitches</a></li>
-          <li><a href="https://www.leisureworldcork.com/teen-gym-cork/" target="_blank">Teen Gym</a></li>
-          <li><a href="https://www.leisureworldcork.com/summer-activity-camps/" target="_blank">Summer Camps</a></li>
-          <li><a href="https://www.leisureworldcork.com/health-wellbeing/" target="_blank">Health &amp; Wellbeing</a></li>
-          <li><a href="https://www.leisureworldcork.com/training/nplq-courses/" target="_blank">Lifeguard Training</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>More</h5>
-        <ul>
-          <li><a href="./pricing.html" target="_blank">Prices</a></li>
-          <li><a href="https://leisureworld-cork.vouchercart.com/app" target="_blank">Gift Vouchers</a></li>
-          <li><a href="./about.html" target="_blank">About Us</a></li>
-          <li><a href="https://www.leisureworldcork.com/category/news/" target="_blank">News</a></li>
-          <li><a href="./careers.html" target="_blank">Careers</a></li>
-          <li><a href="https://www.leisureworldcork.com/accessibility/" target="_blank">Accessibility</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 LeisureWorld Cork</p>
-      <div class="footer-legal">
-        <a href="https://www.leisureworldcork.com/privacy-policy/" target="_blank">Privacy Policy</a>
-        <a href="https://www.leisureworldcork.com/cookies-policy/" target="_blank">Cookie Policy</a>
-        <a href="./centre-policies.html" target="_blank">Centre Policies</a>
-      </div>
-    </div>
-  </footer>
-  <script src="script.js" defer></script>
-
-</body>
-</html>
+<html lang="en-IE"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="#0a2348" name="theme-color"/><title>Contact LeisureWorld — LeisureWorld Cork</title><meta content="Contact LeisureWorld Bishopstown, Churchfield or Gus Healy Pool in Douglas. Find reception phone numbers or send an enquiry about your visit." name="description"/><link href="Images/logo.png" rel="icon" type="image/png"/><link as="font" crossorigin="" href="fonts/archivo-black-v23-latin-regular.woff2" rel="preload" type="font/woff2"/><link href="assets/icons/tabler-icons.min.css?v=f14b2b4013" rel="stylesheet"/><link href="homepage.css?v=c91c57f394" rel="stylesheet"/><link href="site-pages.css?v=b5cb39c3f6" rel="stylesheet"/><link href="page-refinements.css?v=b199ec6caf" rel="stylesheet"/><link href="site-accessibility.css?v=6429f2c9ee" rel="stylesheet"/><script defer="" src="homepage.js?v=9cfbe6a137"></script><script defer="" src="site-pages.js?v=a5c90c3600"></script><script defer="" src="contact-page.js?v=879fad860c"></script><link href="https://www.leisureworldcork.com/contact.html" rel="canonical"/><meta content="website" property="og:type"/><meta content="LeisureWorld Cork" property="og:site_name"/><meta content="en_IE" property="og:locale"/><meta content="Contact LeisureWorld — LeisureWorld Cork" property="og:title"/><meta content="Contact LeisureWorld Bishopstown, Churchfield or Gus Healy Pool in Douglas. Find reception phone numbers or send an enquiry about your visit." property="og:description"/><meta content="https://www.leisureworldcork.com/contact.html" property="og:url"/><meta content="https://www.leisureworldcork.com/Images/gus.jpg" property="og:image"/><meta content="LeisureWorld Cork swimming pool" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Contact LeisureWorld — LeisureWorld Cork" name="twitter:title"/><meta content="Contact LeisureWorld Bishopstown, Churchfield or Gus Healy Pool in Douglas. Find reception phone numbers or send an enquiry about your visit." name="twitter:description"/><meta content="https://www.leisureworldcork.com/Images/gus.jpg" name="twitter:image"/><script data-site-schema="" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.leisureworldcork.com/#organization","name":"LeisureWorld Cork","url":"https://www.leisureworldcork.com/","logo":"https://www.leisureworldcork.com/Images/logo.png","email":"info@leisureworldcork.com"},{"@type":"WebSite","@id":"https://www.leisureworldcork.com/#website","url":"https://www.leisureworldcork.com/","name":"LeisureWorld Cork","publisher":{"@id":"https://www.leisureworldcork.com/#organization"},"inLanguage":"en-IE"},{"@type":"ContactPage","@id":"https://www.leisureworldcork.com/contact.html#webpage","url":"https://www.leisureworldcork.com/contact.html","name":"Contact LeisureWorld — LeisureWorld Cork","description":"Contact LeisureWorld Bishopstown, Churchfield or Gus Healy Pool in Douglas. Find reception phone numbers or send an enquiry about your visit.","inLanguage":"en-IE","isPartOf":{"@id":"https://www.leisureworldcork.com/#website"},"about":{"@id":"https://www.leisureworldcork.com/#organization"},"breadcrumb":{"@id":"https://www.leisureworldcork.com/contact.html#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://www.leisureworldcork.com/contact.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.leisureworldcork.com/"},{"@type":"ListItem","position":2,"name":"Contact LeisureWorld","item":"https://www.leisureworldcork.com/contact.html"}]}]}</script></head>
+<body class="interior-page contact-page"><a class="skip-link" href="#main">Skip to content</a><header class="site-header" id="site-header">
+<a aria-label="LeisureWorld Cork home" class="brand" href="index.html"><img alt="LeisureWorld Cork" height="2000" src="Images/logo.png" width="2000"/></a>
+<nav aria-label="Main navigation" class="header-nav">
+<a class="header-link" href="centres.html">Centres</a>
+<a class="header-link" href="Activities.html">Activities</a>
+<a class="header-link" href="pricing.html">Prices</a>
+<a class="button button-solid booking-link" href="appfunnel.html">Get the app</a>
+<button aria-controls="site-menu" aria-expanded="false" aria-haspopup="dialog" aria-label="Open menu" class="icon-button menu-toggle" hidden="" id="menu-toggle"><i aria-hidden="true" class="ti ti-menu-2"></i></button>
+</nav>
+</header><dialog aria-labelledby="menu-title" class="site-menu" id="site-menu">
+<div class="menu-top">
+<a aria-label="LeisureWorld Cork home" class="brand" href="index.html"><img alt="LeisureWorld Cork" height="2000" src="Images/logo.png" width="2000"/></a>
+<form method="dialog"><button aria-label="Close menu" class="icon-button"><i aria-hidden="true" class="ti ti-x"></i></button></form>
+</div>
+<div class="menu-content">
+<div><p class="eyebrow" id="menu-title">Your LeisureWorld</p><nav aria-label="Explore LeisureWorld" class="menu-main">
+<a href="appfunnel.html">Book with the app <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a>
+<a href="centres.html">Our centres <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a>
+<a href="Activities.html">Activities <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a>
+<a href="pricing.html">Prices <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a>
+<a href="https://www.leisureworldcork.com/opening-hours/">Opening hours <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a>
+</nav></div>
+<div class="menu-secondary"><p class="eyebrow">A little more information</p>
+<a href="membershipfunnel.html">Membership options</a><a href="about.html">About LeisureWorld</a><a aria-current="page" href="contact.html">Contact us</a><a href="help.html">Help &amp; FAQs</a><a href="accessibility.html">Access &amp; Functional Zone</a><a href="careers.html">Careers</a>
+<a href="Certfictaons/Cert.html">Training &amp; qualifications</a><a href="website-accessibility.html">Website accessibility</a></div>
+</div>
+<p class="menu-signoff">Every Body Belongs.</p>
+</dialog><main id="main" tabindex="-1"><section aria-labelledby="page-title" class="page-lead content-width" id="home"><nav aria-label="Breadcrumb" class="breadcrumbs"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Contact LeisureWorld</li></ol></nav><p class="eyebrow">Here to help</p><h1 id="page-title">Let’s talk.</h1><p class="body-copy">A question about your visit, booking or membership? Start with your centre, or send our team a message.</p><a class="button button-solid" href="#message">Send a message <i aria-hidden="true" class="ti ti-arrow-right"></i></a></section><section aria-label="Centre reception contacts" class="content-width contact-directory refined-contact-directory"><div class="contact-grid"><article class="contact-card" id="bishopstown"><h2>Bishopstown</h2><address>Rossa Avenue, Cork · T12 HP29</address><a href="tel:+353214346505"><i aria-hidden="true" class="ti ti-phone"></i> 021 434 6505</a><a aria-label="Centre details for Bishopstown" class="text-link" href="Centres/bishopstown.html">Centre details <i aria-hidden="true" class="ti ti-arrow-right"></i></a></article><article class="contact-card" id="churchfield"><h2>Churchfield</h2><address>Knockfree Avenue, Cork · T23 VY36</address><a href="tel:+353214397868"><i aria-hidden="true" class="ti ti-phone"></i> 021 439 7868</a><a aria-label="Centre details for Churchfield" class="text-link" href="Centres/churchfield.html">Centre details <i aria-hidden="true" class="ti ti-arrow-right"></i></a></article><article class="contact-card" id="douglas"><h2>Gus Healy Pool · Douglas</h2><address>Nursery Drive, Douglas, Cork</address><a href="tel:+353214293073"><i aria-hidden="true" class="ti ti-phone"></i> 021 429 3073</a><a aria-label="Centre details for Douglas" class="text-link" href="Centres/douglas.html">Centre details <i aria-hidden="true" class="ti ti-arrow-right"></i></a></article></div></section><section class="white-section" id="message"><div class="contact-form-layout content-width section-space"><div class="prose"><p class="eyebrow">Send a message</p><h2>Let’s get you<br/>to the right team.</h2><p>Choose a centre and topic, then tell us how we can help. For a booking change close to your session, call your centre.</p><p>You can also email <a href="mailto:info@leisureworldcork.com">info@leisureworldcork.com</a>.</p><p>Need an answer now? Our <a href="help.html">help page</a> covers bookings, lessons, memberships and visiting us.</p></div><form action="send-mail.php" id="contact-form" method="post"><p class="required-note">All fields are required.</p><div class="form-feedback" hidden="" id="form-feedback" role="status" tabindex="-1"></div><div class="form-grid"><div class="field"><label for="fname">First name</label><input aria-describedby="fname-error" autocomplete="given-name" id="fname" maxlength="100" name="fname" required="" type="text"/><p class="field-error" hidden="" id="fname-error"></p></div><div class="field"><label for="lname">Last name</label><input aria-describedby="lname-error" autocomplete="family-name" id="lname" maxlength="100" name="lname" required="" type="text"/><p class="field-error" hidden="" id="lname-error"></p></div></div><div class="field"><label for="email">Email address</label><input aria-describedby="email-error" autocomplete="email" id="email" maxlength="254" name="email" required="" type="email"/><p class="field-error" hidden="" id="email-error"></p></div><div class="form-grid"><div class="field"><label for="centre">Centre</label><select aria-describedby="centre-error" id="centre" name="centre" required=""><option value="">Choose a centre</option><option>Bishopstown</option><option>Churchfield</option><option>Douglas</option><option>Not sure / General</option></select><p class="field-error" hidden="" id="centre-error"></p></div><div class="field"><label for="enquiry">Topic</label><select aria-describedby="enquiry-error" id="enquiry" name="enquiry" required=""><option value="">Choose a topic</option><option>Membership &amp; Pricing</option><option>Swimming Lessons</option><option>Fitness Classes</option><option>Astro Pitch Hire</option><option>Summer Camps</option><option>Health Programmes</option><option>Lifeguard Training</option><option>Swim Teacher Training</option><option>Gift Vouchers</option><option>Accessibility</option><option>General Enquiry</option></select><p class="field-error" hidden="" id="enquiry-error"></p></div></div><div class="field"><label for="message-text">Your message</label><textarea aria-describedby="message-help message-error" id="message-text" maxlength="5000" name="message" required=""></textarea><small id="message-help">Include your booking reference if relevant. Maximum 5,000 characters.</small><p class="field-error" hidden="" id="message-error"></p></div><div aria-hidden="true" class="form-honeypot"><label for="website">Leave this field empty</label><input autocomplete="off" id="website" name="website" tabindex="-1" type="text"/></div><p class="required-note">We use these details to respond to your enquiry. Read our <a href="https://www.leisureworldcork.com/privacy-policy/">privacy notice</a>.</p><button class="button button-solid" id="send-message" type="submit">Send message <i aria-hidden="true" class="ti ti-arrow-right"></i></button><noscript><p>You can submit this form without JavaScript, or email reception using the address above.</p></noscript></form></div></section></main><footer class="site-footer">
+<div class="footer-main content-width">
+<div class="footer-brand"><a aria-label="LeisureWorld Cork home" class="brand" href="index.html"><img alt="LeisureWorld Cork" height="2000" loading="lazy" src="Images/logo.png" width="2000"/></a><p>Cork’s community leisure centres.<br/>Every Body Belongs.</p><div class="social-links"><a aria-label="LeisureWorld on Facebook" class="icon-button" href="https://www.facebook.com/LeisureWorldCork" rel="noopener noreferrer"><i aria-hidden="true" class="ti ti-brand-facebook"></i></a><a aria-label="LeisureWorld on Instagram" class="icon-button" href="https://www.instagram.com/leisureworldhq/" rel="noopener noreferrer"><i aria-hidden="true" class="ti ti-brand-instagram"></i></a></div></div>
+<div class="footer-column"><h3>Find your centre</h3><a href="Centres/bishopstown.html">Bishopstown</a><a href="Centres/churchfield.html">Churchfield</a><a href="Centres/douglas.html">Gus Healy Pool · Douglas</a><a href="https://www.leisureworldcork.com/opening-hours/">Opening hours</a></div>
+<div class="footer-column"><h3>Find your activity</h3><a href="poolactivities.html">Swimming</a><a href="Activities/Swimlessons/swimschool.html">Swimming lessons</a><a href="gym.html">Gym &amp; fitness</a><a href="Activities.html">All activities</a><a href="pricing.html">Prices</a><a href="membershipfunnel.html">Membership options</a></div>
+<div class="footer-column" id="help"><h3>A little more</h3><a aria-current="page" href="contact.html">Contact us</a><a href="Certfictaons/Cert.html">Training &amp; qualifications</a><a href="appfunnel.html">Get the LeisureWorld app</a><a href="about.html">About us</a><a href="help.html">Help &amp; FAQs</a><a href="accessibility.html">Access &amp; Functional Zone</a><a href="careers.html">Careers</a><a href="https://leisureworld-cork.vouchercart.com/app" rel="noopener noreferrer">Gift vouchers</a></div>
+</div>
+<div class="footer-bottom content-width"><p>© 2026 LeisureWorld Cork</p><nav aria-label="Policies"><a href="https://www.leisureworldcork.com/privacy-policy/">Privacy policy</a><a href="https://www.leisureworldcork.com/cookies-policy/">Cookie policy</a><a href="centre-policies.html">Centre policies</a><a href="website-accessibility.html">Website accessibility</a></nav><a class="back-to-top" href="#home">Back to top <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a></div>
+</footer></body></html>

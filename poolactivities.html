@@ -1,530 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en-IE">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="LeisureWorld Cork Aquatics Programme — Swim School for kids, Adult Swim Lessons, and Aquafit classes across our Cork centres."/>
-  <title>Aquatics Programme — LeisureWorld Cork</title>
-  <link rel="icon" type="image/png" href="Images/logo.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-
-  <div id="cur"></div>
-  <a href="activities.html" class="back-arrow" aria-label="Back to Activities">
-    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-  </a>
-
-  <!-- NAV -->
-  <nav id="nav">
-    <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
-    <ul class="nav-links">
-      <li><a href="about.html">About</a></li>
-      <li><a href="centres.html">Centres</a></li>
-      <li><a href="activities.html" style="color:var(--white)">Activities</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="faq.html">Help</a></li>
-      <li><a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login" target="_blank" class="nav-cta">Sign In / Book</a></li>
-    </ul>
-    <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
-  </nav>
-
-  <div class="mob" id="mob">
-    <button class="mob-close" id="mob-close">✕</button>
-    <a href="about.html"       class="mlink">About</a>
-    <a href="centres.html"     class="mlink">Our Centres</a>
-    <a href="activities.html"  class="mlink">Activities</a>
-    <a href="pricing.html"     class="mlink">Pricing</a>
-    <a href="contact.html"     class="mlink">Contact</a>
-    <a href="faq.html"         class="mlink">Help Centre</a>
-    <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" style="color:var(--pool)">Join Now →</a>
-  </div>
-
-  <!-- ═══ SCOPED PAGE STYLES ═══ -->
-  <style>
-    /* Breadcrumb above hero title */
-    .aq-crumbs {
-      display: flex; align-items: center; gap: 0.5rem;
-      font-size: 0.78rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(237,242,249,0.55);
-      margin-bottom: 1.4rem;
-    }
-    .aq-crumbs a { color: var(--pool); text-decoration: none; }
-    .aq-crumbs a:hover { text-decoration: underline; }
-    .aq-crumbs span { opacity: 0.5; }
-
-    /* Section eyebrow */
-    .aq-eyebrow {
-      display: block;
-      text-align: center;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--pool);
-      margin-bottom: 1rem;
-    }
-    .aq-intro {
-      max-width: 720px;
-      margin: 0 auto 3.5rem;
-      text-align: center;
-    }
-    .aq-intro h2 {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-      color: var(--ink);
-      margin: 0 0 1rem;
-      letter-spacing: -0.01em;
-    }
-    .aq-intro h2 .hi { color: var(--blue); }
-    .aq-intro p {
-      color: var(--muted);
-      font-size: 1.02rem;
-      line-height: 1.7;
-      margin: 0;
-    }
-
-    /* Little wave divider under intro */
-    .aq-wave {
-      display: block;
-      margin: 0 auto 3rem;
-      width: 80px;
-      height: 20px;
-      color: var(--pool);
-      opacity: 0.55;
-    }
-
-    /* ─── PROGRAMME CARDS ─── */
-    .prog-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.6rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .prog-card {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 3rem 2rem 2.5rem;
-      border-radius: 24px;
-      text-decoration: none;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      min-height: 480px;
-    }
-    .prog-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 24px 60px rgba(10,35,72,0.18);
-    }
-    /* Colour variants — themed to the site palette */
-    .prog-card.pc-kids {
-      background: linear-gradient(160deg, #b8ecf5 0%, #7cd7e8 100%);
-      color: #052a4a;
-    }
-    .prog-card.pc-adult {
-      background: linear-gradient(160deg, #1a4488 0%, #082456 100%);
-      color: var(--white);
-    }
-    .prog-card.pc-fit {
-      background: linear-gradient(160deg, #ffb27a 0%, #ff7a3d 100%);
-      color: #3a1a05;
-    }
-
-    /* Subtle wave pattern behind each card */
-    .prog-card::before {
-      content: '';
-      position: absolute;
-      bottom: -20%; left: -10%; right: -10%;
-      height: 60%;
-      background-image:
-        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.12) 0%, transparent 20%),
-        radial-gradient(circle at 60% 60%, rgba(255,255,255,0.08) 0%, transparent 25%),
-        radial-gradient(circle at 90% 40%, rgba(255,255,255,0.1) 0%, transparent 22%);
-      pointer-events: none;
-    }
-
-    /* Icon circle at top */
-    .prog-icon {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.28);
-      border: 2px dashed rgba(255,255,255,0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.6rem;
-      position: relative;
-      z-index: 1;
-      transition: transform 0.4s ease;
-    }
-    .prog-card.pc-adult .prog-icon {
-      background: rgba(0,184,212,0.18);
-      border-color: rgba(0,184,212,0.5);
-    }
-    .prog-card:hover .prog-icon { transform: scale(1.06) rotate(-4deg); }
-    .prog-icon svg { width: 70px; height: 70px; stroke-width: 1.6; }
-    .prog-icon-img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    .prog-card.pc-kids  .prog-icon svg { color: #052a4a; }
-    .prog-card.pc-adult .prog-icon svg { color: #7fe8f5; }
-    .prog-card.pc-fit   .prog-icon svg { color: #3a1a05; }
-
-    /* Card content */
-    .prog-tag {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      opacity: 0.7;
-      margin-bottom: 0.5rem;
-      position: relative; z-index: 1;
-    }
-    .prog-card h3 {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 1.5rem;
-      margin: 0 0 0.9rem;
-      letter-spacing: -0.01em;
-      position: relative; z-index: 1;
-    }
-    .prog-card p {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      margin: 0 0 1.5rem;
-      opacity: 0.88;
-      position: relative; z-index: 1;
-      flex-grow: 1;
-    }
-
-    /* Little info pills at bottom of each card */
-    .prog-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      justify-content: center;
-      margin-bottom: 1.4rem;
-      position: relative; z-index: 1;
-    }
-    .prog-meta span {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.78rem;
-      font-weight: 600;
-      padding: 0.4rem 0.85rem;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.35);
-    }
-    .prog-card.pc-adult .prog-meta span { background: rgba(255,255,255,0.12); }
-
-    .prog-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 0.82rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 0.9rem 1.6rem;
-      border-radius: 999px;
-      background: rgba(0,0,0,0.85);
-      color: #fff;
-      position: relative; z-index: 1;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-    .prog-card.pc-adult .prog-cta { background: var(--pool); color: var(--ink); }
-    .prog-card:hover .prog-cta { transform: translateX(4px); }
-    .prog-cta svg { width: 14px; height: 14px; stroke-width: 2.5; }
-
-    /* ─── LEVELS ROW (for SwimSchool) ─── */
-    .levels-wrap {
-      max-width: 1000px;
-      margin: 5rem auto 0;
-      padding: 3rem;
-      background: var(--white);
-      border: 1.5px solid var(--border);
-      border-radius: 24px;
-    }
-    .levels-head {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-    .levels-head h3 {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 1.5rem;
-      color: var(--ink);
-      margin: 0;
-    }
-    .levels-head span { font-size: 0.85rem; color: var(--muted); }
-    .levels-row {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-    }
-    .level {
-      text-align: center;
-      padding: 1.4rem 0.8rem;
-      background: linear-gradient(160deg, #f0f8fc 0%, #e6f4f9 100%);
-      border-radius: 16px;
-      border: 1.5px solid transparent;
-      transition: transform 0.25s ease, border-color 0.25s ease;
-    }
-    .level:hover { transform: translateY(-4px); border-color: var(--pool); }
-    .level-emoji {
-      display: block;
-      font-size: 2rem;
-      margin-bottom: 0.6rem;
-    }
-    .level strong {
-      display: block;
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 1rem;
-      color: var(--ink);
-      margin-bottom: 0.2rem;
-    }
-    .level span { font-size: 0.8rem; color: var(--muted); }
-
-    /* ─── HOW TO ENROL ─── */
-    .enrol-wrap {
-      max-width: 1000px;
-      margin: 5rem auto 0;
-      text-align: center;
-    }
-    .enrol-wrap h3 {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 1.8rem;
-      color: var(--ink);
-      margin: 0 0 2.5rem;
-    }
-    .enrol-wrap h3 .hi { color: var(--blue); }
-    .enrol-steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      position: relative;
-    }
-    .enrol-step {
-      background: var(--white);
-      border: 1.5px solid var(--border);
-      border-radius: 18px;
-      padding: 2rem 1.5rem;
-      text-align: left;
-      position: relative;
-    }
-    .enrol-num {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px; height: 40px;
-      background: var(--blue);
-      color: #fff;
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 1.1rem;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-    }
-    .enrol-step h4 {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 1.05rem;
-      color: var(--ink);
-      margin: 0 0 0.5rem;
-    }
-    .enrol-step p {
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .prog-grid { grid-template-columns: 1fr; max-width: 480px; }
-      .prog-card { min-height: auto; }
-      .levels-row { grid-template-columns: repeat(2, 1fr); }
-      .enrol-steps { grid-template-columns: 1fr; }
-      .levels-wrap { padding: 2rem 1.5rem; }
-    }
-  </style>
-
-  <!-- ═══ HERO ═══ -->
-  <section class="ctr-hero">
-    <div class="ctr-hero-wm" aria-hidden="true">AQUATICS</div>
-    <div class="ctr-hero-inner">
-      <div class="aq-crumbs">
-        <a href="activities.html">Activities</a>
-        <span>›</span>
-        <span style="color:rgba(237,242,249,0.75)">Aquatics Programme</span>
-      </div>
-      <h1>Aquatics <span class="hi">Programme</span></h1>
-      <p>From your first splash to freestyle flip-turns, we've got a lane for you. Structured programmes for kids, adults and everyone in between — across three pools in Cork.</p>
-    </div>
-    <div class="ctr-hero-ramp"></div>
-  </section>
-
-  <!-- ═══ BODY ═══ -->
-  <div class="ctr-body">
-    <div class="ctr-body-inner">
-
-      <!-- Section intro (reference-inspired) -->
-      <div class="aq-intro r">
-        <span class="aq-eyebrow">Three Ways to Swim</span>
-        <h2>Choose your <span class="hi">programme</span></h2>
-        <p>Whether you're bringing a little one for their first lesson, learning to swim as an adult, or looking for a low-impact workout in the water, our qualified instructors have you covered.</p>
-      </div>
-
-      <svg class="aq-wave r" viewBox="0 0 80 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M0 10 Q 10 0, 20 10 T 40 10 T 60 10 T 80 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-
-      <!-- ═══ THREE PROGRAMME CARDS ═══ -->
-      <div class="prog-grid">
-
-        <!-- 1 ── SWIM SCHOOL (Kids) -->
-        <a href="Activities/Swimlessons/swimschool.html" class="prog-card pc-kids r d1">
-          <div class="prog-icon">
-            <img src="Images/ss.png" alt="Swim School" class="prog-icon-img"/>
-          </div>
-          <div class="prog-tag">Ages 5 – 12</div>
-          <h3>Swim School</h3>
-          <p>Structured group lessons for kids, from Water Safety &amp; Fun through to competitive Swim Club. Small groups, qualified instructors, level progression every term.</p>
-          <div class="prog-meta">
-            <span>4 Levels</span>
-            <span>Weekly</span>
-            <span>Term-Based</span>
-          </div>
-          <span class="prog-cta">
-            Learn More
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </span>
-        </a>
-
-        <!-- 2 ── ADULT SWIM LESSONS -->
-        <a href="adultswimlesson.html" class="prog-card pc-adult r d2">
-          <div class="prog-icon">
-            <img src="Images/adultswim.png" alt="Adult Swim Lessons" class="prog-icon-img"/>
-          </div>
-          <div class="prog-tag">Ages 18+</div>
-          <h3>Adult Swim Lessons</h3>
-          <p>Learn to swim, or refine your stroke. Six-week courses in small, supportive adult-only groups — from complete beginners to those chasing a smoother freestyle.</p>
-          <div class="prog-meta">
-            <span>6-Week Course</span>
-            <span>All Levels</span>
-            <span>Small Groups</span>
-          </div>
-          <span class="prog-cta">
-            Enrol Now
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </span>
-        </a>
-
-        <!-- 3 ── AQUAFIT -->
-        <a href="Activities/Swimlessons/aquafit.html" class="prog-card pc-fit r d3">
-          <div class="prog-icon">
-            <img src="Images/aqua.jpeg" alt="Aquafit" class="prog-icon-img"/>
-          </div>
-          <div class="prog-tag">All Ages · All Fitness</div>
-          <h3>Aquafit Classes</h3>
-          <p>High-energy, low-impact workouts in the shallow end. Great for cardio, mobility and recovery — join a class alone or with friends, no swimming skill required.</p>
-          <div class="prog-meta">
-            <span>45 Mins</span>
-            <span>Drop-In</span>
-            <span>Low-Impact</span>
-          </div>
-          <span class="prog-cta">
-            View Timetable
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </span>
-        </a>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══ CTA STRIP ═══ -->
-  <div class="pri-cta-strip r">
-    <div class="pri-cta-inner">
-      <div>
-        <h3>Ready to dive in?</h3>
-        <p>Places in each term fill up quickly, especially for kids' Swim School. Enrol online or drop into any centre to grab a spot.</p>
-      </div>
-      <div class="pri-cta-btns">
-        <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup" target="_blank" class="btn-join">Enrol Online</a>
-        <a href="contact.html" class="btn-ask">Ask a Question</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══ FOOTER ═══ -->
-  <footer>
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="index.html" class="logo"><img src="Images/logo.png" alt="LeisureWorld Cork" class="logo-img"/></a>
-        <p class="footer-tagline">Operated by LW Management on behalf of Cork City Council. Three centres serving Cork since 1997.</p>
-        <div class="socials">
-          <a href="https://www.facebook.com/LeisureWorldCork" target="_blank" title="Facebook">
-            <img src="Images/fb.png" alt="Facebook" class="social-icon">
-          </a>
-          <a href="https://www.instagram.com/leisureworldhq/" target="_blank" title="Instagram">
-            <img src="Images/ig.png" alt="Instagram" class="social-icon">
-          </a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h5>Centres</h5>
-        <ul>
-          <li><a href="Centres/bishopstown.html" target="_blank">Bishopstown</a></li>
-          <li><a href="Centres/churchfield.html" target="_blank">Churchfield</a></li>
-          <li><a href="Centres/douglas.html" target="_blank">Douglas</a></li>
-          <li><a href="index.html#hours" target="_blank">Opening Hours</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Activities</h5>
-        <ul>
-          <li><a href="activities.html">All Activities</a></li>
-          <li><a href="Activities/Swimlessons/swimschool.html">Swim School</a></li>
-          <li><a href="adultswimlesson.html">Adult Lessons</a></li>
-          <li><a href="Activities/Swimlessons/aquafit.html">Aquafit</a></li>
-          <li><a href="Activities/Swimlessons/rl.html">Rookie Lifeguard</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>More</h5>
-        <ul>
-          <li><a href="pricing.html" target="_blank">Prices</a></li>
-          <li><a href="https://leisureworld-cork.vouchercart.com/app" target="_blank">Gift Vouchers</a></li>
-          <li><a href="about.html" target="_blank">About Us</a></li>
-          <li><a href="careers.html" target="_blank">Careers</a></li>
-          <li><a href="faq.html">Help Centre</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 LeisureWorld Cork</p>
-      <div class="footer-legal">
-        <a href="https://www.leisureworldcork.com/privacy-policy/" target="_blank">Privacy Policy</a>
-        <a href="https://www.leisureworldcork.com/cookies-policy/" target="_blank">Cookie Policy</a>
-        <a href="centre-policies.html" target="_blank">Centre Policies</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js" defer></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Make time for the water at LeisureWorld Cork. Explore public swimming, children's swim school, adult lessons and Aquafit, with pool information and app booking in one place." name="description"/>
+<meta content="#0a2348" name="theme-color"/>
+<title>Pool &amp; Swimming — LeisureWorld Cork</title>
+<link href="Images/logo.png" rel="icon" type="image/png"/>
+<link as="font" crossorigin="" href="fonts/archivo-black-v23-latin-regular.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="fonts/archivo-v25-latin/archivo-v25-latin-regular.woff2" rel="preload" type="font/woff2"/>
+<link href="assets/icons/tabler-icons.min.css?v=f14b2b4013" rel="stylesheet"/>
+<link href="homepage.css?v=c91c57f394" rel="stylesheet"/>
+<link href="pool-page.css?v=cff79cb52e" rel="stylesheet"/>
+<script defer="" src="homepage.js?v=9cfbe6a137"></script>
+<link href="site-accessibility.css?v=6429f2c9ee" rel="stylesheet"/><link href="https://www.leisureworldcork.com/poolactivities.html" rel="canonical"/><meta content="website" property="og:type"/><meta content="LeisureWorld Cork" property="og:site_name"/><meta content="en_IE" property="og:locale"/><meta content="Pool &amp; Swimming — LeisureWorld Cork" property="og:title"/><meta content="Make time for the water at LeisureWorld Cork. Explore public swimming, children's swim school, adult lessons and Aquafit, with pool information and app booking in one place." property="og:description"/><meta content="https://www.leisureworldcork.com/poolactivities.html" property="og:url"/><meta content="https://www.leisureworldcork.com/Images/cf.jpg" property="og:image"/><meta content="Colourful slides and reflections in Churchfield's family pool" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Pool &amp; Swimming — LeisureWorld Cork" name="twitter:title"/><meta content="Make time for the water at LeisureWorld Cork. Explore public swimming, children's swim school, adult lessons and Aquafit, with pool information and app booking in one place." name="twitter:description"/><meta content="https://www.leisureworldcork.com/Images/cf.jpg" name="twitter:image"/><script data-site-schema="" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.leisureworldcork.com/#organization","name":"LeisureWorld Cork","url":"https://www.leisureworldcork.com/","logo":"https://www.leisureworldcork.com/Images/logo.png","email":"info@leisureworldcork.com"},{"@type":"WebSite","@id":"https://www.leisureworldcork.com/#website","url":"https://www.leisureworldcork.com/","name":"LeisureWorld Cork","publisher":{"@id":"https://www.leisureworldcork.com/#organization"},"inLanguage":"en-IE"},{"@type":"WebPage","@id":"https://www.leisureworldcork.com/poolactivities.html#webpage","url":"https://www.leisureworldcork.com/poolactivities.html","name":"Pool & Swimming — LeisureWorld Cork","description":"Make time for the water at LeisureWorld Cork. Explore public swimming, children's swim school, adult lessons and Aquafit, with pool information and app booking in one place.","inLanguage":"en-IE","isPartOf":{"@id":"https://www.leisureworldcork.com/#website"},"about":{"@id":"https://www.leisureworldcork.com/#organization"},"breadcrumb":{"@id":"https://www.leisureworldcork.com/poolactivities.html#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://www.leisureworldcork.com/poolactivities.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.leisureworldcork.com/"},{"@type":"ListItem","position":2,"name":"Activities","item":"https://www.leisureworldcork.com/Activities.html"},{"@type":"ListItem","position":3,"name":"Pool & Swimming","item":"https://www.leisureworldcork.com/poolactivities.html"}]}]}</script></head>
+<body class="pool-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="site-header">
+<a aria-label="LeisureWorld Cork home" class="brand" href="index.html"><img alt="LeisureWorld Cork" height="2000" src="Images/logo.png" width="2000"/></a>
+<nav aria-label="Main navigation" class="header-nav">
+<a class="header-link" href="centres.html">Centres</a>
+<a class="header-link" href="Activities.html">Activities</a>
+<a class="header-link" href="pricing.html">Prices</a>
+<a class="button button-solid booking-link" href="#app">Get the app</a>
+<button aria-controls="site-menu" aria-expanded="false" aria-haspopup="dialog" aria-label="Open menu" class="icon-button menu-toggle" hidden="" id="menu-toggle"><i aria-hidden="true" class="ti ti-menu-2"></i></button>
+</nav>
+</header><dialog aria-labelledby="menu-title" class="site-menu" id="site-menu">
+<div class="menu-top">
+<a aria-label="LeisureWorld Cork home" class="brand" href="index.html"><img alt="LeisureWorld Cork" height="2000" src="Images/logo.png" width="2000"/></a>
+<form method="dialog"><button aria-label="Close menu" class="icon-button"><i aria-hidden="true" class="ti ti-x"></i></button></form>
+</div>
+<div class="menu-content">
+<div><p class="eyebrow" id="menu-title">Your LeisureWorld</p><nav aria-label="Explore LeisureWorld" class="menu-main">
+<a href="#app">Book with the app <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a>
+<a href="centres.html">Our centres <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a>
+<a href="Activities.html">Activities <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a>
+<a href="pricing.html">Prices <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a>
+<a href="https://www.leisureworldcork.com/opening-hours/">Opening hours <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a>
+</nav></div>
+<div class="menu-secondary"><p class="eyebrow">A little more information</p>
+<a href="membershipfunnel.html">Membership options</a><a href="about.html">About LeisureWorld</a><a href="contact.html">Contact us</a><a href="help.html">Help &amp; FAQs</a><a href="accessibility.html">Access &amp; Functional Zone</a><a href="careers.html">Careers</a>
+<a href="Certfictaons/Cert.html">Training &amp; qualifications</a><a href="website-accessibility.html">Website accessibility</a></div>
+</div>
+<p class="menu-signoff">Every Body Belongs.</p>
+</dialog>
+<main id="main" tabindex="-1">
+<section aria-labelledby="hero-title" class="home-hero pool-hero" id="home">
+<img alt="Colourful slides and reflections in Churchfield's family pool" class="hero-image" data-original-src="Images/cf.jpg" decoding="async" fetchpriority="high" height="1280" id="hero-image" sizes="100vw" src="Images/optimized/cf-1600.webp" srcset="Images/optimized/cf-480.webp 480w, Images/optimized/cf-960.webp 960w, Images/optimized/cf-1600.webp 1600w" width="1920"/>
+<div aria-hidden="true" class="hero-shade"></div>
+<div class="hero-content"><p class="eyebrow">Pool &amp; swimming</p><h1 id="hero-title">Find your<br/>flow.</h1><div class="hero-booking"><a class="button app-hero-button" href="#app">Book a swim <i aria-hidden="true" class="ti ti-arrow-right"></i></a><p>A few lengths. A first splash.<br/>A little time for you.</p></div></div>
+<p class="hero-caption"><i aria-hidden="true" class="ti ti-map-pin"></i> The family pool · Churchfield</p>
+</section>
+<nav aria-label="Explore pool activities" class="visit-strip pool-shortcuts content-width">
+<div class="visit-intro"><p class="eyebrow">A little pool time</p><p>Your next splash starts here</p></div>
+<a href="#swimming"><span>Public swimming</span><i aria-hidden="true" class="ti ti-arrow-right"></i></a>
+<a href="#programmes"><span>Lessons &amp; Aquafit</span><i aria-hidden="true" class="ti ti-arrow-right"></i></a>
+<a href="#visit"><span>Before you visit</span><i aria-hidden="true" class="ti ti-arrow-right"></i></a>
+</nav><nav aria-label="Breadcrumb" class="breadcrumbs breadcrumb-trail content-width"><ol><li><a href="index.html">Home</a></li><li><a href="Activities.html">Activities</a></li><li aria-current="page">Pool &amp; Swimming</li></ol></nav>
+<section aria-labelledby="swimming-title" class="public-swimming content-width section-space" id="swimming">
+<div class="public-copy reveal"><p class="eyebrow">Swim your own way</p><h2 id="swimming-title">Make time<br/>for pool time.</h2><p class="body-copy">Get a few lengths in, bring the family or enjoy a change of pace. Find your pool, check the public swim times and choose a session that suits your day.</p><a class="text-link" href="https://www.leisureworldcork.com/opening-hours/">Public swim timetables <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a><p class="pool-timetable-note">Bishopstown &amp; Churchfield. For Douglas times, check with Gus Healy Pool.</p></div>
+<div class="pool-centres reveal"><p class="eyebrow">Choose your pool</p><nav aria-label="Find your swimming pool">
+<a href="Centres/bishopstown.html"><div><h3>Bishopstown</h3><p>Explore the pools, facilities and visitor information.</p></div><i aria-hidden="true" class="ti ti-arrow-up-right"></i></a>
+<a href="Centres/churchfield.html"><div><h3>Churchfield</h3><p>Discover the pools, family play area and waterslide.</p></div><i aria-hidden="true" class="ti ti-arrow-up-right"></i></a>
+<a href="Centres/douglas.html"><div><h3>Gus Healy Pool</h3><p>Douglas · Swimming, lessons and centre information.</p></div><i aria-hidden="true" class="ti ti-arrow-up-right"></i></a>
+</nav><p class="pool-centre-note">Facilities and session times vary by centre. Check your chosen session before travelling.</p></div>
+</section>
+<section aria-labelledby="programmes-title" class="pool-programmes" id="programmes"><div class="content-width section-space">
+<div class="pool-section-heading reveal"><div><p class="eyebrow">Learn. Move. Enjoy.</p><h2 id="programmes-title">There’s more<br/>in the water.</h2></div><p class="body-copy">Build confidence, work on your strokes or move to the music. Find your next step in the pool.</p></div>
+<div class="activity-grid">
+<a aria-labelledby="school-title school-action" class="activity-card pool-programme reveal" href="Activities/Swimlessons/swimschool.html"><div class="activity-photo"><img alt="A young swimmer exploring underwater in goggles" class="family-photo" data-original-src="Images/herobg.jpeg" decoding="async" height="487" loading="lazy" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1000px) 50vw, 640px" src="Images/optimized/herobg-736.webp" srcset="Images/optimized/herobg-480.webp 480w, Images/optimized/herobg-736.webp 736w" width="736"/><span class="activity-action"><i aria-hidden="true" class="ti ti-arrow-up-right"></i></span></div><div class="activity-copy"><p class="eyebrow">For young swimmers</p><h3 id="school-title">Swim school.</h3><p>From first splashes to growing confidence. Explore the programmes and book a free assessment to find your child’s starting level.</p><span class="pool-card-link" id="school-action">Explore swim school <i aria-hidden="true" class="ti ti-arrow-right"></i></span></div></a>
+<a aria-labelledby="adult-title adult-action" class="activity-card pool-programme reveal" href="adultswimlesson.html"><div class="activity-photo"><img alt="A swimmer practising lengths in a marked pool lane" class="adult-photo" data-original-src="Images/hero-bg.jpeg" decoding="async" height="978" loading="lazy" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1000px) 50vw, 640px" src="Images/optimized/hero-bg-735.webp" srcset="Images/optimized/hero-bg-480.webp 480w, Images/optimized/hero-bg-735.webp 735w" width="735"/><span class="activity-action"><i aria-hidden="true" class="ti ti-arrow-up-right"></i></span></div><div class="activity-copy"><p class="eyebrow">Your turn to learn</p><h3 id="adult-title">Adult lessons.</h3><p>New to swimming or ready to improve? Explore lessons that help you build confidence and develop your technique.</p><span class="pool-card-link" id="adult-action">Explore adult lessons <i aria-hidden="true" class="ti ti-arrow-right"></i></span></div></a>
+<a aria-labelledby="aquafit-title aquafit-action" class="activity-card pool-programme reveal" href="#app"><div class="activity-photo"><img alt="A group enjoying exercise in a pool with foam floats" class="aquafit-photo" data-original-src="Images/aqua.jpeg" decoding="async" height="490" loading="lazy" sizes="(max-width: 600px) calc(100vw - 48px), (max-width: 1000px) 50vw, 640px" src="Images/optimized/aqua-735.webp" srcset="Images/optimized/aqua-480.webp 480w, Images/optimized/aqua-735.webp 735w" width="735"/><span class="activity-action"><i aria-hidden="true" class="ti ti-arrow-right"></i></span></div><div class="activity-copy"><p class="eyebrow">Move to the music</p><h3 id="aquafit-title">Aquafit.</h3><p>A pool workout with a different rhythm. Check the LeisureWorld app for Aquafit sessions at your chosen centre.</p><span class="pool-card-link" id="aquafit-action">Find Aquafit in the app <i aria-hidden="true" class="ti ti-arrow-right"></i></span></div></a>
+</div>
+<div class="pool-progress-link"><p>Ready for the next challenge?</p><a class="text-link" href="Activities/Swimlessons/swimschool.html#programmes">Swimming Skills &amp; Rookie Lifeguard <i aria-hidden="true" class="ti ti-arrow-right"></i></a></div>
+</div></section>
+<section aria-labelledby="visit-title" class="pool-visit content-width section-space" id="visit">
+<div class="reveal"><p class="eyebrow">A little planning</p><h2 id="visit-title">Before you<br/>dive in.</h2><p class="body-copy">Check the details for your visit, so you can arrive ready for the water.</p><a class="text-link" href="contact.html">Ask our pool team <i aria-hidden="true" class="ti ti-arrow-right"></i></a></div>
+<nav aria-label="Plan your pool visit" class="pool-visit-links reveal">
+<a href="pricing.html"><i aria-hidden="true" class="ti ti-ticket"></i><div><h3>Prices &amp; passes</h3><p>Find the swimming prices for your centre.</p></div><i aria-hidden="true" class="ti ti-arrow-right"></i></a>
+<a href="Policies/admission-policy.html"><i aria-hidden="true" class="ti ti-users"></i><div><h3>Coming with children?</h3><p>Check age and adult-supervision requirements.</p></div><i aria-hidden="true" class="ti ti-arrow-right"></i></a>
+<a href="Policies/code-of-conduct-pool.html"><i aria-hidden="true" class="ti ti-info-circle"></i><div><h3>Pool guidelines</h3><p>What to know before getting in the water.</p></div><i aria-hidden="true" class="ti ti-arrow-right"></i></a>
+</nav>
+</section>
+<section aria-labelledby="booking-title" class="pool-booking" id="app"><div class="pool-booking-inner content-width section-space">
+<div class="pool-booking-copy reveal"><p class="eyebrow">The LeisureWorld app</p><h2 id="booking-title">Your next swim.<br/>A few taps away.</h2><p class="body-copy">Choose your centre, book a swim or an Aquafit class, and keep your bookings together in the app.</p><div aria-label="Download the LeisureWorld app" class="app-downloads" role="group">
+<a class="store-badge" href="https://apps.apple.com/ie/app/leisureworld/id1479809806"><img alt="Download on the App Store" decoding="async" height="366" loading="lazy" src="Images/appstore.png" width="1154"/></a>
+<a class="store-badge" href="https://play.google.com/store/apps/details?id=com.innovatise.leisureworldsport"><img alt="Get it on Google Play" decoding="async" height="1310" loading="lazy" src="Images/playstore.png" width="4130"/></a>
+</div><p class="app-web-booking">Prefer to use your browser? <a href="https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login">Book online <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a></p><p class="pool-lesson-note">Booking lessons? Start with <a href="Activities/Swimlessons/swimschool.html">swim school</a> or <a href="adultswimlesson.html">adult lessons</a> to find the right programme.</p></div>
+<figure class="app-preview pool-app-preview reveal"><img alt="The LeisureWorld app on an iPhone with swim and fitness class booking options" data-original-src="Images/leisureworld-app-iphone.png" decoding="async" height="1536" loading="lazy" sizes="(max-width: 600px) 220px, 320px" src="Images/optimized/leisureworld-app-iphone-1024.webp" srcset="Images/optimized/leisureworld-app-iphone-480.webp 480w, Images/optimized/leisureworld-app-iphone-960.webp 960w, Images/optimized/leisureworld-app-iphone-1024.webp 1024w" width="1024"/></figure>
+</div></section>
+</main>
+<footer class="site-footer">
+<div class="footer-main content-width">
+<div class="footer-brand"><a aria-label="LeisureWorld Cork home" class="brand" href="index.html"><img alt="LeisureWorld Cork" height="2000" loading="lazy" src="Images/logo.png" width="2000"/></a><p>Cork’s community leisure centres.<br/>Every Body Belongs.</p><div class="social-links"><a aria-label="LeisureWorld on Facebook" class="icon-button" href="https://www.facebook.com/LeisureWorldCork" rel="noopener noreferrer"><i aria-hidden="true" class="ti ti-brand-facebook"></i></a><a aria-label="LeisureWorld on Instagram" class="icon-button" href="https://www.instagram.com/leisureworldhq/" rel="noopener noreferrer"><i aria-hidden="true" class="ti ti-brand-instagram"></i></a></div></div>
+<div class="footer-column"><h3>Find your centre</h3><a href="Centres/bishopstown.html">Bishopstown</a><a href="Centres/churchfield.html">Churchfield</a><a href="Centres/douglas.html">Gus Healy Pool · Douglas</a><a href="https://www.leisureworldcork.com/opening-hours/">Opening hours</a></div>
+<div class="footer-column"><h3>Find your activity</h3><a aria-current="page" href="poolactivities.html">Swimming</a><a href="Activities/Swimlessons/swimschool.html">Swimming lessons</a><a href="gym.html">Gym &amp; fitness</a><a href="Activities.html">All activities</a><a href="pricing.html">Prices</a><a href="membershipfunnel.html">Membership options</a></div>
+<div class="footer-column" id="help"><h3>A little more</h3><a href="contact.html">Contact us</a><a href="Certfictaons/Cert.html">Training &amp; qualifications</a><a href="#app">Get the LeisureWorld app</a><a href="about.html">About us</a><a href="help.html">Help &amp; FAQs</a><a href="accessibility.html">Access &amp; Functional Zone</a><a href="careers.html">Careers</a><a href="https://leisureworld-cork.vouchercart.com/app" rel="noopener noreferrer">Gift vouchers</a></div>
+</div>
+<div class="footer-bottom content-width"><p>© 2026 LeisureWorld Cork</p><nav aria-label="Policies"><a href="https://www.leisureworldcork.com/privacy-policy/">Privacy policy</a><a href="https://www.leisureworldcork.com/cookies-policy/">Cookie policy</a><a href="centre-policies.html">Centre policies</a><a href="website-accessibility.html">Website accessibility</a></nav><a class="back-to-top" href="#home">Back to top <i aria-hidden="true" class="ti ti-arrow-up-right"></i></a></div>
+</footer>
 </body>
 </html>
