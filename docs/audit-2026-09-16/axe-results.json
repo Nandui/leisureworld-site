@@ -1,0 +1,706 @@
+[
+  {
+    "page": "about.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 3
+      }
+    ],
+    "passes": 37,
+    "violations": []
+  },
+  {
+    "page": "accessibility.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 40,
+    "violations": []
+  },
+  {
+    "page": "Activities/Swimlessons/rl.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 4
+      }
+    ],
+    "passes": 40,
+    "violations": []
+  },
+  {
+    "page": "Activities/Swimlessons/ss.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 4
+      }
+    ],
+    "passes": 40,
+    "violations": []
+  },
+  {
+    "page": "Activities/Swimlessons/swimschool.html",
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "nodes": 1
+      },
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 4
+      }
+    ],
+    "passes": 38,
+    "violations": []
+  },
+  {
+    "page": "Activities/Swimlessons/wsf.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 4
+      }
+    ],
+    "passes": 40,
+    "violations": []
+  },
+  {
+    "page": "Activities.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 7
+      }
+    ],
+    "passes": 42,
+    "violations": []
+  },
+  {
+    "page": "adultswimlesson.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 3
+      }
+    ],
+    "passes": 37,
+    "violations": []
+  },
+  {
+    "page": "appfunnel.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      }
+    ],
+    "passes": 42,
+    "violations": []
+  },
+  {
+    "page": "camps.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      }
+    ],
+    "passes": 37,
+    "violations": []
+  },
+  {
+    "page": "careers.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 3
+      }
+    ],
+    "passes": 37,
+    "violations": []
+  },
+  {
+    "page": "centre-policies.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 39,
+    "violations": []
+  },
+  {
+    "page": "Centres/bishopstown.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 47,
+    "violations": []
+  },
+  {
+    "page": "Centres/churchfield.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 47,
+    "violations": []
+  },
+  {
+    "page": "Centres/douglas.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 47,
+    "violations": []
+  },
+  {
+    "page": "centres.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 7
+      }
+    ],
+    "passes": 42,
+    "violations": []
+  },
+  {
+    "page": "Certfictaons/Cert.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      }
+    ],
+    "passes": 37,
+    "violations": []
+  },
+  {
+    "page": "Certfictaons/nplq.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 3
+      }
+    ],
+    "passes": 39,
+    "violations": []
+  },
+  {
+    "page": "Certfictaons/ws.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 3
+      }
+    ],
+    "passes": 37,
+    "violations": []
+  },
+  {
+    "page": "contact.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 38,
+    "violations": []
+  },
+  {
+    "page": "gym.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 8
+      }
+    ],
+    "passes": 42,
+    "violations": []
+  },
+  {
+    "page": "help.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      }
+    ],
+    "passes": 46,
+    "violations": []
+  },
+  {
+    "page": "index.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 7
+      }
+    ],
+    "passes": 43,
+    "violations": []
+  },
+  {
+    "page": "membershipfunnel.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 38,
+    "violations": []
+  },
+  {
+    "page": "opening-hours.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 43,
+    "violations": []
+  },
+  {
+    "page": "parent-guide.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 38,
+    "violations": []
+  },
+  {
+    "page": "pitches.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 38,
+    "violations": []
+  },
+  {
+    "page": "Policies/admission-policy.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 39,
+    "violations": []
+  },
+  {
+    "page": "Policies/child-admission-policy.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 38,
+    "violations": []
+  },
+  {
+    "page": "Policies/child-safeguarding-statement.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 39,
+    "violations": []
+  },
+  {
+    "page": "Policies/clean-sport-anti-doping-policy.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 37,
+    "violations": []
+  },
+  {
+    "page": "Policies/code-of-conduct-gym.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 39,
+    "violations": []
+  },
+  {
+    "page": "Policies/code-of-conduct-pool.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 39,
+    "violations": []
+  },
+  {
+    "page": "Policies/community-engagement-policy.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 39,
+    "violations": []
+  },
+  {
+    "page": "Policies/cookie-policy.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 38,
+    "violations": []
+  },
+  {
+    "page": "Policies/customer-charter.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 39,
+    "violations": []
+  },
+  {
+    "page": "Policies/disability-inclusion-policy.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 39,
+    "violations": []
+  },
+  {
+    "page": "Policies/environmental-policy.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 39,
+    "violations": []
+  },
+  {
+    "page": "Policies/gender-pay-gap-2025.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 39,
+    "violations": []
+  },
+  {
+    "page": "Policies/privacy-policy.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 38,
+    "violations": []
+  },
+  {
+    "page": "Policies/sauna-steam-room-guidelines.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 39,
+    "violations": []
+  },
+  {
+    "page": "Policies/supplements-statement.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 37,
+    "violations": []
+  },
+  {
+    "page": "Policies/terms-and-conditions.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 39,
+    "violations": []
+  },
+  {
+    "page": "Policies/tips-and-gratuities-policy.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      }
+    ],
+    "passes": 39,
+    "violations": []
+  },
+  {
+    "page": "poolactivities.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 7
+      }
+    ],
+    "passes": 42,
+    "violations": []
+  },
+  {
+    "page": "pricing.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 48,
+    "violations": []
+  },
+  {
+    "page": "teen-gym.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 38,
+    "violations": []
+  },
+  {
+    "page": "website-accessibility.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": 38,
+    "violations": []
+  }
+]

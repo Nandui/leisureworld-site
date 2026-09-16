@@ -1,0 +1,28 @@
+{
+  "observed_in": "Saved navigation links in docs/audit-2026-09-16/sources/*.html",
+  "purpose": "Additional old routes beyond the 17 originally linked by this redesign; proposed for integration, not applied by this audit worker.",
+  "equivalent_mappings": [
+    { "source": "/contact-us/", "destination": "/contact.html" },
+    { "source": "/locations/", "destination": "/centres.html" },
+    { "source": "/locations/leisureworld-bishopstown/", "destination": "/Centres/bishopstown.html" },
+    { "source": "/locations/leisureworld-churchfield/", "destination": "/Centres/churchfield.html" },
+    { "source": "/locations/leisureworld-bishopstown/bishopstown-swimming-pool/", "destination": "/Centres/bishopstown.html#facilities" },
+    { "source": "/locations/leisureworld-churchfield/swimming-pool-churchfield/", "destination": "/Centres/churchfield.html#facilities" },
+    { "source": "/gym-cork/", "destination": "/gym.html" },
+    { "source": "/locations/leisureworld-bishopstown/leisureworld-bishopstown-gym/", "destination": "/gym.html#gyms" },
+    { "source": "/locations/leisureworld-churchfield/churchfield-gym/", "destination": "/gym.html#gyms" },
+    { "source": "/fitness-classes-cork/", "destination": "/gym.html#classes" },
+    { "source": "/locations/leisureworld-churchfield/fitness-classes-churchfield/", "destination": "/gym.html#classes" },
+    { "source": "/locations/leisureworld-bishopstown/leisureworld-agewell-programme/", "destination": "/gym.html#agewell-movement-title" },
+    { "source": "/swimming-pools-cork/", "destination": "/poolactivities.html" },
+    { "source": "/swimming-lessons-cork/", "destination": "/Activities/Swimlessons/swimschool.html" },
+    { "source": "/training/rookie-lifeguard/", "destination": "/Activities/Swimlessons/rl.html" },
+    { "source": "/leisureworld-policies/", "destination": "/centre-policies.html" }
+  ],
+  "needs_deliberate_content_destination": [
+    { "source": "/health-wellbeing/", "note": "Broad health programme overview; current gym and Functional Zone pages cover only parts. Map once its retained information has a local destination." },
+    { "source": "/swimming-pools-cork/swim-coaching-cork/", "note": "Do not imply a named coaching programme is offered unless source confirms it. Adult lesson improvement is related but not necessarily equivalent." },
+    { "source": "/category/news/", "note": "Old news archive has no equivalent; do not redirect old articles indiscriminately to home. Current published visitor notices may warrant an updates landing section." }
+  ],
+  "implementation_note": "Support both trailing-slash and slashless old URLs consistently. Verify destination anchors exist. Do not catch all missing URLs with a homepage rewrite. Source policy PDFs can use explicit redirects to their local copies when those exact files were migrated."
+}

@@ -1,0 +1,362 @@
+- navigation
+  - generic
+    - image "App Store"
+      - image
+    - button "App Store" [expanded=false, ref=e8]
+      - StaticText "for iPhone"
+      - image
+  - generic
+    - form
+      - LabelText
+        - StaticText "Search"
+      - searchbox "Search" [ref=e26]
+  - generic
+    - list
+      - listitem [level=1]
+        - button "Today" [ref=e27]
+          - StaticText "Today"
+      - listitem [level=1]
+        - button "Games" [ref=e28]
+          - StaticText "Games"
+      - listitem [level=1]
+        - button "Apps" [ref=e29]
+          - StaticText "Apps"
+      - listitem [level=1]
+        - button "Arcade" [ref=e30]
+          - StaticText "Arcade"
+    - list "Categories"
+      - listitem [level=1]
+        - button "Categories" [ref=e31]
+          - StaticText "Categories"
+      - listitem [level=1]
+        - button "Photo & Video" [ref=e32]
+          - StaticText "Photo & Video"
+      - listitem [level=1]
+        - button "Health & Fitness" [ref=e33]
+          - StaticText "Health & Fitness"
+      - listitem [level=1]
+        - button "Productivity" [ref=e34]
+          - StaticText "Productivity"
+      - listitem [level=1]
+        - button "Entertainment" [ref=e35]
+          - StaticText "Entertainment"
+      - listitem [level=1]
+        - button "Action" [ref=e36]
+          - StaticText "Action"
+      - listitem [level=1]
+        - button "Adventure" [ref=e37]
+          - StaticText "Adventure"
+      - listitem [level=1]
+        - button "Puzzle" [ref=e38]
+          - StaticText "Puzzle"
+      - listitem [level=1]
+        - button "Indie" [ref=e39]
+          - StaticText "Indie"
+    - list
+- generic
+  - main
+    - generic
+      - generic
+        - heading "LeisureWorld" [level=1, ref=e40]
+          - StaticText "LeisureWorld"
+        - paragraph
+          - StaticText "Health & Fitness"
+        - paragraph
+          - StaticText "Only for iPhone"
+        - paragraph
+          - StaticText "Free · Designed for iPhone. Not verified for macOS."
+        - button "Share" [ref=e41]
+    - list
+      - listitem [level=1]
+        - link "379 RATINGS 4.5 Stars" [ref=e48]
+          - term "379 RATINGS"
+            - StaticText "379 RATINGS"
+          - definition
+            - list "4.5 Stars"
+              - listitem [level=2]
+                - image
+              - listitem [level=2]
+                - image
+              - listitem [level=2]
+                - image
+              - listitem [level=2]
+                - image
+              - listitem [level=2]
+                - image
+                - image
+      - listitem [level=1]
+        - link "AGE RATING 16+ Years" [ref=e49]
+          - term "AGE RATING"
+            - StaticText "AGE RATING"
+          - definition
+            - StaticText "16+"
+            - StaticText "Years"
+      - listitem [level=1]
+        - link "CATEGORY Health & Fitness" [ref=e50]
+          - term "CATEGORY"
+            - StaticText "CATEGORY"
+          - definition
+            - StaticText "Health & Fitness"
+      - listitem [level=1]
+        - link "DEVELOPER SPÓRT-IONAD RÉIGIÚINACH CHORCAÍ CUIDEACHTA FAOI THEORAINN RATHAIOCHTA" [ref=e51]
+          - term "DEVELOPER"
+            - StaticText "DEVELOPER"
+          - definition
+            - StaticText "SPÓRT-IONAD RÉIGIÚINACH CHORCAÍ CUIDEACHTA FAOI THEORAINN RATHAIOCHTA"
+      - listitem [level=1]
+        - link "LANGUAGE EN + 7 More" [ref=e52]
+          - term "LANGUAGE"
+            - StaticText "LANGUAGE"
+          - definition
+            - StaticText "EN"
+            - StaticText "+ 7 More"
+      - listitem [level=1]
+        - link "SIZE 108.4 MB" [ref=e53]
+          - term "SIZE"
+            - StaticText "SIZE"
+          - definition
+            - StaticText "108.4"
+            - StaticText "MB"
+    - region "iPhone App Previews and Screenshots" [ref=e1]
+      - list
+        - listitem [level=1]
+        - listitem [level=1]
+        - listitem [level=1]
+        - listitem [level=1]
+      - StaticText "iPhone"
+    - paragraph
+      - StaticText "Download the #MyLeisureWorld App to easily manage your fitness schedule. Anytime... Anywhere!\n\nAPPLE HEALTHKIT\nWe also use HealthKit to allow users to share their activity and workout data with the app. This data is used to incentivise users to stay active."
+    - region "Ratings & Reviews" [ref=e2]
+      - link "Ratings & Reviews" [ref=e9]
+        - heading "Ratings & Reviews" [level=2, ref=e16]
+      - list
+        - listitem [level=1]
+          - StaticText "4.5"
+          - StaticText "out of 5"
+          - StaticText "379 Ratings"
+          - generic "**ASE.Shared.Ratings.Review.StarsAria.one.other**"
+            - image
+            - image
+            - image
+            - image
+            - image
+          - generic "**ASE.Shared.Ratings.Review.StarsAria.one.other**"
+            - image
+            - image
+            - image
+            - image
+          - generic "**ASE.Shared.Ratings.Review.StarsAria.one.other**"
+            - image
+            - image
+            - image
+          - generic "**ASE.Shared.Ratings.Review.StarsAria.one.other**"
+            - image
+            - image
+          - generic "**ASE.Shared.Ratings.Review.StarsAria.other.one**"
+            - image
+    - list
+      - listitem [level=1]
+        - generic "Payment doesn’t work"
+          - heading "Payment doesn’t work" [level=3, ref=e64]
+          - list "2 Stars"
+            - listitem [level=2]
+              - image
+            - listitem [level=2]
+              - image
+            - listitem [level=2]
+              - image
+            - listitem [level=2]
+              - image
+            - listitem [level=2]
+              - image
+          - time
+            - StaticText "18/03/2022"
+          - StaticText "Tzimo'11"
+          - generic
+            - paragraph
+              - StaticText "Hey guys, i would normally rate this 5 stars, but for a couple of days I haven’t been able to book a pool session and pay. When you select to pay for the session it takes you to a new page where you have to confirm the billing details. If i click the tick box to confirm the existing billing details, the Pay button does nothing. If i go to edit the billing details and complete all fields and the Postcode and then click to check that the Eircode is correct it says that its not, even though it is. If you don’t click in the button to check the Eircode and just hit Pay, it simply says that the payment has failed and card details are incorrect even though they are not. So its impossible to book the session. Please fix this. Thanks"
+            - button "more" [ref=e66]
+      - listitem [level=1]
+        - generic "Booking"
+          - heading "Booking" [level=3, ref=e65]
+          - list "1 Star"
+            - listitem [level=2]
+              - image
+            - listitem [level=2]
+              - image
+            - listitem [level=2]
+              - image
+            - listitem [level=2]
+              - image
+            - listitem [level=2]
+              - image
+          - time
+            - StaticText "15 Aug"
+          - StaticText "Sookiesox"
+          - paragraph
+            - StaticText "Tried booking a swim session, paid and it would not go back to the home page. Clicked cancel to see if it would go back but it just cancelled my booking"
+    - region "What’s New" [ref=e3]
+      - button "What’s New" [ref=e10]
+        - heading "What’s New" [level=2, ref=e17]
+      - paragraph
+        - StaticText "Thanks for using our app! To make our app better for you, we bring updates to the App Store regularly. Updates will include new features, fixes and performance improvements."
+      - StaticText "Version 109.40"
+      - time
+        - StaticText "09/10/2025"
+    - region "App Privacy" [ref=e4]
+      - button "App Privacy" [ref=e11]
+        - link "App Privacy" [ref=e18]
+          - heading "App Privacy" [level=2, ref=e42]
+      - paragraph
+        - StaticText "The developer, SPÓRT-IONAD RÉIGIÚINACH CHORCAÍ CUIDEACHTA FAOI THEORAINN RATHAIOCHTA, indicated that the app’s privacy practices may include handling of data as described below. For more information, see the "
+        - link "Developer’s Privacy Policy" [ref=e19]
+          - StaticText "developer’s privacy policy"
+        - StaticText "."
+    - list
+      - listitem [level=1]
+        - generic "Data Linked to You"
+          - heading "Data Linked to You" [level=3, ref=e54]
+          - paragraph
+            - StaticText "The following data may be collected and linked to your identity:"
+          - list
+            - listitem [level=2]
+              - StaticText "Health & Fitness"
+            - listitem [level=2]
+              - StaticText "Contact Info"
+            - listitem [level=2]
+              - StaticText "Search History"
+            - listitem [level=2]
+              - StaticText "Identifiers"
+            - listitem [level=2]
+              - StaticText "Diagnostics"
+    - paragraph
+      - StaticText "Privacy practices may vary based, for example, on the features you use or your age. "
+      - link "Learn More" [ref=e20]
+    - region "Accessibility" [ref=e5]
+      - heading "Accessibility" [level=2, ref=e12]
+      - paragraph
+        - StaticText "The developer has not yet indicated which accessibility features this app supports. "
+        - link "Learn More" [ref=e21]
+    - region "Information" [ref=e6]
+      - heading "Information" [level=2, ref=e13]
+      - DescriptionList
+        - term "Size"
+        - definition
+          - list
+            - listitem [level=1]
+              - StaticText "108.4 MB"
+        - term "Category"
+        - definition
+          - list
+            - listitem [level=1]
+              - StaticText "Health & Fitness"
+        - term "Compatibility"
+        - definition
+          - group
+            - DisclosureTriangle "Requires iOS 15.0 or later." [expanded=false]
+              - StaticText "Requires iOS 15.0 or later."
+              - image
+        - term "Languages"
+        - definition
+          - group
+            - DisclosureTriangle "English and 7 more" [expanded=false]
+              - StaticText "English and 7 more"
+              - image
+        - term "Age Rating"
+        - definition
+          - group
+            - DisclosureTriangle "16+" [expanded=false]
+              - StaticText "16+"
+              - image
+        - term "Provider"
+        - definition
+          - group
+            - DisclosureTriangle "SPÓRT-IONAD RÉIGIÚINACH CHORCAÍ CUIDEACHTA FAOI THEORAINN RATHAIOCHTA" [expanded=false]
+              - StaticText "SPÓRT-IONAD RÉIGIÚINACH CHORCAÍ CUIDEACHTA FAOI THEORAINN RATHAIOCHTA"
+              - image
+        - term "Copyright"
+        - definition
+          - list
+            - listitem [level=1]
+              - StaticText "©2023 Innovatise GmbH"
+    - listitem [level=1]
+      - link "Privacy Policy ↗" [ref=e43]
+        - StaticText "Privacy Policy"
+        - StaticText "↗"
+    - region "You Might Also Like" [ref=e7]
+      - link "You Might Also Like" [ref=e14]
+        - heading "You Might Also Like" [level=2, ref=e22]
+      - button "Previous Page" [disabled, ref=e23]
+        - image
+      - list
+        - listitem [level=1]
+          - link "View Dennehys Health & Fitness" [ref=e55]
+            - StaticText "View"
+            - StaticText "Dennehys"
+            - paragraph
+              - StaticText "Health & Fitness"
+        - listitem [level=1]
+          - link "View MTU Arena Health & Fitness" [ref=e56]
+            - StaticText "View"
+            - StaticText "MTU Arena"
+            - paragraph
+              - StaticText "Health & Fitness"
+        - listitem [level=1]
+          - link "View Obodo App Health & Fitness" [ref=e57]
+            - StaticText "View"
+            - StaticText "Obodo App"
+            - paragraph
+              - StaticText "Health & Fitness"
+        - listitem [level=1]
+          - link "View Revelate fitness Your Peak Performance Partner" [ref=e58]
+            - StaticText "View"
+            - StaticText "Revelate fitness"
+            - paragraph
+              - StaticText "Your Peak Performance Partner"
+        - listitem [level=1]
+          - link "View Sculptzone Health & Fitness" [ref=e59]
+            - StaticText "View"
+            - StaticText "Sculptzone"
+            - paragraph
+              - StaticText "Health & Fitness"
+        - listitem [level=1]
+          - link "View Pippo Medical" [ref=e60]
+            - StaticText "View"
+            - StaticText "Pippo"
+            - paragraph
+              - StaticText "Medical"
+        - listitem [level=1]
+          - link "View Roc Fitness Health & Fitness" [ref=e61]
+            - StaticText "View"
+            - StaticText "Roc Fitness"
+            - paragraph
+              - StaticText "Health & Fitness"
+        - listitem [level=1]
+          - link "View RE:SET Health & Fitness" [ref=e62]
+            - StaticText "View"
+            - StaticText "RE:SET"
+            - paragraph
+              - StaticText "Health & Fitness"
+        - listitem [level=1]
+          - link "View Solis Studio Health & Fitness" [ref=e63]
+            - StaticText "View"
+            - StaticText "Solis Studio"
+            - paragraph
+              - StaticText "Health & Fitness"
+      - button "Next Page" [ref=e24]
+        - image
+  - sectionfooter
+    - button "Ireland" [ref=e15]
+    - paragraph
+      - StaticText "Copyright © 2026 "
+      - link "Apple Inc." [ref=e25]
+      - StaticText " All rights reserved."
+    - list
+      - listitem [level=1]
+        - link "Internet Service Terms" [ref=e44]
+      - listitem [level=1]
+        - link "AppStore & Privacy" [ref=e45]
+      - listitem [level=1]
+        - link "Cookie Warning" [ref=e46]
+      - listitem [level=1]
+        - link "Support" [ref=e47]

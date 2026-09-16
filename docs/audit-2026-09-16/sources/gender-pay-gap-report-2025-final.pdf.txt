@@ -1,0 +1,318 @@
+ 
+ 
+ 
+Sport Ionad Réigiúnach Chorcaí CTR. 
+T/A LeisureWorld 
+Gender Pay Gap Report 2025 
+November 2025 
+ 
+ 
+1. Introduction 
+The Gender Pay Gap Information Act 2021 introduced the legislative basis for 
+gender pay gap reporting in Ireland and requires organisations to report on their 
+hourly gender pay gap. Under recent amendments to legislation, organisations with 
+more than 50 employees must now report by selecting a "snapshot" date in June to 
+base their reporting. 
+ 
+The snapshot date chosen by the company was the 30th of June 2025. A 
+headcount of all employees on this date was conducted, and the gender pay 
+information was calculated based on those employees' remuneration between 1st of 
+July 2024 and 30th of June 2025. 
+ 
+This report presents the Employment profile and the Gender Pay Gap profile for the 
+reporting period. 
+ 
+The company has a mean gender pay gap of 4.14% in favour of men and a median 
+pay gap of -18.24% in favour of women.  
+ 
+For part-time employees, the mean gender pay gap is -14.37% in favour of women 
+and the median gender pay gap is 50.92% in favour of men. 
+ 
+The report includes an analysis of the reported pay gap and measures being 
+undertaken to reduce it.  
+ 
+Appendix 1 contains a summary checklist confirming that all reporting requirements 
+have been met. 
+ 
+  
+ 
+ 
+2. Definitions 
+ 
+• Gender Pay Gap (GPG): The gender pay gap is the difference on average 
+across a population between men's and women's pay. The gender pay gap is 
+usually represented as the average difference in gross hourly earnings of men 
+and of women, expressed as a percentage of men's average gross hourly 
+earnings. 
+ 
+o A gender pay gap which is positive indicates that, on average, women 
+are in a less favourable position than men. 
+o A gender pay gap which is negative indicates the reverse - that, on 
+average, men are in a less favourable position than women. 
+o It is important to note that the company respects gender as a 
+spectrum, to include those who are non-binary, and we are reporting 
+as per the legislative requirements. 
+ 
+• Employee Hourly Rate: The hourly remuneration of an employee is 
+calculated by dividing the employee’s total ordinary pay according to the 
+reporting period by the hours worked for that period. Ordinary pay includes: 
+the normal salary paid to the employee; Sunday premium; pay for sick leave; 
+any salary top-ups for statutory leaves like maternity / paternity / parent’s 
+leave. 
+ 
+• Mean Hourly GPG: The mean gender pay gap is the difference in the 
+arithmetic average hourly pay for women compared to men, within our 
+organisation. 
+ 
+• Median Hourly GPG: The median gender pay gap is the difference between 
+women's median hourly pay (the middle-paid woman) and men's median 
+hourly pay (the middle-paid man). The median hourly pay is calculated by 
+ranking all employees from the highest paid to the lowest paid and taking the 
+hourly pay of the person in the middle. 
+ 
+• Quartiles: Employees were organised into quartiles based on hourly 
+remuneration of all male and female full-time employees: lower, lower middle, 
+upper middle and upper. The proportion of male and female employees in 
+each quartile was expressed as a percentage. 
+ 
+• Snapshot Date: Employers to whom the reporting obligations apply are 
+required to calculate and publish the gender pay gap information in respect of 
+relevant persons employed by them on the chosen snapshot date, with the 
+calculations to be based on those employees' remuneration for the 12-month 
+period that precedes the snapshot date. Employers must choose a snapshot 
+date. The snapshot date must be in June but may be any date in June. 
+ 
+  
+ 
+3. Data 
+ 
+3.1 Source of Data 
+ 
+The Quantum payroll software used by the company provided pay information 
+relevant to the reporting period. 
+ 
+3.2 Data Protection 
+ 
+All processing was conducted in line with Data Protection obligations. All statistics 
+provided in this report are combined and do not identify individuals. 
+ 
+ 
+4. Employment Profile 
+ 
+On 30th of June 2025, there were 89 employees in the company included in the 
+report. 
+ 
+Category Total Count Breakdown 
+All Employees 89 47 Males (53%) | 42 Females (47%) 
+Full-Time Employees 41 21 Males (51%) | 20 Females (49%) 
+Part-Time Employees 48 26 Males (54%) | 22 Females (46%) 
+Note: Percentages are rounded to the nearest whole number. 
+ 
+ 
+ 
+5. Gender Pay Gap Profile 
+The Gender Pay Gap Information Act 2021 requires organisations to provide the 
+Mean Gender Pay Gap % and the Median Gender Pay Gap % across three distinct 
+categories. 
+ 
+Gender Pay Gap Headcount, June 2025 
+ 
+ Full-time 
+employees 
+Part-time 
+employees 
+Total 
+employees 
+Of whom are 
+temporary 
+Male 21 26 47 0 
+Female 20 22 42 0 
+Other 0 0 0 0 
+Total 41 48 89 0 
+ 
+Gender Pay Gap Mean & Median Hourly Remuneration Differences 
+ 
+  
+Statutory 
+Reference 
+Mean 
+Hourly 
+Gap % 
+ 
+Statutory 
+Reference 
+Median Hourly 
+Gap 
+% 
+All Employees  
+R.7(1)(a) 
+ 
+4.14% 
+ 
+R.8(1)(a) 
+ 
+-18.24% 
+Part-Time R.7(1)(b) -14.37% R.8(1)(b) 50.92% 
+Temporary R.7(1)(c) NIL R.8(1)(c) NIL 
+ 
+Gender Pay Gap Benefit in Kind & Bonus Remuneration Differences 
+ 
+As a not-for-profit organisation, the company does not provide bonuses or 
+benefits-in-kind; therefore, no data is reported under this criterion. 
+ 
+Gender Pay Gap Quartile differences based on gender 
+ 
+Employees were organised into quartiles based on hourly remuneration of all male 
+and female employees. 
+ 
+ 
+Pay Quartiles 
+ 
+Ref % 
+Male 
+ 
+Ref % 
+Female 
+Quartile 1 (Lower) R.10(1)(a) 43% R.10(1)(a) 57% 
+Quartile 2 (Lower Middle) 
+ 
+R.10(1)(b) 
+ 
+64% 
+ 
+R.10(1)(b) 
+ 
+36% 
+Quartile 3 (Upper Middle) 
+ 
+R.10(1)(c) 
+ 
+55% 
+ 
+R.10(1)(c) 
+ 
+45% 
+Quartile 4 (Upper) R.10(1)(d) 50% R.10(1)(d) 50% 
+Total Gender Breakdown   
+53%   
+47% 
+ 
+ 
+ 
+6. Analysis 
+ 
+The Gender Pay Gap is the difference in the average hourly wage of men and women across a 
+workforce. It is important to distinguish this from Equal Pay.  
+The company operates under pay scales decided on by the Board of Directors, 
+regardless of gender, ensuring equal pay for equal work. 
+ 
+While the company has equal pay for men and women in the same roles, we have a 
+mean gender pay gap of 4.14% in favour of men and a median gender pay gap of 
+-18.24% in favour of women. 
+ 
+These results are influenced by the distribution of gender across the grading 
+structure: 
+• Timing:  
+o The gender pay profile is correlated to, and affected by the timing of 
+employee joiner, leaver, mobility, and promotion activities. 
+• Seniority and Representation:  
+o The quartile data highlights a higher representation of men in 
+operations management at the snapshot date, which are higher-paid 
+roles.  
+o In the Upper Middle Quartile (Quartile 3), 55% of employees are male, 
+compared to 45% female. 
+o Conversely, the Lower Quartile (Quartile 1) has a higher 
+representation of women (57%) compared to men (43%). These roles 
+are typically reception and cleaning staff roles and have a higher 
+percentage of female representation which is in line proportionally with 
+the gender of the job applications for these roles.
+ 
+ 
+• Part-Time Trends:  
+o For part -time employees, the gap is significantly positive (50.92% 
+median) in favour of women.  
+o This indicates that most of the part- time roles are held by men (54%), 
+and these men are, on average,  at lower grades or points on the pay 
+scale than the smaller number of women (46%) working part-time.  
+o This is influenced by the type of work undertaken by these higher paid 
+women, e.g., private swim lessons, class instructors. These roles 
+currently have a higher percentage of female representation.
+ 
+ 
+  
+ 
+ 
+ 
+7. Measures being taken to eliminate or reduce the Gender Pay Gap 
+ 
+Recruitment & Promotional Practices 
+ 
+The company is committed to ensuring that our workforce reflects the diversity of 
+the society we serve. Recruitment is largely fulfilled by advertising jobs publicly , 
+with transparent pay ranges, adhering to company policy. 
+ 
+• Interviewer teams are gender balanced. 
+• Training is provided to interviewers on equality, diversity, and inclusion (EDI) 
+to mitigate unconscious bias. 
+ 
+Learning & Development 
+ 
+We continue to prioritise Learning and Development to support career progression: 
+ 
+• Mentoring programmes and leadership development courses are available to 
+all staff. 
+ 
+Work-Life Balance 
+ 
+To support retention and progression, the company offers: 
+ 
+• Blended working policy, where possible. 
+• Flexible working hours (flexitime), where possible. 
+• These policies aim to support all employees, particularly those with caring 
+responsibilities, to remain in the workforce and progress to senior roles. 
+ 
+ 
+Equality, Diversity and Inclusion (EDI) 
+ 
+LeisureWorld is an Equal Opportunities Employer and does not discriminate on 
+grounds of, gender, marital status, family status, sexual orientation, race, religion, 
+age, disability, membership of the Traveller community in employment, promotion, 
+practices or procedures. 
+ 
+The company’s EDI initiatives focus on promoting an inclusive culture. Our aim is to 
+promote a positive inclusive workplace culture where all colleagues feel respected, 
+supported and valued. 
+ 
+ 
+Appendix 1: Gender Pay Gap Reporting Checklist 
+ 
+Organisation: Sport Ionad Réigiúnach Chorcaí CTR. T/A LeisureWorld 
+ 
+Snapshot Date Reporting Period From Reporting Period To 
+30th June 2025 1st July 2024 30th June 2025 
+ 
+Headcount on Snapshot Date 
+ 
+ Full-time Part-time Total Of whom Temporary 
+Male 21 26 47 0 
+Female 20 22 42 0 
+Total 41 48 89 0 
+ 
+Gender Pay Gap Metrics 
+ 
+Metric Statutory Ref Result 
+Mean Gap (All Employees) R.7(1)(a) 4.14% 
+Median Gap (All Employees) R.8(1)(a) -18.24% 
+Mean Gap (Part-Time) R.7(1)(b) -14.37% 
+Median Gap (Part-Time) R.8(1)(b) 50.92% 
+Gap (Temporary) R.7(1)(c) NIL 
+Bonus/BIK R.9(1) N/A 
+ 
+Gender Pay Gap Information Report 
+ 
+• Does the information show differences relating to remuneration referable to 
+gender? [YES] 
+• Is a statement included setting out reasons for the difference? [YES] 
+• Is a statement included setting out measures to reduce the difference? [YES] 
+Date of Publication: November 2025 
+If published online, the URL: https://www.leisureworldcork.com/ 

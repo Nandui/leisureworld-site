@@ -9,7 +9,7 @@ ROOT=Path(__file__).resolve().parent.parent
 out=ROOT/'Images/optimized';out.mkdir(exist_ok=True)
 records={}
 for page in sorted(ROOT.rglob('*.html')):
-    if any(x.startswith('.') for x in page.relative_to(ROOT).parts):continue
+    if any(x.startswith('.') or x in {'dist','node_modules','docs'} for x in page.relative_to(ROOT).parts):continue
     soup=BeautifulSoup(page.read_text(encoding='utf-8'),'html.parser')
     for img in soup.select('img[src]'):
         src=img.get('data-original-src',img['src'])

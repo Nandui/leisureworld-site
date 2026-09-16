@@ -1,0 +1,41 @@
+[
+  {
+    "page": "about.html",
+    "width320": {
+      "overflow": [],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    "text200percent": {
+      "overflow": [],
+      "scrollWidth": 305,
+      "viewport": 320
+    }
+  },
+  {
+    "page": "Activities/Swimlessons/swimschool.html",
+    "width320": {
+      "overflow": [],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    "text200percent": {
+      "overflow": [],
+      "scrollWidth": 316,
+      "viewport": 320
+    }
+  },
+  {
+    "page": "pricing.html",
+    "width320": {
+      "overflow": [],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    "text200percent": {
+      "overflow": [],
+      "scrollWidth": 305,
+      "viewport": 320
+    }
+  }
+]

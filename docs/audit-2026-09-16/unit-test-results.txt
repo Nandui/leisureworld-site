@@ -1,0 +1,39 @@
+
+> leisureworld-cork-website@1.0.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: public feed rejects invalid dates and unsafe course destinations
+ok 1 - public feed rejects invalid dates and unsafe course destinations
+  ---
+  duration_ms: 6.752
+  ...
+# Subtest: dated courses, timetables and notices expire instead of offering stale bookings
+ok 2 - dated courses, timetables and notices expire instead of offering stale bookings
+  ---
+  duration_ms: 26.0246
+  ...
+# Subtest: public content is escaped and retains correct centre and class destinations
+ok 3 - public content is escaped and retains correct centre and class destinations
+  ---
+  duration_ms: 1.2098
+  ...
+# Subtest: the deployment surface includes site assets and excludes source, secrets and traversal
+ok 4 - the deployment surface includes site assets and excludes source, secrets and traversal
+  ---
+  duration_ms: 9.4445
+  ...
+# Subtest: preview returns public content, safe failures and a contact redirect without any email transport
+ok 5 - preview returns public content, safe failures and a contact redirect without any email transport
+  ---
+  duration_ms: 619.4589
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 809.4037

@@ -1,0 +1,48 @@
+- main
+  - generic
+    - button "Language: English" [expanded=false, ref=e8]
+  - generic [ref=e3] clickable [cursor:pointer]
+    - link "Sign in" [ref=e9]
+  - image "Google"
+  - heading "Before you continue to Google" [level=1, ref=e1]
+  - paragraph
+    - StaticText "We use "
+    - link "cookies (Opens in a new tab)" [ref=e4]
+      - StaticText "cookies"
+      - image
+    - StaticText " and data, including IP addresses, to"
+  - list
+    - listitem [level=1]
+      - StaticText "Deliver and maintain Google services"
+    - listitem [level=1]
+      - StaticText "Track outages and protect against spam, fraud, and abuse"
+    - listitem [level=1]
+      - StaticText "Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services"
+  - paragraph
+    - StaticText "If you choose to “Accept all,” we will also use cookies and data, including IP addresses, to"
+  - list
+    - listitem [level=1]
+      - StaticText "Develop and improve new services"
+    - listitem [level=1]
+      - StaticText "Deliver and measure the effectiveness of ads"
+    - listitem [level=1]
+      - StaticText "Show personalized content, depending on your settings"
+    - listitem [level=1]
+      - StaticText "Show personalized ads, depending on your settings"
+  - paragraph
+    - StaticText "If you choose to “Reject all,” we will not use cookies or IP addresses for these additional purposes."
+  - paragraph
+    - StaticText "Non-personalized content is influenced by things like the content you’re currently viewing, activity in your active Search session, and your location. Non-personalized ads are influenced by the content you’re currently viewing and your general location. Personalized content and ads can also include more relevant results, recommendations, and tailored ads based on past activity from this browser, like previous Google searches. We also use cookies and data to tailor the experience to be age-appropriate, if relevant."
+  - paragraph
+    - StaticText "Select “More options” to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time."
+  - generic
+    - form
+      - button "Reject all" [ref=e10]
+    - form
+      - button "Accept all" [ref=e11]
+  - generic [ref=e2] clickable [cursor:pointer]
+    - link "More options for personalization settings and cookies" [ref=e5]
+  - generic [ref=e6] clickable [cursor:pointer]
+    - link "Privacy Policy" [ref=e12]
+  - generic [ref=e7] clickable [cursor:pointer]
+    - link "Terms of Service" [ref=e13]

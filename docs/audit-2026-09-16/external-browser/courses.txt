@@ -1,0 +1,89 @@
+- generic
+  - navigation
+    - list
+      - listitem [level=1]
+        - link "Skip To Navigation" [ref=e3]
+      - listitem [level=1]
+        - link "Skip To Main Content" [ref=e4]
+  - navigation
+    - link "Company Logo" [ref=e1]
+      - StaticText "Company Logo"
+    - link "Navigate to Basket Summary  0" [ref=e5]
+      - StaticText "Navigate to Basket Summary"
+      - StaticText ""
+      - StaticText "0"
+  - navigation
+    - list
+      - listitem [level=1]
+        - link " Login" [ref=e8]
+          - StaticText ""
+          - StaticText "Login"
+      - listitem [level=1]
+        - link " Make Bookings " [ref=e9]
+          - StaticText ""
+          - StaticText "Make Bookings"
+          - StaticText ""
+      - listitem [level=1]
+        - list
+          - listitem [level=2]
+            - link " Book a Pitch" [ref=e11]
+              - StaticText ""
+              - StaticText "Book a Pitch"
+          - listitem [level=2]
+            - link " Book A Course" [ref=e12]
+              - StaticText ""
+              - StaticText "Book A Course"
+          - listitem [level=2]
+            - link " Book a Class, Gym Or Pool Visit" [ref=e13]
+              - StaticText ""
+              - StaticText "Book a Class, Gym Or Pool Visit"
+  - banner
+    - heading "Course Search" [level=1, ref=e2]
+    - separator
+  - main
+    - generic
+      - generic
+        - button "Filters" [ref=e10]
+        - heading "Search Filter" [level=3, ref=e6]
+        - form
+          - alert
+            - StaticText "If you know the barcode of the course, please provide it in the textbox below."
+          - generic
+            - textbox "Course Barcode" [ref=e14]
+            - button "Search" [ref=e15]
+        - generic
+          - alert
+            - StaticText "Alternatively, you can add some basic search criteria below. If you wish to refine the results further, please click on the 'filter' option."
+          - form
+            - textbox "Course Name" [ref=e16]
+            - combobox "Main Category" [expanded=false, ref=e17]
+              - MenuListPopup
+                - option "Main Category" [selected, ref=e21]
+                - option "Activity Camps" [ref=e22]
+                - option "Adult Swim Lessons" [ref=e23]
+                - option "Children Swim Lessons" [ref=e24]
+                - option "Courses (NPLQ, Swim Teacher etc)" [ref=e25]
+                - option "Health & Fitness" [ref=e26]
+                - option "Holiday Intensive Swim Camp" [ref=e27]
+                - option "Lifesaving" [ref=e28]
+                - option "Parent & Toddler" [ref=e29]
+                - option "Private courses" [ref=e30]
+                - option "SCHOOL SWIMMING LESSONS (NOT FOR PUBLIC)" [ref=e31]
+                - option "Swim 4 a Mile" [ref=e32]
+            - combobox "Sub-Category" [expanded=false, disabled, ref=e18]
+              - MenuListPopup
+                - option "Sub-Category" [disabled, ref=e33]
+            - generic
+              - button "Reset Form" [ref=e19]
+              - button "Search" [ref=e20]
+      - alert
+        - StaticText ""
+        - paragraph
+          - StaticText "Please use the 'Search Filter' functionality to help locate a course."
+  - contentinfo
+    - generic
+      - paragraph
+        - StaticText "© 2017 Leisureworld Cork. All Rights Reserved."
+      - paragraph
+        - StaticText "Online Services provided by "
+        - link "Legend Club Management Systems" [ref=e7]

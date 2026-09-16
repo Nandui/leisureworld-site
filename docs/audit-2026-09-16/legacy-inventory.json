@@ -1,0 +1,816 @@
+{
+  "https://www.leisureworldcork.com/opening-hours/": [
+    {
+      "page": "about.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "about.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "accessibility.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "accessibility.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Activities.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Activities.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "adultswimlesson.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "adultswimlesson.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "appfunnel.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "appfunnel.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "careers.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "careers.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "centre-policies.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "centre-policies.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "centres.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "centres.html",
+      "label": "Bishopstown & Churchfield"
+    },
+    {
+      "page": "centres.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "contact.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "contact.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "gym.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "gym.html",
+      "label": "Check opening hours"
+    },
+    {
+      "page": "gym.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "help.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "help.html",
+      "label": "Published opening hours"
+    },
+    {
+      "page": "help.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "index.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "index.html",
+      "label": "Check current opening hours"
+    },
+    {
+      "page": "index.html",
+      "label": "Check current opening hours"
+    },
+    {
+      "page": "index.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "membershipfunnel.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "membershipfunnel.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "poolactivities.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "poolactivities.html",
+      "label": "Public swim timetables"
+    },
+    {
+      "page": "poolactivities.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "pricing.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "pricing.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "website-accessibility.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "website-accessibility.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Centres\\bishopstown.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Centres\\bishopstown.html",
+      "label": "Check opening hours & timetables"
+    },
+    {
+      "page": "Centres\\bishopstown.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Centres\\churchfield.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Centres\\churchfield.html",
+      "label": "Check opening hours & timetables"
+    },
+    {
+      "page": "Centres\\churchfield.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Centres\\douglas.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Centres\\douglas.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Certfictaons\\Cert.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Certfictaons\\Cert.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Certfictaons\\nplq.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Certfictaons\\nplq.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Certfictaons\\ws.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Certfictaons\\ws.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\admission-policy.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\admission-policy.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\child-safeguarding-statement.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\child-safeguarding-statement.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\code-of-conduct-gym.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\code-of-conduct-gym.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\code-of-conduct-pool.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\code-of-conduct-pool.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\community-engagement-policy.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\community-engagement-policy.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\customer-charter.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\customer-charter.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\disability-inclusion-policy.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\disability-inclusion-policy.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\environmental-policy.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\environmental-policy.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\gender-pay-gap-2025.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\gender-pay-gap-2025.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\sauna-steam-room-guidelines.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\sauna-steam-room-guidelines.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\terms-and-conditions.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\terms-and-conditions.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\tips-and-gratuities-policy.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Policies\\tips-and-gratuities-policy.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Activities\\Swimlessons\\rl.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Activities\\Swimlessons\\rl.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Activities\\Swimlessons\\ss.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Activities\\Swimlessons\\ss.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Activities\\Swimlessons\\swimschool.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Activities\\Swimlessons\\swimschool.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Activities\\Swimlessons\\wsf.html",
+      "label": "Opening hours"
+    },
+    {
+      "page": "Activities\\Swimlessons\\wsf.html",
+      "label": "Opening hours"
+    }
+  ],
+  "https://www.leisureworldcork.com/about/": [
+    {
+      "page": "about.html",
+      "label": "About the organisation"
+    }
+  ],
+  "https://www.leisureworldcork.com/privacy-policy/": [
+    {
+      "page": "about.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "accessibility.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Activities.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "adultswimlesson.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "appfunnel.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "careers.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "centre-policies.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "centres.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "contact.html",
+      "label": "privacy notice"
+    },
+    {
+      "page": "contact.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "gym.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "help.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "index.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "membershipfunnel.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "poolactivities.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "pricing.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "website-accessibility.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Centres\\bishopstown.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Centres\\churchfield.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Centres\\douglas.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Certfictaons\\Cert.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Certfictaons\\nplq.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Certfictaons\\ws.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Policies\\admission-policy.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Policies\\child-safeguarding-statement.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Policies\\code-of-conduct-gym.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Policies\\code-of-conduct-pool.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Policies\\community-engagement-policy.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Policies\\customer-charter.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Policies\\disability-inclusion-policy.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Policies\\environmental-policy.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Policies\\gender-pay-gap-2025.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Policies\\sauna-steam-room-guidelines.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Policies\\terms-and-conditions.html",
+      "label": "leisureworldcork.com/privacy-policy"
+    },
+    {
+      "page": "Policies\\terms-and-conditions.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Policies\\tips-and-gratuities-policy.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Activities\\Swimlessons\\rl.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Activities\\Swimlessons\\ss.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Activities\\Swimlessons\\swimschool.html",
+      "label": "Privacy policy"
+    },
+    {
+      "page": "Activities\\Swimlessons\\wsf.html",
+      "label": "Privacy policy"
+    }
+  ],
+  "https://www.leisureworldcork.com/cookies-policy/": [
+    {
+      "page": "about.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "accessibility.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Activities.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "adultswimlesson.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "appfunnel.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "careers.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "centre-policies.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "centres.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "contact.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "gym.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "help.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "index.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "membershipfunnel.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "poolactivities.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "pricing.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "website-accessibility.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Centres\\bishopstown.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Centres\\churchfield.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Centres\\douglas.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Certfictaons\\Cert.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Certfictaons\\nplq.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Certfictaons\\ws.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Policies\\admission-policy.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Policies\\child-safeguarding-statement.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Policies\\code-of-conduct-gym.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Policies\\code-of-conduct-pool.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Policies\\community-engagement-policy.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Policies\\customer-charter.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Policies\\disability-inclusion-policy.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Policies\\environmental-policy.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Policies\\gender-pay-gap-2025.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Policies\\sauna-steam-room-guidelines.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Policies\\terms-and-conditions.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Policies\\tips-and-gratuities-policy.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Activities\\Swimlessons\\rl.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Activities\\Swimlessons\\ss.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Activities\\Swimlessons\\swimschool.html",
+      "label": "Cookie policy"
+    },
+    {
+      "page": "Activities\\Swimlessons\\wsf.html",
+      "label": "Cookie policy"
+    }
+  ],
+  "https://www.leisureworldcork.com/accessibility/": [
+    {
+      "page": "accessibility.html",
+      "label": "Published access information"
+    }
+  ],
+  "https://www.leisureworldcork.com/health-wellbeing/functional-zone/": [
+    {
+      "page": "accessibility.html",
+      "label": "Published Functional Zone information"
+    }
+  ],
+  "https://www.leisureworldcork.com/all-weather-pitch-cork/": [
+    {
+      "page": "Activities.html",
+      "label": "Explore pitch hire"
+    },
+    {
+      "page": "Activities.html",
+      "label": "Astro pitches Get a game going on our all-weather pitches at Bishopstown and Churchfield. Explore pitch hire"
+    },
+    {
+      "page": "pricing.html",
+      "label": "Pitch hire details"
+    },
+    {
+      "page": "Centres\\bishopstown.html",
+      "label": "Explore astro pitches"
+    },
+    {
+      "page": "Centres\\churchfield.html",
+      "label": "Explore astro pitches"
+    }
+  ],
+  "https://www.leisureworldcork.com/summer-activity-camps/": [
+    {
+      "page": "Activities.html",
+      "label": "Kids\u2019 camps Games, crafts, sports and pool time. See our summer camp information. Explore kids\u2019 camps"
+    }
+  ],
+  "https://www.leisureworldcork.com/careers-at-lw-management/": [
+    {
+      "page": "careers.html",
+      "label": "View current vacancies"
+    },
+    {
+      "page": "careers.html",
+      "label": "View vacancies and benefits"
+    },
+    {
+      "page": "careers.html",
+      "label": "View current vacancies"
+    }
+  ],
+  "https://www.leisureworldcork.com/locations/leisureworld-douglas/": [
+    {
+      "page": "centres.html",
+      "label": "Douglas public swim times"
+    },
+    {
+      "page": "index.html",
+      "label": "Check current Douglas swim times"
+    },
+    {
+      "page": "membershipfunnel.html",
+      "label": "Douglas membership information"
+    },
+    {
+      "page": "pricing.html",
+      "label": "Douglas prices"
+    },
+    {
+      "page": "Centres\\douglas.html",
+      "label": "Check Douglas public swim times"
+    }
+  ],
+  "https://www.leisureworldcork.com/teen-gym-cork/": [
+    {
+      "page": "gym.html",
+      "label": "Teen programme details"
+    },
+    {
+      "page": "gym.html",
+      "label": "Teen programme details"
+    },
+    {
+      "page": "gym.html",
+      "label": "Teen gym information"
+    },
+    {
+      "page": "Centres\\churchfield.html",
+      "label": "Explore teen gym"
+    }
+  ],
+  "https://www.leisureworldcork.com/locations/leisureworld-bishopstown/fitness-classes-bishopstown/": [
+    {
+      "page": "gym.html",
+      "label": "Programme details"
+    }
+  ],
+  "https://www.leisureworldcork.com/locations/leisureworld-bishopstown/fitness-classes-timetables-bishopstown/": [
+    {
+      "page": "gym.html",
+      "label": "Bishopstown timetable"
+    }
+  ],
+  "https://www.leisureworldcork.com/locations/leisureworld-churchfield/fitness-classes-timetables-churchfield/": [
+    {
+      "page": "gym.html",
+      "label": "Churchfield timetable"
+    }
+  ],
+  "https://www.leisureworldcork.com/prices/": [
+    {
+      "page": "membershipfunnel.html",
+      "label": "published prices"
+    },
+    {
+      "page": "pricing.html",
+      "label": "LeisureWorld\u2019s published prices"
+    }
+  ],
+  "https://www.leisureworldcork.com/training/nplq-courses/": [
+    {
+      "page": "Certfictaons\\nplq.html",
+      "label": "View dates & booking details"
+    },
+    {
+      "page": "Certfictaons\\nplq.html",
+      "label": "View dates & booking details"
+    }
+  ],
+  "https://www.leisureworldcork.com/swimming-lessons-cork/swim-lessons-parent-help/": [
+    {
+      "page": "Activities\\Swimlessons\\rl.html",
+      "label": "Parent guide"
+    },
+    {
+      "page": "Activities\\Swimlessons\\ss.html",
+      "label": "Parent guide"
+    },
+    {
+      "page": "Activities\\Swimlessons\\swimschool.html",
+      "label": "See the parent account guide"
+    },
+    {
+      "page": "Activities\\Swimlessons\\swimschool.html",
+      "label": "Parent account guide"
+    },
+    {
+      "page": "Activities\\Swimlessons\\wsf.html",
+      "label": "Parent guide"
+    }
+  ]
+}

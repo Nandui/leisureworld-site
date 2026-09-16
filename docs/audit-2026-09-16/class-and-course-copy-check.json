@@ -1,0 +1,30 @@
+[
+  {
+    "page": "gym.html",
+    "missing_in_page_targets": [],
+    "course_search_links": [],
+    "class_count": 12,
+    "disclosures": 6,
+    "legacy_info_links": []
+  },
+  {
+    "page": "adultswimlesson.html",
+    "missing_in_page_targets": [],
+    "course_search_links": [
+      "Search courses"
+    ],
+    "class_count": 0,
+    "disclosures": 0,
+    "legacy_info_links": []
+  },
+  {
+    "page": "Activities/Swimlessons/swimschool.html",
+    "missing_in_page_targets": [],
+    "course_search_links": [
+      "Search assessment courses"
+    ],
+    "class_count": 0,
+    "disclosures": 4,
+    "legacy_info_links": []
+  }
+]

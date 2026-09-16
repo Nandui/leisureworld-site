@@ -1,3 +1,5 @@
+> Historical review from 12 September 2026. The current 48-page migration and verification are recorded in [the September audit](audit-2026-09-16/README.md).
+
 # Content and AI search discovery
 
 The latest [every-page refinement](design-refinement-review.md) makes programme

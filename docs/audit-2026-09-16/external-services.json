@@ -1,0 +1,1003 @@
+{
+  "checked_at": "2026-09-16T10:42:56.089282+00:00",
+  "scope": "Read-only GET checks of unique external navigation destinations. No sign-in, booking, purchase, application or message submitted.",
+  "results": [
+    {
+      "url": "https://apps.apple.com/ie/app/leisureworld/id1479809806",
+      "references": [
+        {
+          "page": "Activities.html",
+          "label": "Download on the App Store"
+        },
+        {
+          "page": "appfunnel.html",
+          "label": "Download on the App Store"
+        },
+        {
+          "page": "centres.html",
+          "label": "Download on the App Store"
+        },
+        {
+          "page": "gym.html",
+          "label": "Download on the App Store"
+        },
+        {
+          "page": "index.html",
+          "label": "Download on the App Store"
+        },
+        {
+          "page": "poolactivities.html",
+          "label": "Download on the App Store"
+        },
+        {
+          "page": "Centres/bishopstown.html",
+          "label": "Download on the App Store"
+        },
+        {
+          "page": "Centres/churchfield.html",
+          "label": "Download on the App Store"
+        },
+        {
+          "page": "Centres/douglas.html",
+          "label": "Download on the App Store"
+        }
+      ],
+      "method": "GET",
+      "status": 429,
+      "final_url": "https://apps.apple.com/ie/app/leisureworld/id1479809806",
+      "title": "",
+      "outcome": "verified_browser",
+      "identity_excerpt": "",
+      "reason_retained": "Official iPhone LeisureWorld app download.",
+      "browser_evidence": "LeisureWorld app page rendered; Cork operator identified. Direct GET rate-limit did not indicate a dead URL."
+    },
+    {
+      "url": "https://ie.indeed.com/cmp/Leisureworld-Cork/jobs",
+      "references": [
+        {
+          "page": "careers.html",
+          "label": "View current roles & apply on Indeed"
+        }
+      ],
+      "method": "GET",
+      "status": 403,
+      "final_url": "https://ie.indeed.com/cmp/Leisureworld-Cork/jobs",
+      "title": "Security Check - Indeed.com",
+      "outcome": "unverified_challenge",
+      "identity_excerpt": "445ebf1c21fc',cTplB: '0',cTplC:1,cTplO:0,cTplV:5,cType: 'managed',cUPMDTk:\"/cmp/Leisureworld-Cork/jobs?__cf_chl_tk=xJQHZgocrYdkxN9CLb7IMS6Yow9A0oAOL6ZA.vWmCIQ-1789555373-1.0.1.1-1osCDVl3JUUjGBYRrxq4SC2QMvHaIPYLE8Wwk_DHVkQ\",cvId: '3',cZone: 'ie.indeed.com',fa:\"/cmp/Leisure",
+      "reason_retained": "Operator employer jobs page with local contact fallback.",
+      "browser_evidence": "Request Blocked. No challenge bypass attempted.",
+      "secondary_evidence": "Official Indeed URL indexed as Leisureworld Cork jobs and careers; index six months old, not proof of current openings."
+    },
+    {
+      "url": "https://leisureworld-cork.vouchercart.com/app",
+      "references": [
+        {
+          "page": "about.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "accessibility.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Activities.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "adultswimlesson.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "appfunnel.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "camps.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "careers.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "centre-policies.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "centres.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "contact.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "gym.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "help.html",
+          "label": "Visit the voucher store"
+        },
+        {
+          "page": "help.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "index.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "membershipfunnel.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "opening-hours.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "parent-guide.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "pitches.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "poolactivities.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "pricing.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "teen-gym.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "website-accessibility.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Centres/bishopstown.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Centres/churchfield.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Centres/douglas.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Certfictaons/Cert.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Certfictaons/nplq.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Certfictaons/ws.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Policies/admission-policy.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Policies/child-admission-policy.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Policies/child-safeguarding-statement.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Policies/clean-sport-anti-doping-policy.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Policies/code-of-conduct-gym.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Policies/code-of-conduct-pool.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Policies/community-engagement-policy.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Policies/cookie-policy.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Policies/customer-charter.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Policies/disability-inclusion-policy.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Policies/environmental-policy.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Policies/gender-pay-gap-2025.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Policies/privacy-policy.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Policies/sauna-steam-room-guidelines.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Policies/supplements-statement.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Policies/terms-and-conditions.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Policies/tips-and-gratuities-policy.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Activities/Swimlessons/rl.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Activities/Swimlessons/ss.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Activities/Swimlessons/swimschool.html",
+          "label": "Gift vouchers"
+        },
+        {
+          "page": "Activities/Swimlessons/wsf.html",
+          "label": "Gift vouchers"
+        }
+      ],
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://leisureworld-cork.vouchercart.com/app",
+      "title": "LeisureWorld Cork Voucher Sales, Cork - VoucherCart -",
+      "outcome": "verified_browser",
+      "identity_excerpt": "LeisureWorld Cork Voucher Sales, Cork - VoucherCart - window.appGlobals = {\"clientName\":\"LeisureWorld Cork\",\"apiBaseUrl\":\"https:\\/\\/api.vouchercart.com\",\"apiUrl\":\"https:\\/\\/api.vouchercart.com",
+      "reason_retained": "Gift voucher purchase through provider.",
+      "browser_evidence": "LeisureWorld Cork gift voucher product, Rossa Avenue address and reception details render. No checkout initiated."
+    },
+    {
+      "url": "https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login",
+      "references": [
+        {
+          "page": "Activities.html",
+          "label": "Book online"
+        },
+        {
+          "page": "appfunnel.html",
+          "label": "Book online"
+        },
+        {
+          "page": "appfunnel.html",
+          "label": "online booking service"
+        },
+        {
+          "page": "centres.html",
+          "label": "Book online"
+        },
+        {
+          "page": "gym.html",
+          "label": "Book online"
+        },
+        {
+          "page": "help.html",
+          "label": "browser booking service"
+        },
+        {
+          "page": "index.html",
+          "label": "Book online"
+        },
+        {
+          "page": "parent-guide.html",
+          "label": "LeisureWorld browser booking service"
+        },
+        {
+          "page": "pitches.html",
+          "label": "Book online"
+        },
+        {
+          "page": "poolactivities.html",
+          "label": "Book online"
+        },
+        {
+          "page": "Centres/bishopstown.html",
+          "label": "Book online"
+        },
+        {
+          "page": "Centres/churchfield.html",
+          "label": "Book online"
+        },
+        {
+          "page": "Centres/douglas.html",
+          "label": "Book online"
+        }
+      ],
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://leisureworldcork.legendonlineservices.co.uk/enterprise/account/login",
+      "title": "Account Login",
+      "outcome": "verified_browser",
+      "identity_excerpt": "-GB\"; Skip To Navigation Skip To Main Content Company Logo Account Login © 2017 Leisureworld Cork. All Rights Reserved. Online Services provided by Legend Club Management Systems window.currentCulture = 'en-GB'; window.clientTimezone = ''; require([\"/Scripts/RequireConfig",
+      "reason_retained": "Browser booking alternative and account access.",
+      "browser_evidence": "Email/password fields, reset password, casual registration and membership choices rendered."
+    },
+    {
+      "url": "https://leisureworldcork.legendonlineservices.co.uk/enterprise/onlinesignup",
+      "references": [
+        {
+          "page": "membershipfunnel.html",
+          "label": "Explore & join online"
+        },
+        {
+          "page": "membershipfunnel.html",
+          "label": "Explore & join online"
+        }
+      ],
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://leisureworldcork.legendonlineservices.co.uk/enterprise/join",
+      "title": "Joining",
+      "outcome": "verified_browser",
+      "identity_excerpt": " = \"en-GB\"; Skip To Navigation Skip To Main Content Company Logo Joining © 2017 Leisureworld Cork. All Rights Reserved. Online Services provided by Legend Club Management Systems window.currentCulture = 'en-GB'; window.clientTimezone = ''; require([\"/Scripts/RequireConfig",
+      "reason_retained": "Membership joining via the live transaction provider.",
+      "browser_evidence": "Redirects to /enterprise/join; Choose your Facility selector and joining steps render."
+    },
+    {
+      "url": "https://leisureworldcork.legendonlineservices.co.uk/enterprise/program/8699",
+      "references": [
+        {
+          "page": "Certfictaons/nplq.html",
+          "label": "Check places & book this course"
+        }
+      ],
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://leisureworldcork.legendonlineservices.co.uk/enterprise/program/8699",
+      "title": "Course Details",
+      "outcome": "verified_browser",
+      "identity_excerpt": "ly at checkout. Standard Price €500.00 (€500.00 Inc Tax) Back to Courses © 2017 Leisureworld Cork. All Rights Reserved. Online Services provided by Legend Club Management Systems window.currentCulture = 'en-GB'; window.clientTimezone = ''; require([\"/Scripts/RequireConfig",
+      "reason_retained": "Specific NPLQ course registration.",
+      "browser_evidence": "RLSS Pool Lifeguard Course, Bishopstown, 27–31 Oct 2026, EUR500, minimum age16; Register present. No booking action taken."
+    },
+    {
+      "url": "https://leisureworldcork.legendonlineservices.co.uk/enterprise/program/index",
+      "references": [
+        {
+          "page": "adultswimlesson.html",
+          "label": "Search courses"
+        },
+        {
+          "page": "Activities/Swimlessons/rl.html",
+          "label": "Book a free assessment"
+        },
+        {
+          "page": "Activities/Swimlessons/rl.html",
+          "label": "Book a free assessment"
+        },
+        {
+          "page": "Activities/Swimlessons/ss.html",
+          "label": "Book a free assessment"
+        },
+        {
+          "page": "Activities/Swimlessons/ss.html",
+          "label": "Book a free assessment"
+        },
+        {
+          "page": "Activities/Swimlessons/swimschool.html",
+          "label": "Search assessment courses"
+        },
+        {
+          "page": "Activities/Swimlessons/wsf.html",
+          "label": "Book a free assessment"
+        },
+        {
+          "page": "Activities/Swimlessons/wsf.html",
+          "label": "Book a free assessment"
+        }
+      ],
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://leisureworldcork.legendonlineservices.co.uk/enterprise/program/index",
+      "title": "Course Search",
+      "outcome": "verified_browser",
+      "identity_excerpt": "-GB\"; Skip To Navigation Skip To Main Content Company Logo Course Search © 2017 Leisureworld Cork. All Rights Reserved. Online Services provided by Legend Club Management Systems window.currentCulture = 'en-GB'; window.clientTimezone = ''; require([\"/Scripts/RequireConfig",
+      "reason_retained": "Live course search and registration.",
+      "browser_evidence": "Course search form renders; Adult Swim Lessons, Children Swim Lessons and Courses (NPLQ, Swim Teacher etc) categories present.",
+      "context_note": "Generic search is not filtered. Local copy should name the appropriate category and centre."
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.innovatise.leisureworldsport",
+      "references": [
+        {
+          "page": "Activities.html",
+          "label": "Get it on Google Play"
+        },
+        {
+          "page": "appfunnel.html",
+          "label": "Get it on Google Play"
+        },
+        {
+          "page": "centres.html",
+          "label": "Get it on Google Play"
+        },
+        {
+          "page": "gym.html",
+          "label": "Get it on Google Play"
+        },
+        {
+          "page": "index.html",
+          "label": "Get it on Google Play"
+        },
+        {
+          "page": "poolactivities.html",
+          "label": "Get it on Google Play"
+        },
+        {
+          "page": "Centres/bishopstown.html",
+          "label": "Get it on Google Play"
+        },
+        {
+          "page": "Centres/churchfield.html",
+          "label": "Get it on Google Play"
+        },
+        {
+          "page": "Centres/douglas.html",
+          "label": "Get it on Google Play"
+        }
+      ],
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://play.google.com/store/apps/details?id=com.innovatise.leisureworldsport",
+      "title": "LeisureWorld - Apps on Google Play",
+      "outcome": "verified_http_context",
+      "identity_excerpt": "load', onJsLoad, false);} window['_wjdc'] = function (d) {window['_wjdd'] = d}; LeisureWorld - Apps on Google Play var AF_initDataKeys = [\"ds:0\",\"ds:1\",\"ds:2\",\"ds:3\",\"ds:4\",\"ds:5\",\"ds:6\",\"ds:7\",\"ds:8\",\"ds:9\",\"ds:10\",\"ds:11\",\"ds:12\"]; var AF_dataServiceRequests = {'ds:0' :",
+      "reason_retained": "Official Android LeisureWorld app download.",
+      "context_evidence": "LeisureWorld title, Innovatise publisher, official LeisureWorld support URL/email."
+    },
+    {
+      "url": "https://www.ccpc.ie/consumer-advice/consumer-rights/buying-services",
+      "references": [
+        {
+          "page": "Policies/terms-and-conditions.html",
+          "label": "CCPC guidance on buying services and entering contracts"
+        }
+      ],
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.ccpc.ie/consumer-advice/consumer-rights/buying-services",
+      "title": "Buying services and entering contracts | CCPC",
+      "outcome": "verified_http_context",
+      "identity_excerpt": "",
+      "reason_retained": "Relevant official consumer-rights guidance for services/contracts."
+    },
+    {
+      "url": "https://www.facebook.com/LeisureWorldCork",
+      "references": [
+        {
+          "page": "about.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "accessibility.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Activities.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "adultswimlesson.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "appfunnel.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "camps.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "careers.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "centre-policies.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "centres.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "contact.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "gym.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "help.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "index.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "membershipfunnel.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "opening-hours.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "parent-guide.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "pitches.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "poolactivities.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "pricing.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "teen-gym.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "website-accessibility.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Centres/bishopstown.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Centres/churchfield.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Centres/douglas.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Certfictaons/Cert.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Certfictaons/nplq.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Certfictaons/ws.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Policies/admission-policy.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Policies/child-admission-policy.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Policies/child-safeguarding-statement.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Policies/clean-sport-anti-doping-policy.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Policies/code-of-conduct-gym.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Policies/code-of-conduct-pool.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Policies/community-engagement-policy.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Policies/cookie-policy.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Policies/customer-charter.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Policies/disability-inclusion-policy.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Policies/environmental-policy.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Policies/gender-pay-gap-2025.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Policies/privacy-policy.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Policies/sauna-steam-room-guidelines.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Policies/supplements-statement.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Policies/terms-and-conditions.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Policies/tips-and-gratuities-policy.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Activities/Swimlessons/rl.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Activities/Swimlessons/ss.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Activities/Swimlessons/swimschool.html",
+          "label": "LeisureWorld on Facebook"
+        },
+        {
+          "page": "Activities/Swimlessons/wsf.html",
+          "label": "LeisureWorld on Facebook"
+        }
+      ],
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.facebook.com/leisureworld.cork/",
+      "title": "LeisureWorld Cork (@leisureworld.cork) • Facebook, Connect with friends",
+      "outcome": "verified_http_identity",
+      "identity_excerpt": "equire\":[[\"qplTimingsServerJS\",null,null,[\"7686081807410096063\",\"htmlStart\"]]]} LeisureWorld Cork (@leisureworld.cork) • Facebook, Connect with friends {\"require\":[[\"HasteSupportData\",\"handle\",null,[{\"clpData\":{\"7235\":{\"r\":1,\"s\":1},\"1838142\":{\"r\":1,\"s\":1},\"1744178\":{\"r\":1",
+      "reason_retained": "Optional official social updates in footer."
+    },
+    {
+      "url": "https://www.google.com/maps/dir/?api=1&destination=Gus+Healy+Pool+Nursery+Drive+Douglas+Cork",
+      "references": [
+        {
+          "page": "centres.html",
+          "label": "Get directions to Gus Healy Pool"
+        },
+        {
+          "page": "Centres/douglas.html",
+          "label": "Get directions"
+        }
+      ],
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.google.com/maps/dir/?api=1&destination=Gus+Healy+Pool+Nursery+Drive+Douglas+Cork&ucbcb=1",
+      "title": "Google Maps",
+      "outcome": "reachable_provider_consent",
+      "identity_excerpt": "561207,795561207]]]],null,[null,null,null,\")]}'\\n[[[null,null,null,null,0,4],[\\\"Gus Healy Pool Nursery Drive Douglas Cork\\\",null,null,null,null,0]],null,[[39397.31109964138,-8.539340799999998,51.8914048],[0,0,0],[1024,768],13.1],null,null,[[null,null,null,null,null,nul",
+      "reason_retained": "Directions to the named LeisureWorld centre.",
+      "context_evidence": "Destination query includes the correct centre/city; full route not checked. Browser spot check reached Google consent."
+    },
+    {
+      "url": "https://www.google.com/maps/dir/?api=1&destination=LeisureWorld+Bishopstown+Rossa+Avenue+Cork",
+      "references": [
+        {
+          "page": "centres.html",
+          "label": "Get directions to Bishopstown"
+        },
+        {
+          "page": "Centres/bishopstown.html",
+          "label": "Get directions"
+        }
+      ],
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.google.com/maps/dir/?api=1&destination=LeisureWorld+Bishopstown+Rossa+Avenue+Cork&ucbcb=1",
+      "title": "Google Maps",
+      "outcome": "reachable_provider_consent",
+      "identity_excerpt": ",0,0,[null,\\\"https://www.google.com/maps/dir/?api\\u003d1\\\\u0026destination\\u003dLeisureWorld+Bishopstown+Rossa+Avenue+Cork\\\\u0026ucbcb\\u003d1\\\",null,null,null,0,null,0,0,\\\"\\\",\\\"\\\",\\\"\\\",\\\"https://ogads-pa.clients6.google.com\\\",null,0,0,\\\"\\\",\\\"\\\",null,0,null,86400,null,null",
+      "reason_retained": "Directions to the named LeisureWorld centre.",
+      "context_evidence": "Destination query includes the correct centre/city; full route not checked. Browser spot check reached Google consent."
+    },
+    {
+      "url": "https://www.google.com/maps/dir/?api=1&destination=LeisureWorld+Churchfield+Cork",
+      "references": [
+        {
+          "page": "centres.html",
+          "label": "Get directions to Churchfield"
+        }
+      ],
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.google.com/maps/dir/?api=1&destination=LeisureWorld+Churchfield+Cork&ucbcb=1",
+      "title": "Google Maps",
+      "outcome": "reachable_provider_consent",
+      "identity_excerpt": ",0,0,[null,\\\"https://www.google.com/maps/dir/?api\\u003d1\\\\u0026destination\\u003dLeisureWorld+Churchfield+Cork\\\\u0026ucbcb\\u003d1\\\",null,null,null,0,null,0,0,\\\"\\\",\\\"\\\",\\\"\\\",\\\"https://ogads-pa.clients6.google.com\\\",null,0,0,\\\"\\\",\\\"\\\",null,0,null,86400,null,null,null,null,0,",
+      "reason_retained": "Directions to the named LeisureWorld centre.",
+      "context_evidence": "Destination query includes the correct centre/city; full route not checked. Browser spot check reached Google consent."
+    },
+    {
+      "url": "https://www.google.com/maps/dir/?api=1&destination=LeisureWorld+Churchfield+Knockfree+Avenue+Cork",
+      "references": [
+        {
+          "page": "Centres/churchfield.html",
+          "label": "Get directions"
+        }
+      ],
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.google.com/maps/dir/?api=1&destination=LeisureWorld+Churchfield+Knockfree+Avenue+Cork&ucbcb=1",
+      "title": "Google Maps",
+      "outcome": "reachable_provider_consent",
+      "identity_excerpt": ",0,0,[null,\\\"https://www.google.com/maps/dir/?api\\u003d1\\\\u0026destination\\u003dLeisureWorld+Churchfield+Knockfree+Avenue+Cork\\\\u0026ucbcb\\u003d1\\\",null,null,null,0,null,0,0,\\\"\\\",\\\"\\\",\\\"\\\",\\\"https://ogads-pa.clients6.google.com\\\",null,0,0,\\\"\\\",\\\"\\\",null,0,null,86400,null,",
+      "reason_retained": "Directions to the named LeisureWorld centre.",
+      "context_evidence": "Destination query includes the correct centre/city; full route not checked. Browser spot check reached Google consent."
+    },
+    {
+      "url": "https://www.instagram.com/leisureworldhq/",
+      "references": [
+        {
+          "page": "about.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "accessibility.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Activities.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "adultswimlesson.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "appfunnel.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "camps.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "careers.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "centre-policies.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "centres.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "contact.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "gym.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "help.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "index.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "membershipfunnel.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "opening-hours.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "parent-guide.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "pitches.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "poolactivities.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "pricing.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "teen-gym.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "website-accessibility.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Centres/bishopstown.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Centres/churchfield.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Centres/douglas.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Certfictaons/Cert.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Certfictaons/nplq.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Certfictaons/ws.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Policies/admission-policy.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Policies/child-admission-policy.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Policies/child-safeguarding-statement.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Policies/clean-sport-anti-doping-policy.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Policies/code-of-conduct-gym.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Policies/code-of-conduct-pool.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Policies/community-engagement-policy.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Policies/cookie-policy.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Policies/customer-charter.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Policies/disability-inclusion-policy.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Policies/environmental-policy.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Policies/gender-pay-gap-2025.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Policies/privacy-policy.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Policies/sauna-steam-room-guidelines.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Policies/supplements-statement.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Policies/terms-and-conditions.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Policies/tips-and-gratuities-policy.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Activities/Swimlessons/rl.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Activities/Swimlessons/ss.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Activities/Swimlessons/swimschool.html",
+          "label": "LeisureWorld on Instagram"
+        },
+        {
+          "page": "Activities/Swimlessons/wsf.html",
+          "label": "LeisureWorld on Instagram"
+        }
+      ],
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.instagram.com/leisureworldhq/",
+      "title": "LeisureWorld (@leisureworldhq) • Instagram photos and videos",
+      "outcome": "verified_http_identity",
+      "identity_excerpt": "equire\":[[\"qplTimingsServerJS\",null,null,[\"7686081807769852208\",\"htmlStart\"]]]} LeisureWorld (@leisureworldhq) • Instagram photos and videos {\"require\":[[\"HasteSupportData\",\"handle\",null,[{\"clpData\":{\"1744178\":{\"r\":1,\"s\":1},\"1838142\":{\"r\":1,\"s\":1},\"3729\":{\"r\":1,\"s\":1},\"18",
+      "reason_retained": "Optional official social updates in footer."
+    },
+    {
+      "url": "https://www.ombudsman.ie/",
+      "references": [
+        {
+          "page": "website-accessibility.html",
+          "label": "Office of the Ombudsman"
+        }
+      ],
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.ombudsman.ie/en/",
+      "title": "Ombudsman.ie - Office of the Ombudsman",
+      "outcome": "verified_http_context",
+      "identity_excerpt": "",
+      "reason_retained": "Official accessibility complaint escalation organisation."
+    }
+  ],
+  "summary": {
+    "unique_destinations": 16,
+    "dead_http_404_or_410": 0,
+    "unverified_provider_challenges": 1,
+    "maps_routes_not_calculated": 4,
+    "real_transactions_performed": 0
+  }
+}

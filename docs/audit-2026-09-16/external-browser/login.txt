@@ -1,0 +1,63 @@
+- generic
+  - navigation
+    - list
+      - listitem [level=1]
+        - link "Skip To Navigation" [ref=e3]
+      - listitem [level=1]
+        - link "Skip To Main Content" [ref=e4]
+  - navigation
+    - link "Company Logo" [ref=e1]
+      - StaticText "Company Logo"
+    - link "Navigate to Basket Summary  0" [ref=e5]
+      - StaticText "Navigate to Basket Summary"
+      - StaticText ""
+      - StaticText "0"
+  - navigation
+    - list
+      - listitem [level=1]
+        - link " Login" [ref=e7]
+          - StaticText ""
+          - StaticText "Login"
+      - listitem [level=1]
+        - link " Make Bookings " [ref=e8]
+          - StaticText ""
+          - StaticText "Make Bookings"
+          - StaticText ""
+  - banner
+    - heading "Account Login" [level=1, ref=e2]
+    - separator
+  - main
+    - generic
+      - heading "Login" [level=3, ref=e9]
+      - form
+        - LabelText [ref=e12] clickable [cursor:pointer]
+          - StaticText "Email Address"
+        - textbox "Email Address" [required, ref=e13]
+        - LabelText [ref=e14] clickable [cursor:pointer]
+          - StaticText "Password"
+        - generic
+          - textbox "Password" [required, ref=e16]
+          - button "display password" [ref=e17]
+            - StaticText "display password"
+      - link "Reset Password" [ref=e10]
+      - button "Login" [ref=e11]
+        - StaticText "Login"
+    - generic
+      - heading "Sign Up" [level=4, ref=e15]
+        - strong
+          - StaticText "Sign Up"
+      - generic
+        - paragraph
+          - StaticText "If you don't have a membership click here to register for a casual membership."
+        - button "Sign Up" [ref=e18]
+      - generic
+        - paragraph
+          - StaticText "Alternatively, you can sign up for a monthly or paid in full membership."
+        - link "Buy Membership" [ref=e19]
+  - contentinfo
+    - generic
+      - paragraph
+        - StaticText "© 2017 Leisureworld Cork. All Rights Reserved."
+      - paragraph
+        - StaticText "Online Services provided by "
+        - link "Legend Club Management Systems" [ref=e6]

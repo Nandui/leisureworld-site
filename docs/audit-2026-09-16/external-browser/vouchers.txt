@@ -1,0 +1,120 @@
+- generic
+  - banner
+    - generic
+      - image "Bottom shape"
+      - generic
+        - navigation
+          - list
+            - listitem [level=1]
+              - link "" [ref=e17]
+                - StaticText ""
+          - link [ref=e11]
+            - image
+          - link "" [ref=e14]
+            - StaticText ""
+          - link " 0" [ref=e15]
+            - StaticText ""
+            - StaticText "0"
+    - generic
+      - generic [ref=e8] clickable [cursor:pointer]
+        - paragraph
+          - StaticText "All vouchers"
+        - StaticText ""
+  - generic
+    - generic
+      - generic
+        - generic
+          - generic [ref=e23] clickable [cursor:pointer]
+          - StaticText "Gift Voucher"
+          - StaticText "Gift Voucher"
+          - generic
+            - image "Rating: 5 out of 5 stars "
+            - StaticText "10 Reviews"
+          - paragraph
+            - StaticText "Gift Voucher"
+          - generic
+            - StaticText "Price from: €5.00"
+          - link "Buy now" [ref=e21]
+    - generic
+      - generic
+        - StaticText "LeisureWorld Cork"
+      - generic
+        - generic [ref=e18] clickable [cursor:pointer]
+        - link "Voucher image" [ref=e19]
+          - image "Voucher image"
+        - heading "Gift Voucher Gift Voucher" [level=4, ref=e16]
+          - link "Gift Voucher " [ref=e20]
+          - StaticText "Gift Voucher"
+        - generic
+          - image "Rating: 5 out of 5 stars "
+          - StaticText "10 Reviews"
+        - paragraph
+          - StaticText "Gift Voucher"
+        - generic
+          - generic
+            - StaticText "Price from: €5.00"
+          - link "Buy now" [ref=e22]
+  - contentinfo
+    - list
+      - listitem [level=1]
+        - StaticText ""
+        - StaticText "Rossa Ave"
+        - LineBreak "\n"
+        - StaticText "Bishopstown"
+        - LineBreak "\n"
+        - StaticText "Cork"
+        - LineBreak "\n"
+        - StaticText "T12 HP29"
+        - LineBreak "\n"
+      - listitem [level=1]
+        - StaticText ""
+        - link "021 434 6505" [ref=e9]
+      - listitem [level=1]
+        - StaticText ""
+        - link "info@leisureworldcork.com" [ref=e10]
+      - link "  Back to Website" [ref=e5]
+        - StaticText ""
+        - StaticText "Back to Website"
+    - paragraph
+      - StaticText "HELP AND LINKS"
+    - link "My Account" [ref=e1]
+    - link "Check Balance" [ref=e2]
+    - link "Privacy Policy" [ref=e3]
+    - link "Terms and Conditions" [ref=e4]
+    - generic
+      - generic
+        - paragraph
+          - StaticText "SUBSCRIBE"
+        - paragraph
+          - StaticText "Subscribe to our newsletter to stay updated on our latest news and amazing offers."
+        - form
+          - generic
+            - textbox "Enter your email" [required, ref=e12]
+            - button "" [ref=e13]
+              - StaticText ""
+      - generic
+        - paragraph
+          - StaticText "SOCIAL LINKS:"
+        - link "" [ref=e6]
+          - StaticText ""
+    - paragraph
+      - StaticText "SECURE CHECKOUT"
+    - figure
+      - image "undefined"
+    - figure
+      - image "undefined"
+    - figure
+      - image "undefined"
+    - generic
+      - StaticText "This sales page is encrypted with Amazon SSL. All information are encrypted and we do not store your payment information. Payments are handled securely with Stripe."
+      - LineBreak "\n"
+    - separator
+    - generic
+      - StaticText "© 2026 Powered by "
+      - link " oucherCart." [ref=e7]
+        - StaticText ""
+        - StaticText "oucherCart."
+      - StaticText " All rights reserved."
+  - image
+  - generic
+    - IframePresentational "reCAPTCHA"

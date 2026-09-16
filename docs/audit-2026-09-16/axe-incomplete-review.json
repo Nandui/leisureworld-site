@@ -1,0 +1,248 @@
+[
+  {
+    "page": "index.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": [
+          {
+            "all": [
+              {
+                "data": {
+                  "messageKey": "controlsWithinPopup",
+                  "needsReview": "aria-controls=\"site-menu\""
+                },
+                "id": "aria-valid-attr-value",
+                "impact": "critical",
+                "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-menu\"",
+                "relatedNodes": []
+              }
+            ],
+            "any": [],
+            "html": "<button aria-controls=\"site-menu\" aria-expanded=\"false\" aria-haspopup=\"dialog\" aria-label=\"Open menu\" class=\"icon-button menu-toggle\" id=\"menu-toggle\"><i aria-hidden=\"true\" class=\"ti ti-menu-2\"></i></button>",
+            "none": [],
+            "target": [
+              "#menu-toggle"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "contrastRatio": 0,
+                  "expectedContrastRatio": "3:1",
+                  "fontSize": "31.6pt (42.12px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node",
+                "relatedNodes": [
+                  {
+                    "html": "<div aria-hidden=\"true\" class=\"hero-shade\"></div>",
+                    "target": [
+                      ".hero-shade"
+                    ]
+                  },
+                  {
+                    "html": "<img alt=\"Clear turquoise pool...\" class=\"hero-image\" data-original-src=\"Images/pool-stock-he...\" decoding=\"async\" fetchpriority=\"high\" height=\"1596\" id=\"hero-image\" sizes=\"(max-width: 600px) 9...\" src=\"Images/optimized/poo...\" srcset=\"Images/optimized/poo...\" style=\"object-position:20% ...\" ...>",
+                    "target": [
+                      "#hero-image"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "html": "<h1 id=\"hero-title\"><span class=\"hero-greeting\">Welcome to</span> LeisureWorld.</h1>",
+            "none": [],
+            "target": [
+              "#hero-title"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "contrastRatio": 0,
+                  "expectedContrastRatio": "4.5:1",
+                  "fontSize": "15.8pt (21px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element's background color could not be determined because element contains an image node",
+                "relatedNodes": [
+                  {
+                    "html": "<div aria-hidden=\"true\" class=\"hero-shade\"></div>",
+                    "target": [
+                      ".hero-shade"
+                    ]
+                  },
+                  {
+                    "html": "<img alt=\"Clear turquoise pool...\" class=\"hero-image\" data-original-src=\"Images/pool-stock-he...\" decoding=\"async\" fetchpriority=\"high\" height=\"1596\" id=\"hero-image\" sizes=\"(max-width: 600px) 9...\" src=\"Images/optimized/poo...\" srcset=\"Images/optimized/poo...\" style=\"object-position:20% ...\" ...>",
+                    "target": [
+                      "#hero-image"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "html": "<span class=\"hero-greeting\">Welcome to</span>",
+            "none": [],
+            "target": [
+              ".hero-greeting"
+            ]
+          },
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "contrastRatio": 0,
+                  "expectedContrastRatio": "4.5:1",
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<p>Cork’s community leisure centres.<br>Every Body Belongs.</p>",
+            "none": [],
+            "target": [
+              ".footer-brand > p"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "Activities/Swimlessons/swimschool.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": [
+          {
+            "all": [
+              {
+                "data": {
+                  "messageKey": "controlsWithinPopup",
+                  "needsReview": "aria-controls=\"site-menu\""
+                },
+                "id": "aria-valid-attr-value",
+                "impact": "critical",
+                "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-menu\"",
+                "relatedNodes": []
+              }
+            ],
+            "any": [],
+            "html": "<button aria-controls=\"site-menu\" aria-expanded=\"false\" aria-haspopup=\"dialog\" aria-label=\"Open menu\" class=\"icon-button menu-toggle\" id=\"menu-toggle\"><i aria-hidden=\"true\" class=\"ti ti-menu-2\"></i></button>",
+            "none": [],
+            "target": [
+              "#menu-toggle"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "contrastRatio": 0,
+                  "expectedContrastRatio": "4.5:1",
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<p>Cork’s community leisure centres.<br>Every Body Belongs.</p>",
+            "none": [],
+            "target": [
+              ".footer-brand > p"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "Policies/admission-policy.html",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "nodes": [
+          {
+            "all": [
+              {
+                "data": {
+                  "messageKey": "controlsWithinPopup",
+                  "needsReview": "aria-controls=\"site-menu\""
+                },
+                "id": "aria-valid-attr-value",
+                "impact": "critical",
+                "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"site-menu\"",
+                "relatedNodes": []
+              }
+            ],
+            "any": [],
+            "html": "<button aria-controls=\"site-menu\" aria-expanded=\"false\" aria-haspopup=\"dialog\" aria-label=\"Open menu\" class=\"icon-button menu-toggle\" id=\"menu-toggle\"><i aria-hidden=\"true\" class=\"ti ti-menu-2\"></i></button>",
+            "none": [],
+            "target": [
+              "#menu-toggle"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "all": [],
+            "any": [
+              {
+                "data": {
+                  "contrastRatio": 0,
+                  "expectedContrastRatio": "4.5:1",
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap"
+                },
+                "id": "color-contrast",
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "relatedNodes": []
+              }
+            ],
+            "html": "<p>Cork’s community leisure centres.<br>Every Body Belongs.</p>",
+            "none": [],
+            "target": [
+              ".footer-brand > p"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

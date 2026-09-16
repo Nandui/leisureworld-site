@@ -1,0 +1,50 @@
+- generic
+  - navigation
+    - list
+      - listitem [level=1]
+        - link "Skip To Navigation" [ref=e3]
+      - listitem [level=1]
+        - link "Skip To Main Content" [ref=e4]
+  - navigation
+    - link "Company Logo" [ref=e1]
+      - StaticText "Company Logo"
+  - navigation
+    - list
+      - listitem [level=1]
+        - link " Login" [ref=e8]
+          - StaticText ""
+          - StaticText "Login"
+      - listitem [level=1]
+        - link " Make Bookings " [ref=e9]
+          - StaticText ""
+          - StaticText "Make Bookings"
+          - StaticText ""
+  - banner
+    - heading "Joining" [level=1, ref=e2]
+    - separator
+  - main
+    - generic
+      - navigation "Breadcrumb" [ref=e5]
+        - list
+          - listitem [level=1]
+            - StaticText "Your Facility"
+          - listitem [level=1]
+            - StaticText "/"
+            - StaticText "About you"
+          - listitem [level=1]
+            - StaticText "/"
+            - StaticText "Payment"
+      - generic
+        - heading "Choose your Facility" [level=2, ref=e10]
+        - generic
+          - combobox "Search for Facility" [expanded=false, ref=e11]
+            - textbox [ref=e12]: Search for Facility
+              - StaticText "Search for Facility"
+      - button "Next step - About you" [disabled, ref=e6]
+  - contentinfo
+    - generic
+      - paragraph
+        - StaticText "© 2017 Leisureworld Cork. All Rights Reserved."
+      - paragraph
+        - StaticText "Online Services provided by "
+        - link "Legend Club Management Systems" [ref=e7]

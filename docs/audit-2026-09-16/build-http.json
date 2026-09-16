@@ -1,0 +1,1359 @@
+{
+  "checkedOn": "2026-09-16T11:03:07.268Z",
+  "files": 193,
+  "htmlPages": 48,
+  "errors": [],
+  "results": [
+    {
+      "file": "Activities.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 23063,
+      "identical": true
+    },
+    {
+      "file": "Activities/Swimlessons/rl.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 15473,
+      "identical": true
+    },
+    {
+      "file": "Activities/Swimlessons/ss.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 15454,
+      "identical": true
+    },
+    {
+      "file": "Activities/Swimlessons/swimschool.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 23584,
+      "identical": true
+    },
+    {
+      "file": "Activities/Swimlessons/wsf.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 15413,
+      "identical": true
+    },
+    {
+      "file": "Centres/bishopstown.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 17480,
+      "identical": true
+    },
+    {
+      "file": "Centres/churchfield.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 17885,
+      "identical": true
+    },
+    {
+      "file": "Centres/douglas.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 17014,
+      "identical": true
+    },
+    {
+      "file": "Certfictaons/Cert.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 12012,
+      "identical": true
+    },
+    {
+      "file": "Certfictaons/nplq.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 14460,
+      "identical": true
+    },
+    {
+      "file": "Certfictaons/ws.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 12642,
+      "identical": true
+    },
+    {
+      "file": "Images/1.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 3831348,
+      "identical": true
+    },
+    {
+      "file": "Images/ABox.jpeg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 37715,
+      "identical": true
+    },
+    {
+      "file": "Images/AMove.jpeg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 45288,
+      "identical": true
+    },
+    {
+      "file": "Images/Adultbox.jpeg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 55200,
+      "identical": true
+    },
+    {
+      "file": "Images/Astrength.jpeg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 41981,
+      "identical": true
+    },
+    {
+      "file": "Images/Astretch.jpeg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 40390,
+      "identical": true
+    },
+    {
+      "file": "Images/Tbox.jpeg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 47892,
+      "identical": true
+    },
+    {
+      "file": "Images/X.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 103016,
+      "identical": true
+    },
+    {
+      "file": "Images/adultswim.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 2655319,
+      "identical": true
+    },
+    {
+      "file": "Images/agewellstrecth.jpeg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 79628,
+      "identical": true
+    },
+    {
+      "file": "Images/agewmove.jpeg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 42253,
+      "identical": true
+    },
+    {
+      "file": "Images/appstore.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 22611,
+      "identical": true
+    },
+    {
+      "file": "Images/aqua.jpeg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 61188,
+      "identical": true
+    },
+    {
+      "file": "Images/bishopstown-pool.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 87095,
+      "identical": true
+    },
+    {
+      "file": "Images/bishopstown.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 123414,
+      "identical": true
+    },
+    {
+      "file": "Images/box.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 50502,
+      "identical": true
+    },
+    {
+      "file": "Images/cf.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 651068,
+      "identical": true
+    },
+    {
+      "file": "Images/cf1.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 1262473,
+      "identical": true
+    },
+    {
+      "file": "Images/dol.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 101250,
+      "identical": true
+    },
+    {
+      "file": "Images/fa.jpeg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 58561,
+      "identical": true
+    },
+    {
+      "file": "Images/fb.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 47324,
+      "identical": true
+    },
+    {
+      "file": "Images/gus.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 386342,
+      "identical": true
+    },
+    {
+      "file": "Images/gymact.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 1671455,
+      "identical": true
+    },
+    {
+      "file": "Images/hero-bg.jpeg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 185947,
+      "identical": true
+    },
+    {
+      "file": "Images/herobg.jpeg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 63100,
+      "identical": true
+    },
+    {
+      "file": "Images/ig.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 190161,
+      "identical": true
+    },
+    {
+      "file": "Images/kidscamps.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 34806186,
+      "identical": true
+    },
+    {
+      "file": "Images/l2f.jpeg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 59260,
+      "identical": true
+    },
+    {
+      "file": "Images/lbt.jpeg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 80648,
+      "identical": true
+    },
+    {
+      "file": "Images/leisureworld-app-home.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 291197,
+      "identical": true
+    },
+    {
+      "file": "Images/leisureworld-app-iphone.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 1609656,
+      "identical": true
+    },
+    {
+      "file": "Images/logo.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 115940,
+      "identical": true
+    },
+    {
+      "file": "Images/movewell.jpeg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 52429,
+      "identical": true
+    },
+    {
+      "file": "Images/movinchat.jpeg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 58786,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/agewellstrecth-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 36252,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/agewellstrecth-736.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 66054,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/aqua-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 28632,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/aqua-735.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 53730,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/bishopstown-1400.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 98646,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/bishopstown-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 14964,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/bishopstown-960.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 49896,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/bishopstown-pool-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 41568,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/bishopstown-pool-518.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 47736,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/cf-1600.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 278792,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/cf-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 38654,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/cf-960.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 126800,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/cf1-1258.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 66636,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/cf1-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 22564,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/cf1-960.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 50424,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/fa-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 27556,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/fa-735.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 51420,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/gus-1600.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 253656,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/gus-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 36570,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/gus-960.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 112688,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/gymact-1600.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 152170,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/gymact-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 30760,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/gymact-960.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 77132,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/hero-bg-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 97058,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/hero-bg-735.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 204258,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/herobg-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 31514,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/herobg-736.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 60642,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/l2f-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 25870,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/l2f-736.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 46460,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/leisureworld-app-iphone-1024.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 113994,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/leisureworld-app-iphone-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 42386,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/leisureworld-app-iphone-960.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 105214,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/movewell-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 21102,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/movewell-735.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 35844,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/movinchat-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 30408,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/movinchat-736.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 49514,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/pool-stock-hero-1600.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 331186,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/pool-stock-hero-2400.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 557904,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/pool-stock-hero-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 45318,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/pool-stock-hero-960.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 150358,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/revelate-1574.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 193698,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/revelate-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 43412,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/revelate-960.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 113028,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/rl-1370.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 125040,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/rl-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 33318,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/rl-960.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 82502,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/swimschool-1564.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 134982,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/swimschool-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 29866,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/swimschool-960.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 76838,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/tt-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 19896,
+      "identical": true
+    },
+    {
+      "file": "Images/optimized/tt-735.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 35844,
+      "identical": true
+    },
+    {
+      "file": "Images/pg.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 113635,
+      "identical": true
+    },
+    {
+      "file": "Images/playstore.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 360658,
+      "identical": true
+    },
+    {
+      "file": "Images/pool-stock-hero.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 861509,
+      "identical": true
+    },
+    {
+      "file": "Images/revelate.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 2375282,
+      "identical": true
+    },
+    {
+      "file": "Images/rl.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 1898184,
+      "identical": true
+    },
+    {
+      "file": "Images/rllogo.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 18156,
+      "identical": true
+    },
+    {
+      "file": "Images/rllogo1.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 48615,
+      "identical": true
+    },
+    {
+      "file": "Images/sf.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 126755,
+      "identical": true
+    },
+    {
+      "file": "Images/sh1.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 325942,
+      "identical": true
+    },
+    {
+      "file": "Images/sh2.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 308452,
+      "identical": true
+    },
+    {
+      "file": "Images/sh3.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 315427,
+      "identical": true
+    },
+    {
+      "file": "Images/ss.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 3257798,
+      "identical": true
+    },
+    {
+      "file": "Images/ssbg.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 4336839,
+      "identical": true
+    },
+    {
+      "file": "Images/swimschool.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 2070088,
+      "identical": true
+    },
+    {
+      "file": "Images/tt.jpeg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 45049,
+      "identical": true
+    },
+    {
+      "file": "Images/turtle.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 112942,
+      "identical": true
+    },
+    {
+      "file": "Images/wsf.png",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 3169052,
+      "identical": true
+    },
+    {
+      "file": "Policies/admission-policy.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 13584,
+      "identical": true
+    },
+    {
+      "file": "Policies/child-admission-policy.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 12485,
+      "identical": true
+    },
+    {
+      "file": "Policies/child-safeguarding-statement.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 12771,
+      "identical": true
+    },
+    {
+      "file": "Policies/clean-sport-anti-doping-policy.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 10462,
+      "identical": true
+    },
+    {
+      "file": "Policies/code-of-conduct-gym.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 12747,
+      "identical": true
+    },
+    {
+      "file": "Policies/code-of-conduct-pool.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 11907,
+      "identical": true
+    },
+    {
+      "file": "Policies/community-engagement-policy.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 13944,
+      "identical": true
+    },
+    {
+      "file": "Policies/cookie-policy.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 10690,
+      "identical": true
+    },
+    {
+      "file": "Policies/customer-charter.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 13762,
+      "identical": true
+    },
+    {
+      "file": "Policies/disability-inclusion-policy.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 14076,
+      "identical": true
+    },
+    {
+      "file": "Policies/environmental-policy.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 12283,
+      "identical": true
+    },
+    {
+      "file": "Policies/gender-pay-gap-2025.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 14436,
+      "identical": true
+    },
+    {
+      "file": "Policies/privacy-policy.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 12540,
+      "identical": true
+    },
+    {
+      "file": "Policies/sauna-steam-room-guidelines.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 13993,
+      "identical": true
+    },
+    {
+      "file": "Policies/supplements-statement.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 10377,
+      "identical": true
+    },
+    {
+      "file": "Policies/terms-and-conditions.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 23532,
+      "identical": true
+    },
+    {
+      "file": "Policies/tips-and-gratuities-policy.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 11465,
+      "identical": true
+    },
+    {
+      "file": "about.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 12152,
+      "identical": true
+    },
+    {
+      "file": "accessibility.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 12795,
+      "identical": true
+    },
+    {
+      "file": "activities-page.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 9377,
+      "identical": true
+    },
+    {
+      "file": "activity-finder.js",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "bytes": 886,
+      "identical": true
+    },
+    {
+      "file": "adultswimlesson.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 12529,
+      "identical": true
+    },
+    {
+      "file": "appfunnel.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 13208,
+      "identical": true
+    },
+    {
+      "file": "assets/documents/1.13-leisureworld-admission-policy-june-2026-v1.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 148169,
+      "identical": true
+    },
+    {
+      "file": "assets/documents/clean-sport-anti-doping-policy-v1.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 191766,
+      "identical": true
+    },
+    {
+      "file": "assets/documents/community-engagement-public-relations-policy-june-2026-v1.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 167937,
+      "identical": true
+    },
+    {
+      "file": "assets/documents/customer-charter-2026.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 1158172,
+      "identical": true
+    },
+    {
+      "file": "assets/documents/gender-pay-gap-report-2025-final.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 200633,
+      "identical": true
+    },
+    {
+      "file": "assets/documents/gym-rules.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 90274,
+      "identical": true
+    },
+    {
+      "file": "assets/documents/leisureworld-disability-inclusion-policy-2026-v1.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 192319,
+      "identical": true
+    },
+    {
+      "file": "assets/documents/leisureworld-environmental-policy-v16.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 162343,
+      "identical": true
+    },
+    {
+      "file": "assets/documents/leisureworld-safe-selling-supplements-sport-food-statement-v1.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 192782,
+      "identical": true
+    },
+    {
+      "file": "assets/documents/leisureworld-tips-gratuities-policy-v1-2024.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 236841,
+      "identical": true
+    },
+    {
+      "file": "assets/documents/safeguard-statement-april-2026.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 171417,
+      "identical": true
+    },
+    {
+      "file": "assets/documents/sauna-steam-room.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 2145677,
+      "identical": true
+    },
+    {
+      "file": "assets/documents/summer-camp-flyer-1.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 1986668,
+      "identical": true
+    },
+    {
+      "file": "assets/icons/fonts/tabler-icons.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 778812,
+      "identical": true
+    },
+    {
+      "file": "assets/icons/tabler-icons.min.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 203697,
+      "identical": true
+    },
+    {
+      "file": "camps.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 10752,
+      "identical": true
+    },
+    {
+      "file": "careers.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 13497,
+      "identical": true
+    },
+    {
+      "file": "centre-page.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 5747,
+      "identical": true
+    },
+    {
+      "file": "centre-policies.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 12213,
+      "identical": true
+    },
+    {
+      "file": "centres-page.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 7359,
+      "identical": true
+    },
+    {
+      "file": "centres.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 20517,
+      "identical": true
+    },
+    {
+      "file": "contact-page.js",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "bytes": 1581,
+      "identical": true
+    },
+    {
+      "file": "contact.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 11703,
+      "identical": true
+    },
+    {
+      "file": "data/visit-information.json",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bytes": 18776,
+      "identical": true
+    },
+    {
+      "file": "fonts/archivo-black-v23-latin-regular.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 18604,
+      "identical": true
+    },
+    {
+      "file": "fonts/archivo-v25-latin/archivo-v25-latin-300.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 14444,
+      "identical": true
+    },
+    {
+      "file": "fonts/archivo-v25-latin/archivo-v25-latin-300italic.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 15764,
+      "identical": true
+    },
+    {
+      "file": "fonts/archivo-v25-latin/archivo-v25-latin-500.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 14600,
+      "identical": true
+    },
+    {
+      "file": "fonts/archivo-v25-latin/archivo-v25-latin-600.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 13820,
+      "identical": true
+    },
+    {
+      "file": "fonts/archivo-v25-latin/archivo-v25-latin-regular.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 14700,
+      "identical": true
+    },
+    {
+      "file": "gym-page.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 9719,
+      "identical": true
+    },
+    {
+      "file": "gym-page.js",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "bytes": 1341,
+      "identical": true
+    },
+    {
+      "file": "gym.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 29501,
+      "identical": true
+    },
+    {
+      "file": "help.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 23868,
+      "identical": true
+    },
+    {
+      "file": "homepage.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 22461,
+      "identical": true
+    },
+    {
+      "file": "homepage.js",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "bytes": 2556,
+      "identical": true
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 17890,
+      "identical": true
+    },
+    {
+      "file": "llms.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 8920,
+      "identical": true
+    },
+    {
+      "file": "membershipfunnel.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 14007,
+      "identical": true
+    },
+    {
+      "file": "opening-hours.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 23361,
+      "identical": true
+    },
+    {
+      "file": "page-refinements.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 13864,
+      "identical": true
+    },
+    {
+      "file": "parent-guide.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 11867,
+      "identical": true
+    },
+    {
+      "file": "pitches.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 11231,
+      "identical": true
+    },
+    {
+      "file": "pool-page.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 8436,
+      "identical": true
+    },
+    {
+      "file": "poolactivities.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 18826,
+      "identical": true
+    },
+    {
+      "file": "pricing.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 19654,
+      "identical": true
+    },
+    {
+      "file": "robots.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 375,
+      "identical": true
+    },
+    {
+      "file": "script.js",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "bytes": 11243,
+      "identical": true
+    },
+    {
+      "file": "site-accessibility.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 6624,
+      "identical": true
+    },
+    {
+      "file": "site-pages.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 15363,
+      "identical": true
+    },
+    {
+      "file": "site-pages.js",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "bytes": 3386,
+      "identical": true
+    },
+    {
+      "file": "sitemap.xml",
+      "status": 200,
+      "contentType": "application/xml; charset=utf-8",
+      "bytes": 4107,
+      "identical": true
+    },
+    {
+      "file": "style.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 151740,
+      "identical": true
+    },
+    {
+      "file": "swim-school.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 12548,
+      "identical": true
+    },
+    {
+      "file": "teen-gym.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 10772,
+      "identical": true
+    },
+    {
+      "file": "visit-information.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 3924,
+      "identical": true
+    },
+    {
+      "file": "website-accessibility.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 12268,
+      "identical": true
+    }
+  ]
+}

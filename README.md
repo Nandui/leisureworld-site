@@ -1,18 +1,22 @@
 # LeisureWorld Cork website
 
-The redesign covers all 38 public HTML pages. The primary booking route is the
+The redesign covers all 48 public HTML pages. The primary booking route is the
 LeisureWorld app, with a browser booking alternative. Centre, activity, lesson,
 membership, pricing, support and policy pages share the homepage design.
+
+The current [whole-site audit](docs/audit-2026-09-16/README.md) records link,
+content, layout and interaction checks. See the [content maintenance guide](docs/content-maintenance.md)
+for timetables, course dates, jobs, notices and confirmed visitor policies.
 
 ## Preview
 
 ```powershell
-python scripts/preview.py
+npm run dev
 ```
 
-Open `http://127.0.0.1:8123`. Use `--port 8124` if needed. This loopback-only
-preview serves public static file types and cannot execute PHP. Contact requests
-in a static preview display the failure/recovery state.
+Open `http://127.0.0.1:8123`. Use `npm run dev -- --port 8124` if needed. This
+loopback-only preview serves public files including timetable PDFs and the JSON
+content feed. Contact uses direct email and phone links.
 
 ## Implementation
 
@@ -21,15 +25,18 @@ in a static preview display the failure/recovery state.
 - `site-pages.css` styles supporting pages. `site-accessibility.css` applies to
   every page; activity and centre styles extend the same design.
 - `site-pages.js` enhances help search; `gym-page.js` enhances class filtering.
-- `contact-page.js` provides labelled errors and honest submission states.
-  `send-mail.php` validates the enquiry and hands it to the host's mail transport.
+- `contact-page.js` optionally prefills the email subject and centre phone link
+  for visitors arriving from an activity enquiry. All contact choices work
+  without JavaScript; there is no website email-submission backend.
+- `data/visit-information.json` is the GitHub-editable content feed. The content
+  build writes its published information into static HTML regions.
 - Fonts/icons are local. `Images/optimized/` contains responsive WebP versions;
   original source images remain intact.
 - Legacy `style.css` and `script.js` are not referenced by redesigned pages.
 
-No framework or browser build is required. Live bookings, membership purchases,
-current timetables and some specialist information belong to linked services.
-There is no internal live-availability system or enquiry escalation pipeline.
+No frontend framework is required. Node.js 22 runs the content and deployment
+build. Live bookings and membership purchases belong to external services;
+the editorial feed does not provide live booking availability.
 
 ## Maintenance and checks
 
@@ -40,6 +47,8 @@ python -m pip install -r scripts/requirements.txt
 python scripts/optimize-images.py
 python scripts/update-metadata.py
 python scripts/check-site.py
+npm test
+npm run build
 ```
 
 Run image optimization when source images change. It creates encodings without
@@ -53,34 +62,29 @@ Keep exact filename casing on Linux hosts.
 See [page purposes](docs/page-purpose.md), [accessibility review](docs/accessibility-review.md)
 and [content/search notes](docs/content-and-discovery.md).
 
-## Contact service
+## Contact and deployment
 
-Production requires a supported PHP version and a configured mail transport.
-Set `LEISUREWORLD_CONTACT_TO` to the approved mailbox; the default is
-`info@leisureworldcork.com`. Configure the sender domain on the host. Success
-means the transport accepted the email, not proof of inbox delivery.
+Contact is by direct phone/email for this release. The email button opens the
+visitor's email app, and the address is visible for copying. Existing activity
+enquiry links can prefill the subject. No account, API key or mail transport is
+needed. The obsolete PHP handler and fixtures were removed; its old URL safely
+redirects to the contact page.
 
-PHP 8.5.10 syntax and 15 isolated handler cases were checked. To repeat without
-sending any email:
-
-```powershell
-python scripts/test-contact.py path/to/php.exe
-```
-
-The fixture disables real `mail()` before replacing it with a test stub.
-Production mail delivery still needs a separate test.
+Vercel runs `npm run build` and publishes only `dist/`, as configured in
+`vercel.json`. The build runs the content generator and copies public files from
+an allowlist. It excludes documentation, scripts, tests, secrets and configuration.
+See [deployment instructions](docs/deployment.md) for the GitHub workflow and
+local production-output preview.
 
 ## Before publishing
 
 1. Confirm the production domain, canonical paths and redirects. HTML should
    revalidate; asset query strings must be included in cache keys.
-2. Deploy public HTML, referenced CSS/JS/assets, discovery files and the PHP
-   endpoint. Exclude `.git`, `.impeccable`, `scripts`, reports and development
-   files. Robots exclusions are not access controls.
-3. Configure and verify mail delivery. GitHub Pages and other static hosts
-   cannot execute the PHP endpoint.
-4. Preserve linked official timetable, course, privacy and specialist routes
-   if replacing the existing website; these still depend on that service.
+2. Use the committed Vercel build settings and publish only `dist/`. Robots
+   exclusions are not access controls.
+3. Check direct email/phone links and the old contact endpoint redirect.
+4. Review published timetable, course and policy information and keep the JSON
+   feed and local documents current.
 5. Complete the wider accessibility/external booking evaluation in the review
    and have the operator confirm approved policy texts and statement wording.
 6. Submit the production sitemap to verified search accounts and check real
@@ -88,9 +92,9 @@ Production mail delivery still needs a separate test.
 
 No deployment, purchase, app installation or real enquiry was performed.
 Original repository attribution: [Nikita Joisa](https://github.com/nikitajoisa).
-## Latest comprehensive review
+## Previous design review
 
-The [latest 38-page visual review](docs/design-refinement-review.md) records the
+The [earlier 38-page visual review](docs/design-refinement-review.md) records the
 follow-up after feedback on Swim School and the whole site. Thirty pages received
 design or flow refinements. The [current results](docs/design-refinement-audit.json)
 contain 304 final responsive/text-spacing checks and focused interaction evidence.

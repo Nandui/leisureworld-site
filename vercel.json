@@ -1,0 +1,373 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/send-mail.php",
+      "destination": "/contact.html#message",
+      "statusCode": 303
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/about/",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/accessibility",
+      "destination": "/accessibility.html",
+      "permanent": true
+    },
+    {
+      "source": "/accessibility/",
+      "destination": "/accessibility.html",
+      "permanent": true
+    },
+    {
+      "source": "/all-weather-pitch-cork",
+      "destination": "/pitches.html",
+      "permanent": true
+    },
+    {
+      "source": "/all-weather-pitch-cork/",
+      "destination": "/pitches.html",
+      "permanent": true
+    },
+    {
+      "source": "/careers-at-lw-management",
+      "destination": "/careers.html#vacancies",
+      "permanent": true
+    },
+    {
+      "source": "/careers-at-lw-management/",
+      "destination": "/careers.html#vacancies",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us/",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/cookies-policy",
+      "destination": "/Policies/cookie-policy.html",
+      "permanent": true
+    },
+    {
+      "source": "/cookies-policy/",
+      "destination": "/Policies/cookie-policy.html",
+      "permanent": true
+    },
+    {
+      "source": "/fitness-classes-bishopstown",
+      "destination": "/gym.html#classes",
+      "permanent": true
+    },
+    {
+      "source": "/fitness-classes-bishopstown/",
+      "destination": "/gym.html#classes",
+      "permanent": true
+    },
+    {
+      "source": "/fitness-classes-cork",
+      "destination": "/gym.html#classes",
+      "permanent": true
+    },
+    {
+      "source": "/fitness-classes-cork/",
+      "destination": "/gym.html#classes",
+      "permanent": true
+    },
+    {
+      "source": "/gym-cork",
+      "destination": "/gym.html",
+      "permanent": true
+    },
+    {
+      "source": "/gym-cork/",
+      "destination": "/gym.html",
+      "permanent": true
+    },
+    {
+      "source": "/health-wellbeing/functional-zone",
+      "destination": "/accessibility.html#functional-zone",
+      "permanent": true
+    },
+    {
+      "source": "/health-wellbeing/functional-zone/",
+      "destination": "/accessibility.html#functional-zone",
+      "permanent": true
+    },
+    {
+      "source": "/leisureworld-policies",
+      "destination": "/centre-policies.html",
+      "permanent": true
+    },
+    {
+      "source": "/leisureworld-policies/",
+      "destination": "/centre-policies.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations",
+      "destination": "/centres.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/",
+      "destination": "/centres.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-bishopstown",
+      "destination": "/Centres/bishopstown.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-bishopstown/",
+      "destination": "/Centres/bishopstown.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-bishopstown/bishopstown-swimming-pool",
+      "destination": "/Centres/bishopstown.html#facilities",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-bishopstown/bishopstown-swimming-pool/",
+      "destination": "/Centres/bishopstown.html#facilities",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-bishopstown/fitness-classes-bishopstown",
+      "destination": "/gym.html#classes",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-bishopstown/fitness-classes-bishopstown/",
+      "destination": "/gym.html#classes",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-bishopstown/fitness-classes-timetables-bishopstown",
+      "destination": "/opening-hours.html#bishopstown-classes",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-bishopstown/fitness-classes-timetables-bishopstown/",
+      "destination": "/opening-hours.html#bishopstown-classes",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-bishopstown/leisureworld-agewell-programme",
+      "destination": "/gym.html#agewell-movement-title",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-bishopstown/leisureworld-agewell-programme/",
+      "destination": "/gym.html#agewell-movement-title",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-bishopstown/leisureworld-bishopstown-gym",
+      "destination": "/gym.html#gyms",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-bishopstown/leisureworld-bishopstown-gym/",
+      "destination": "/gym.html#gyms",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-churchfield",
+      "destination": "/Centres/churchfield.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-churchfield/",
+      "destination": "/Centres/churchfield.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-churchfield/churchfield-gym",
+      "destination": "/gym.html#gyms",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-churchfield/churchfield-gym/",
+      "destination": "/gym.html#gyms",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-churchfield/fitness-classes-churchfield",
+      "destination": "/gym.html#classes",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-churchfield/fitness-classes-churchfield/",
+      "destination": "/gym.html#classes",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-churchfield/fitness-classes-timetables-churchfield",
+      "destination": "/opening-hours.html#churchfield-classes",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-churchfield/fitness-classes-timetables-churchfield/",
+      "destination": "/opening-hours.html#churchfield-classes",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-churchfield/swimming-pool-churchfield",
+      "destination": "/Centres/churchfield.html#facilities",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-churchfield/swimming-pool-churchfield/",
+      "destination": "/Centres/churchfield.html#facilities",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-douglas",
+      "destination": "/Centres/douglas.html#hours",
+      "permanent": true
+    },
+    {
+      "source": "/locations/leisureworld-douglas/",
+      "destination": "/Centres/douglas.html#hours",
+      "permanent": true
+    },
+    {
+      "source": "/opening-hours",
+      "destination": "/opening-hours.html",
+      "permanent": true
+    },
+    {
+      "source": "/opening-hours/",
+      "destination": "/opening-hours.html",
+      "permanent": true
+    },
+    {
+      "source": "/prices",
+      "destination": "/pricing.html",
+      "permanent": true
+    },
+    {
+      "source": "/prices/",
+      "destination": "/pricing.html",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/Policies/privacy-policy.html",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/Policies/privacy-policy.html",
+      "permanent": true
+    },
+    {
+      "source": "/summer-activity-camps",
+      "destination": "/camps.html",
+      "permanent": true
+    },
+    {
+      "source": "/summer-activity-camps/",
+      "destination": "/camps.html",
+      "permanent": true
+    },
+    {
+      "source": "/swimming-lessons-cork",
+      "destination": "/Activities/Swimlessons/swimschool.html",
+      "permanent": true
+    },
+    {
+      "source": "/swimming-lessons-cork/",
+      "destination": "/Activities/Swimlessons/swimschool.html",
+      "permanent": true
+    },
+    {
+      "source": "/swimming-lessons-cork/swim-lessons-parent-help",
+      "destination": "/parent-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/swimming-lessons-cork/swim-lessons-parent-help/",
+      "destination": "/parent-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/swimming-pools-cork",
+      "destination": "/poolactivities.html",
+      "permanent": true
+    },
+    {
+      "source": "/swimming-pools-cork/",
+      "destination": "/poolactivities.html",
+      "permanent": true
+    },
+    {
+      "source": "/teen-gym-cork",
+      "destination": "/teen-gym.html",
+      "permanent": true
+    },
+    {
+      "source": "/teen-gym-cork/",
+      "destination": "/teen-gym.html",
+      "permanent": true
+    },
+    {
+      "source": "/training/nplq-courses",
+      "destination": "/Certfictaons/nplq.html#course-dates",
+      "permanent": true
+    },
+    {
+      "source": "/training/nplq-courses/",
+      "destination": "/Certfictaons/nplq.html#course-dates",
+      "permanent": true
+    },
+    {
+      "source": "/training/rookie-lifeguard",
+      "destination": "/Activities/Swimlessons/rl.html",
+      "permanent": true
+    },
+    {
+      "source": "/training/rookie-lifeguard/",
+      "destination": "/Activities/Swimlessons/rl.html",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
+      ]
+    }
+  ]
+}

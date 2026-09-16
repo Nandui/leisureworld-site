@@ -1,0 +1,610 @@
+You are here:
+Home
+›
+Cookies Policy
+This Cookie Policy was last updated on October 5, 2020 and applies to citizens and legal permanent residents of the European Economic Area and Switzerland.
+1. Introduction
+Our website,
+https://www.leisureworldcork.com
+(hereinafter: "the website") uses cookies and other related technologies (for convenience all technologies are referred to as "cookies"). Cookies are also placed by third parties we have engaged. In the document below we inform you about the use of cookies on our website.
+2. What are cookies?
+A cookie is a small simple file that is sent along with pages of this website and stored by your browser on the hard drive of your computer or another device. The information stored therein may be returned to our servers or to the servers of the relevant third parties during a subsequent visit.
+3. What are scripts?
+A script is a piece of program code that is used to make our website function properly and interactively. This code is executed on our server or on your device.
+4. What is a web beacon?
+A web beacon (or a pixel tag) is a small, invisible piece of text or image on a website that is used to monitor traffic on a website. In order to do this, various data about you is stored using web beacons.
+5. Cookies
+5.1 Technical or functional cookies
+Some cookies ensure that certain parts of the website work properly and that your user preferences remain known. By placing functional cookies, we make it easier for you to visit our website. This way, you do not need to repeatedly enter the same information when visiting our website and, for example, the items remain in your shopping cart until you have paid. We may place these cookies without your consent.
+5.2 Statistics cookies
+We use statistics cookies to optimise the website experience for our users. With these statistics cookies we get insights in the usage of our website. We ask your permission to place statistics cookies.
+5.3 Marketing/Tracking cookies
+Marketing/Tracking cookies are cookies or any other form of local storage, used to create user profiles to display advertising or to track the user on this website or across several websites for similar marketing purposes.
+5.4 Social media
+On our website, we have included content from Facebook, Instagram and Pinterest to promote web pages (e.g. “like”, “pin”) or share (e.g. “tweet”) on social networks like Facebook, Instagram and Pinterest. This content is embedded with code derived from Facebook, Instagram and Pinterest and places cookies. This content might store and process certain information for personalised advertising.
+Please read the privacy statement of these social networks (which can change regularly) to read what they do with your (personal) data which they process using these cookies. The data that is retrieved is anonymised as much as possible. Facebook, Instagram and Pinterest are located in the United States.
+6. Placed cookies
+WordPress
+Functional
+Consent to service wordpress
+Usage
+We use WordPress for website development.
+Sharing data
+This data is not shared with third parties.
+Functional
+Name
+wordpress_test_cookie
+Expiration
+none
+Function
+Check if cookies can be placed
+Name
+wordpress_logged_in_*
+Expiration
+persistent
+Function
+Keep users logged in
+Name
+wp_lang
+Expiration
+session
+Function
+Store language settings
+Google Analytics
+Statistics
+Consent to service google-analytics
+Usage
+We use Google Analytics for website statistics.
+Sharing data
+For more information, please read the
+Google Analytics Privacy Statement
+.
+Statistics
+Name
+_ga
+Expiration
+2 years
+Function
+Store and count pageviews
+Name
+_gid
+Expiration
+1 day
+Function
+Store and count pageviews
+Name
+_gat_gtag_UA_*
+Expiration
+1 minute
+Function
+Store a unique user ID
+Facebook
+Marketing/Tracking, Functional
+Consent to service facebook
+Usage
+We use Facebook for display of recent social posts and/or social share buttons.
+Sharing data
+For more information, please read the
+Facebook Privacy Statement
+.
+Marketing/Tracking
+Name
+_fbp
+Expiration
+3 months
+Function
+Store and track visits across websites
+Name
+_fbc
+Expiration
+2 years
+Function
+Store last visit
+Name
+fbm*
+Expiration
+1 year
+Function
+Store account details
+Name
+xs
+Expiration
+3 months
+Function
+Store a unique session ID
+Name
+fr
+Expiration
+3 months
+Function
+Provide ad delivery or retargeting
+Name
+act
+Expiration
+90 days
+Function
+Store logged in users
+Name
+datr
+Expiration
+2 years
+Function
+Provide fraud prevention
+Name
+c_user
+Expiration
+30 days
+Function
+Store a unique user ID
+Name
+sb
+Expiration
+2 years
+Function
+Store browser details
+Name
+*_fbm_
+Expiration
+1 year
+Function
+Store account details
+Functional
+Name
+wd
+Expiration
+1 week
+Function
+Read screen resolution
+Name
+csm
+Expiration
+90 days
+Function
+Provide fraud prevention
+Name
+presence
+Expiration
+session
+Function
+Store and track if the browser tab is active
+Name
+actppresence
+Expiration
+session
+Function
+Store and track if the browser tab is active
+Google Fonts
+Marketing/Tracking
+Consent to service google-fonts
+Usage
+We use Google Fonts for display of webfonts.
+Sharing data
+For more information, please read the
+Google Fonts Privacy Statement
+.
+Marketing/Tracking
+Name
+Google Fonts API
+Expiration
+expires immediately
+Function
+Read user IP address
+Google reCAPTCHA
+Marketing/Tracking
+Consent to service google-recaptcha
+Usage
+We use Google reCAPTCHA for spam prevention.
+Sharing data
+For more information, please read the
+Google reCAPTCHA Privacy Statement
+.
+Marketing/Tracking
+Name
+rc::c
+Expiration
+session
+Function
+Read and filter requests from bots
+Name
+rc::b
+Expiration
+session
+Function
+Read and filter requests from bots
+Name
+rc::a
+Expiration
+persistent
+Function
+Read and filter requests from bots
+Purpose pending investigation
+Name
+_grecaptcha
+Expiration
+Function
+Google Maps
+Marketing/Tracking
+Consent to service google-maps
+Usage
+We use Google Maps for maps display.
+Sharing data
+For more information, please read the
+Google Maps Privacy Statement
+.
+Marketing/Tracking
+Name
+Google Maps API
+Expiration
+expires immediately
+Function
+Read user IP address
+YouTube
+Marketing/Tracking, Functional
+Consent to service youtube
+Usage
+We use YouTube for video display.
+Sharing data
+For more information, please read the
+YouTube Privacy Statement
+.
+Marketing/Tracking
+Name
+GPS
+Expiration
+session
+Function
+Store location data
+Name
+YSC
+Expiration
+session
+Function
+Store and track interaction
+Name
+PREF
+Expiration
+8 months
+Function
+Store user preferences
+Functional
+Name
+VISITOR_INFO1_LIVE
+Expiration
+6 months
+Function
+Provide bandwidth estimations
+ShareThis
+Marketing/Tracking
+Consent to service sharethis
+Usage
+We use ShareThis for display of recent social posts and/or social share buttons.
+Sharing data
+For more information, please read the
+ShareThis Privacy Statement
+.
+Purpose pending investigation
+Name
+UIDR
+Expiration
+Function
+Name
+__uset
+Expiration
+Function
+Name
+uset
+Expiration
+Function
+Marketing/Tracking
+Name
+_stgmap
+Expiration
+1 week
+Function
+Store and track audience reach
+Name
+_stamap
+Expiration
+1 week
+Function
+Store and track audience reach
+Name
+stacxiommap
+Expiration
+1 week
+Function
+Store and track audience reach
+Name
+stdlxmap
+Expiration
+1 week
+Function
+Store and track audience reach
+Name
+__stid
+Expiration
+1 week
+Function
+Store and track audience reach
+Instagram
+Marketing/Tracking
+Consent to service instagram
+Usage
+We use Instagram for display of recent social posts and/or social share buttons.
+Sharing data
+For more information, please read the
+Instagram Privacy Statement
+.
+Marketing/Tracking
+Name
+actppresence
+Expiration
+1 year
+Function
+Store ad display frequency
+WP Engine
+Purpose pending investigation
+Consent to service wp-engine
+Usage
+We use WP Engine for website hosting.
+Sharing data
+For more information, please read the
+WP Engine Privacy Statement
+.
+Purpose pending investigation
+Name
+rtk_gdpr_c
+Expiration
+session
+Function
+Name
+rtkuuid
+Expiration
+session
+Function
+Name
+rtk_gdpr_a
+Expiration
+session
+Function
+Name
+rtk_p
+Expiration
+session
+Function
+Name
+rtk_sid
+Expiration
+session
+Function
+Name
+rtk_rps
+Expiration
+session
+Function
+Name
+rtk_sat
+Expiration
+session
+Function
+Complianz
+Functional
+Consent to service complianz
+Usage
+We use Complianz for cookie consent management.
+Sharing data
+This data is not shared with third parties. For more information, please read the
+Complianz Privacy Statement
+.
+Functional
+Name
+cmplz_user_data
+Expiration
+365 days
+Function
+Read to determine which cookie banner to show
+Name
+complianz_policy_id
+Expiration
+365 days
+Function
+Store accepted cookie policy ID
+Name
+cmplz_event_*
+Expiration
+365 days
+Function
+Store cookie consent preferences
+Name
+complianz_consent_status
+Expiration
+365 days
+Function
+Store cookie consent preferences
+Name
+cmplz_marketing
+Expiration
+365 days
+Function
+Store cookie consent preferences
+Name
+cmplz_functional
+Expiration
+365 days
+Function
+Store cookie consent preferences
+Name
+cmplz_statistics-anonymous
+Expiration
+365 days
+Function
+Store cookie consent preferences
+Name
+cmplz_policy_id
+Expiration
+365 days
+Function
+Store accepted cookie policy ID
+Name
+cmplz_consent_status
+Expiration
+365 days
+Function
+Store cookie consent preferences
+Name
+cmplz_choice
+Expiration
+365 days
+Function
+Store if a message has been dismissed
+Name
+cmplz_statistics
+Expiration
+365 days
+Function
+Store cookie consent preferences
+Name
+cmplz_preferences
+Expiration
+365 days
+Function
+Store cookie consent preferences
+Name
+cmplz_banner-status
+Expiration
+365 days
+Function
+Store if the cookie banner has been dismissed
+Name
+cmplz_consented_services
+Expiration
+365 days
+Function
+Store cookie consent preferences
+PopUp Builder
+Functional
+Consent to service popup-builder
+Usage
+We use PopUp Builder for popup creation.
+Sharing data
+This data is not shared with third parties.
+Functional
+Name
+SGPBShowingLimitationDomain*
+Expiration
+session
+Function
+Store if a message has been shown
+Miscellaneous
+Purpose pending investigation
+Consent to service miscellaneous
+Usage
+Sharing data
+Sharing of data is pending investigation
+Purpose pending investigation
+Name
+loglevel
+Expiration
+Function
+Name
+__gsas
+Expiration
+Function
+Name
+test_cookie
+Expiration
+Function
+.doubleclick.net
+Name
+_ga_KH06T62CJ0
+Expiration
+Function
+Name
+wpEmojiSettingsSupports
+Expiration
+Function
+Name
+_ga_15L9G5EFTM
+Expiration
+Function
+Name
+lastExternalReferrerTime
+Expiration
+Function
+Name
+active_tab
+Expiration
+Function
+Name
+lastExternalReferrer
+Expiration
+Function
+Name
+betterlinks__admin_menu_notice
+Expiration
+Function
+Name
+adobeCleanFontAdded
+Expiration
+Function
+Name
+topicsLastReferenceTime
+Expiration
+Function
+Name
+wpr-hash
+Expiration
+Function
+Name
+persist:hs-beacon-44cc73fb-7636-4206-b115-c7b33823551b
+Expiration
+Function
+Name
+wpr-show-sidebar
+Expiration
+Function
+Name
+persist:hs-beacon-message-44cc73fb-7636-4206-b115-c7b33823551b
+Expiration
+Function
+7. Consent
+When you visit our website for the first time, we will show you a pop-up with an explanation about cookies. As soon as you click on "Save preferences", you consent to us using the categories of cookies and plug-ins you selected in the pop-up, as described in this Cookie Policy. You can disable the use of cookies via your browser, but please note that our website may no longer work properly.
+7.1 Manage your consent settings
+You have loaded the Cookie Policy without javascript support. On AMP, you can use the manage consent button on the bottom of the page.
+8. Enabling/disabling and deleting cookies
+You can use your internet browser to automatically or manually delete cookies. You can also specify that certain cookies may not be placed. Another option is to change the settings of your internet browser so that you receive a message each time a cookie is placed. For more information about these options, please refer to the instructions in the Help section of your browser.
+Please note that our website may not work properly if all cookies are disabled. If you do delete the cookies in your browser, they will be placed again after your consent when you visit our website again.
+9. Your rights with respect to personal data
+You have the following rights with respect to your personal data:
+You have the right to know why your personal data is needed, what will happen to it, and how long it will be retained for.
+Right of access: You have the right to access your personal data that is known to us.
+Right to rectification: you have the right to supplement, correct, have deleted or blocked your personal data whenever you wish.
+If you give us your consent to process your data, you have the right to revoke that consent and to have your personal data deleted.
+Right to transfer your data: you have the right to request all your personal data from the controller and transfer it in its entirety to another controller.
+Right to object: you may object to the processing of your data. We comply with this, unless there are justified grounds for processing.
+To exercise these rights, please contact us. Please refer to the contact details at the bottom of this Cookie Policy. If you have a complaint about how we handle your data, we would like to hear from you, but you also have the right to submit a complaint to the supervisory authority (the Data Protection Authority).
+10. Contact details
+For questions and/or comments about our Cookie Policy and this statement, please contact us by using the following contact details:
+LeisureWorld Bishopstown
+Rossa Ave, Bishopstown, Cork
+Ireland
+Website:
+https://www.leisureworldcork.com
+Email:
+info@
+ex.com
+leisureworldcork.com
+Phone number: 021- 4346505
+This Cookie Policy was synchronised with
+cookiedatabase.org
+on June 1, 2026.
+Cookies Policy
+Privacy Policy
+Contact us
+OPENING HOURS
+Click here for opening Hours
+Share this page…
+Facebook
+Twitter
+Pinterest
+Email

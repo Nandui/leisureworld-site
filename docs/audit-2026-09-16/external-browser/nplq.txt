@@ -1,0 +1,152 @@
+- generic
+  - navigation
+    - list
+      - listitem [level=1]
+        - link "Skip To Navigation" [ref=e3]
+      - listitem [level=1]
+        - link "Skip To Main Content" [ref=e4]
+  - navigation
+    - link "Company Logo" [ref=e1]
+      - StaticText "Company Logo"
+    - link "Navigate to Basket Summary  0" [ref=e5]
+      - StaticText "Navigate to Basket Summary"
+      - StaticText ""
+      - StaticText "0"
+  - navigation
+    - list
+      - listitem [level=1]
+        - link " Login" [ref=e7]
+          - StaticText ""
+          - StaticText "Login"
+      - listitem [level=1]
+        - link " Make Bookings " [ref=e8]
+          - StaticText ""
+          - StaticText "Make Bookings"
+          - StaticText ""
+  - banner
+    - heading "Course Details" [level=1, ref=e2]
+    - separator
+  - main
+    - generic
+      - generic
+        - generic
+          - heading "Pricing Information" [level=3, ref=e11]
+          - generic
+            - StaticText "You may be eligible for a discount or concession, this will be applied automatically at checkout."
+            - strong
+              - StaticText "Standard Price"
+          - generic
+            - StaticText "€500.00 "
+            - emphasis
+              - StaticText "(€500.00 Inc Tax)"
+        - generic
+          - button "Course Details" [expanded=true, ref=e12]
+            - heading "Course Details" [level=3, ref=e14]
+          - strong
+            - StaticText "Name"
+          - StaticText "RLSS Pool Lifeguard Course"
+          - generic
+            - strong
+              - StaticText "Short Code"
+            - StaticText "00008699"
+          - strong
+            - StaticText "Description"
+          - paragraph
+            - StaticText "RLSS Pool Lifeguard Course - The Royal Life Saving Society UK's (RLSS UK) NPLQ is the most awarded lifeguard qualification in the UK and Ireland and is also internationally recognised. More than 46,000 pool lifeguards qualify with the RLSS UK course every year, and there are currently more than 75,000 pool lifeguards qualified in the NPLQ."
+          - generic
+            - strong
+              - StaticText "Level"
+            - StaticText "NPLQ Course"
+            - strong
+              - StaticText "Discipline"
+            - StaticText "LW Management Training"
+            - generic
+              - strong
+                - StaticText "Categories"
+              - generic
+                - paragraph
+                  - StaticText "Courses (NPLQ, Swim Teacher etc)"
+                - paragraph
+                  - StaticText "NPLQ"
+          - strong
+            - StaticText "Day of Week"
+          - StaticText "Tue, Wed, Thur, Fri, Sat"
+          - strong
+            - StaticText "Start Date"
+          - generic
+            - StaticText "27 Oct, 2026 09:00"
+          - strong
+            - StaticText "End Date"
+          - generic
+            - StaticText "31 Oct, 2026 09:00"
+          - strong
+            - StaticText "Number of Sessions"
+          - StaticText "5"
+          - strong
+            - StaticText "Clubs"
+          - StaticText "LW Bishopstown"
+          - strong
+            - StaticText "Location"
+          - generic
+            - generic
+              - StaticText "Rossa Avenue Bishopstown Cork"
+            - StaticText "Rooms"
+          - generic
+            - generic
+              - strong
+                - StaticText "Required Min Age"
+            - StaticText "16 years"
+          - strong
+            - StaticText "Instructor"
+          - StaticText "Group Exercise Instructor"
+      - generic
+        - button "Session Details" [expanded=true, ref=e13]
+          - heading "Session Details" [level=3, ref=e15]
+        - table "Provides a list of available sessions for the Sports Course."
+          - caption
+            - StaticText "Provides a list of available sessions for the Sports Course."
+          - rowgroup
+            - row
+              - columnheader "Date & Time" [ref=e31]
+              - columnheader "Location" [ref=e32]
+              - columnheader "Instructor" [ref=e33]
+          - row
+            - cell "Tue Oct 27, 2026 09:00 (540 minutes)" [ref=e16]
+            - cell "Rooms (LW Bishopstown)" [ref=e17]
+              - generic
+                - StaticText "Rooms (LW Bishopstown)"
+            - cell "Group Exercise Instructor" [ref=e18]
+          - row
+            - cell "Wed Oct 28, 2026 09:00 (540 minutes)" [ref=e19]
+            - cell "Rooms (LW Bishopstown)" [ref=e20]
+              - generic
+                - StaticText "Rooms (LW Bishopstown)"
+            - cell "Group Exercise Instructor" [ref=e21]
+          - row
+            - cell "Thu Oct 29, 2026 09:00 (540 minutes)" [ref=e22]
+            - cell "Rooms (LW Bishopstown)" [ref=e23]
+              - generic
+                - StaticText "Rooms (LW Bishopstown)"
+            - cell "Group Exercise Instructor" [ref=e24]
+          - row
+            - cell "Fri Oct 30, 2026 09:00 (540 minutes)" [ref=e25]
+            - cell "Rooms (LW Bishopstown)" [ref=e26]
+              - generic
+                - StaticText "Rooms (LW Bishopstown)"
+            - cell "Group Exercise Instructor" [ref=e27]
+          - row
+            - cell "Sat Oct 31, 2026 09:00 (540 minutes)" [ref=e28]
+            - cell "Rooms (LW Bishopstown)" [ref=e29]
+              - generic
+                - StaticText "Rooms (LW Bishopstown)"
+            - cell "Group Exercise Instructor" [ref=e30]
+      - generic
+        - link "Back to Courses" [ref=e9]
+        - link "Register" [ref=e10]
+  - contentinfo
+    - generic
+      - paragraph
+        - StaticText "© 2017 Leisureworld Cork. All Rights Reserved."
+      - paragraph
+        - StaticText "Online Services provided by "
+        - link "Legend Club Management Systems" [ref=e6]

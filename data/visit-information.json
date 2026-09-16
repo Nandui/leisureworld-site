@@ -1,0 +1,754 @@
+{
+  "version": 1,
+  "checkedOn": "2026-09-16",
+  "membershipCentres": [
+    "bishopstown",
+    "churchfield"
+  ],
+  "childSupervision": {
+    "inWaterUnderAge": 10,
+    "adultOnPremisesThroughAge": 12,
+    "maxChildrenPerAdultInWater": 2
+  },
+  "notices": [],
+  "centres": [
+    {
+      "id": "bishopstown",
+      "name": "Bishopstown",
+      "phone": "+353214346505",
+      "phoneDisplay": "021 434 6505",
+      "page": "Centres/bishopstown.html",
+      "gymHours": [
+        {
+          "day": "Monday",
+          "times": [
+            "7am – 8.45pm"
+          ]
+        },
+        {
+          "day": "Tuesday",
+          "times": [
+            "7am – 8.45pm"
+          ]
+        },
+        {
+          "day": "Wednesday",
+          "times": [
+            "7am – 8.45pm"
+          ]
+        },
+        {
+          "day": "Thursday",
+          "times": [
+            "7am – 8.45pm"
+          ]
+        },
+        {
+          "day": "Friday",
+          "times": [
+            "7am – 7.45pm"
+          ]
+        },
+        {
+          "day": "Saturday",
+          "times": [
+            "9am – 5.45pm"
+          ]
+        },
+        {
+          "day": "Sunday",
+          "times": [
+            "9am – 5.45pm"
+          ]
+        },
+        {
+          "day": "Bank Holidays",
+          "times": [
+            "10am – 5.45pm"
+          ]
+        }
+      ],
+      "pitchHours": [
+        {
+          "day": "Monday",
+          "times": [
+            "10am – 9pm"
+          ]
+        },
+        {
+          "day": "Tuesday",
+          "times": [
+            "10am – 9pm"
+          ]
+        },
+        {
+          "day": "Wednesday",
+          "times": [
+            "10am – 9pm"
+          ]
+        },
+        {
+          "day": "Thursday",
+          "times": [
+            "10am – 9pm"
+          ]
+        },
+        {
+          "day": "Friday",
+          "times": [
+            "10am – 8pm"
+          ]
+        },
+        {
+          "day": "Saturday",
+          "times": [
+            "10am – 6pm"
+          ]
+        },
+        {
+          "day": "Sunday",
+          "times": [
+            "10am – 6pm"
+          ]
+        }
+      ],
+      "swimming": {
+        "label": "Published public swimming sessions",
+        "note": "These are public swimming windows, not a guarantee of spaces. Choose your session in the app before travelling.",
+        "pools": [
+          {
+            "id": "main-pool",
+            "name": "25m pool and children’s pool",
+            "rows": [
+              {
+                "day": "Monday",
+                "times": [
+                  "7am – 8.30am",
+                  "1.15pm – 3pm",
+                  "6pm – 7.45pm"
+                ]
+              },
+              {
+                "day": "Tuesday",
+                "times": [
+                  "8am – 10.30am",
+                  "1.15pm – 3pm"
+                ]
+              },
+              {
+                "day": "Wednesday",
+                "times": [
+                  "7am – 9.30am",
+                  "1.15pm – 2pm",
+                  "6pm – 7.45pm"
+                ]
+              },
+              {
+                "day": "Thursday",
+                "times": [
+                  "7am – 10.30am",
+                  "1.15pm – 3pm",
+                  "8pm – 8.45pm"
+                ]
+              },
+              {
+                "day": "Friday",
+                "times": [
+                  "7am – 9am",
+                  "1.15pm – 3pm",
+                  "6.50pm – 7.45pm"
+                ]
+              },
+              {
+                "day": "Saturday",
+                "times": [
+                  "1.30pm – 5.45pm"
+                ]
+              },
+              {
+                "day": "Sunday",
+                "times": [
+                  "11am – 5.45pm"
+                ]
+              },
+              {
+                "day": "Bank Holidays",
+                "times": [
+                  "10am – 3pm",
+                  "3pm – 5.45pm"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "18m-pool",
+            "name": "18m pool",
+            "rows": [
+              {
+                "day": "Monday",
+                "times": [
+                  "9am – 1pm",
+                  "3pm – 6pm",
+                  "7.45pm – 8.45pm"
+                ]
+              },
+              {
+                "day": "Tuesday",
+                "times": [
+                  "10.30am – 1pm",
+                  "3pm – 6pm",
+                  "6pm – 8.45pm"
+                ],
+                "note": "Ask reception about the early-morning session; its published time is unclear."
+              },
+              {
+                "day": "Wednesday",
+                "times": [
+                  "9.30am – 1pm",
+                  "2pm – 6pm",
+                  "7.45pm – 8.45pm"
+                ]
+              },
+              {
+                "day": "Thursday",
+                "times": [
+                  "10.30am – 1pm",
+                  "3pm – 6pm",
+                  "6pm – 7.45pm"
+                ]
+              },
+              {
+                "day": "Friday",
+                "times": [
+                  "9am – 1pm",
+                  "3pm – 6pm",
+                  "6pm – 6.50pm"
+                ]
+              },
+              {
+                "day": "Saturday",
+                "times": [
+                  "9am – 1.30pm"
+                ]
+              },
+              {
+                "day": "Sunday",
+                "times": [
+                  "9am – 11am"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "classes": [
+        {
+          "day": "Monday",
+          "time": "9.45am",
+          "name": "AquaFit",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Monday",
+          "time": "11.30am",
+          "name": "AgeWell Strength",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Monday",
+          "time": "6.00pm",
+          "name": "Revelate",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Monday",
+          "time": "7.00pm",
+          "name": "Boxercise",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Monday",
+          "time": "8.00pm",
+          "name": "Legs, Bums & Tums",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Tuesday",
+          "time": "9.45am",
+          "name": "Movin’ Chat",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Tuesday",
+          "time": "10.00am",
+          "name": "MoveWell",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Tuesday",
+          "time": "11.15am",
+          "name": "AgeWell Movement",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Tuesday",
+          "time": "12.15pm",
+          "name": "AgeWell Movement",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Tuesday",
+          "time": "4.00pm",
+          "name": "Teen Induction",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Tuesday",
+          "time": "5.00pm",
+          "name": "Teen Learn to Lift",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Tuesday",
+          "time": "6.00pm",
+          "name": "Revelate",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Tuesday",
+          "time": "7.00pm",
+          "name": "Couch 2 5K",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Wednesday",
+          "time": "9.45am",
+          "name": "AquaFit",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Wednesday",
+          "time": "11.30am",
+          "name": "AgeWell Stretch",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Wednesday",
+          "time": "12.30pm",
+          "name": "AgeWell Boxercise",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Wednesday",
+          "time": "5.00pm",
+          "name": "Revelate",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Wednesday",
+          "time": "5.00pm",
+          "name": "Teen Boxercise",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Wednesday",
+          "time": "5.00pm",
+          "name": "Teen Learn to Lift",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Wednesday",
+          "time": "6.00pm",
+          "name": "Rebel Rockets Revelate",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Wednesday",
+          "time": "6.00pm",
+          "name": "Total Tone",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Wednesday",
+          "time": "7.00pm",
+          "name": "Boxercise",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Thursday",
+          "time": "9.45am",
+          "name": "Movin’ Chat",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Thursday",
+          "time": "10.00am",
+          "name": "MoveWell",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Thursday",
+          "time": "11.15am",
+          "name": "AgeWell Movement",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Thursday",
+          "time": "6.00pm",
+          "name": "Revelate",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Thursday",
+          "time": "7.00pm",
+          "name": "Revelate",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Friday",
+          "time": "9.45am",
+          "name": "AquaFit",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Friday",
+          "time": "12.00pm",
+          "name": "AgeWell Stretch",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Saturday",
+          "time": "09.00am",
+          "name": "Revelate",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Saturday",
+          "time": "10.00am",
+          "name": "Revelate",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Saturday",
+          "time": "2.00pm",
+          "name": "Teen Fitness Academy (Girls)",
+          "durationMinutes": 45
+        },
+        {
+          "day": "Saturday",
+          "time": "3.00pm",
+          "name": "Teen Fitness Academy (Boys)",
+          "durationMinutes": 45
+        }
+      ]
+    },
+    {
+      "id": "churchfield",
+      "name": "Churchfield",
+      "phone": "+353214397868",
+      "phoneDisplay": "021 439 7868",
+      "page": "Centres/churchfield.html",
+      "gymHours": [
+        {
+          "day": "Monday",
+          "times": [
+            "7am – 8.45pm"
+          ]
+        },
+        {
+          "day": "Tuesday",
+          "times": [
+            "7am – 8.45pm"
+          ]
+        },
+        {
+          "day": "Wednesday",
+          "times": [
+            "7am – 8.45pm"
+          ]
+        },
+        {
+          "day": "Thursday",
+          "times": [
+            "7am – 8.45pm"
+          ]
+        },
+        {
+          "day": "Friday",
+          "times": [
+            "7am – 7.45pm"
+          ]
+        },
+        {
+          "day": "Saturday",
+          "times": [
+            "9am – 5.45pm"
+          ]
+        },
+        {
+          "day": "Sunday",
+          "times": [
+            "9am – 5.45pm"
+          ]
+        },
+        {
+          "day": "Bank Holidays",
+          "times": [
+            "10am – 5.45pm"
+          ]
+        }
+      ],
+      "pitchHours": [
+        {
+          "day": "Monday",
+          "times": [
+            "10am – 9pm"
+          ]
+        },
+        {
+          "day": "Tuesday",
+          "times": [
+            "10am – 9pm"
+          ]
+        },
+        {
+          "day": "Wednesday",
+          "times": [
+            "10am – 9pm"
+          ]
+        },
+        {
+          "day": "Thursday",
+          "times": [
+            "10am – 9pm"
+          ]
+        },
+        {
+          "day": "Friday",
+          "times": [
+            "10am – 8pm"
+          ]
+        },
+        {
+          "day": "Saturday",
+          "times": [
+            "10am – 6pm"
+          ]
+        },
+        {
+          "day": "Sunday",
+          "times": [
+            "10am – 6pm"
+          ]
+        }
+      ],
+      "swimming": {
+        "label": "Published public swimming sessions",
+        "note": "Pool activities and the waterslide may follow separate sessions. Check the activity you want in the app.",
+        "pools": [
+          {
+            "id": "public-swim",
+            "name": "Public swimming",
+            "rows": [
+              {
+                "day": "Monday",
+                "times": [
+                  "7am – 9.30am",
+                  "10.30am – 2.45pm",
+                  "6pm – 7pm"
+                ]
+              },
+              {
+                "day": "Tuesday",
+                "times": [
+                  "7am – 10am",
+                  "12.15pm – 2.45pm",
+                  "6pm – 7.45pm"
+                ]
+              },
+              {
+                "day": "Wednesday",
+                "times": [
+                  "7am – 9.30am, 10.15am – 11.15am",
+                  "1.15pm – 2.45pm",
+                  "6pm – 8.45pm"
+                ]
+              },
+              {
+                "day": "Thursday",
+                "times": [
+                  "7am – 12.15pm",
+                  "1.15pm – 2.45pm",
+                  "6pm – 7.30pm"
+                ]
+              },
+              {
+                "day": "Friday",
+                "times": [
+                  "7am – 9.30am, 10.15am – 12.15pm",
+                  "1.15pm – 2.45pm",
+                  "6pm – 7.45pm"
+                ]
+              },
+              {
+                "day": "Saturday",
+                "times": [
+                  "1.00pm – 5.45pm"
+                ]
+              },
+              {
+                "day": "Sunday",
+                "times": [
+                  "9am – 5.45pm"
+                ]
+              },
+              {
+                "day": "Bank Holidays",
+                "times": [
+                  "10am – 5.45pm"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "classes": [
+        {
+          "day": "Monday",
+          "time": "9.30am",
+          "name": "Aqua",
+          "durationMinutes": null
+        },
+        {
+          "day": "Wednesday",
+          "time": "9.30am",
+          "name": "Aqua",
+          "durationMinutes": null
+        },
+        {
+          "day": "Friday",
+          "time": "9.30am",
+          "name": "Aqua",
+          "durationMinutes": null
+        }
+      ]
+    },
+    {
+      "id": "douglas",
+      "name": "Gus Healy Pool · Douglas",
+      "phone": "+353214293073",
+      "phoneDisplay": "021 429 3073",
+      "page": "Centres/douglas.html",
+      "gymHours": [],
+      "pitchHours": [],
+      "swimming": {
+        "label": "September–December 2026 public swimming",
+        "validThrough": "2026-12-31",
+        "note": "Douglas is a pool-only centre. Public swim times are limited during school terms because the pool also serves schools and clubs. Contact reception about bank holidays.",
+        "pools": [
+          {
+            "id": "public-swim",
+            "name": "Public swimming",
+            "rows": [
+              {
+                "day": "Monday",
+                "times": [
+                  "8am – 9.40am",
+                  "1pm – 1.40pm"
+                ]
+              },
+              {
+                "day": "Tuesday",
+                "times": [
+                  "8am – 9.40am",
+                  "1pm – 1.40pm"
+                ]
+              },
+              {
+                "day": "Wednesday",
+                "times": [
+                  "8am – 9.40am",
+                  "1pm – 1.40pm"
+                ]
+              },
+              {
+                "day": "Thursday",
+                "times": [
+                  "8am – 9.40am",
+                  "1pm – 1.40pm"
+                ]
+              },
+              {
+                "day": "Friday",
+                "times": [
+                  "8am – 9.40am",
+                  "1pm – 1.40pm"
+                ]
+              },
+              {
+                "day": "Saturday",
+                "times": [
+                  "1pm – 3.40pm"
+                ]
+              },
+              {
+                "day": "Sunday",
+                "times": [
+                  "Closed"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "classes": []
+    }
+  ],
+  "courses": [
+    {
+      "id": "nplq-october-2026",
+      "title": "National Pool Lifeguard Qualification",
+      "centre": "bishopstown",
+      "startsOn": "2026-10-27",
+      "endsOn": "2026-10-31",
+      "dailyTime": "9am–6pm",
+      "priceEuro": 500,
+      "includes": "Learning materials, assessment, logbook and a two-year qualification",
+      "bookingUrl": "https://leisureworldcork.legendonlineservices.co.uk/enterprise/program/8699"
+    }
+  ],
+  "recruitment": {
+    "checkedOn": "2026-09-16",
+    "applicationUrl": "https://ie.indeed.com/cmp/Leisureworld-Cork/jobs",
+    "roles": [
+      {
+        "title": "Centre Manager",
+        "location": "Bishopstown / Churchfield"
+      },
+      {
+        "title": "Pool Lifeguard",
+        "location": "Douglas"
+      },
+      {
+        "title": "Full-time Gym Instructor",
+        "location": "Bishopstown"
+      },
+      {
+        "title": "Part-time Gym Instructor",
+        "location": "Churchfield"
+      },
+      {
+        "title": "Part-time Swim Teacher",
+        "location": "Bishopstown"
+      },
+      {
+        "title": "Part-time Pool Lifeguard",
+        "location": "Churchfield"
+      },
+      {
+        "title": "Part-time Pool Lifeguard",
+        "location": "Douglas"
+      }
+    ]
+  }
+}

@@ -13,7 +13,7 @@ ROOT=Path(__file__).resolve().parent.parent
 config=json.loads((ROOT/'site-settings.json').read_text(encoding='utf-8'))
 BASE=config['site_url'].rstrip('/')+'/'
 if urlsplit(BASE).scheme!='https': raise ValueError('Production site_url must use HTTPS')
-paths=sorted(p for p in ROOT.rglob('*.html') if not any(x.startswith('.') for x in p.relative_to(ROOT).parts))
+paths=sorted(p for p in ROOT.rglob('*.html') if not any(x.startswith('.') or x in {'dist','node_modules','docs'} for x in p.relative_to(ROOT).parts))
 ORG=BASE+'#organization'; WEBSITE=BASE+'#website'
 manifest=[]
 def write_changed(path,content):

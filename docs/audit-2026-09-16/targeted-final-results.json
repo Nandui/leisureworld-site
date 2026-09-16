@@ -1,0 +1,74 @@
+[
+  {
+    "check": "Contact topic=Teen%20Gym",
+    "result": {
+      "context": "Enquiry: Teen Gym",
+      "contextHidden": false,
+      "email": "mailto:info@leisureworldcork.com?subject=Teen%20Gym",
+      "phone": null,
+      "phoneHidden": true
+    }
+  },
+  {
+    "check": "Contact centre=Douglas&topic=Membership%20%26%20Pricing",
+    "result": {
+      "context": "Enquiry: Membership & Pricing — Douglas",
+      "contextHidden": false,
+      "email": "mailto:info@leisureworldcork.com?subject=Membership%20%26%20Pricing%20%E2%80%94%20Douglas",
+      "phone": "tel:+353214293073",
+      "phoneHidden": false
+    }
+  },
+  {
+    "check": "Contact centre=Unknown&topic=Unknown",
+    "result": {
+      "context": "",
+      "contextHidden": true,
+      "email": "mailto:info@leisureworldcork.com?subject=Website%20enquiry",
+      "phone": null,
+      "phoneHidden": true
+    }
+  },
+  {
+    "check": "Contact centre=Churchfield&topic=Careers",
+    "result": {
+      "context": "Enquiry: Careers — Churchfield",
+      "contextHidden": false,
+      "email": "mailto:info@leisureworldcork.com?subject=Careers%20%E2%80%94%20Churchfield",
+      "phone": "tel:+353214397868",
+      "phoneHidden": false
+    }
+  },
+  {
+    "check": "Deep link bishopstown-classes",
+    "result": {
+      "hash": "#bishopstown-classes",
+      "open": true,
+      "top": 52
+    }
+  },
+  {
+    "check": "Deep link churchfield-classes",
+    "result": {
+      "hash": "#churchfield-classes",
+      "open": true,
+      "top": 52
+    }
+  },
+  {
+    "check": "Deep link bishopstown-pitches",
+    "result": {
+      "hash": "#bishopstown-pitches",
+      "open": true,
+      "top": 52
+    }
+  },
+  {
+    "check": "Deep link churchfield-pitches",
+    "result": {
+      "hash": "#churchfield-pitches",
+      "open": true,
+      "top": 52
+    }
+  }
+]

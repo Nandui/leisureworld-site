@@ -1,0 +1,41 @@
+/* Timetables show practical details first, with optional class/pitch schedules. */
+.schedule-checked,.schedule-note{font-size:15px;line-height:1.65;color:var(--muted)}
+.schedule-checked{max-width:75ch;margin-bottom:36px}
+.schedule-note{margin-top:18px}
+.schedule-note a,.visit-notice a,.expired-schedule a,.course-expired a{color:var(--navy);text-decoration:underline;text-underline-offset:3px}
+.hours-centre{padding-block:44px 60px;border-top:1px solid var(--line);scroll-margin-top:28px}
+.hours-centre-heading{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin-bottom:24px}
+.hours-centre-heading h2{font-size:clamp(29px,3.5vw,45px);max-width:22ch}
+.hours-centre>.body-copy{font-size:17px;max-width:75ch}
+.hours-columns,.centre-hours-summary{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(28px,5vw,70px);margin-top:28px;align-items:start}
+.hours-table{width:100%;border-collapse:collapse;font-size:16px;line-height:1.65;text-align:left;font-variant-numeric:tabular-nums}
+.hours-table caption{text-align:left;font-family:var(--heading);font-size:23px;line-height:1.25;margin-bottom:20px;color:var(--navy)}
+.hours-table th,.hours-table td{padding:13px 12px 13px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.hours-table th:first-child{width:43%}
+.hours-table thead{font-size:14px;color:var(--muted)}
+.hours-table tbody th{font-weight:500}
+.hours-table .schedule-note{margin:8px 0 0;font-size:14px;max-width:36ch}
+.swim-hours>h3{font-size:23px;line-height:1.25;margin-bottom:12px}
+.hours-disclosure{border-bottom:1px solid var(--line);padding:0 0 15px;margin:18px 0 0;scroll-margin-top:28px}
+.hours-disclosure summary{cursor:pointer;padding:14px 28px 14px 0;min-height:48px;font-size:19px;font-weight:600;line-height:1.4}
+.hours-disclosure summary h3{display:inline;font-size:23px;line-height:1.3;letter-spacing:-.02em}
+.hours-disclosure[open] summary{margin-bottom:10px}
+.hours-disclosure .hours-table caption{font-family:Archivo,sans-serif;font-size:16px;font-weight:600}
+.class-days{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 50px;margin-block:25px}
+.class-day h4{font-size:19px;margin:0 0 12px}
+.class-day ul{list-style:none;padding:0;margin:0}
+.class-day li{display:grid;grid-template-columns:86px minmax(0,1fr);gap:16px;padding:12px 0;border-top:1px solid var(--line);font-size:16px;line-height:1.5}
+.class-time{font-weight:600;font-variant-numeric:tabular-nums}
+.class-day small{display:block;color:var(--muted);font-size:14px}
+.hours-actions{display:flex;align-items:center;flex-wrap:wrap;gap:16px 30px;margin-top:28px}
+.visit-notice,.expired-schedule,.course-expired{background:#fff;padding:20px;border:1px solid var(--line);border-radius:12px;margin-block:20px;line-height:1.6;max-width:75ch}
+.centre-hours-summary{margin-top:0}
+.centre-hours-summary .prose h3{margin-top:0}
+.course-dates{max-width:920px}
+.course-dates>p{margin-block:24px;font-size:17px;line-height:1.7}
+.course-dates .quick-facts{grid-template-columns:2fr 1fr 1fr;margin-block:25px}
+.vacancy-list{list-style:none;padding:0;margin:28px 0;max-width:800px}
+.vacancy-list li{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);font-size:16px;line-height:1.5}
+.vacancy-list span{color:var(--muted)}
+@media(max-width:750px){.hours-columns,.centre-hours-summary{grid-template-columns:1fr;gap:32px}.hours-centre-heading{display:block}.hours-centre-heading .text-link{margin-top:12px}.class-days{grid-template-columns:1fr;gap:22px}.hours-centre{padding-block:32px 44px}.course-dates .quick-facts{grid-template-columns:1fr}.vacancy-list li{display:block}.vacancy-list span{display:block;margin-top:5px}}
+@media(max-width:400px){.hours-table{font-size:15px}.hours-table th:first-child{width:42%}.hours-table th,.hours-table td{padding-right:8px}.class-day li{grid-template-columns:72px minmax(0,1fr);gap:12px}}

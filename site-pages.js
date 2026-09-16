@@ -1,6 +1,36 @@
 /* Native controls stay usable without enhancement; no visitor tracking. */
 (() => {
   'use strict';
+  // Dated notices and seasonal schedules must not look current after expiry,
+  // even when no deployment has happened since they were published.
+  const today = new Intl.DateTimeFormat('en-CA', {timeZone:'Europe/Dublin',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  document.querySelectorAll('[data-timetable-until]').forEach(schedule => {
+    if (schedule.dataset.timetableUntil < today) {
+      schedule.querySelector('.published-schedule').hidden = true;
+      schedule.querySelector('.expired-schedule').hidden = false;
+    }
+  });
+  document.querySelectorAll('[data-course-until]').forEach(course => {
+    if (course.dataset.courseUntil < today) {
+      course.querySelector('.course-booking').hidden = true;
+      course.querySelector('.course-expired').hidden = false;
+    }
+  });
+  document.querySelectorAll('[data-expires]').forEach(notice => {
+    if (notice.dataset.expires < today) notice.hidden = true;
+  });
+  // Links to a class timetable should reveal the relevant disclosure.
+  const revealHash = () => {
+    let target;
+    try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); }
+    catch { return; }
+    if (!target) return;
+    for (let element = target; element; element = element.parentElement) {
+      if (element.tagName === 'DETAILS') element.open = true;
+    }
+  };
+  revealHash();
+  window.addEventListener('hashchange', revealHash);
   // Keep long document contents available without making phone readers scroll past them.
   const contents = document.querySelector('.policy-contents');
   if (contents) {

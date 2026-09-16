@@ -1,0 +1,933 @@
+[
+  {
+    "check": "First keyboard focus",
+    "result": {
+      "href": "#main",
+      "outline": "solid",
+      "text": "Skip to content"
+    }
+  },
+  {
+    "check": "Skip link target",
+    "result": {
+      "hash": "#main",
+      "id": "main"
+    }
+  },
+  {
+    "check": "Menu opens accessibly",
+    "result": {
+      "expanded": "true",
+      "focused": "LeisureWorld Cork home",
+      "menuScrollWidth": 357,
+      "open": true,
+      "viewport": 390
+    }
+  },
+  {
+    "check": "Menu keyboard containment",
+    "result": {
+      "inDialog": true,
+      "text": "Your LeisureWorld\nBook with the app \nOur centres \nActivities \nPrices \nOpening hours \n\nA little more information\nMembership optionsAbout LeisureWorldContact usHelp & FAQsAccess & Functional ZoneCareers\nTraining & qualificationsWebsite accessibility\n\nEvery Body Belongs."
+    }
+  },
+  {
+    "check": "Menu escape and focus return",
+    "result": {
+      "expanded": "false",
+      "focusId": "menu-toggle",
+      "open": false
+    }
+  },
+  {
+    "check": "Menu close button",
+    "result": {
+      "focusId": "menu-toggle",
+      "open": false
+    }
+  },
+  {
+    "check": "Activity finder swim",
+    "result": {
+      "announcement": "Find your flow. Swim at Bishopstown, Churchfield or Gus Healy Pool in Douglas. Check your centre’s public swim times, then choose an available session.",
+      "pressed": [
+        "swim"
+      ],
+      "visible": [
+        "swim"
+      ]
+    }
+  },
+  {
+    "check": "Activity finder move",
+    "result": {
+      "announcement": "Make your move. Gym sessions and fitness classes at Bishopstown and Churchfield. Explore a class that suits you, then check the app for availability.",
+      "pressed": [
+        "move"
+      ],
+      "visible": [
+        "move"
+      ]
+    }
+  },
+  {
+    "check": "Activity finder learn",
+    "result": {
+      "announcement": "A little confidence goes a long way. Start with a free assessment for children’s Swim School at Bishopstown. Find adult lessons and options at other centres on our lesson pages.",
+      "pressed": [
+        "learn"
+      ],
+      "visible": [
+        "learn"
+      ]
+    }
+  },
+  {
+    "check": "Activity finder family",
+    "result": {
+      "announcement": "Make a splash together. Explore the family pools, waterslide and play area at Churchfield. Check session times and the children’s supervision requirements before you visit.",
+      "pressed": [
+        "family"
+      ],
+      "visible": [
+        "family"
+      ]
+    }
+  },
+  {
+    "check": "Activity finder team",
+    "result": {
+      "announcement": "Get your people together. All-weather pitches at Bishopstown and Churchfield. Check pitch sizes, prices and available times for your next game.",
+      "pressed": [
+        "team"
+      ],
+      "visible": [
+        "team"
+      ]
+    }
+  },
+  {
+    "check": "Activity finder unwind",
+    "result": {
+      "announcement": "A little time to yourself. Discover sauna and steam facilities at Churchfield, for adults aged 18 and over. Read the guidelines and check the available sessions.",
+      "pressed": [
+        "unwind"
+      ],
+      "visible": [
+        "unwind"
+      ]
+    }
+  },
+  {
+    "check": "Gym filter all",
+    "result": {
+      "announcement": "12 classes & programmes",
+      "pressed": [
+        "all"
+      ],
+      "visible": [
+        "fitness",
+        "fitness",
+        "fitness",
+        "fitness",
+        "agewell",
+        "agewell",
+        "agewell",
+        "agewell",
+        "teens",
+        "teens",
+        "wellbeing",
+        "wellbeing"
+      ]
+    }
+  },
+  {
+    "check": "Gym filter fitness",
+    "result": {
+      "announcement": "4 fitness classes",
+      "pressed": [
+        "fitness"
+      ],
+      "visible": [
+        "fitness",
+        "fitness",
+        "fitness",
+        "fitness"
+      ]
+    }
+  },
+  {
+    "check": "Gym filter agewell",
+    "result": {
+      "announcement": "4 AgeWell classes",
+      "pressed": [
+        "agewell"
+      ],
+      "visible": [
+        "agewell",
+        "agewell",
+        "agewell",
+        "agewell"
+      ]
+    }
+  },
+  {
+    "check": "Gym filter teens",
+    "result": {
+      "announcement": "2 teen programmes",
+      "pressed": [
+        "teens"
+      ],
+      "visible": [
+        "teens",
+        "teens"
+      ]
+    }
+  },
+  {
+    "check": "Gym filter wellbeing",
+    "result": {
+      "announcement": "2 wellbeing programmes",
+      "pressed": [
+        "wellbeing"
+      ],
+      "visible": [
+        "wellbeing",
+        "wellbeing"
+      ]
+    }
+  },
+  {
+    "check": "FAQ filter all",
+    "result": {
+      "announcement": "16 questions",
+      "pressed": [
+        "all"
+      ],
+      "visible": [
+        "booking",
+        "booking",
+        "booking",
+        "membership",
+        "membership",
+        "membership",
+        "lessons",
+        "lessons",
+        "lessons",
+        "visiting",
+        "visiting",
+        "visiting",
+        "visiting",
+        "access",
+        "access",
+        "booking"
+      ]
+    }
+  },
+  {
+    "check": "FAQ filter booking",
+    "result": {
+      "announcement": "4 questions",
+      "pressed": [
+        "booking"
+      ],
+      "visible": [
+        "booking",
+        "booking",
+        "booking",
+        "booking"
+      ]
+    }
+  },
+  {
+    "check": "FAQ filter membership",
+    "result": {
+      "announcement": "3 questions",
+      "pressed": [
+        "membership"
+      ],
+      "visible": [
+        "membership",
+        "membership",
+        "membership"
+      ]
+    }
+  },
+  {
+    "check": "FAQ filter lessons",
+    "result": {
+      "announcement": "3 questions",
+      "pressed": [
+        "lessons"
+      ],
+      "visible": [
+        "lessons",
+        "lessons",
+        "lessons"
+      ]
+    }
+  },
+  {
+    "check": "FAQ filter visiting",
+    "result": {
+      "announcement": "4 questions",
+      "pressed": [
+        "visiting"
+      ],
+      "visible": [
+        "visiting",
+        "visiting",
+        "visiting",
+        "visiting"
+      ]
+    }
+  },
+  {
+    "check": "FAQ filter access",
+    "result": {
+      "announcement": "2 questions",
+      "pressed": [
+        "access"
+      ],
+      "visible": [
+        "access",
+        "access"
+      ]
+    }
+  },
+  {
+    "check": "FAQ empty state",
+    "result": {
+      "count": "0 questions matching your search",
+      "hidden": false,
+      "message": "No questions found.\n\nTry a different word or clear the search. You can also contact our team."
+    }
+  },
+  {
+    "check": "FAQ reset",
+    "result": {
+      "count": "16 questions",
+      "focus": "search",
+      "query": ""
+    }
+  },
+  {
+    "check": "FAQ real click expansion",
+    "result": {
+      "open": true,
+      "text": "How do I book a swim, gym session or class?\n\nUse the LeisureWorld app to choose your centre, activity and available session. You can also use the browser booking service .\n\nGet the app"
+    }
+  },
+  {
+    "check": "Native details toggle about.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle accessibility.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle Activities/Swimlessons/rl.html",
+    "result": [
+      {
+        "name": "What should we bring?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Does a parent or guardian need to stay?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "What if we already attend lessons?",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle Activities/Swimlessons/ss.html",
+    "result": [
+      {
+        "name": "What should we bring?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Does a parent or guardian need to stay?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "What if we already attend lessons?",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle Activities/Swimlessons/swimschool.html",
+    "result": [
+      {
+        "name": "Does my child need to know how to swim?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "What should we bring to the assessment?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "How does my child move up a level?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Where can I check prices and class times?",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle Activities/Swimlessons/wsf.html",
+    "result": [
+      {
+        "name": "What should we bring?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Does a parent or guardian need to stay?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "What if we already attend lessons?",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle Activities.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle adultswimlesson.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle appfunnel.html",
+    "result": [
+      {
+        "name": "Can I book without the app?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Do I need a membership?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "How do I manage an existing booking?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Are swimming lessons booked in the app?",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle camps.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle careers.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle centre-policies.html",
+    "result": [
+      {
+        "name": "Organisation policies and reports",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle Centres/bishopstown.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle Centres/churchfield.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle Centres/douglas.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle centres.html",
+    "result": [
+      {
+        "name": "Opening hours & swim times",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Pay as you go or join",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Visiting with children",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle Certfictaons/Cert.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle Certfictaons/nplq.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle Certfictaons/ws.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle contact.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle gym.html",
+    "result": [
+      {
+        "name": "Details and requirements",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Details and requirements",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Details and requirements",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Details and requirements",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Details and requirements",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Details and requirements",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Your first visit",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Teen gym & inductions",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Pay as you go or join",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Help finding a programme",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle help.html",
+    "result": [
+      {
+        "name": "How do I book a swim, gym session or class?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Can I visit without a membership?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "How do I change or cancel a booking?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "How do I join?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Are classes included in membership?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "How do I freeze or cancel membership?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "How do I start children’s swimming lessons?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Can adults learn to swim?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Does a parent need to stay during lessons?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Where are the three centres?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Where can I check opening hours?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "What should I bring for swimming?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Can teens use the gym?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Can you help with access requirements?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "How do I report a website accessibility problem?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Where can I buy gift vouchers?",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle index.html",
+    "result": [
+      {
+        "name": "BishopstownPools · Gym · Classes · Astro pitches",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "ChurchfieldPools · Gym · Waterslide · Astro pitches",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Gus Healy PoolDouglas · Swimming pool & lessons",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle membershipfunnel.html",
+    "result": [
+      {
+        "name": "What does a membership include?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "How does the classes add-on work?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Are discounted options available?",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Can I freeze or cancel?",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle opening-hours.html",
+    "result": [
+      {
+        "name": "25m pool and children’s pool",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "18m pool",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Fitness class timetable",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Pitch opening hours",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Public swimming",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Fitness class timetable",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Pitch opening hours",
+        "restored": true,
+        "toggles": true
+      },
+      {
+        "name": "Public swimming",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle parent-guide.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle pitches.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle Policies/admission-policy.html",
+    "result": [
+      {
+        "name": "On this page",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle Policies/child-admission-policy.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle Policies/child-safeguarding-statement.html",
+    "result": [
+      {
+        "name": "On this page",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle Policies/clean-sport-anti-doping-policy.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle Policies/code-of-conduct-gym.html",
+    "result": [
+      {
+        "name": "On this page",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle Policies/code-of-conduct-pool.html",
+    "result": [
+      {
+        "name": "On this page",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle Policies/community-engagement-policy.html",
+    "result": [
+      {
+        "name": "On this page",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle Policies/cookie-policy.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle Policies/customer-charter.html",
+    "result": [
+      {
+        "name": "On this page",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle Policies/disability-inclusion-policy.html",
+    "result": [
+      {
+        "name": "On this page",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle Policies/environmental-policy.html",
+    "result": [
+      {
+        "name": "On this page",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle Policies/gender-pay-gap-2025.html",
+    "result": [
+      {
+        "name": "On this page",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle Policies/privacy-policy.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle Policies/sauna-steam-room-guidelines.html",
+    "result": [
+      {
+        "name": "On this page",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle Policies/supplements-statement.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle Policies/terms-and-conditions.html",
+    "result": [
+      {
+        "name": "On this page",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle Policies/tips-and-gratuities-policy.html",
+    "result": [
+      {
+        "name": "On this page",
+        "restored": true,
+        "toggles": true
+      }
+    ]
+  },
+  {
+    "check": "Native details toggle poolactivities.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle pricing.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle teen-gym.html",
+    "result": []
+  },
+  {
+    "check": "Native details toggle website-accessibility.html",
+    "result": []
+  },
+  {
+    "check": "Timetable link bishopstown",
+    "result": {
+      "open": true,
+      "targetTop": 484,
+      "url": "http://127.0.0.1:8123/opening-hours.html#bishopstown-classes",
+      "visibleClasses": "Fitness class timetable\n\nBook through the app. Some programmes require an induction or referral; their entry requirements are explained on the class guide.\n\nMonday\n9.45am\nAquaFit\n45 minutes\n11.30am\nAgeWell Strength\n45 minutes\n6.00pm\nRevelate\n45 minut"
+    }
+  },
+  {
+    "check": "Timetable link churchfield",
+    "result": {
+      "open": true,
+      "targetTop": 1469,
+      "url": "http://127.0.0.1:8123/opening-hours.html#churchfield-classes",
+      "visibleClasses": "Fitness class timetable\n\nBook through the app. Some programmes require an induction or referral; their entry requirements are explained on the class guide.\n\nMonday\n9.30am\nAqua\nWednesday\n9.30am\nAqua\nFriday\n9.30am\nAqua"
+    }
+  },
+  {
+    "check": "Direct timetable deep link",
+    "result": {
+      "hash": "#churchfield-classes",
+      "open": true,
+      "top": 75
+    }
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "pages": 48,
+  "desktopRenders": 48,
+  "mobileRenders": 48,
+  "anchors": 2830,
+  "localReferences": 3253,
+  "distinctExternalDestinations": 15,
+  "reachablePages": 48,
+  "staticErrors": [],
+  "legacyInformationalAnchors": 0,
+  "localLinkIssues": [],
+  "nativeDisclosuresExercised": 74,
+  "automatedAxeViolations": 0,
+  "resizeFailures": [],
+  "browserErrors": [],
+  "visibleImageFailures": [],
+  "limitations": [
+    "Not a certification of WCAG conformance. Automated axe incomplete checks require human judgment.",
+    "No real-device or assistive-technology user study. No external booking, purchase, application or message was submitted.",
+    "External service availability is documented separately by the destination/source audit.",
+    "Per-page screenshots precede the final shared 320px footer/caption fixes, semantic FAQ region fix and a small centres timetable label cleanup; these received focused follow-up checks."
+  ],
+  "artifacts": {
+    "fullCoverage": "page-coverage.json",
+    "links": "link-inventory.json",
+    "interactions": "interactive-results.json",
+    "targeted": "targeted-final-results.json",
+    "resize": "resize-final-results.json",
+    "axe": "axe-results.json",
+    "report": "browser-review.md"
+  }
+}

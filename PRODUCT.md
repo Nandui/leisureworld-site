@@ -1,5 +1,23 @@
 # Product
 
+## Whole-site audit decisions — 16 September 2026
+
+- The app is the primary booking route; browser booking remains a subtle alternative.
+- Support uses direct phone/email. There is no contact form or email backend.
+- Membership covers Bishopstown and Churchfield only; Douglas is separate.
+- Under-10s need an adult aged 18+ in the water, at most two children per adult;
+  ages 10–12 need an adult in the building. These owner-confirmed rules override
+  contradictory historical source documents.
+- The 48-page site keeps visitor information locally. External links are for
+  services such as booking, app downloads, directions and recruitment.
+- Hours, classes, dated courses, notices and recruitment use a GitHub-editable
+  JSON feed compiled to readable HTML. This does not represent live capacity.
+- Publish via the GitHub/Vercel integration, with the explicit public build in
+  `dist`. Audit evidence and source scripts are excluded from deployment.
+- The homepage stock photograph shows pool water, a tiled edge and handrail,
+  without presenting an identifiable building as a LeisureWorld centre.
+- Current findings and page purposes are in `docs/audit-2026-09-16/README.md`.
+
 <!-- impeccable:product-schema 1 -->
 
 ## Platform

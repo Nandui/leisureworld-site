@@ -4,7 +4,11 @@ main:focus{outline:none}
 .site-menu :focus-visible{outline-color:#a1dfff;outline-width:3px}
 .menu-secondary>a,.footer-column>a,.footer-bottom nav a,.back-to-top{min-height:44px}
 .footer-column>a{padding-block:10px}
-.site-footer .footer-bottom{font-size:12px}
+.site-footer .footer-bottom{font-size:14px}
+.footer-main>*{min-width:0}
+.site-footer p,.footer-column a{overflow-wrap:anywhere}
+@media(max-width:360px){.site-footer .footer-main{grid-template-columns:minmax(0,1fr)}}
+.price-table caption{overflow-wrap:anywhere}
 .body-copy,.prose,.centre-detail-body,.hero-booking p{overflow-wrap:anywhere}
 h1,h2,h3{overflow-wrap:anywhere}
 .text-link,.button,.store-badge{max-width:100%}
@@ -34,6 +38,16 @@ main .action-group>.button,main .action-group>.text-link{margin:0}
 .site-menu{overscroll-behavior:contain}
 details summary{min-height:44px}
 details summary:focus-visible{outline-offset:3px}
+/* Keep text enlargement within the available column instead of allowing the
+   automatic minimum size of grid/flex items to push content off the screen. */
+.visitor-section>*,.gym-intro>*,.school-jumps>a,.gym-locations>a{min-width:0}
+.school-jumps{grid-template-columns:repeat(4,minmax(0,1fr))}
+.gym-locations{grid-template-columns:repeat(2,minmax(0,1fr))}
+.school-jumps a,.gym-locations a,.text-link,details summary{overflow-wrap:anywhere}
+details summary>span{min-width:0}
+details summary>.ti{flex-shrink:0}
+@media(max-width:600px){.school-jumps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:360px){.school-jumps,.gym-locations{grid-template-columns:minmax(0,1fr)}.school-jumps a+a{border-left:0;border-top:1px solid var(--line)}}
 button:disabled{cursor:wait;opacity:.75}
 /* Keep hero copy in document flow so zoom and custom text spacing can grow it.
    The original heights and offsets remain the minimum layout at each breakpoint. */

@@ -2,5 +2,16 @@
 .output/
 __pycache__/
 node_modules/
+dist/
+.vercel/
+.env*
 *.log
 .DS_Store
+
+# Generated local audit visuals and captured source markup; text reports stay tracked.
+docs/audit-2026-09-16/screenshots/
+docs/audit-2026-09-16/sheets/
+docs/audit-2026-09-16/**/*.png
+docs/audit-2026-09-16/sources/*.html
+docs/audit-2026-09-16/desktop-*.json
+docs/audit-2026-09-16/mobile-*.json
