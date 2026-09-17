@@ -1,11 +1,7 @@
 /* Pool discovery extends the homepage's typography, palette and components. */
-.pool-hero{height:clamp(640px,65vw,740px);min-height:640px}
-.pool-hero .hero-image{object-position:50% 52%}
-.pool-hero .hero-shade{background:rgba(5,24,46,.48)}
-.pool-hero .hero-content{bottom:125px;max-width:930px}
-.pool-hero .hero-content>.eyebrow{margin-bottom:22px}
-.pool-hero h1{font-size:clamp(70px,8.5vw,116px);line-height:1.01}
-.pool-hero .hero-booking{margin-top:30px}
+
+.pool-hero .hero-image{object-position:50% 52%;}
+
 .pool-shortcuts{min-height:118px;padding-block:22px}
 .pool-shortcuts>a{font-size:clamp(17px,1.5vw,21px)}
 .public-swimming{display:grid;grid-template-columns:1fr 1fr;gap:clamp(50px,8vw,120px);padding-block:80px}
@@ -58,7 +54,7 @@
 .pool-lesson-note a{color:var(--navy);text-decoration:underline;text-underline-offset:3px}
 @media(max-width:1100px){.public-swimming,.pool-visit{gap:55px}.pool-shortcuts>a{font-size:18px}.pool-programme .activity-copy>p:not(.eyebrow){font-size:15px;min-height:124px}}
 @media(max-width:850px){
-  .pool-hero{height:640px;min-height:640px}.pool-hero .hero-content{bottom:120px}.pool-hero h1{font-size:clamp(64px,10vw,82px)}
+
   .pool-shortcuts{min-height:150px}.pool-shortcuts>a{font-size:17px}
   .public-swimming{gap:35px}.public-copy .body-copy{font-size:16px}.public-copy .text-link{font-size:13px;gap:14px}.pool-centres h3{font-size:23px}.pool-centres nav p{font-size:13px}
   .pool-section-heading{grid-template-columns:1fr;gap:22px}.pool-section-heading .body-copy{font-size:17px;max-width:55ch}
@@ -68,7 +64,7 @@
   .pool-booking-inner{gap:30px;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr)}.pool-booking .body-copy{font-size:16px}.pool-booking .store-badge{width:145px}.pool-booking .app-downloads{gap:10px}
 }
 @media(max-width:600px){
-  .pool-hero{height:545px;min-height:545px}.pool-hero .hero-image{object-position:45% center}.pool-hero .hero-shade{background:rgba(5,24,46,.51)}.pool-hero .hero-content{left:24px;right:24px;bottom:110px}.pool-hero h1{font-size:clamp(48px,14vw,74px)}.pool-hero .hero-content>.eyebrow{font-size:10px;margin-bottom:20px}.pool-hero .hero-booking{margin-top:24px}.pool-hero .hero-caption{bottom:48px}
+  .pool-hero .hero-image{object-position:45% center;}
   .pool-shortcuts{min-height:0;padding:18px 22px 6px}.pool-shortcuts .visit-intro{display:none}.pool-shortcuts>a,.pool-shortcuts>a:first-of-type,.pool-shortcuts>a:last-of-type{font-size:17px;min-height:54px;padding-block:14px}
   .public-swimming,.pool-visit{grid-template-columns:1fr;gap:34px;padding-block:55px}.public-copy>.eyebrow,.pool-section-heading .eyebrow,.pool-visit .eyebrow,.pool-booking-copy>.eyebrow{font-size:10px;margin-bottom:18px}.public-copy h2,.pool-section-heading h2,.pool-visit h2,.pool-booking-copy h2{font-size:33px}.public-copy .body-copy,.pool-visit .body-copy{margin-top:21px;font-size:16px}.public-copy .text-link{font-size:14px}.pool-centres>.eyebrow{font-size:10px;margin-bottom:18px}.pool-centres nav>a{min-height:104px;padding-block:22px}.pool-centres h3{font-size:24px}.pool-centres nav p{font-size:14px}
   .pool-programmes>.section-space{padding-block:55px}.pool-section-heading{gap:20px;margin-bottom:30px}.pool-section-heading .body-copy{font-size:16px}.pool-programme .activity-photo{aspect-ratio:1.4}.pool-programme .activity-copy{height:auto}.pool-programme .activity-copy h3{font-size:28px}.pool-programme .activity-copy>p:not(.eyebrow){min-height:0;font-size:15px;max-width:36ch}.pool-card-link{margin-top:14px;font-size:14px;min-height:44px}
@@ -76,4 +72,4 @@
   .pool-visit-links>a{grid-template-columns:25px minmax(0,1fr) 20px;gap:15px;padding-block:24px}.pool-visit-links h3{font-size:22px}.pool-visit .text-link{font-size:14px}
   .pool-booking-inner{grid-template-columns:minmax(0,1fr);gap:28px;padding-block:55px}.pool-booking .body-copy{margin-top:21px}.pool-booking .store-badge{width:157px;max-width:calc(50% - 5px)}.pool-booking .app-web-booking{font-size:12px}.pool-app-preview{max-width:200px}.pool-lesson-note{font-size:12px;margin-top:20px}
 }
-@media(max-width:360px){.pool-hero .hero-content{left:20px;right:18px}.pool-hero h1{font-size:46px}.public-copy h2,.pool-section-heading h2,.pool-visit h2,.pool-booking-copy h2{font-size:29px}.pool-progress-link .text-link{font-size:12px}}
+@media(max-width:360px){.public-copy h2,.pool-section-heading h2,.pool-visit h2,.pool-booking-copy h2{font-size:29px}.pool-progress-link .text-link{font-size:12px}}

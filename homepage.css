@@ -3,9 +3,9 @@
 @font-face{font-family:Archivo;src:url('fonts/archivo-v25-latin/archivo-v25-latin-500.woff2') format('woff2');font-style:normal;font-weight:500;font-display:swap}
 @font-face{font-family:Archivo;src:url('fonts/archivo-v25-latin/archivo-v25-latin-600.woff2') format('woff2');font-style:normal;font-weight:600;font-display:swap}
 @font-face{font-family:'Archivo Black';src:url('fonts/archivo-black-v23-latin-regular.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
-:root{--ink:#05101f;--deep:#081a38;--navy:#0a2348;--blue:#1464d8;--bright:#3d8eff;--pool:#00b8d4;--paper:#edf2f9;--white:#fff;--muted:#52647a;--orange:#ff6a1a;--line:#c9d5e5;--gutter:clamp(24px,4vw,72px);--radius:22px;--heading:'Archivo Black',Archivo,sans-serif}
+:root{--ink:#05101f;--deep:#081a38;--navy:#0a2348;--blue:#1464d8;--bright:#3d8eff;--pool:#00b8d4;--paper:#edf2f9;--white:#fff;--muted:#52647a;--orange:#ff6a1a;--line:#c9d5e5;--gutter:clamp(24px,4vw,72px);--content-max:1440px;--radius:22px;--heading:'Archivo Black',Archivo,sans-serif}
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:40px}
+html{scroll-behavior:smooth;scroll-padding-top:40px;scrollbar-gutter:stable}
 body{margin:0;background:var(--paper);color:var(--navy);font-family:Archivo,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
 body.menu-open{overflow:hidden}
 button,a,summary{-webkit-tap-highlight-color:transparent}
@@ -21,7 +21,7 @@ h3{font-size:clamp(24px,2.1vw,32px)}
 ::selection{background:var(--pool);color:var(--navy)}
 :focus-visible{outline:3px solid var(--blue);outline-offset:6px;border-radius:4px}
 .site-header :focus-visible,.home-hero :focus-visible,.site-footer :focus-visible,.site-menu :focus-visible{outline-color:#a1dfff}
-.content-width{width:calc(100% - var(--gutter)*2);max-width:1440px;margin-inline:auto}
+.content-width{width:calc(100% - var(--gutter)*2);max-width:var(--content-max);margin-inline:auto}
 .section-space{padding-block:clamp(76px,9vw,132px)}
 .eyebrow{font-size:12px;font-weight:600;line-height:1.5;letter-spacing:.17em;text-transform:uppercase}
 .body-copy{font-size:clamp(17px,1.65vw,21px);line-height:1.6;max-width:46ch;color:#334c69}
@@ -48,7 +48,7 @@ h3{font-size:clamp(24px,2.1vw,32px)}
 .header-nav{display:flex;align-items:center;gap:32px}
 .header-link{display:inline-flex;align-items:center;min-height:48px;font-size:14px;font-weight:600;position:relative}
 .header-link::after{content:'';position:absolute;bottom:6px;left:0;right:0;height:2px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .2s}
-.header-link:hover::after{transform:scaleX(1)}
+.header-link:hover::after,.header-link[aria-current="page"]::after{transform:scaleX(1)}
 .booking-link{min-height:48px;padding:12px 24px;white-space:nowrap}
 /* The photo responds subtly to a pointer; it never runs a looping animation. */
 .home-hero{position:relative;isolation:isolate;margin:12px 12px 0;height:min(76vw,calc(100svh - 70px));min-height:610px;max-height:1100px;border-radius:var(--radius);overflow:hidden;background:var(--navy);color:white}
@@ -174,10 +174,11 @@ h3{font-size:clamp(24px,2.1vw,32px)}
 .menu-main .ti{font-size:24px}
 .menu-secondary>a{display:block;min-height:42px;font-size:16px}
 .menu-secondary>a:hover{text-decoration:underline;text-underline-offset:5px}
+.menu-main a[aria-current="page"],.menu-secondary>a[aria-current="page"],.footer-column>a[aria-current="page"]{color:#a1dfff;text-decoration:underline;text-underline-offset:5px}
 .menu-signoff{margin-top:45px;padding-top:22px;border-top:1px solid #354b69;font-size:14px;color:#b7c8dc}
 .reveal.is-revealed{animation:soft-arrival .65s both}
 @keyframes soft-arrival{from{transform:translateY(18px)}to{transform:translateY(0)}}
-@media(min-width:1600px){.site-header{padding-inline:calc((100% - 1440px)/2)}.hero-content{left:max(var(--gutter),calc((100% - 1440px)/2))}}
+@media(min-width:1600px){.site-header{padding-inline:calc((100% - var(--content-max))/2 - 12px)}}
 @media(max-width:1100px){
   .header-nav{gap:25px}
   .visit-strip{grid-template-columns:1fr 1fr 1fr 1.12fr;padding-inline:0}

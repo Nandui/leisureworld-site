@@ -18,6 +18,15 @@
   without presenting an identifiable building as a LeisureWorld centre.
 - Current findings and page purposes are in `docs/audit-2026-09-16/README.md`.
 
+Initialization refreshed on 16 September 2026 against the current checkout and
+the audit above. The user reconfirmed app bookings, practical visitor information
+and community positioning, and requested reconciliation with the current code
+and latest audit. Other previously recorded user decisions are retained; this
+refresh does not establish new visual approvals or repeat the historical audit.
+Dated review sections below describe earlier project states. The current
+implementation and the 16 September decisions supersede their outdated
+implementation details.
+
 <!-- impeccable:product-schema 1 -->
 
 ## Platform
@@ -63,27 +72,39 @@ impact, or partnership needs supporting evidence.
   Centre-specific information must not be treated as universal.
 - Sign-in, booking, and online membership sign-up links lead to LeisureWorld's
   external Legend service. The repository does not implement that service.
-- Contact enquiries collect visitor details, centre, enquiry category, and a
-  message. `contact-page.js` submits these to `send-mail.php` and handles
-  accessible errors and confirmed outcomes.
-- Existing opening-hours copy directs visitors to the app or centre for changes,
-  including bank holidays. Published schedules are not evidence of live availability.
+- Support uses visible email addresses and direct phone/email links.
+  `contact-page.js` can prefill an email subject and select a centre phone link
+  from recognised enquiry parameters. There is no contact form or mail backend;
+  an email link opens the visitor's own email application.
+- `opening-hours.html` publishes local centre, swimming, class and pitch
+  schedules generated from `data/visit-information.json`. Visitors use the app
+  or reception to confirm changes and availability. Published schedules are not
+  evidence of live availability.
 
-These workflows are observed in the checkout. External service operation and
-the deployed website have not been verified during initialization.
+These workflows are observed in the checkout. Historical external-service
+checks and their limits are recorded in `docs/audit-2026-09-16/external-services.md`.
+External service operation and the deployed website were not reverified during
+this initialization.
 
 ## Capabilities and Constraints
 
 - The implementation is a multi-page HTML site with shared `homepage.css`,
   `homepage.js`, `site-pages.css`, `site-accessibility.css`, local assets,
-  page-specific styles/scripts and a PHP mail endpoint. Maintenance scripts
-  regenerate responsive images and metadata; no browser framework is required.
-- HTML pages can be previewed with a static web server. Enquiry delivery requires
-  PHP and working server mail configuration; static preview cannot validate it.
-- `send-mail.php` uses `LEISUREWORLD_CONTACT_TO` or the official reception mailbox
-  by default. It includes centre and topic in the email. Production transport
-  and inbox delivery require hosting configuration; no escalation pipeline is
-  implemented. The README now describes these limits accurately.
+  and page-specific styles/scripts. Maintenance scripts regenerate responsive
+  images and metadata; no browser framework is required.
+- Node.js 22 runs the content and deployment build. `npm run dev` serves the
+  public site at `http://127.0.0.1:8123`; `npm run build` publishes an explicit
+  allowlist into `dist/` for Vercel. Audit evidence, scripts, configuration and
+  private files are excluded from deployment.
+- The contact page requires no API key or server mail transport. The retired
+  `send-mail.php` URL redirects to `contact.html#message`; no PHP handler remains.
+  Opening an email application is not evidence of delivery.
+- Hours, class schedules, dated courses, notices and recruitment use the
+  GitHub-editable `data/visit-information.json` feed, compiled to readable HTML.
+  Do not hand-edit generated `feed:*` regions. Membership and supervision rules
+  also require coordinated changes to the relevant policy and visitor pages.
+  Maintenance responsibilities and unresolved source conflicts are recorded in
+  `docs/content-maintenance.md`.
 - The LeisureWorld app's store listings were verified on 2026-09-11:
   Apple Ireland `https://apps.apple.com/ie/app/leisureworld/id1479809806` and
   Google Play `https://play.google.com/store/apps/details?id=com.innovatise.leisureworldsport`.
@@ -106,9 +127,10 @@ Orange accents must be very deliberate and restrained. The desired result is
 modern, distinctive, and exceptionally easy to use. Strong hierarchy, legibility,
 welcoming imagery, and clear routes to useful information support this commitment.
 The user also explicitly asked for a memorable website with "wow factor" and
-requested live design inspiration before further design development. Research is
-recorded in `.impeccable/inspiration/README.md`; its recommendations are not an
-approved design or a change to the confirmed brand constraints.
+requested live design inspiration before further design development. Research was
+previously recorded in `.impeccable/inspiration/README.md`; that local record is
+not present in this checkout (`.impeccable/` is gitignored). Its recommendations
+were not an approved design or a change to the confirmed brand constraints.
 The user rejected the subsequent `cork-in-motion` concept for its cheap/AI-like
 appearance, arbitrary navy coverage, weak separation, excessive information,
 lack of mobile planning, and lack of a distinctive idea. Future homepage work
@@ -132,10 +154,14 @@ steam, plus booking management, membership card, opening hours and account acces
 - `Activities.html`, `Activities/Swimlessons/`, `adultswimlesson.html`, `gym.html`,
   and `poolactivities.html`: existing activity and lesson content.
 - `pricing.html` and `membershipfunnel.html`: published price and membership content.
-- `help.html`, `contact.html`, `contact-page.js`, and `send-mail.php`: help and enquiry flow.
+- `help.html`, `contact.html`, and `contact-page.js`: help and direct contact routes.
+- `opening-hours.html`, `data/visit-information.json`, and
+  `docs/content-maintenance.md`: maintained schedules, dated content and rules.
 - `about.html`, `centre-policies.html`, and `Policies/`: community positioning and policy copy.
-- `accessibility.html`: existing Functional Zone information for people with
-  neurological conditions; this is a service page, not a digital accessibility audit.
+- `accessibility.html`: physical access and Functional Zone information; this
+  is a service page, not a digital accessibility audit.
+- `website-accessibility.html` and `docs/audit-2026-09-16/`: the digital
+  accessibility target, recorded checks, limitations and current audit evidence.
 - `Images/` and `fonts/`: existing image assets and self-hosted fonts. File presence
   does not establish licensing or usage rights for new contexts.
 
@@ -153,8 +179,9 @@ adult learners have a separate route to adult lessons.
 
 Programme and assessment information was checked against LeisureWorld's published
 swimming-lessons page on 2026-09-11. Its three named programmes are offered at
-Bishopstown; other centres' options require confirmation. The primary booking
-destination is the published Legend course search:
+Bishopstown; other centres' options require confirmation. Assessment actions
+first lead to local instructions, which explain how to choose the centre and
+assessment category in the published Legend course search:
 https://leisureworldcork.legendonlineservices.co.uk/enterprise/program/index.
 Current prices, times and availability remain with that service or reception.
 
@@ -179,7 +206,7 @@ helps visitors choose swimming, gym/fitness or swimming lessons. It exposes
 adult lessons, pitches, camps, sauna/steam and the Functional Zone through direct
 links. App downloads are available on the page, with a browser booking fallback.
 The old broken `Activities/other.html` destination is no longer used by the hub.
-Seasonal camp information stays on the official camp page; the hub does not
+Seasonal camp information stays on the local `camps.html` page; the hub does not
 claim that places are currently available or publish recurring class counts.
 
 ### Pool and swimming
@@ -218,8 +245,10 @@ Teens and Wellbeing; all twelve programmes remain readable without JavaScript.
 The existing `#classes` destination is preserved. Class and gym booking actions
 lead to app downloads, with the Legend browser login as a secondary route.
 
-Published gym, class and teen information was checked on 2026-09-12. Classes
-and availability vary by centre; current timetables remain on the official site.
+Published gym, class and teen information was checked on 2026-09-12, with later
+local content migration recorded in the 16 September audit. Classes and
+availability vary by centre; published timetables are now maintained on the local
+`opening-hours.html` page, while live availability belongs to the booking service.
 Fixed prices, durations and availability promises are not duplicated here.
 Teen gym users aged 13–17 need an induction with a parent or legal guardian
 present. Reception arranges inductions; the page links to current teen programme
@@ -240,10 +269,18 @@ The repository contains disability inclusion and admission policies and content
 for the Functional Zone. These are existing product evidence and should inform
 future work without implying the website meets a particular accessibility standard.
 
-Open decisions: required digital accessibility standard, particular assistive
-technology needs, language requirements, additional priority audiences, and any
-business or policy commitments that must be treated as fixed beyond the confirmed
-navy identity and community, premium, accessible, modern positioning above.
+The documented implementation target is WCAG 2.2 AA, alongside the relevant web
+requirements of EN 301 549. The current website statement and audit do not claim
+full conformance. Third-party booking flows and comprehensive assistive-technology
+testing remain outside the recorded checks.
+
+Physical access information does not establish that every listed facility is
+available at every centre. A confirmed centre-by-centre access inventory remains
+open; see `docs/audit-2026-09-16/accessibility-content.md`.
+
+Other open decisions: particular assistive-technology needs, language
+requirements, additional priority audiences, measurable success targets, and
+any further business or policy commitments beyond those recorded here.
 
 ### Whole-site completion — 12 September 2026
 

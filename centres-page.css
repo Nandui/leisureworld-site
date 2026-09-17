@@ -1,10 +1,7 @@
 /* Centres directory: the approved homepage visual system. */
-.centres-hero{height:690px;min-height:640px}
-.centres-hero .hero-image{object-position:50% 55%}
-.centres-hero .hero-content{bottom:125px}
-.centres-hero .hero-content>.eyebrow{margin-bottom:24px}
-.centres-hero h1{font-size:clamp(70px,8.3vw,116px);line-height:1.01}
-.centres-hero .hero-booking{margin-top:28px}
+
+.centres-hero .hero-image{object-position:50% 55%;}
+
 .centres-shortcuts{min-height:120px;padding-block:22px}
 .centres-shortcuts>a{font-size:clamp(17px,1.7vw,22px)}
 .centres-directory{padding-block:80px}
@@ -48,19 +45,19 @@
 .centres-app-preview{max-width:270px}
 @media(max-width:1100px){.locations-grid{gap:24px}.location-description{font-size:15px;min-height:124px}.location-copy h3{font-size:27px}.location-features li{font-size:12px}.location-explore{font-size:13px;gap:10px}}
 @media(max-width:850px){
-  .centres-hero{height:640px;min-height:640px}.centres-hero h1{font-size:clamp(64px,10vw,82px)}.centres-shortcuts{min-height:150px}
+  .centres-shortcuts{min-height:150px}
   .directory-heading{grid-template-columns:1fr;gap:23px}.directory-heading .body-copy{max-width:55ch;font-size:17px}
   .locations-grid{grid-template-columns:1fr;gap:40px}.location-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px;padding-bottom:40px;border-bottom:1px solid var(--line)}.location-image{aspect-ratio:1.36;height:auto;min-height:0;align-self:center}.location-copy{padding-top:0}.location-copy h3{font-size:31px}.location-description{min-height:0;font-size:15px}.location-copy address{min-height:0}.location-features{margin-block:20px 15px}.location-explore{font-size:14px}.directory-note{margin-top:25px}
   .planning-inner{gap:35px;grid-template-columns:.9fr 1.1fr}.planning-copy .body-copy{font-size:16px}.planning-details .centre-detail summary{font-size:19px}.planning-link{font-size:13px}
   .centres-app{gap:30px;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr)}.centres-app-copy .body-copy{font-size:16px}.centres-app .store-badge{width:145px}.centres-app .app-downloads{gap:10px}
 }
 @media(max-width:600px){
-  .centres-hero{height:545px;min-height:545px}.centres-hero .hero-content{left:24px;right:22px;bottom:110px}.centres-hero h1{font-size:clamp(48px,14vw,74px)}.centres-hero .hero-content>.eyebrow{font-size:9px;margin-bottom:20px}.centres-hero .hero-booking{margin-top:25px}.centres-hero .hero-caption{bottom:48px}
+
   .centres-shortcuts{min-height:0;padding:18px 22px 6px}.centres-shortcuts .visit-intro{display:none}.centres-shortcuts>a,.centres-shortcuts>a:first-of-type,.centres-shortcuts>a:last-of-type{font-size:17px;min-height:54px;padding-block:14px}.centres-shortcuts small{display:inline;font-size:12px;margin:0 0 0 5px}
   .centres-directory{padding-block:55px}.directory-heading{margin-bottom:32px;gap:20px}.directory-heading .eyebrow,.planning-copy>.eyebrow,.centres-app-copy>.eyebrow{font-size:10px;margin-bottom:18px}.directory-heading h2,.planning-copy h2,.centres-app-copy h2{font-size:33px}.directory-heading .body-copy{font-size:16px}
   .locations-grid{gap:34px}.location-card{grid-template-columns:1fr;gap:23px;padding-bottom:28px}.location-image{height:auto;min-height:0;aspect-ratio:1.4;border-radius:12px}.location-copy h3{font-size:29px}.location-copy>.eyebrow{margin-bottom:10px}.location-copy address{margin-top:10px}.location-description{margin-top:17px}.location-features{margin-top:22px}.location-features li{font-size:14px;min-height:48px}.location-directions{margin-top:12px;font-size:13px}
   .planning-inner{grid-template-columns:1fr;gap:30px;padding-block:55px}.planning-copy .body-copy{margin-top:21px}.planning-copy>.text-link{font-size:14px}.planning-details .centre-detail summary{font-size:20px}.planning-link{font-size:13px}
   .centres-app{grid-template-columns:minmax(0,1fr);gap:28px;padding-block:55px}.centres-app-copy .body-copy{margin-top:21px}.centres-app .store-badge{width:157px;max-width:calc(50% - 5px)}.centres-app .app-web-booking{font-size:12px}.centres-app-preview{max-width:200px}
 }
-@media(max-width:360px){.centres-hero .hero-content{left:20px;right:18px}.centres-hero h1{font-size:46px}.centres-hero .app-hero-button{padding-inline:22px;font-size:13px;gap:18px}.centres-shortcuts small{display:block;margin:5px 0 0}.directory-heading h2,.planning-copy h2,.centres-app-copy h2{font-size:29px}.location-copy h3{font-size:27px}}
+@media(max-width:360px){.centres-shortcuts small{display:block;margin:5px 0 0}.directory-heading h2,.planning-copy h2,.centres-app-copy h2{font-size:29px}.location-copy h3{font-size:27px}}
 @media(prefers-reduced-motion:reduce){.location-image:hover>img{transform:none}}

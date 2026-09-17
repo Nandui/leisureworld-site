@@ -1,0 +1,163 @@
+/* Shared introductions for every secondary page. Keep the homepage's brand hero independent. */
+:root {
+  --page-title-size: 72px;
+  --page-intro-top: 32px;
+  --page-intro-bottom: 64px;
+  --page-copy-size: 20px;
+  --page-copy-gap: 24px;
+  --page-action-gap: 28px;
+  --page-image-height: 480px;
+  --page-image-radius: 20px;
+  --page-photo-height: 640px;
+  --page-photo-foot: 104px;
+}
+
+.page-breadcrumbs { padding-block: 24px 0; }
+.page-breadcrumbs ol { margin: 0; gap: 8px 22px; font-size: 13px; }
+.page-breadcrumbs a { min-height: 44px; }
+.page-hero { padding-block: var(--page-intro-top) var(--page-intro-bottom); }
+.page-hero h1 {
+  margin: 0;
+  max-width: 22ch;
+  font-size: var(--page-title-size);
+  line-height: 1.08;
+  letter-spacing: -.035em;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+.page-hero .eyebrow {
+  margin: 0 0 20px;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: .12em;
+}
+.page-hero:not(.page-hero--photo) .eyebrow { color: var(--muted); }
+.page-hero :is(.body-copy, .school-lead) {
+  max-width: 52ch;
+  margin-top: var(--page-copy-gap);
+  color: #334c69;
+  font-size: var(--page-copy-size);
+  line-height: 1.6;
+}
+.page-hero :is(.action-group, .hero-booking) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+  margin-top: var(--page-action-gap);
+}
+.page-hero--plain > .button { margin-top: var(--page-action-gap); }
+.page-hero .button { min-height: 52px; padding: 13px 24px; gap: 20px; font-size: 14px; }
+.page-hero .text-link { font-size: 14px; gap: 16px; }
+.page-hero__copy { min-width: 0; }
+
+/* Photo hubs: one frame, type scale and lower edge for Activities, Pool, Gym and Centres. */
+.page-hero.page-hero--photo {
+  --hero-side: max(calc(var(--gutter) - 12px), calc((100% - var(--content-max)) / 2));
+  display: flex;
+  align-items: flex-end;
+  height: auto;
+  min-height: var(--page-photo-height);
+  max-height: none;
+  padding-block: 160px var(--page-photo-foot);
+}
+.page-hero--photo .hero-content {
+  position: relative;
+  inset: auto;
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: none;
+  margin-inline: var(--hero-side);
+}
+.page-hero--photo h1 { max-width: 18ch; }
+.page-hero--photo .hero-caption { bottom: 48px; right: var(--hero-side); }
+.page-hero--photo .hero-shade { background: rgba(5,16,31,.60); }
+.page-hero--photo .hero-booking > p { max-width: 43ch; }
+
+/* Split introductions share their grid and image frame; each photo retains its focal point. */
+.page-hero--split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 48px;
+}
+.page-hero--split h1 { max-width: 16ch; }
+.page-hero--split :is(.body-copy, .school-lead) { max-width: 42ch; }
+.page-hero__media {
+  position: relative;
+  align-self: stretch;
+  min-width: 0;
+  min-height: var(--page-image-height);
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--page-image-radius);
+  background: #d9e8f2;
+}
+.page-hero__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.page-hero__media figcaption {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  max-width: calc(100% - 48px);
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--navy);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.page-hero .school-intro-note { margin-top: 16px; color: var(--muted); font-size: 14px; }
+.page-hero--app { min-height: calc(var(--page-image-height) + var(--page-intro-top) + var(--page-intro-bottom)); }
+.page-hero--app .app-preview { width: 100%; max-width: 280px; }
+.page-hero--app .app-features { margin-block: var(--page-copy-gap); }
+.page-hero--app .app-copy { max-width: none; }
+
+/* All three centre panoramas use the same frame. Image-specific object positions stay local. */
+.location-page .centre-panorama img { aspect-ratio: 5 / 1; object-fit: cover; }
+
+@media (max-width: 1100px) {
+  :root { --page-title-size: 64px; --page-image-height: 440px; }
+  .page-hero--split { gap: 32px; }
+}
+@media (max-width: 850px) {
+  :root { --page-title-size: 56px; --page-copy-size: 18px; --page-photo-height: 600px; }
+  .page-hero--split { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .page-hero--split h1 { max-width: 22ch; }
+  .page-hero--split :is(.body-copy, .school-lead) { max-width: 52ch; }
+  .page-hero__media { min-height: 0; aspect-ratio: 16 / 9; }
+  .page-hero--app { min-height: 0; }
+}
+@media (max-width: 600px) {
+  :root {
+    --page-title-size: 40px;
+    --page-intro-top: 24px;
+    --page-intro-bottom: 40px;
+    --page-copy-size: 17px;
+    --page-copy-gap: 20px;
+    --page-action-gap: 24px;
+    --page-image-radius: 16px;
+    --page-photo-height: 520px;
+    --page-photo-foot: 96px;
+  }
+  .page-breadcrumbs { padding-top: 16px; }
+  .page-breadcrumbs ol { font-size: 12px; gap: 4px 18px; }
+  .page-hero .eyebrow { margin-bottom: 16px; font-size: 11px; }
+  .page-hero :is(.action-group, .hero-booking) { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .page-hero.page-hero--photo { --hero-side: calc(var(--gutter) - 8px); padding-top: 128px; }
+  .page-hero--photo .hero-caption { left: var(--hero-side); right: var(--hero-side); bottom: 44px; }
+  .page-hero--split { gap: 28px; }
+  .page-hero__media { aspect-ratio: 4 / 3; }
+  .page-hero__media figcaption { left: 16px; bottom: 16px; max-width: calc(100% - 32px); font-size: 13px; }
+  .page-hero--app .app-preview { max-width: 220px; }
+}
+@media (max-width: 360px) {
+  :root { --page-title-size: 36px; }
+}
+@media (forced-colors: active) {
+  .page-hero--photo .hero-shade { background: Canvas; }
+}
+@media print {
+  .page-hero { display: block; min-height: 0; padding: 10px 0 25px; }
+  .page-hero h1 { font-size: 28pt; }
+  .page-hero__media, .page-breadcrumbs { display: none; }
+}

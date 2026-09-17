@@ -1,11 +1,7 @@
 /* Gym and class discovery, using the approved homepage design. */
-.gym-hero{height:690px;min-height:640px}
-.gym-hero .hero-image{object-position:50% 55%}
-.gym-hero .hero-shade{background:rgba(5,16,31,.52)}
-.gym-hero .hero-content{bottom:125px}
-.gym-hero .hero-content>.eyebrow{margin-bottom:24px}
-.gym-hero h1{font-size:clamp(70px,8.3vw,116px);line-height:1.01}
-.gym-hero .hero-booking{margin-top:28px}
+
+.gym-hero .hero-image{object-position:50% 55%;}
+
 .gym-shortcuts{min-height:120px;padding-block:22px}
 .gym-shortcuts>a{font-size:clamp(17px,1.7vw,22px)}
 .gym-intro{display:grid;grid-template-columns:1fr 1fr;gap:clamp(50px,9vw,130px);padding-block:80px}
@@ -28,10 +24,10 @@
 .class-heading .body-copy{font-size:18px;max-width:43ch}
 .class-toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px 25px;margin-bottom:32px}
 .class-filters{display:flex;flex-wrap:wrap;gap:9px}
-.class-filters button{border:1px solid var(--line);border-radius:999px;background:transparent;font-size:13px;font-weight:600;min-height:44px;padding:10px 20px;transition:background .2s,color .2s,border-color .2s}
+.class-filters button{border:1px solid var(--line);border-radius:999px;background:transparent;font-size:14px;font-weight:600;min-height:44px;padding:10px 20px;transition:background .2s,color .2s,border-color .2s}
 .class-filters button:hover{border-color:var(--navy);background:var(--paper)}
 .class-filters button[aria-pressed="true"]{background:var(--navy);color:white;border-color:var(--navy)}
-.class-count{font-size:12px;color:var(--muted)}
+.class-count{font-size:14px;color:var(--muted)}
 .class-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 44px}
 .class-row{display:grid;grid-template-columns:148px minmax(0,1fr);gap:24px;padding:26px 0;border-top:1px solid var(--line);min-width:0}
 .class-photo{height:172px;border-radius:12px;overflow:hidden;background:var(--paper)}
@@ -48,9 +44,9 @@
 .class-link .ti{color:var(--orange);font-size:20px}
 .class-link:hover{color:var(--blue);border-color:var(--blue)}
 .class-timetables{display:flex;justify-content:space-between;align-items:center;gap:35px;border-top:1px solid var(--line);margin-top:8px;padding-top:25px}
-.class-timetables p{font-size:12px;color:var(--muted);line-height:1.75}
+.class-timetables p{font-size:14px;color:var(--muted);line-height:1.75}
 .class-timetables>div{display:flex;flex-wrap:wrap;gap:8px 28px}
-.class-timetables a{display:inline-flex;align-items:center;gap:10px;min-height:44px;font-size:12px;font-weight:600;border-bottom:1px solid var(--line)}
+.class-timetables a{display:inline-flex;align-items:center;gap:10px;min-height:44px;font-size:14px;font-weight:600;border-bottom:1px solid var(--line)}
 .class-timetables .ti{font-size:19px;color:var(--orange)}
 .class-timetables a:hover{color:var(--blue)}
 .gym-start{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(50px,8vw,120px);padding-block:76px}
@@ -70,18 +66,18 @@
 .gym-app-preview{max-width:270px}
 @media(max-width:1100px){.class-list{gap:0 30px}.class-row{grid-template-columns:120px minmax(0,1fr);gap:20px}.class-copy h3{font-size:22px}.class-timetables{align-items:flex-start}.class-timetables>div{flex-direction:column;gap:2px}.class-timetables a{width:fit-content}}
 @media(max-width:850px){
-  .gym-hero{height:640px;min-height:640px}.gym-hero h1{font-size:clamp(64px,10vw,82px)}.gym-shortcuts{min-height:150px}
+  .gym-shortcuts{min-height:150px}
   .gym-intro{gap:35px}.gym-intro-copy .body-copy{font-size:16px}.training-row{gap:16px}.training-row h3{font-size:21px}.training-row p{font-size:14px}.gym-locations{gap:0 17px}.gym-locations a{font-size:13px;gap:6px}
   .class-heading{grid-template-columns:1fr;gap:23px}.class-heading .body-copy{font-size:17px;max-width:56ch}.class-row{grid-template-columns:95px minmax(0,1fr);gap:18px}.class-photo{height:150px}.class-copy h3{font-size:21px}.class-copy>p:not(.eyebrow){font-size:13px}.class-link{font-size:11px;gap:7px}.class-link .ti{font-size:18px}.class-filters button{padding-inline:18px}
   .gym-start{gap:35px;grid-template-columns:.9fr 1.1fr}.start-copy .body-copy{font-size:16px}.start-details .centre-detail summary{font-size:19px}.start-link{font-size:13px}
   .gym-app{gap:30px;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr)}.gym-app-copy .body-copy{font-size:16px}.gym-app .store-badge{width:145px}.gym-app .app-downloads{gap:10px}
 }
 @media(max-width:600px){
-  .gym-hero{height:545px;min-height:545px}.gym-hero .hero-image{object-position:63% center}.gym-hero .hero-content{left:24px;right:22px;bottom:110px}.gym-hero h1{font-size:clamp(48px,14vw,74px)}.gym-hero .hero-content>.eyebrow{font-size:9px;margin-bottom:20px}.gym-hero .hero-booking{margin-top:25px}.gym-hero .hero-caption{bottom:48px}
+  .gym-hero .hero-image{object-position:63% center;}
   .gym-shortcuts{min-height:0;padding:18px 22px 6px}.gym-shortcuts .visit-intro{display:none}.gym-shortcuts>a,.gym-shortcuts>a:first-of-type,.gym-shortcuts>a:last-of-type{font-size:17px;min-height:54px;padding-block:14px}
   .gym-intro{grid-template-columns:1fr;gap:34px;padding-block:55px}.gym-intro-copy>.eyebrow,.class-heading .eyebrow,.start-copy>.eyebrow,.gym-app-copy>.eyebrow{font-size:10px;margin-bottom:18px}.gym-intro h2,.class-heading h2,.start-copy h2,.gym-app-copy h2{font-size:33px}.gym-intro-copy .body-copy,.start-copy .body-copy{margin-top:21px}.gym-intro-copy>.text-link,.start-copy>.text-link{font-size:14px}.training-row{padding-block:23px;gap:20px}.training-row h3{font-size:22px}.training-row>.ti{font-size:29px}.gym-locations a{font-size:14px}
-  .class-inner{padding-block:55px}.class-heading{margin-bottom:27px;gap:20px}.class-heading .body-copy{font-size:16px}.class-toolbar{margin-bottom:20px;gap:17px}.class-filters{gap:8px}.class-filters button{font-size:12px;padding-inline:17px}.class-count{font-size:11px}.class-list{grid-template-columns:1fr}.class-row{grid-template-columns:90px minmax(0,1fr);gap:20px;padding-block:23px}.class-photo{height:133px;border-radius:9px}.class-copy h3{font-size:22px}.class-copy>p:not(.eyebrow){font-size:14px;margin-top:10px}.class-link{font-size:12px;gap:10px}.class-copy .eyebrow{font-size:9px}.class-timetables{flex-direction:column;gap:17px;margin-top:5px;padding-top:22px}.class-timetables p{font-size:12px}.class-timetables>div{gap:5px}.class-timetables a{font-size:13px}
+  .class-inner{padding-block:55px}.class-heading{margin-bottom:27px;gap:20px}.class-heading .body-copy{font-size:16px}.class-toolbar{margin-bottom:20px;gap:17px}.class-filters{gap:8px}.class-filters button{font-size:14px;padding-inline:17px}.class-count{font-size:14px}.class-list{grid-template-columns:1fr}.class-row{grid-template-columns:90px minmax(0,1fr);gap:20px;padding-block:23px}.class-photo{height:133px;border-radius:9px}.class-copy h3{font-size:22px}.class-copy>p:not(.eyebrow){font-size:14px;margin-top:10px}.class-link{font-size:12px;gap:10px}.class-copy .eyebrow{font-size:9px}.class-timetables{flex-direction:column;gap:17px;margin-top:5px;padding-top:22px}.class-timetables p{font-size:14px}.class-timetables>div{gap:5px}.class-timetables a{font-size:14px}
   .gym-start{grid-template-columns:1fr;gap:30px;padding-block:55px}.start-details .centre-detail summary{font-size:20px}.start-link{font-size:13px}
   .gym-app{grid-template-columns:minmax(0,1fr);gap:28px;padding-block:55px}.gym-app-copy .body-copy{margin-top:21px}.gym-app .store-badge{width:157px;max-width:calc(50% - 5px)}.gym-app .app-web-booking{font-size:12px}.gym-app-preview{max-width:200px}
 }
-@media(max-width:360px){.gym-hero .hero-content{left:20px;right:18px}.gym-hero h1{font-size:46px}.gym-hero .app-hero-button{padding-inline:22px;font-size:13px;gap:18px}.gym-intro h2,.class-heading h2,.start-copy h2,.gym-app-copy h2{font-size:29px}.class-row{grid-template-columns:70px minmax(0,1fr);gap:16px}.class-photo{height:112px}.class-copy h3{font-size:20px}.class-copy>p:not(.eyebrow){font-size:13px}.class-link{font-size:11px}.class-filters button{padding-inline:14px}.gym-locations{gap:0 13px}.gym-locations a{font-size:12px}}
+@media(max-width:360px){.gym-intro h2,.class-heading h2,.start-copy h2,.gym-app-copy h2{font-size:29px}.class-row{grid-template-columns:70px minmax(0,1fr);gap:16px}.class-photo{height:112px}.class-copy h3{font-size:20px}.class-copy>p:not(.eyebrow){font-size:13px}.class-link{font-size:11px}.class-filters button{padding-inline:14px}.gym-locations{gap:0 13px}.gym-locations a{font-size:12px}}

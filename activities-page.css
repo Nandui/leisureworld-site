@@ -1,11 +1,7 @@
 /* Activity discovery, using the shared homepage visual system. */
-.activities-hero{height:clamp(640px,65vw,760px);min-height:640px}
-.activities-hero .hero-image{object-position:58% 50%}
-.activities-hero .hero-shade{background:rgba(5,16,31,.5)}
-.activities-hero .hero-content{bottom:120px;max-width:950px}
-.activities-hero .hero-content>.eyebrow{margin-bottom:22px}
-.activities-hero h1{font-size:clamp(66px,8vw,110px);line-height:1.02}
-.activities-hero .hero-booking{margin-top:30px}
+
+.activities-hero .hero-image{object-position:58% 50%;}
+
 .activity-shortcuts{min-height:118px;padding-block:22px}
 .activity-shortcuts>a{font-size:clamp(17px,1.55vw,22px)}
 .activity-directory{padding-block:80px}
@@ -50,7 +46,7 @@
   .activity-shortcuts>a{font-size:18px}.activity-directory .activity-grid{gap:25px}.more-inner{gap:55px}
 }
 @media(max-width:850px){
-  .activities-hero{height:640px;min-height:640px}.activities-hero .hero-content{bottom:110px}.activities-hero h1{font-size:clamp(60px,9vw,76px)}
+
   .activity-shortcuts{min-height:150px}.activity-shortcuts>a{font-size:17px}
   .directory-heading{grid-template-columns:1fr;gap:22px}.directory-heading .body-copy{max-width:55ch;font-size:17px}
   .activity-directory .activity-grid{gap:22px}.directory-card .activity-copy h3{font-size:25px;min-height:57px}.directory-card .activity-copy>p:not(.eyebrow){font-size:14px;min-height:112px}
@@ -60,8 +56,8 @@
   .activity-app{gap:30px;grid-template-columns:1.3fr .7fr}.activity-app .body-copy{font-size:16px}.activity-app .store-badge{width:145px}.activity-app .app-downloads{gap:10px}
 }
 @media(max-width:600px){
-  .activities-hero{height:545px;min-height:545px}.activities-hero .hero-image{object-position:63% center}.activities-hero .hero-shade{background:rgba(5,16,31,.58)}
-  .activities-hero .hero-content{left:24px;right:24px;bottom:93px}.activities-hero .hero-content>.eyebrow{font-size:10px;margin-bottom:20px}.activities-hero h1{font-size:clamp(46px,13.6vw,72px);line-height:1.02}.activities-hero .hero-booking{margin-top:27px}
+  .activities-hero .hero-image{object-position:63% center;}
+
   .activity-shortcuts{min-height:0;padding:18px 22px 6px}.activity-shortcuts .visit-intro{display:none}.activity-shortcuts>a,.activity-shortcuts>a:first-of-type,.activity-shortcuts>a:last-of-type{font-size:17px;min-height:54px;padding-block:14px}
   .activity-directory,.more-inner{padding-block:55px}.directory-heading{gap:20px;margin-bottom:30px}.directory-heading h2{font-size:32px}.directory-heading .eyebrow,.more-intro>.eyebrow,.activity-app-copy>.eyebrow{font-size:10px;margin-bottom:18px}.directory-heading .body-copy{font-size:16px}
   .activity-directory .activity-grid{gap:36px}.activity-directory .activity-photo{aspect-ratio:1.4}.directory-card .activity-copy h3{min-height:0;font-size:27px}.directory-card .activity-copy>p:not(.eyebrow){min-height:0;font-size:15px;max-width:36ch}.directory-card-cta{min-height:44px;margin-top:12px;font-size:14px}.directory-extra-link{min-height:54px;margin-top:8px;font-size:13px}
@@ -69,7 +65,7 @@
   .more-inner{gap:30px}.more-list{display:block}.more-activity{grid-template-columns:28px 1fr 20px;grid-template-rows:auto;gap:15px;border-bottom:0}.more-activity .more-icon{grid-column:auto;font-size:26px}.more-activity>.ti:last-child{font-size:20px}.more-activity h3{font-size:23px}.more-activity p{font-size:14px}.more-activity span{font-size:12px}
   .activity-app{grid-template-columns:1fr;gap:25px;padding-block:55px}.activity-app-copy h2{font-size:32px}.activity-app .body-copy{margin-top:21px}.activity-app-preview{width:200px}.activity-app .store-badge{width:157px;max-width:calc(50% - 5px)}.activity-app .app-web-booking{font-size:12px}
 }
-@media(max-width:360px){.activities-hero .hero-content{left:20px;right:18px}.activities-hero h1{font-size:44px}.directory-heading h2,.more-intro h2,.activity-app-copy h2{font-size:28px}.directory-card .activity-copy h3{font-size:25px}.more-activity{gap:12px;grid-template-columns:24px 1fr 18px}}
+@media(max-width:360px){.directory-heading h2,.more-intro h2,.activity-app-copy h2{font-size:28px}.directory-card .activity-copy h3{font-size:25px}.more-activity{gap:12px;grid-template-columns:24px 1fr 18px}}
 /* A helpful choice, then a direct route to a real activity or booking. */
 .activity-finder{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;background:white;border:1px solid var(--line);border-radius:var(--radius);padding:36px;margin-bottom:48px}
 .activity-finder h3{font-size:clamp(25px,2.4vw,35px);margin:12px 0 24px}

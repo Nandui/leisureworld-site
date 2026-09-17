@@ -24,6 +24,9 @@ content feed. Contact uses direct email and phone links.
 - `homepage.css` / `homepage.js` provide shared brand components and the menu.
 - `site-pages.css` styles supporting pages. `site-accessibility.css` applies to
   every page; activity and centre styles extend the same design.
+- `page-heroes.css` owns secondary-page hero sizes, heading scales, breadcrumbs,
+  intro spacing and image frames. Follow the [shared introduction guide](docs/page-introductions.md)
+  when adding a page; keep those dimensions out of individual page stylesheets.
 - `site-pages.js` enhances help search; `gym-page.js` enhances class filtering.
 - `contact-page.js` optionally prefills the email subject and centre phone link
   for visitors arriving from an activity enquiry. All contact choices work
