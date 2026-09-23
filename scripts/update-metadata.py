@@ -38,7 +38,7 @@ for p in paths:
     imgurl=urljoin(url,image.get('data-original-src',image['src'])) if image else BASE+'Images/gus.jpg'
     for attr,key,val in [('property','og:type','website'),('property','og:site_name',config['name']),('property','og:locale','en_IE'),('property','og:title',title),('property','og:description',description),('property','og:url',url),('property','og:image',imgurl),('property','og:image:alt',image.get('alt','LeisureWorld Cork swimming pool') if image else 'LeisureWorld Cork swimming pool'),('name','twitter:card','summary_large_image'),('name','twitter:title',title),('name','twitter:description',description),('name','twitter:image',imgurl)]:
         soup.head.append(soup.new_tag('meta',attrs={attr:key,'content':val}))
-    org={'@type':'Organization','@id':ORG,'name':config['name'],'url':BASE,'logo':BASE+'Images/logo.png','email':'info@leisureworldcork.com'}
+    org={'@type':'Organization','@id':ORG,'name':config['name'],'url':BASE,'logo':BASE+'Images/leisureworld-logo-white.png','email':'info@leisureworldcork.com'}
     page={'@type':'WebPage','@id':url+'#webpage','url':url,'name':title,'description':description,'inLanguage':config['language'],'isPartOf':{'@id':WEBSITE},'about':{'@id':ORG}}
     graph=[org,{'@type':'WebSite','@id':WEBSITE,'url':BASE,'name':config['name'],'publisher':{'@id':ORG},'inLanguage':config['language']},page]
     if path!='index.html':

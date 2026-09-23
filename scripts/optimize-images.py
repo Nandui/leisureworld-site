@@ -14,7 +14,7 @@ for page in sorted(ROOT.rglob('*.html')):
     for img in soup.select('img[src]'):
         src=img.get('data-original-src',img['src'])
         path=(page.parent/src).resolve()
-        if not path.is_file() or path.suffix.lower() not in ['.png','.jpg','.jpeg'] or path.name in ['logo.png','appstore.png','playstore.png']:continue
+        if not path.is_file() or path.suffix.lower() not in ['.png','.jpg','.jpeg'] or path.name in ['logo.png','leisureworld-logo-white.png','appstore.png','playstore.png']:continue
         if path.stat().st_size<45000:continue
         if path not in records:
             original=Image.open(path)
