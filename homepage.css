@@ -60,6 +60,8 @@ h3{font-size:clamp(24px,2.1vw,32px)}
 .homepage .hero-image{object-position:78% 25%}
 /* Oversized brand mark: white alpha mask tinted per section */
 .hero-shade::after{content:"";position:absolute;aspect-ratio:1;--wm:calc(var(--hero-h) * 1.12);width:var(--wm);top:calc(var(--hero-h) * -.02);left:calc(max(var(--gutter) - 12px,(100% - var(--content-max))/2) - var(--wm) * .2);background:#fff;opacity:.1;-webkit-mask:url(Images/leisureworld-mark.webp) center/contain no-repeat;mask:url(Images/leisureworld-mark.webp) center/contain no-repeat;pointer-events:none}
+/* Desktop: the brand mark sits centred behind the headline + button block */
+@media(min-width:601px){.hero-shade::after{display:none}body.homepage main .home-hero .hero-content{flex:0 0 auto;width:max-content;max-width:none;z-index:1}.homepage .hero-content::before{content:"";position:absolute;z-index:-1;left:50%;top:50%;width:calc(var(--hero-h) * 1.05);aspect-ratio:1;transform:translate(-50%,-50%);background:#fff;opacity:.1;-webkit-mask:url(Images/leisureworld-mark.webp) center/contain no-repeat;mask:url(Images/leisureworld-mark.webp) center/contain no-repeat;pointer-events:none}}
 .homepage .site-header{background:linear-gradient(var(--navy) 60%,rgba(10,35,72,0));border-radius:var(--radius) var(--radius) 0 0}
 /* Oversized brand mark: white alpha mask tinted per section */
 .joining-section::before{content:"";position:absolute;aspect-ratio:1;background:currentColor;-webkit-mask:url(Images/leisureworld-mark.webp) center/contain no-repeat;mask:url(Images/leisureworld-mark.webp) center/contain no-repeat;pointer-events:none}
