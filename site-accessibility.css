@@ -55,7 +55,7 @@ button:disabled{cursor:wait;opacity:.75}
    The original heights and offsets remain the minimum layout at each breakpoint. */
 .homepage main .home-hero{--hero-size:max(610px,min(76vw,calc(100svh - 70px)));--hero-foot:clamp(130px,12vw,180px);--hero-side:calc(var(--gutter) - 12px);display:flex;align-items:flex-end;height:auto;min-height:var(--hero-size);max-height:none;padding:160px 0 var(--hero-foot)}
 .homepage main .home-hero .hero-content{position:relative;inset:auto;min-width:0;flex:1 1 auto;margin-inline:var(--hero-side) var(--gutter)}
-.homepage main .home-hero .hero-shade{background:rgba(5,16,31,.60)}
+.homepage main .home-hero .hero-shade{background:linear-gradient(90deg,rgba(5,16,31,.6),rgba(5,16,31,.25) 50%,rgba(5,16,31,0) 70%)}
 .homepage main .home-hero{--hero-foot:clamp(132px,11vw,160px)}
 @media(min-width:1600px){.homepage main .home-hero{--hero-side:calc((100% - var(--content-max))/2)}}
 
