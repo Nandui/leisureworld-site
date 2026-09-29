@@ -161,3 +161,54 @@
   .page-hero h1 { font-size: 28pt; }
   .page-hero__media, .page-breadcrumbs { display: none; }
 }
+
+/* Brand refresh: the homepage's nav fade, wave-mark watermark and orange full stops, shared by every page. */
+main { overflow-x: clip; }
+body:is(.activities-page, .centres-page, .gym-page, .pool-page) .site-header {
+  background: linear-gradient(var(--navy) 60%, rgba(10,35,72,0));
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.page-hero--photo .hero-content {
+  flex: 0 0 auto;
+  width: max-content;
+  max-width: calc(100% - 2 * var(--hero-side));
+  z-index: 1;
+}
+.page-hero--photo .hero-content::before,
+.page-hero:is(.page-hero--plain, .page-hero--split)::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  aspect-ratio: 1;
+  -webkit-mask: url(Images/leisureworld-mark.webp) center / contain no-repeat;
+  mask: url(Images/leisureworld-mark.webp) center / contain no-repeat;
+  pointer-events: none;
+}
+.page-hero--photo .hero-content::before {
+  left: 50%;
+  top: 50%;
+  width: calc(var(--page-photo-height) * .95);
+  transform: translate(-50%, -50%);
+  background: #fff;
+  opacity: .14;
+}
+.page-hero:is(.page-hero--plain, .page-hero--split) { position: relative; isolation: isolate; }
+.page-hero--plain { overflow: clip; overflow-clip-margin: 40px; }
+.page-hero:is(.page-hero--plain, .page-hero--split)::before {
+  top: 50%;
+  width: clamp(420px, 44vw, 680px);
+  max-width: none;
+  transform: translateY(-50%);
+  background: #39bfee;
+  opacity: .09;
+}
+.page-hero--plain::before { right: -4%; width: auto; height: 135%; }
+.page-hero--split::before { left: -14%; }
+
+@media (max-width: 600px) {
+  body:is(.activities-page, .centres-page, .gym-page, .pool-page) .site-header { border-radius: 18px 18px 0 0; }
+  .page-hero--photo .hero-content::before { width: min(120vw, 540px); }
+  .page-hero:is(.page-hero--plain, .page-hero--split)::before { width: 92vw; top: 38%; }
+  .page-hero--plain::before { right: -34vw; height: auto; }
+  .page-hero--split::before { left: -30vw; }
+}
