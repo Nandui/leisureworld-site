@@ -268,3 +268,5 @@ body.homepage main .home-hero .hero-content{flex:0 0 auto;width:max-content;max-
 @media(max-width:600px){.consent-banner{flex-direction:column;align-items:stretch;gap:14px;bottom:8px;width:calc(100% - 16px);padding:16px}.consent-actions .consent-button{flex:1}.footer-cookie-settings{min-height:44px}}
 @media print{.consent-banner{display:none}}
 .policy-cookie-settings{min-height:44px;color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:4px}
+/* Soft launch tagline "Every Body Belongs": BODY in orange, as in the original logo. */
+.hero-body{color:#f26721}
