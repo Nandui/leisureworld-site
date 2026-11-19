@@ -115,11 +115,10 @@ this initialization.
 
 ## Brand Commitments
 
-The incumbent name is LeisureWorld Cork. On 23 September 2026, the user supplied
-the new full-white primary wordmark, stored unchanged at
-`Images/leisureworld-logo-white.png`. Shared brand styles hide its transparent
-canvas margins while preserving the artwork. `Images/leisureworld-favicon.svg`
-uses the same artwork on navy for browser tabs.
+The incumbent name is LeisureWorld Cork, with its logo at `Images/logo.png`
+(also the favicon). It stays in use for the soft launch. The new no-tagline
+logo (`Images/leisureworld-logo-notag.svg`) and the brand-mark watermark
+(`Images/leisureworld-mark.webp`) launch on 1 December 2026.
 Existing copy uses the inclusion statement "Every Body Belongs" and identifies
 the individual centres by name.
 
