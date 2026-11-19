@@ -255,3 +255,16 @@ body.homepage main .home-hero .hero-content{flex:0 0 auto;width:max-content;max-
 .site-footer::before{content:"";position:absolute;z-index:-1;right:-6%;bottom:-18%;width:clamp(360px,40vw,640px);aspect-ratio:1;background:#fff;opacity:.05;-webkit-mask:url(Images/leisureworld-mark.webp) center/contain no-repeat;mask:url(Images/leisureworld-mark.webp) center/contain no-repeat;pointer-events:none}
 /* Soft launch: the brand watermark stays off until the revamp launches on 1 December 2026. Delete this rule to turn it back on. */
 .homepage .hero-content::before,.joining-section::before,.site-footer::before,.page-hero--photo .hero-content::before,.page-hero:is(.page-hero--plain,.page-hero--split)::before{display:none}
+/* Analytics cookie choice */
+.consent-banner{position:fixed;z-index:90;left:50%;bottom:16px;transform:translateX(-50%);display:flex;align-items:center;gap:24px;width:min(860px,calc(100% - 32px));padding:18px 22px;border:1px solid #354b69;border-radius:16px;background:var(--navy);color:white;box-shadow:0 18px 50px rgba(5,16,31,.35);font-size:14px;line-height:1.55}
+.consent-banner p{margin:0;flex:1 1 auto;color:#e3eaf3}
+.consent-banner a{color:white;text-decoration:underline;text-underline-offset:3px}
+.consent-actions{display:flex;gap:10px;flex-shrink:0}
+.consent-button{min-height:44px;min-width:104px;padding:10px 20px;border:1px solid white;border-radius:999px;background:white;color:var(--navy);font:inherit;font-weight:600;cursor:pointer}
+.consent-button:hover{background:#dbe7f5;border-color:#dbe7f5}
+.consent-button:focus-visible,.footer-cookie-settings:focus-visible{outline:3px solid #39bfee;outline-offset:3px}
+.footer-cookie-settings{display:inline-flex;align-items:center;min-height:30px;padding:0;border:0;background:none;color:inherit;font:inherit;cursor:pointer}
+.footer-cookie-settings:hover{color:white;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:600px){.consent-banner{flex-direction:column;align-items:stretch;gap:14px;bottom:8px;width:calc(100% - 16px);padding:16px}.consent-actions .consent-button{flex:1}.footer-cookie-settings{min-height:44px}}
+@media print{.consent-banner{display:none}}
+.policy-cookie-settings{min-height:44px;color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:4px}
