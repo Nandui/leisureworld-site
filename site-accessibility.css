@@ -70,3 +70,5 @@ button:disabled{cursor:wait;opacity:.75}
 @media(max-width:360px){.homepage main .home-hero{--hero-side:20px}.site-header{column-gap:6px}.site-header .booking-link{white-space:normal;max-width:100px;letter-spacing:0;word-spacing:0}}
 @media(forced-colors:active){.button,.store-badge,.class-filters button,.filter-buttons button,.site-menu,.info-card,.plan-card{border:1px solid ButtonText}.class-filters button[aria-pressed=true],.filter-buttons button[aria-pressed=true]{outline:3px solid Highlight}.hero-shade{background:Canvas}.hero-image{opacity:.15}.home-hero{color:CanvasText}.hero-booking>p{color:CanvasText}.site-header{background:Canvas!important;color:CanvasText}.brand{background:#0a2348}.ti{forced-color-adjust:auto}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+@media print{.seasonal-snow{display:none!important}}

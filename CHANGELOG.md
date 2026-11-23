@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-23
+
+- Added `snowfall.js`, a subtle seasonal snowfall on every page from 20 November to 6 January. Switch it off with `ENABLED = false` in the file.
+
 ## 2026-08-21
 
 - Added `Activities.html` — new central activities hub page, replacing the old `index.html#activities` anchor section

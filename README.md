@@ -28,6 +28,10 @@ content feed. Contact uses direct email and phone links.
   intro spacing and image frames. Follow the [shared introduction guide](docs/page-introductions.md)
   when adding a page; keep those dimensions out of individual page stylesheets.
 - `site-pages.js` enhances help search; `gym-page.js` enhances class filtering.
+- `snowfall.js` adds a light seasonal snowfall layer to every page (decorative,
+  never blocks clicks, off for reduced motion). It runs from 20 November to
+  6 January each year. Set `ENABLED = false` at the top of the file to switch it
+  off early; `?snow=on` / `?snow=off` previews it either way.
 - `contact-page.js` optionally prefills the email subject and centre phone link
   for visitors arriving from an activity enquiry. All contact choices work
   without JavaScript; there is no website email-submission backend.
