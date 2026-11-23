@@ -164,42 +164,59 @@
 
 
   /* ---------- Corner drifts ----------
-   * Snow that lands near the bottom corners slowly builds two small drifts.
-   * They are drawn once per growth step, not every frame, and the level is
-   * kept for the visit so it carries over between pages.
+   * Snow that lands near the bottom corners builds two small drifts. Each
+   * corner has its own size, shape and pace, so they never mirror each other,
+   * and a second mound appears as a drift fills up. Drifts are redrawn only
+   * when they grow, and their levels are kept for the visit across pages.
    */
-  const DRIFT_KEY = 'lw-snow-drift';
-  let driftLevel = 0;
-  try { driftLevel = Math.min(1, Number(sessionStorage.getItem(DRIFT_KEY)) || 0); } catch { /* storage blocked */ }
-  let driftDrawn = -1, driftSaved = 0;
-  const driftShape = [random(0, TAU), random(0, TAU), random(0, TAU), random(0, TAU)];
-  const driftImage = canvasOf(1);
-  let driftWidth = 0, driftHeight = 0;
+  const DRIFT_KEY = 'lw-snow-drifts';
+  const hump = (t, at, spread) => Math.exp(-(((t - at) / spread) ** 2));
+  const drifts = [
+    // Left: the larger drift, filling steadily, with a low shoulder further out.
+    { side: 'left', widthShare: 0.19, maxWidth: 260, height: [24, 38], rate: 1,
+      main: { at: 0.02, spread: 0.42 }, extra: { at: 0.58, spread: 0.16, size: 0.42 } },
+    // Right: narrower and lumpier, slower to start, with a small bump close in.
+    { side: 'right', widthShare: 0.12, maxWidth: 170, height: [18, 28], rate: 0.72,
+      main: { at: 0.12, spread: 0.3 }, extra: { at: 0.4, spread: 0.12, size: 0.55 } },
+  ].map(d => ({ ...d, level: 0, drawn: -1, image: canvasOf(1), width: 0, peak: 0, noise: [random(0, TAU), random(0, TAU), random(0, TAU)] }));
+  try {
+    const saved = (sessionStorage.getItem(DRIFT_KEY) || '').split(',').map(Number);
+    drifts.forEach((d, i) => { d.level = Math.min(1, saved[i] || 0); });
+  } catch { /* storage blocked */ }
+  let driftSaved = 0;
 
   function driftSize() {
-    driftWidth = Math.min(220, Math.max(110, width * 0.16));
-    driftHeight = width < 600 ? 22 : 34;
+    for (const d of drifts) {
+      d.width = Math.min(d.maxWidth, Math.max(90, width * d.widthShare));
+      d.peak = width < 600 ? d.height[0] : d.height[1];
+      d.drawn = -1;
+    }
   }
 
-  function renderDrift(ratio) {
+  function renderDrift(d, ratio) {
     const pad = 12;
-    driftImage.width = Math.ceil((driftWidth + pad) * ratio);
-    driftImage.height = Math.ceil((driftHeight + pad) * ratio);
-    const g = driftImage.getContext('2d');
+    const w = d.width, h = d.peak;
+    d.image.width = Math.ceil((w + pad) * ratio);
+    d.image.height = Math.ceil((h + pad) * ratio);
+    const g = d.image.getContext('2d');
     g.setTransform(ratio, 0, 0, ratio, 0, 0);
-    g.clearRect(0, 0, driftWidth + pad, driftHeight + pad);
-    const base = driftHeight + pad;
-    const [a, b, c, d] = driftShape;
+    g.clearRect(0, 0, w + pad, h + pad);
+    const base = h + pad;
+    const [n1, n2, n3] = d.noise;
+    const mainGrowth = Math.min(1, d.level * 1.25);
+    const extraGrowth = Math.max(0, (d.level - 0.35) / 0.65);
     const surface = t => {
-      const profile = Math.pow(1 - t, 1.5) * (0.88 + 0.08 * Math.sin(t * 9 + a) + 0.05 * Math.sin(t * 23 + b));
-      return base - driftHeight * driftLevel * Math.max(0, profile);
+      const taper = Math.pow(Math.max(0, 1 - t), 0.7);
+      const lumps = 1 + 0.07 * Math.sin(t * 11 + n1) + 0.04 * Math.sin(t * 29 + n2);
+      const rise = mainGrowth * hump(t, d.main.at, d.main.spread) + extraGrowth * d.extra.size * hump(t, d.extra.at, d.extra.spread);
+      return base - h * rise * taper * lumps;
     };
     g.beginPath();
     g.moveTo(0, base);
-    for (let x = 0; x <= driftWidth; x += 3) g.lineTo(x, surface(x / driftWidth));
-    g.lineTo(driftWidth, base);
+    for (let x = 0; x <= w; x += 2) g.lineTo(x, surface(x / w));
+    g.lineTo(w, base);
     g.closePath();
-    const fill = g.createLinearGradient(0, base - driftHeight, 0, base);
+    const fill = g.createLinearGradient(0, base - h, 0, base);
     fill.addColorStop(0, 'rgba(255,255,255,0.98)');
     fill.addColorStop(0.45, 'rgba(240,246,253,0.96)');
     fill.addColorStop(1, 'rgba(205,222,242,0.95)');
@@ -211,30 +228,38 @@
     // Fine sparkles in the snow's surface.
     g.shadowBlur = 0;
     g.fillStyle = 'rgba(255,255,255,1)';
-    for (let i = 0; i < 9; i++) {
-      const t = (i + 0.5 + 0.4 * Math.sin(i * 7.3 + c)) / 10;
-      const y = surface(t) + 2 + Math.abs(Math.sin(i * 3.1 + d)) * 3;
-      if (y < base - 1) { g.beginPath(); g.arc(t * driftWidth, y, 0.7, 0, TAU); g.fill(); }
+    for (let i = 0; i < 11; i++) {
+      const t = (i + 0.5 + 0.4 * Math.sin(i * 7.3 + n3)) / 12;
+      const y = surface(t) + 2 + Math.abs(Math.sin(i * 3.1 + n1)) * 3;
+      if (y < base - 1) { g.beginPath(); g.arc(t * w, y, 0.7, 0, TAU); g.fill(); }
     }
-    driftDrawn = driftLevel;
+    d.drawn = d.level;
   }
 
-  function addToDrift(amount) {
-    driftLevel = Math.min(1, driftLevel + amount);
+  function addToDrift(d, amount) {
+    d.level = Math.min(1, d.level + amount * d.rate);
+  }
+
+  // Which drift, if any, a flake at this x lands in.
+  function driftAt(x) {
+    if (x < drifts[0].width * 0.85) return drifts[0];
+    if (x > width - drifts[1].width * 0.85) return drifts[1];
+    return null;
   }
 
   function drawDrifts(scale) {
-    if (driftLevel < 0.02) return;
-    if (Math.abs(driftLevel - driftDrawn) > 0.01) renderDrift(scale);
-    const h = driftImage.height / scale, w = driftImage.width / scale;
     ctx.globalAlpha = 1;
-    ctx.setTransform(scale, 0, 0, scale, 0, (height - h) * scale);
-    ctx.drawImage(driftImage, 0, 0, w, h);
-    ctx.setTransform(-scale, 0, 0, scale, width * scale, (height - h) * scale);
-    ctx.drawImage(driftImage, 0, 0, w, h);
+    for (const d of drifts) {
+      if (d.level < 0.02) continue;
+      if (Math.abs(d.level - d.drawn) > 0.008) renderDrift(d, scale);
+      const h = d.image.height / scale, w = d.image.width / scale;
+      if (d.side === 'left') ctx.setTransform(scale, 0, 0, scale, 0, (height - h) * scale);
+      else ctx.setTransform(-scale, 0, 0, scale, width * scale, (height - h) * scale);
+      ctx.drawImage(d.image, 0, 0, w, h);
+    }
     if (clock - driftSaved > 2) {
       driftSaved = clock;
-      try { sessionStorage.setItem(DRIFT_KEY, driftLevel.toFixed(3)); } catch { /* storage blocked */ }
+      try { sessionStorage.setItem(DRIFT_KEY, drifts.map(d => d.level.toFixed(3)).join(',')); } catch { /* storage blocked */ }
     }
   }
 
@@ -282,7 +307,6 @@
     canvas.width = Math.round(width * ratio);
     canvas.height = Math.round(height * ratio);
     driftSize();
-    driftDrawn = -1;
     // Sparse: about one flake per 24,000 px², capped for large and small screens.
     const total = Math.max(16, Math.min(60, Math.round((width * height) / 24000)));
     const next = [];
@@ -316,8 +340,9 @@
       f.x += (gust * f.wind + Math.sin(f.phase * 0.7) * 4) * dt;
       f.rotation += f.spin * dt;
       // Flakes reaching the bottom corners settle into the drifts.
-      if (f.layer !== 'far' && scrollDelta === 0 && f.y > height - 6 && (f.x < driftWidth * 0.8 || f.x > width - driftWidth * 0.8)) {
-        addToDrift(0.008 * (f.size / 10));
+      const landing = f.layer !== 'far' && scrollDelta === 0 && f.y > height - 6 && driftAt(f.x);
+      if (landing) {
+        addToDrift(landing, 0.03 * (f.size / 10));
         Object.assign(f, makeFlake(f.layer, false));
         continue;
       }
@@ -344,8 +369,8 @@
         }
       }
     }
-    // A slow steady build-up as well, so drifts appear even on short visits.
-    addToDrift(dt / 300);
+    // A steady build-up as well, so drifts form within the first minute or so.
+    for (const d of drifts) addToDrift(d, dt / 75);
     drawDrifts(scale);
     frame = requestAnimationFrame(draw);
   }
