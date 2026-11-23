@@ -28,119 +28,174 @@
   if (!ctx) return;
 
   const TAU = Math.PI * 2;
+  const SIXTY = Math.PI / 3;
   const random = (min, max) => min + Math.random() * (max - min);
   const pick = list => list[Math.floor(Math.random() * list.length)];
+  const SPRITE = 160;
 
-  function sprite(size, paint) {
+  /* ---------- Crystal designs ----------
+   * Every flake is a six-fold ice crystal. Side branches leave the spine at
+   * 60 degrees, as they do in real snow. Each design is drawn in local units
+   * where the arm runs from 0 to -1.
+   */
+  function twig(g, x, y, len, dir) {
+    g.moveTo(x, y);
+    g.lineTo(x + Math.sin(dir) * len, y - Math.cos(dir) * len);
+  }
+  function hexagon(g, radius, rotate = 0) {
+    for (let k = 0; k <= 6; k++) {
+      const a = rotate + (k * TAU) / 6;
+      k ? g.lineTo(Math.cos(a) * radius, Math.sin(a) * radius) : g.moveTo(Math.cos(a) * radius, Math.sin(a) * radius);
+    }
+  }
+
+  const designs = {
+    // Classic stellar dendrite: long branches carrying their own small twigs.
+    dendrite(g) {
+      const pairs = 3 + Math.floor(Math.random() * 2);
+      const spec = Array.from({ length: pairs }, (_, i) => ({ at: 0.28 + i * (0.6 / pairs) + random(-0.03, 0.03), len: random(0.24, 0.36) * (1 - i * 0.2) }));
+      return arm => {
+        arm.moveTo(0, 0); arm.lineTo(0, -1);
+        for (const b of spec) for (const side of [-1, 1]) {
+          const dir = side * SIXTY;
+          twig(arm, 0, -b.at, b.len, dir);
+          const mx = Math.sin(dir) * b.len * 0.55, my = -b.at - Math.cos(dir) * b.len * 0.55;
+          twig(arm, mx, my, b.len * 0.35, dir - side * SIXTY);
+        }
+      };
+    },
+    // Fern-like: many short, evenly tapering branches.
+    fern(g) {
+      const count = 6 + Math.floor(Math.random() * 3);
+      const reach = random(0.18, 0.26);
+      return arm => {
+        arm.moveTo(0, 0); arm.lineTo(0, -1);
+        for (let i = 0; i < count; i++) {
+          const at = 0.2 + (i / count) * 0.75;
+          const len = reach * (1 - at * 0.8);
+          for (const side of [-1, 1]) twig(arm, 0, -at, len, side * SIXTY);
+        }
+      };
+    },
+    // Stellar plate: broad hexagonal centre with ribbed arms ending in little plates.
+    plate(g) {
+      const centre = random(0.24, 0.32);
+      const tip = random(0.08, 0.12);
+      return (arm, k) => {
+        arm.moveTo(0, -centre * 0.9); arm.lineTo(0, -1 + tip);
+        for (const side of [-1, 1]) twig(arm, 0, -0.62, random(0.12, 0.16), side * SIXTY);
+        // Small plate at the tip of each arm.
+        arm.moveTo(0, -1 + tip);
+        for (let j = 0; j <= 6; j++) {
+          const a = (j * TAU) / 6;
+          arm.lineTo(Math.sin(a) * tip, -1 + Math.cos(a) * tip);
+        }
+        if (k === 0) { hexagon(arm, centre, Math.PI / 6); hexagon(arm, centre * 0.55, Math.PI / 6); }
+        // Ribs inside the central plate.
+        arm.moveTo(0, 0); arm.lineTo(0, -centre * 0.55);
+      };
+    },
+    // Sectored: arms with broad leaf-like sides and a fine spine.
+    sectored(g) {
+      const width = random(0.12, 0.18);
+      return arm => {
+        arm.moveTo(0, 0); arm.lineTo(0, -1);
+        arm.moveTo(0, -0.18);
+        arm.lineTo(-width, -0.5); arm.lineTo(0, -0.86); arm.lineTo(width, -0.5); arm.closePath();
+        for (const side of [-1, 1]) twig(arm, 0, -0.9, 0.1, side * SIXTY);
+      };
+    },
+  };
+
+  function drawCrystal(g, size, shape, { glow, line }) {
+    const r = size / 2;
+    const arm = r * 0.84;
+    g.save();
+    g.translate(r, r);
+    g.scale(arm, arm);
+    g.lineCap = 'round';
+    g.lineJoin = 'round';
+    g.lineWidth = line;
+    g.strokeStyle = 'rgba(255,255,255,0.97)';
+    g.shadowColor = glow;
+    g.shadowBlur = r * 0.12;
+    g.beginPath();
+    for (let k = 0; k < 6; k++) {
+      g.save();
+      g.rotate((k * TAU) / 6);
+      shape(g, k);
+      g.restore();
+    }
+    g.stroke();
+    // A tiny bright core where the arms meet.
+    g.fillStyle = 'rgba(255,255,255,0.95)';
+    g.beginPath();
+    g.arc(0, 0, line * 1.4, 0, TAU);
+    g.fill();
+    g.restore();
+  }
+
+  function canvasOf(size) {
     const c = document.createElement('canvas');
     c.width = c.height = size;
-    paint(c.getContext('2d'), size / 2);
     return c;
   }
 
-  // Six-armed ice crystals, each with its own randomised branching so no two
-  // variants look alike. A cool blue glow keeps them readable on white sections.
-  function crystal() {
-    const branches = Array.from({ length: 2 + Math.floor(Math.random() * 2) }, (_, i) => ({
-      at: 0.3 + i * random(0.18, 0.24),
-      length: random(0.16, 0.32) * (1 - i * 0.22),
-      angle: random(0.75, 1.05),
-    }));
-    const tip = Math.random() < 0.5;
-    const plate = random(0.1, 0.2);
-    return sprite(128, (g, r) => {
-      const arm = r * 0.78;
-      g.translate(r, r);
-      g.lineCap = 'round';
-      g.lineJoin = 'round';
-      g.strokeStyle = 'rgba(255,255,255,0.96)';
-      g.fillStyle = 'rgba(255,255,255,0.9)';
-      g.shadowColor = 'rgba(190,220,255,0.95)';
-      g.shadowBlur = r * 0.18;
-      for (let k = 0; k < 6; k++) {
-        g.save();
-        g.rotate((k * TAU) / 6);
-        g.lineWidth = r * 0.06;
-        g.beginPath();
-        g.moveTo(0, 0);
-        g.lineTo(0, -arm);
-        for (const b of branches) {
-          const y = -arm * b.at;
-          const len = arm * b.length;
-          g.moveTo(0, y);
-          g.lineTo(Math.sin(b.angle) * len, y - Math.cos(b.angle) * len);
-          g.moveTo(0, y);
-          g.lineTo(-Math.sin(b.angle) * len, y - Math.cos(b.angle) * len);
-        }
-        g.stroke();
-        if (tip) {
-          g.beginPath();
-          g.arc(0, -arm, r * 0.05, 0, TAU);
-          g.fill();
-        }
-        g.restore();
-      }
-      // Small hexagonal plate at the centre.
-      g.beginPath();
-      for (let k = 0; k < 6; k++) g.lineTo(Math.cos((k * TAU) / 6) * r * plate, Math.sin((k * TAU) / 6) * r * plate);
-      g.closePath();
-      g.fill();
-    });
+  // Each design yields a crisp sprite, a soft (out-of-focus) version for the
+  // nearest flakes, and a glint sprite that flashes as the flake turns.
+  function makeCrystal() {
+    const shape = designs[pick(Object.keys(designs))]();
+    const crisp = canvasOf(SPRITE);
+    drawCrystal(crisp.getContext('2d'), SPRITE, shape, { glow: 'rgba(160,200,240,0.9)', line: 0.05 });
+    // Depth blur that works in every browser: shrink, then scale back up smoothly.
+    const small = canvasOf(28);
+    const s = small.getContext('2d');
+    s.drawImage(crisp, 0, 0, 28, 28);
+    const soft = canvasOf(SPRITE);
+    const so = soft.getContext('2d');
+    so.imageSmoothingQuality = 'high';
+    so.drawImage(small, 0, 0, SPRITE, SPRITE);
+    so.globalAlpha = 0.5;
+    so.drawImage(crisp, 0, 0);
+    const glint = canvasOf(SPRITE);
+    drawCrystal(glint.getContext('2d'), SPRITE, shape, { glow: 'rgba(255,255,255,1)', line: 0.07 });
+    return { crisp, soft, glint };
   }
-
-  // Out-of-focus foreground flake: a soft disc with a slightly brighter rim,
-  // like a camera's bokeh.
-  const bokeh = sprite(128, (g, r) => {
-    const disc = g.createRadialGradient(r, r, 0, r, r, r);
-    disc.addColorStop(0, 'rgba(255,255,255,0.55)');
-    disc.addColorStop(0.6, 'rgba(245,250,255,0.65)');
-    disc.addColorStop(0.8, 'rgba(255,255,255,0.9)');
-    disc.addColorStop(0.9, 'rgba(230,242,255,0.35)');
-    disc.addColorStop(1, 'rgba(210,228,248,0)');
-    g.fillStyle = disc;
-    g.fillRect(0, 0, r * 2, r * 2);
-  });
-
-  // Distant flakes: tiny soft points of light.
-  const haze = sprite(32, (g, r) => {
-    const dot = g.createRadialGradient(r, r, 0, r, r, r);
-    dot.addColorStop(0, 'rgba(255,255,255,1)');
-    dot.addColorStop(0.4, 'rgba(240,248,255,0.7)');
-    dot.addColorStop(1, 'rgba(190,215,240,0)');
-    g.fillStyle = dot;
-    g.fillRect(0, 0, r * 2, r * 2);
-  });
 
   let crystals = null;
   let width = 0, height = 0, flakes = [], frame = 0, last = 0, clock = 0, running = false;
+  let scrolled = window.scrollY;
 
   // Three depth layers move at different speeds for parallax.
   const LAYERS = {
-    far:   { share: 0.5,  size: [2, 4.5],  speed: [14, 24], alpha: [0.35, 0.6],  wind: 0.4 },
-    mid:   { share: 0.42, size: [9, 17],   speed: [26, 42], alpha: [0.6, 0.9],   wind: 0.75 },
-    near:  { share: 0.08, size: [18, 34],  speed: [46, 64], alpha: [0.22, 0.38],   wind: 1.2 },
+    far:  { share: 0.45, size: [3.5, 6],  speed: [14, 22], alpha: [0.35, 0.55], wind: 0.45, sprite: 'soft', parallax: 0.45 },
+    mid:  { share: 0.45, size: [8, 14],   speed: [24, 38], alpha: [0.7, 0.92],  wind: 0.75, sprite: 'crisp', parallax: 0.8 },
+    near: { share: 0.10, size: [17, 24],  speed: [40, 56], alpha: [0.38, 0.55], wind: 1.15, sprite: 'soft', parallax: 1.1 },
   };
 
   function makeFlake(layer, anywhere) {
     const spec = LAYERS[layer];
     const size = random(...spec.size);
+    const crystal = pick(crystals);
     return {
       layer,
-      image: layer === 'mid' ? pick(crystals) : layer === 'near' ? bokeh : haze,
+      image: crystal[spec.sprite],
+      glint: layer === 'far' ? null : crystal.glint,
       size,
       x: random(-40, width + 40),
       y: anywhere ? random(-size, height) : random(-80, -size * 2),
       speed: random(...spec.speed),
       alpha: random(...spec.alpha),
       wind: spec.wind,
-      sway: random(10, 26),
-      swaySpeed: random(0.3, 0.75),
+      parallax: spec.parallax,
+      sway: random(10, 24),
+      swaySpeed: random(0.3, 0.7),
       phase: random(0, TAU),
       rotation: random(0, TAU),
-      spin: random(-0.5, 0.5),
-      tumble: random(0.35, 0.9),
+      spin: random(-0.45, 0.45),
+      tumble: random(0.3, 0.8),
       tumblePhase: random(0, TAU),
-      shimmer: random(1.2, 2.6),
+      glintSpeed: random(0.5, 1.1),
     };
   }
 
@@ -150,9 +205,8 @@
     height = window.innerHeight;
     canvas.width = Math.round(width * ratio);
     canvas.height = Math.round(height * ratio);
-    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-    // Sparse: about one flake per 22,000 px², capped for large and small screens.
-    const total = Math.max(18, Math.min(70, Math.round((width * height) / 22000)));
+    // Sparse: about one flake per 24,000 px², capped for large and small screens.
+    const total = Math.max(16, Math.min(60, Math.round((width * height) / 24000)));
     const next = [];
     for (const layer of Object.keys(LAYERS)) {
       const count = Math.max(layer === 'near' ? 2 : 1, Math.round(total * LAYERS[layer].share));
@@ -160,7 +214,7 @@
       while (existing.length < count) existing.push(makeFlake(layer, true));
       next.push(...existing);
     }
-    // Draw far to near so foreground bokeh sits on top.
+    // Draw far to near so the nearest flakes sit on top.
     flakes = next.sort((a, b) => a.size - b.size);
   }
 
@@ -168,38 +222,42 @@
     const dt = Math.min((time - last) / 1000 || 0, 0.05);
     last = time;
     clock += dt;
+    const scale = canvas.width / width;
     // Slowly changing gusts, so the whole field drifts together like real wind.
     const gust = Math.sin(clock * 0.11) * 14 + Math.sin(clock * 0.37 + 1.3) * 6 + Math.sin(clock * 0.07 + 4) * 8;
-    ctx.setTransform(canvas.width / width, 0, 0, canvas.height / height, 0, 0);
-    ctx.clearRect(0, 0, width, height);
-    const scale = canvas.width / width;
+    // Snow belongs to the page: scrolling carries flakes with the content,
+    // with distant flakes moving less than near ones for depth.
+    const scrollDelta = window.scrollY - scrolled;
+    scrolled = window.scrollY;
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     for (const f of flakes) {
       f.phase += f.swaySpeed * dt;
-      f.y += f.speed * dt;
+      f.y += f.speed * dt - scrollDelta * f.parallax;
+      if (f.y < -f.size * 2 - 60) f.y += height + f.size * 4 + 120;
       f.x += (gust * f.wind + Math.sin(f.phase * 0.7) * 4) * dt;
+      f.rotation += f.spin * dt;
       if (f.y > height + f.size * 2 || f.x < -80 || f.x > width + 80) {
         Object.assign(f, makeFlake(f.layer, false));
         continue;
       }
       const x = f.x + Math.sin(f.phase) * f.sway;
-      let alpha = f.alpha;
-      if (f.layer === 'mid') {
-        f.rotation += f.spin * dt;
-        alpha *= 0.82 + 0.18 * Math.sin(clock * f.shimmer + f.phase * 3);
-        // Flatten one axis over time so the crystal appears to tumble in 3D.
-        const tilt = 0.35 + 0.65 * Math.abs(Math.cos(clock * f.tumble + f.tumblePhase));
-        const cos = Math.cos(f.rotation) * scale, sin = Math.sin(f.rotation) * scale;
-        ctx.setTransform(cos * tilt, sin * tilt, -sin, cos, x * scale, f.y * scale);
-        ctx.globalAlpha = alpha;
-        ctx.drawImage(f.image, -f.size, -f.size, f.size * 2, f.size * 2);
-        ctx.setTransform(scale, 0, 0, scale, 0, 0);
-      } else {
-        // Screen blending makes the soft flakes glow like light rather than
-        // sit on the page as flat grey discs.
-        ctx.globalCompositeOperation = 'screen';
-        ctx.globalAlpha = alpha;
-        ctx.drawImage(f.image, x - f.size, f.y - f.size, f.size * 2, f.size * 2);
-        ctx.globalCompositeOperation = 'source-over';
+      // Flatten one axis over time so the crystal appears to tumble in 3D.
+      const turn = Math.cos(clock * f.tumble + f.tumblePhase);
+      const tilt = 0.3 + 0.7 * Math.abs(turn);
+      const cos = Math.cos(f.rotation) * scale, sin = Math.sin(f.rotation) * scale;
+      ctx.setTransform(cos * tilt, sin * tilt, -sin, cos, x * scale, f.y * scale);
+      ctx.globalAlpha = f.alpha;
+      ctx.drawImage(f.image, -f.size, -f.size, f.size * 2, f.size * 2);
+      if (f.glint) {
+        // A brief catch of light as the crystal turns face-on.
+        const sparkle = Math.pow(Math.max(0, Math.sin(clock * f.glintSpeed + f.tumblePhase * 2)), 24) * Math.abs(turn);
+        if (sparkle > 0.02) {
+          ctx.globalAlpha = sparkle * (f.layer === 'near' ? 0.45 : 0.8);
+          ctx.globalCompositeOperation = 'lighter';
+          ctx.drawImage(f.glint, -f.size, -f.size, f.size * 2, f.size * 2);
+          ctx.globalCompositeOperation = 'source-over';
+        }
       }
     }
     frame = requestAnimationFrame(draw);
@@ -208,9 +266,10 @@
   function start() {
     if (running || reducedMotion.matches || document.hidden) return;
     running = true;
-    crystals ??= Array.from({ length: 6 }, crystal);
+    crystals ??= Array.from({ length: 8 }, makeCrystal);
     if (!canvas.isConnected) document.body.append(canvas);
     resize();
+    scrolled = window.scrollY;
     last = performance.now();
     frame = requestAnimationFrame(draw);
     requestAnimationFrame(() => { canvas.style.opacity = '1'; });
