@@ -162,6 +162,82 @@
     return { crisp, soft, glint };
   }
 
+
+  /* ---------- Corner drifts ----------
+   * Snow that lands near the bottom corners slowly builds two small drifts.
+   * They are drawn once per growth step, not every frame, and the level is
+   * kept for the visit so it carries over between pages.
+   */
+  const DRIFT_KEY = 'lw-snow-drift';
+  let driftLevel = 0;
+  try { driftLevel = Math.min(1, Number(sessionStorage.getItem(DRIFT_KEY)) || 0); } catch { /* storage blocked */ }
+  let driftDrawn = -1, driftSaved = 0;
+  const driftShape = [random(0, TAU), random(0, TAU), random(0, TAU), random(0, TAU)];
+  const driftImage = canvasOf(1);
+  let driftWidth = 0, driftHeight = 0;
+
+  function driftSize() {
+    driftWidth = Math.min(220, Math.max(110, width * 0.16));
+    driftHeight = width < 600 ? 22 : 34;
+  }
+
+  function renderDrift(ratio) {
+    const pad = 12;
+    driftImage.width = Math.ceil((driftWidth + pad) * ratio);
+    driftImage.height = Math.ceil((driftHeight + pad) * ratio);
+    const g = driftImage.getContext('2d');
+    g.setTransform(ratio, 0, 0, ratio, 0, 0);
+    g.clearRect(0, 0, driftWidth + pad, driftHeight + pad);
+    const base = driftHeight + pad;
+    const [a, b, c, d] = driftShape;
+    const surface = t => {
+      const profile = Math.pow(1 - t, 1.5) * (0.88 + 0.08 * Math.sin(t * 9 + a) + 0.05 * Math.sin(t * 23 + b));
+      return base - driftHeight * driftLevel * Math.max(0, profile);
+    };
+    g.beginPath();
+    g.moveTo(0, base);
+    for (let x = 0; x <= driftWidth; x += 3) g.lineTo(x, surface(x / driftWidth));
+    g.lineTo(driftWidth, base);
+    g.closePath();
+    const fill = g.createLinearGradient(0, base - driftHeight, 0, base);
+    fill.addColorStop(0, 'rgba(255,255,255,0.98)');
+    fill.addColorStop(0.45, 'rgba(240,246,253,0.96)');
+    fill.addColorStop(1, 'rgba(205,222,242,0.95)');
+    g.fillStyle = fill;
+    g.shadowColor = 'rgba(60,100,150,0.32)';
+    g.shadowBlur = 8;
+    g.shadowOffsetY = -1;
+    g.fill();
+    // Fine sparkles in the snow's surface.
+    g.shadowBlur = 0;
+    g.fillStyle = 'rgba(255,255,255,1)';
+    for (let i = 0; i < 9; i++) {
+      const t = (i + 0.5 + 0.4 * Math.sin(i * 7.3 + c)) / 10;
+      const y = surface(t) + 2 + Math.abs(Math.sin(i * 3.1 + d)) * 3;
+      if (y < base - 1) { g.beginPath(); g.arc(t * driftWidth, y, 0.7, 0, TAU); g.fill(); }
+    }
+    driftDrawn = driftLevel;
+  }
+
+  function addToDrift(amount) {
+    driftLevel = Math.min(1, driftLevel + amount);
+  }
+
+  function drawDrifts(scale) {
+    if (driftLevel < 0.02) return;
+    if (Math.abs(driftLevel - driftDrawn) > 0.01) renderDrift(scale);
+    const h = driftImage.height / scale, w = driftImage.width / scale;
+    ctx.globalAlpha = 1;
+    ctx.setTransform(scale, 0, 0, scale, 0, (height - h) * scale);
+    ctx.drawImage(driftImage, 0, 0, w, h);
+    ctx.setTransform(-scale, 0, 0, scale, width * scale, (height - h) * scale);
+    ctx.drawImage(driftImage, 0, 0, w, h);
+    if (clock - driftSaved > 2) {
+      driftSaved = clock;
+      try { sessionStorage.setItem(DRIFT_KEY, driftLevel.toFixed(3)); } catch { /* storage blocked */ }
+    }
+  }
+
   let crystals = null;
   let width = 0, height = 0, flakes = [], frame = 0, last = 0, clock = 0, running = false;
   let scrolled = window.scrollY;
@@ -205,6 +281,8 @@
     height = window.innerHeight;
     canvas.width = Math.round(width * ratio);
     canvas.height = Math.round(height * ratio);
+    driftSize();
+    driftDrawn = -1;
     // Sparse: about one flake per 24,000 px², capped for large and small screens.
     const total = Math.max(16, Math.min(60, Math.round((width * height) / 24000)));
     const next = [];
@@ -237,6 +315,12 @@
       if (f.y < -f.size * 2 - 60) f.y += height + f.size * 4 + 120;
       f.x += (gust * f.wind + Math.sin(f.phase * 0.7) * 4) * dt;
       f.rotation += f.spin * dt;
+      // Flakes reaching the bottom corners settle into the drifts.
+      if (f.layer !== 'far' && scrollDelta === 0 && f.y > height - 6 && (f.x < driftWidth * 0.8 || f.x > width - driftWidth * 0.8)) {
+        addToDrift(0.008 * (f.size / 10));
+        Object.assign(f, makeFlake(f.layer, false));
+        continue;
+      }
       if (f.y > height + f.size * 2 || f.x < -80 || f.x > width + 80) {
         Object.assign(f, makeFlake(f.layer, false));
         continue;
@@ -260,6 +344,9 @@
         }
       }
     }
+    // A slow steady build-up as well, so drifts appear even on short visits.
+    addToDrift(dt / 300);
+    drawDrifts(scale);
     frame = requestAnimationFrame(draw);
   }
 
