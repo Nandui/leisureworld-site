@@ -29,12 +29,12 @@ Bookings use the LeisureWorld mobile app or the linked Legend browser service. P
 - [Gym & Fitness Classes](https://www.leisureworldcork.com/gym.html): Make your move at LeisureWorld Cork. Explore gym sessions at Bishopstown and Churchfield, find a fitness class and book your next session with the app.
 - [Help & Frequently Asked Questions](https://www.leisureworldcork.com/help.html): Find answers about LeisureWorld bookings, memberships, swimming lessons, opening hours, teen gym and accessibility. Search questions or contact your centre.
 - [LeisureWorld Cork](https://www.leisureworldcork.com/): Welcome to LeisureWorld Cork. Book swims, gym sessions and fitness classes with our mobile app, and explore our Bishopstown, Churchfield and Douglas centres.
-- [Membership Options](https://www.leisureworldcork.com/membershipfunnel.html): Compare LeisureWorld memberships for Bishopstown, Churchfield and Gus Healy Pool in Douglas. See payment options, class add-ons and how to join.
+- [Membership Options](https://www.leisureworldcork.com/membershipfunnel.html): Compare LeisureWorld memberships for Bishopstown, Churchfield and Gus Healy Pool in Douglas. See payment options, fitness class add-ons and how to join.
 - [Opening hours & timetables](https://www.leisureworldcork.com/opening-hours.html): Find gym opening hours, public swim times, fitness classes and pitch hours at Bishopstown, Churchfield and Gus Healy Pool in Douglas.
 - [Swimming lessons: parent guide](https://www.leisureworldcork.com/parent-guide.html): Set up your swimming lesson account, link your membership and check your child’s progress.
 - [All-weather pitches](https://www.leisureworldcork.com/pitches.html): Book floodlit football pitches at LeisureWorld Bishopstown and Churchfield.
 - [Pool & Swimming](https://www.leisureworldcork.com/poolactivities.html): Make time for the water at LeisureWorld Cork. Explore public swimming, children's swim school, adult lessons and Aquafit, with pool information and app booking in one place.
-- [Prices & Memberships](https://www.leisureworldcork.com/pricing.html): Find LeisureWorld Cork pay-as-you-go prices, memberships and class add-ons. Compare Bishopstown and Churchfield with Gus Healy Pool in Douglas.
+- [Prices & Memberships](https://www.leisureworldcork.com/pricing.html): Find LeisureWorld Cork pay-as-you-go prices, memberships and fitness class add-ons. Compare Bishopstown and Churchfield with Gus Healy Pool in Douglas.
 - [Teen gym](https://www.leisureworldcork.com/teen-gym.html): A safe start in the gym for teenagers at LeisureWorld Bishopstown and Churchfield.
 - [Website Accessibility](https://www.leisureworldcork.com/website-accessibility.html): Read about accessibility on the LeisureWorld website, the design standard, assessment limitations and how to request help or report a barrier.
 
