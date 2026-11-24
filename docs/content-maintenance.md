@@ -37,8 +37,11 @@ parent pages; those pages are not rewritten automatically from JSON.
 ## Confirmed rules and source ambiguities
 
 - Membership covers Bishopstown and Churchfield only. Douglas is separate.
-- Under-10s need an adult aged 18+ in the water, at most two children per adult.
-  Ages 10–12 need an adult in the building. Lesson attendance rules also apply.
+- Public swimming supervision (December 2026 child admission policy): under-3s
+  need an adult aged 18+ in the water (1:1); ages 3–7 need an adult in the water
+  (max two per adult); ages 8–12 need an adult in the centre watching from
+  poolside; 13+ may swim independently. Weak or non-swimmers need an adult in
+  the water at any age. Lesson attendance rules also apply.
 - Bishopstown's published early Tuesday 18m-pool window reads “9am–8am”. That
   invalid window is omitted with advice to ask reception. Confirmed sessions
   later on Tuesday remain visible.

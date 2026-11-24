@@ -5,9 +5,11 @@
 - The app is the primary booking route; browser booking remains a subtle alternative.
 - Support uses direct phone/email. There is no contact form or email backend.
 - Membership covers Bishopstown and Churchfield only; Douglas is separate.
-- Under-10s need an adult aged 18+ in the water, at most two children per adult;
-  ages 10–12 need an adult in the building. These owner-confirmed rules override
-  contradictory historical source documents.
+- Child swimming supervision follows the December 2026 child admission policy:
+  under-3s need an adult aged 18+ in the water (1:1); ages 3–7 need an adult in
+  the water (max two per adult); ages 8–12 need an adult in the centre watching
+  from poolside; 13+ may swim independently. Weak or non-swimmers need an adult
+  in the water at any age. This replaces the September 2026 under-10/10–12 bands.
 - The 48-page site keeps visitor information locally. External links are for
   services such as booking, app downloads, directions and recruitment.
 - Hours, classes, dated courses, notices and recruitment use a GitHub-editable
