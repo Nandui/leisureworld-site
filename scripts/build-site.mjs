@@ -3,11 +3,14 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import { publicFiles } from './public-files.mjs';
+import { buildSitemap } from './build-sitemap.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const output = resolve(root, 'dist');
 const generated = spawnSync(process.execPath, [join(root, 'scripts/build-content.mjs')], { cwd: root, stdio: 'inherit' });
 if (generated.status !== 0) process.exit(generated.status || 1);
+// Refresh sitemap.xml (pages and last-changed dates) before it is copied.
+await buildSitemap();
 // The only recursive deletion is this verified, fixed build directory.
 if (output !== join(root, 'dist') || dirname(output) !== root) throw new Error('Unsafe output directory');
 await rm(output, { recursive: true, force: true });

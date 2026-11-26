@@ -15,7 +15,7 @@ preview tags. JSON-LD describes the organisation, website, pages, breadcrumbs,
 centre addresses/phone numbers and visible help questions. No ratings, real-time
 availability or unverified openingHours values were fabricated.
 
-`sitemap.xml` lists all 38 pages. `robots.txt` permits public search crawling and
+`sitemap.xml` lists every public page and is regenerated on each build. `robots.txt` permits public search crawling and
 explicitly allows OAI-SearchBot. No separate GPTBot training preference was added;
 search and training controls are independent.
 [OpenAI crawler documentation](https://developers.openai.com/api/docs/bots).
@@ -77,8 +77,16 @@ The comprehensive follow-up added visible parent breadcrumbs to photo-led pages,
 ItemList data for the five directories and Course data for the five programme/
 qualification detail pages. The generator reads directory names and URLs from
 the visible cards. No dated CourseInstance or offer is invented. Metadata
-generation leaves unchanged HTML alone. The sitemap omits optional `lastmod`
-values because file rewrites are not evidence of reviewed content dates.
+generation leaves unchanged HTML alone.
+
+`scripts/build-sitemap.mjs` (run by `npm run build`, or `npm run sitemap`) lists
+every public page and sets `lastmod` to the date of the last commit that changed
+what a visitor reads: title, description and body content. Regenerated cache keys,
+canonical/social tags, JSON-LD and site-wide scripts are ignored, so they do not
+make pages look freshly reviewed. Pages filled from `data/visit-information.json`
+also take the feed's last change into account. Uncommitted content edits use
+today's date. In a shallow clone, pages whose last change is older than the
+fetched history keep the date already committed in `sitemap.xml`.
 [Schema.org Course](https://schema.org/Course),
 [Schema.org ItemList](https://schema.org/ItemList),
 [Google sitemap guidance](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap).
