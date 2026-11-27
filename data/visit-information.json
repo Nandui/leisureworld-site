@@ -6,9 +6,13 @@
     "churchfield"
   ],
   "childSupervision": {
-    "inWaterUnderAge": 10,
-    "adultOnPremisesThroughAge": 12,
-    "maxChildrenPerAdultInWater": 2
+    "policy": "Child admission policy, December 2026 (general public swimming sessions)",
+    "inWaterOneToOneUnderAge": 3,
+    "inWaterUnderAge": 8,
+    "maxChildrenPerAdultInWaterAged3To7": 2,
+    "adultPoolsideThroughAge": 12,
+    "independentFromAge": 13,
+    "nonSwimmersNeedAdultInWater": true
   },
   "notices": [],
   "centres": [

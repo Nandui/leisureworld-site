@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-24
+
+- Updated child swimming supervision across policy, pool rules, terms, pricing and docs to the December 2026 child admission policy (under 3 / 3–7 / 8–12 / 13+ bands).
+
 ## 2026-11-23
 
 - Added `snowfall.js`, a subtle seasonal snowfall on every page from 20 November to 6 January. Switch it off with `ENABLED = false` in the file.
