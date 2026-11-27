@@ -1,18 +1,12 @@
 # Staff editor for opening hours and timetables (Decap CMS).
-# Saving commits data/visit-information.json to the main branch; Vercel then
-# rebuilds the site. If an edit is invalid, the build fails and the live site
-# keeps the previous hours. See docs/editing-opening-hours.md.
+# Staff sign in with a code sent to their email. Saving checks the hours and
+# commits data/visit-information.json to the main branch; Vercel then rebuilds
+# the site. See docs/editing-opening-hours.md.
 backend:
-  name: github
-  repo: Nandui/leisureworld-site
+  # Custom back end registered in admin/index.html. It talks to /api/cms, which
+  # only lets signed-in staff change data/visit-information.json.
+  name: leisureworld
   branch: main
-  # base_url is set to the current site address in admin/index.html.
-  auth_endpoint: api/cms-auth
-  commit_messages:
-    update: "Update opening hours ({{author-login}})"
-
-# `npx decap-server` + this flag lets you try the editor locally without GitHub.
-local_backend: true
 
 site_url: https://www.leisureworldcork.com
 display_url: https://www.leisureworldcork.com/opening-hours.html
