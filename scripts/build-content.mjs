@@ -14,6 +14,30 @@ const safeUrl = value => {
   return url.href;
 };
 
+/**
+ * Tidy what the staff editor (/admin/) may save: blank optional fields become
+ * null/absent and stray spaces are trimmed, so the checks below see real values.
+ */
+export function normalizeFeed(data) {
+  const blank = value => value === undefined || value === null || (typeof value === 'string' && !value.trim());
+  const tidyRows = rows => (rows || []).map(row => {
+    const out = { ...row, times: (row.times || []).map(t => typeof t === 'string' ? t.trim() : t).filter(t => !blank(t)) };
+    if (blank(out.note)) delete out.note;
+    return out;
+  });
+  data.notices = data.notices || [];
+  for (const c of data.centres || []) {
+    c.gymHours = tidyRows(c.gymHours);
+    c.pitchHours = tidyRows(c.pitchHours);
+    c.classes = (c.classes || []).map(s => ({ ...s, durationMinutes: blank(s.durationMinutes) ? null : Number(s.durationMinutes) }));
+    if (c.swimming) {
+      if (blank(c.swimming.validThrough)) delete c.swimming.validThrough;
+      for (const pool of c.swimming.pools || []) pool.rows = tidyRows(pool.rows);
+    }
+  }
+  return data;
+}
+
 export function validateFeed(data) {
   if (data.version !== 1 || !isDate(data.checkedOn)) throw new Error('Feed version or checkedOn is invalid');
   const ids = new Set();
@@ -24,7 +48,7 @@ export function validateFeed(data) {
     if (!/^Centres\/[a-z-]+\.html$/.test(c.page)) throw new Error('Invalid local centre page');
     for (const collection of [c.gymHours, c.pitchHours, ...c.swimming.pools.map(p=>p.rows)]) {
       for (const row of collection) {
-        if (!days.includes(row.day) || !Array.isArray(row.times) || !row.times.length || row.times.some(t=>typeof t!=='string'||!t.trim())) throw new Error(`Invalid schedule row for ${c.id}`);
+        if (!days.includes(row.day) || !Array.isArray(row.times) || !row.times.length || row.times.some(t=>typeof t!=='string'||!t.trim())) throw new Error(`Invalid schedule row for ${c.id} (${row.day}): each day needs at least one time`);
       }
     }
     for (const session of c.classes) {
@@ -117,7 +141,7 @@ async function replaceRegion(file, key, content) {
 }
 
 export async function buildContent(today=new Date().toISOString().slice(0,10)) {
-  const data=validateFeed(JSON.parse(await readFile(join(root,'data/visit-information.json'),'utf8')));
+  const data=validateFeed(normalizeFeed(JSON.parse(await readFile(join(root,'data/visit-information.json'),'utf8'))));
   await replaceRegion('opening-hours.html','hours',renderHours(data,today));
   for(const c of data.centres) await replaceRegion(c.page,'centre-hours',renderCentreHours(c,data,today));
   await replaceRegion('Certfictaons/nplq.html','courses',renderCourses(data,today));

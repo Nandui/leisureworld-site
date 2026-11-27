@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Opening hours editor | LeisureWorld Cork</title>
+</head>
+<body>
+  <!-- Staff editor for data/visit-information.json. Saving commits to GitHub and Vercel republishes the site. -->
+  <script>window.CMS_MANUAL_INIT = true;</script>
+  <script src="https://unpkg.com/decap-cms@3.17.3/dist/decap-cms.js"></script>
+  <script>
+    // Sign-in runs through this site's own /api/cms-auth, on whichever address
+    // the editor is opened from (live domain or a Vercel preview).
+    CMS.init({ config: { backend: { name: 'github', base_url: location.origin } } });
+  </script>
+</body>
+</html>
