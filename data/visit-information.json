@@ -274,12 +274,6 @@
         },
         {
           "day": "Tuesday",
-          "time": "9.45am",
-          "name": "Movin’ Chat",
-          "durationMinutes": 45
-        },
-        {
-          "day": "Tuesday",
           "time": "10.00am",
           "name": "MoveWell",
           "durationMinutes": 45
@@ -372,12 +366,6 @@
           "day": "Wednesday",
           "time": "7.00pm",
           "name": "Boxercise",
-          "durationMinutes": 45
-        },
-        {
-          "day": "Thursday",
-          "time": "9.45am",
-          "name": "Movin’ Chat",
           "durationMinutes": 45
         },
         {
