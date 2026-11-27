@@ -60,7 +60,9 @@ npm run build
 
 Run image optimization when source images change. It creates encodings without
 cropping or altering image content. Metadata generation updates canonical/social
-tags, JSON-LD, asset cache keys, sitemap, robots rules and the optional AI directory.
+tags, JSON-LD, asset cache keys, robots rules and the optional AI directory.
+`npm run build` also refreshes `sitemap.xml` with every page and its last-changed date
+(`npm run sitemap` does this on its own).
 
 `site-settings.json` uses **https://www.leisureworldcork.com** as the intended
 production base. Change it and regenerate metadata for another domain/subpath.
