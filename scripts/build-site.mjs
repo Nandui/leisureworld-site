@@ -20,4 +20,10 @@ for (const relative of files) {
   await mkdir(dirname(target), { recursive: true });
   await copyFile(join(root, relative), target);
 }
+// Staff editor (Decap CMS) for the opening hours feed; not linked or indexed.
+for (const relative of ['admin/index.html', 'admin/config.yml']) {
+  const target = join(output, relative);
+  await mkdir(dirname(target), { recursive: true });
+  await copyFile(join(root, relative), target);
+}
 console.log(`Built ${files.filter(path => path.endsWith('.html')).length} pages and ${files.length} public files in dist/.`);

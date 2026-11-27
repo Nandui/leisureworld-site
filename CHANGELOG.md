@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-27
+
+- Added a staff editor at `/admin/` (Decap CMS) for opening hours, swim times, fitness classes and notices. Staff sign in with a code sent to their email; saving checks the hours, commits `data/visit-information.json` and Vercel rebuilds the site. See `docs/editing-opening-hours.md`.
+
 ## 2026-11-23
 
 - Added `snowfall.js`, a subtle seasonal snowfall on every page from 20 November to 6 January. Switch it off with `ENABLED = false` in the file.

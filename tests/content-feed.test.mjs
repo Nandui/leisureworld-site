@@ -92,3 +92,17 @@ test('centre summaries keep their own activities, prices and seasonal fallback',
     }
   }
 });
+
+test('blank optional fields saved by the staff editor are tidied, empty days are rejected', async () => {
+  const { normalizeFeed } = await import('../scripts/build-content.mjs');
+  const data=copy();
+  data.centres[1].classes[0].durationMinutes='';
+  data.centres[2].swimming.validThrough='';
+  data.centres[0].gymHours[0]={day:'Monday',times:[' 6.30am – 9pm '],note:''};
+  validateFeed(normalizeFeed(data));
+  assert.equal(data.centres[1].classes[0].durationMinutes,null);
+  assert.equal('validThrough' in data.centres[2].swimming,false);
+  assert.deepEqual(data.centres[0].gymHours[0],{day:'Monday',times:['6.30am – 9pm']});
+  const empty=copy();empty.centres[0].gymHours[0].times=[''];
+  assert.throws(()=>validateFeed(normalizeFeed(empty)),/Monday/);
+});

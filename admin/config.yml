@@ -1,0 +1,122 @@
+# Staff editor for opening hours and timetables (Decap CMS).
+# Staff sign in with a code sent to their email. Saving checks the hours and
+# commits data/visit-information.json to the main branch; Vercel then rebuilds
+# the site. See docs/editing-opening-hours.md.
+backend:
+  # Custom back end registered in admin/index.html. It talks to /api/cms, which
+  # only lets signed-in staff change data/visit-information.json.
+  name: leisureworld
+  branch: main
+
+site_url: https://www.leisureworldcork.com
+display_url: https://www.leisureworldcork.com/opening-hours.html
+publish_mode: simple
+media_folder: Images/uploads
+
+collections:
+  - name: hours
+    label: Opening hours
+    editor:
+      preview: false
+    files:
+      - name: timetables
+        label: Opening hours & timetables
+        file: data/visit-information.json
+        format: json
+        description: Gym, pitch, public swimming and class times for each centre, plus short notices.
+        fields:
+          - name: checkedOn
+            label: Date the hours were last checked
+            hint: Shown on the website as "Schedules checked …". Change it to today whenever you confirm the hours.
+            widget: datetime
+            format: YYYY-MM-DD
+            date_format: D MMMM YYYY
+            time_format: false
+            picker_utc: true
+          - name: notices
+            label: Notices (closures, holiday hours)
+            label_singular: notice
+            hint: A notice shows on the centre's hours only between its start and end dates.
+            widget: list
+            required: false
+            summary: "{{fields.centre}}: {{fields.text}}"
+            fields:
+              - { name: centre, label: Centre, widget: select, options: [{ label: Bishopstown, value: bishopstown }, { label: Churchfield, value: churchfield }, { label: Douglas (Gus Healy Pool), value: douglas }] }
+              - { name: text, label: Notice text, widget: string }
+              - { name: startsOn, label: Show from, widget: datetime, format: YYYY-MM-DD, date_format: D MMMM YYYY, time_format: false, picker_utc: true }
+              - { name: endsOn, label: Show until, widget: datetime, format: YYYY-MM-DD, date_format: D MMMM YYYY, time_format: false, picker_utc: true }
+          - name: centres
+            label: Centres
+            label_singular: centre
+            widget: list
+            allow_add: false
+            allow_remove: false
+            allow_reorder: false
+            collapsed: true
+            summary: "{{fields.name}}"
+            fields:
+              - { name: id, widget: hidden }
+              - { name: name, widget: hidden }
+              - { name: phone, widget: hidden }
+              - { name: phoneDisplay, widget: hidden }
+              - { name: page, widget: hidden }
+              - name: gymHours
+                label: Gym opening hours
+                label_singular: day
+                hint: Leave empty if the centre has no gym.
+                widget: list
+                required: false
+                collapsed: false
+                summary: "{{fields.day}}: {{fields.times.0}}"
+                fields:
+                  - &day { name: day, label: Day, widget: select, options: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Bank Holidays] }
+                  - &times { name: times, label: Times, widget: list, hint: "For example: 7am – 8.45pm. For several sessions in one day, separate them with commas: 7am – 8.30am, 1.15pm – 3pm" }
+                  - &note { name: note, label: Note, widget: string, required: false }
+              - name: pitchHours
+                label: Pitch opening hours
+                label_singular: day
+                hint: Leave empty if the centre has no pitches.
+                widget: list
+                required: false
+                collapsed: false
+                summary: "{{fields.day}}: {{fields.times.0}}"
+                fields: [*day, *times, *note]
+              - name: swimming
+                label: Public swimming
+                widget: object
+                collapsed: true
+                fields:
+                  - { name: label, label: Timetable title, widget: string }
+                  - { name: validThrough, label: Timetable ends on, hint: "After this date the website asks visitors to call for the new timetable. Leave empty if it doesn't end.", widget: datetime, format: YYYY-MM-DD, date_format: D MMMM YYYY, time_format: false, picker_utc: true, required: false }
+                  - { name: note, label: Note shown above the times, widget: text }
+                  - name: pools
+                    label: Pools
+                    label_singular: pool
+                    widget: list
+                    allow_add: false
+                    allow_remove: false
+                    allow_reorder: false
+                    summary: "{{fields.name}}"
+                    fields:
+                      - { name: id, widget: hidden }
+                      - { name: name, label: Pool name, widget: string }
+                      - name: rows
+                        label: Public swim times
+                        label_singular: day
+                        widget: list
+                        collapsed: false
+                        summary: "{{fields.day}}: {{fields.times.0}}"
+                        fields: [*day, *times, *note]
+              - name: classes
+                label: Fitness classes
+                label_singular: class
+                hint: Add one entry per class. The website groups them by day.
+                widget: list
+                required: false
+                collapsed: true
+                summary: "{{fields.day}} {{fields.time}}: {{fields.name}}"
+                fields:
+                  - *day
+                  - { name: time, label: Start time, widget: string, hint: "For example: 9.45am" }
+                  - { name: name, label: Class name, widget: string }
+                  - { name: durationMinutes, label: Length in minutes, widget: number, value_type: int, required: false, hint: "Leave empty if not published." }

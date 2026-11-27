@@ -7,7 +7,7 @@ import re
 from bs4 import BeautifulSoup
 
 ROOT=Path(__file__).resolve().parent.parent
-EXCLUDED_DIRS={'dist','node_modules','docs','coverage','__pycache__','test-results','playwright-report'}
+EXCLUDED_DIRS={'dist','admin','api','node_modules','docs','coverage','__pycache__','test-results','playwright-report'}
 def public_file(p):
     parts=p.relative_to(ROOT).parts
     return p.is_file() and not any(part.startswith('.') or part in EXCLUDED_DIRS for part in parts)

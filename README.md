@@ -35,7 +35,9 @@ content feed. Contact uses direct email and phone links.
 - `contact-page.js` optionally prefills the email subject and centre phone link
   for visitors arriving from an activity enquiry. All contact choices work
   without JavaScript; there is no website email-submission backend.
-- `data/visit-information.json` is the GitHub-editable content feed. The content
+- `data/visit-information.json` is the GitHub-editable content feed. Staff edit
+  its hours, timetables and notices in the web editor at `/admin/`
+  ([guide](docs/editing-opening-hours.md)). The content
   build writes its published information into static HTML regions.
 - Fonts/icons are local. `Images/optimized/` contains responsive WebP versions;
   original source images remain intact.

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Opening hours editor | LeisureWorld Cork</title>
+  <style>
+    :root { color-scheme: light; --ink: #14213d; --muted: #5b6475; --line: #d6dbe4; --brand: #0f6f8f; --bg: #f4f6f9; --error: #b42318; }
+    [hidden] { display: none !important; }
+    body { margin: 0; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); }
+    .signin { min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; box-sizing: border-box; }
+    .card { width: 100%; max-width: 400px; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 28px 24px; box-sizing: border-box; }
+    h1 { font-size: 22px; line-height: 1.25; margin: 0 0 6px; }
+    p { margin: 0 0 18px; color: var(--muted); }
+    label { display: block; font-weight: 600; margin-bottom: 6px; }
+    input { width: 100%; box-sizing: border-box; font: inherit; padding: 12px; border: 1px solid var(--line); border-radius: 8px; margin-bottom: 14px; }
+    input:focus { outline: 3px solid rgba(15, 111, 143, .3); border-color: var(--brand); }
+    #code { font-size: 24px; letter-spacing: 6px; text-align: center; }
+    button { width: 100%; font: inherit; font-weight: 600; padding: 12px; border: 0; border-radius: 8px; background: var(--brand); color: #fff; cursor: pointer; }
+    button[disabled] { opacity: .6; cursor: wait; }
+    .link { background: none; color: var(--brand); padding: 8px 0 0; width: auto; font-weight: 500; text-decoration: underline; }
+    .error { color: var(--error); margin: 0 0 14px; }
+    .error:empty { display: none; }
+    .signout { position: fixed; right: 12px; bottom: 12px; z-index: 1000; width: auto; padding: 8px 14px; font-size: 14px; background: #fff; color: var(--ink); border: 1px solid var(--line); box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+  </style>
+</head>
+<body>
+  <main class="signin" id="signin" hidden>
+    <div class="card">
+      <form id="email-step">
+        <h1>Opening hours editor</h1>
+        <p>Enter your work email and we'll send you a sign-in code.</p>
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" required />
+        <p class="error" role="alert" data-error></p>
+        <button type="submit">Send me a code</button>
+      </form>
+      <form id="code-step" hidden>
+        <h1>Check your email</h1>
+        <p>If <strong id="sent-to"></strong> is on the editors list, a code is on its way. It works for 10 minutes.</p>
+        <label for="code">8-digit code</label>
+        <input id="code" name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="9" required />
+        <p class="error" role="alert" data-error></p>
+        <button type="submit">Sign in</button>
+        <button type="button" class="link" id="restart">Use a different email or send a new code</button>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    (() => {
+      'use strict';
+      const api = (body) => fetch('/api/cms-login', {
+        method: body ? 'POST' : 'GET',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'same-origin',
+        body: body ? JSON.stringify(body) : undefined
+      }).then(async response => ({ ok: response.ok, data: await response.json().catch(() => ({})) }));
+
+      const $ = id => document.getElementById(id);
+      const emailStep = $('email-step'), codeStep = $('code-step');
+      const showError = (form, message) => { form.querySelector('[data-error]').textContent = message || ''; };
+      const busy = (form, on) => { form.querySelector('button[type=submit]').disabled = on; };
+
+      emailStep.addEventListener('submit', async event => {
+        event.preventDefault();
+        showError(emailStep); busy(emailStep, true);
+        const result = await api({ action: 'send', email: $('email').value }).catch(() => ({ ok: false, data: {} }));
+        busy(emailStep, false);
+        if (!result.ok) return showError(emailStep, result.data.error || 'Something went wrong. Please try again.');
+        $('sent-to').textContent = result.data.email;
+        emailStep.hidden = true; codeStep.hidden = false; $('code').value = ''; $('code').focus();
+      });
+
+      codeStep.addEventListener('submit', async event => {
+        event.preventDefault();
+        showError(codeStep); busy(codeStep, true);
+        const result = await api({ action: 'verify', code: $('code').value }).catch(() => ({ ok: false, data: {} }));
+        busy(codeStep, false);
+        if (!result.ok) return showError(codeStep, result.data.error || 'Something went wrong. Please try again.');
+        startEditor(result.data.email);
+      });
+
+      $('restart').addEventListener('click', () => { codeStep.hidden = true; emailStep.hidden = false; showError(emailStep); $('email').focus(); });
+
+      const isLocal = ['localhost', '127.0.0.1'].includes(location.hostname) && new URLSearchParams(location.search).has('local');
+
+      function startEditor(email) {
+        $('signin').hidden = true;
+        window.CMS_MANUAL_INIT = true;
+        const script = document.createElement('script');
+        script.src = 'https://unpkg.com/decap-cms@3.17.3/dist/decap-cms.js';
+        script.onload = () => {
+          if (!isLocal) window.CMS.registerBackend('leisureworld', backendFor(email));
+          window.CMS.init({ config: { backend: isLocal ? { name: 'proxy', proxy_url: 'http://localhost:8081/api/v1', branch: 'main' } : { name: 'leisureworld', branch: 'main' } } });
+          const out = document.createElement('button');
+          out.className = 'signout'; out.type = 'button'; out.textContent = `Sign out (${email})`;
+          out.addEventListener('click', () => api({ action: 'logout' }).finally(() => location.reload()));
+          document.body.appendChild(out);
+        };
+        document.body.appendChild(script);
+      }
+
+      // A small Decap CMS back end that talks to /api/cms on this site. Staff are
+      // already signed in by email code, so the editor opens straight away.
+      function backendFor(email) {
+        const user = { name: email, login: email };
+        return class LeisureWorldBackend {
+          constructor(config) { this.branch = config.backend.branch || 'main'; }
+          isGitBackend() { return false; }
+          status() { return Promise.resolve({ auth: { status: true }, api: { status: true, statusPage: '' } }); }
+          authComponent() {
+            // Already signed in by email code: continue straight into the editor.
+            return window.createClass({
+              componentDidMount() { this.props.onLogin({}); },
+              render() { return window.h('p', { style: { padding: '40px', textAlign: 'center' } }, 'Opening the editor…'); }
+            });
+          }
+          restoreUser() { return Promise.resolve(user); }
+          authenticate() { return Promise.resolve(user); }
+          logout() { return api({ action: 'logout' }).then(() => { location.reload(); }); }
+          getToken() { return Promise.resolve(''); }
+          async request(action, params = {}) {
+            const response = await fetch('/api/cms', {
+              method: 'POST', credentials: 'same-origin',
+              headers: { 'Content-Type': 'application/json; charset=utf-8' },
+              body: JSON.stringify({ branch: this.branch, action, params: { branch: this.branch, ...params } })
+            });
+            const json = await response.json().catch(() => ({}));
+            if (!response.ok) {
+              const error = new Error(json.error || `Request failed (${response.status})`);
+              error.status = response.status;
+              throw error;
+            }
+            return json;
+          }
+          entriesByFolder() { return Promise.resolve([]); }
+          allEntriesByFolder() { return Promise.resolve([]); }
+          entriesByFiles(files) { return this.request('entriesByFiles', { files }); }
+          getEntry(path) { return this.request('getEntry', { path }); }
+          persistEntry(entry, options) {
+            return this.request('persistEntry', { dataFiles: entry.dataFiles, assets: [], options: { commitMessage: options.commitMessage } });
+          }
+          getMedia() { return Promise.resolve([]); }
+          getMediaFile() { return Promise.reject(new Error('Images are not used in the hours editor.')); }
+          persistMedia() { return Promise.reject(new Error('Images are not used in the hours editor.')); }
+          deleteFiles() { return Promise.reject(new Error('Deleting is not available in the hours editor.')); }
+          getDeployPreview() { return Promise.resolve(null); }
+          unpublishedEntries() { return Promise.resolve([]); }
+          unpublishedEntry() { return Promise.reject(new Error('Not available')); }
+        };
+      }
+
+      if (isLocal) return startEditor('local preview');
+      api().then(result => {
+        if (result.ok) startEditor(result.data.email);
+        else { $('signin').hidden = false; $('email').focus(); }
+      }).catch(() => { $('signin').hidden = false; });
+    })();
+  </script>
+</body>
+</html>

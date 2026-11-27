@@ -5,7 +5,9 @@ a browser alternative. Phone and email provide support without a contact form.
 
 ## Hours, notices, course dates and jobs
 
-Edit `data/visit-information.json`, then run `npm run build`. The build writes
+Staff can change opening hours, swim times, classes and notices in the web
+editor at `/admin/`; see [Editing opening hours](editing-opening-hours.md).
+Developers can also edit `data/visit-information.json` directly, then run `npm run build`. The build writes
 marked regions in `opening-hours.html`, the three centre pages,
 `Certfictaons/nplq.html` and `careers.html`. Do not hand-edit between `feed:*`
 comments: the next build replaces that content. Pitch pages link to these same

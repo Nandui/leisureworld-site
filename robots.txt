@@ -4,6 +4,8 @@ Allow: /
 Disallow: /.impeccable/
 Disallow: /.git/
 Disallow: /scripts/
+Disallow: /admin/
+Disallow: /api/
 Disallow: /send-mail.php
 
 User-agent: OAI-SearchBot
@@ -11,6 +13,8 @@ Allow: /
 Disallow: /.impeccable/
 Disallow: /.git/
 Disallow: /scripts/
+Disallow: /admin/
+Disallow: /api/
 Disallow: /send-mail.php
 
 Sitemap: https://www.leisureworldcork.com/sitemap.xml
